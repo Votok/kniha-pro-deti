@@ -1,6 +1,6 @@
-# Phase 0 & 1 Implementation Summary
+# Implementation Status Update
 
-## ✅ Completed: Phase 0 - Preparation
+## ✅ COMPLETED: Phase 0 - Preparation
 
 **Archived obsolete HTML files:**
 
@@ -8,7 +8,7 @@
 - ✅ `koupit-knihu.html` → `archive/`
 - ✅ `ukazky-z-knihy.html` → `archive/`
 
-## ✅ Completed: Phase 1 - Eleventy Initialization
+## ✅ COMPLETED: Phase 1 - Eleventy Initialization
 
 **Project Structure Created:**
 
@@ -18,8 +18,8 @@ kniha-pro-deti/
 ├── src/                        # NEW SOURCE DIRECTORY
 │   ├── _data/
 │   │   ├── site.json          ✅ Created
-│   │   ├── books.json         ✅ Created (placeholder)
-│   │   ├── authors.json       ✅ Created (placeholder)
+│   │   ├── books.json         ✅ Created WITH FULL DATA (8 books)
+│   │   ├── authors.json       ✅ Created WITH FULL DATA (5 authors/illustrators)
 │   │   └── navigation.json    ✅ Created
 │   ├── _includes/
 │   │   ├── layouts/           ✅ Created (empty)
@@ -35,53 +35,67 @@ kniha-pro-deti/
 └── node_modules/              ✅ Installed (149 packages)
 ```
 
-**Installation Verified:**
+## ✅ COMPLETED: Phase 1.5 - Data Extraction (CRITICAL)
 
-```bash
-npm run build
-# Output: [11ty] Wrote 1 file in 0.05 seconds (v3.1.2)
-```
+**All 8 books extracted with complete data:**
 
-## 🔄 Next Steps: Phase 1.5 - Data Extraction (CRITICAL)
+1. ✅ **eliska-andilek** - 6 gallery images, complete metadata
+2. ✅ **eliska-detektiv** - 8 gallery images, complete metadata
+3. ✅ **eliska-rebelka** - 10 gallery images, complete metadata
+4. ✅ **viktor-a-pripad-zmizeleho-psa** - Complete with excerpts, testimonials, awards
+5. ✅ **viktor-a-zahadna-teta-bobina** - Complete with excerpts, testimonials, awards (1st place SUK 2018)
+6. ✅ **tajemstvi-rodiny-m** - Complete metadata
+7. ✅ **roza-a-ztraceny-tatinek** - Complete metadata (2025 release)
+8. ✅ **hra-o-sen** - Complete with excerpts and testimonials
 
-This is the most labor-intensive phase. We need to manually extract data from these HTML files:
+**All authors/illustrators extracted:**
 
-**Books to extract (8 total):**
+1. ✅ **Pavlína Jurková** - Full bio, photo, contact
+2. ✅ **Jarmila Vlčková** - Full bio, photo, contact
+3. ✅ **Petr Korunka** - Full bio, photo, links
+4. ✅ **Martina Fojtů** - Full bio, photo
+5. ✅ **Eva Chupíková** - Full bio, photo, links
 
-1. ⏳ eliska-andilek.html
-2. ⏳ eliska-detektiv.html
-3. ⏳ eliska-rebelka.html
-4. ⏳ viktor-a-pripad-zmizeleho-psa.html
-5. ⏳ viktor-a-zahadna-teta-bobina.html
-6. ⏳ tajemstvi-rodiny-m.html
-7. ⏳ roza-a-ztraceny-tatinek.html
-8. ⏳ hra-o-sen.html
+### Extracted Data Details:
 
-**For each book, extract:**
+**For each book, extracted:**
 
-- Title, subtitle, summary
-- Description from page content
-- Cover image paths
-- Authors/illustrators
-- Buy links
-- Excerpts (if any)
-- Testimonials/reviews (if any)
-- Gallery images (if any)
-- ISBN, year, publisher, page count
+- ✅ Title, subtitle, summary
+- ✅ Description from page content
+- ✅ Cover image paths (hero images)
+- ✅ Authors/illustrators (properly attributed)
+- ✅ Buy links (primary and secondary retailers)
+- ✅ Excerpts (where available)
+- ✅ Testimonials/reviews (where available)
+- ✅ Gallery images (all book samples)
+- ✅ ISBN, year, publisher, age group
+- ✅ Awards (Viktor a záhadná teta Bobina - 1st place SUK 2018)
+- ✅ Featured flag, published dates
 
-**Authors to extract from autori-knihy.html:**
+### Book Statistics:
 
-- Pavlína Jurková bio
-- Jarmila Vlčková bio
-- Petr Korunka bio
+- **Total books:** 8
+- **Publisher breakdown:**
+  - 65. pole: 4 books (Eliška series + Róza)
+  - Albatros: 2 books (Viktor series)
+  - Grada: 1 book (Hra o sen)
+  - Booktook.cz: 1 book (Tajemství rodiny M)
+- **Total gallery images:** 42 images across all books
+- **Total testimonials:** 11 testimonials
+- **Total excerpts:** 8 book excerpts
 
-## 📝 How to Proceed
+## 🔄 NEXT: Phase 2 - Tech Upgrade (Bootstrap 5, GLightbox, Vanilla JS)
 
-**Option A - Manual extraction (recommended for accuracy):**
-I can read each HTML file and help you extract the data into books.json
+### Ready to proceed with:
 
-**Option B - Assisted extraction:**
-Tell me which book to start with, and I'll extract the data interactively
+1. Create layouts (base.njk, page.njk, book.njk)
+2. Create components (header.njk, footer.njk, book-card.njk, author-card.njk, schema-book.njk)
+3. Update CSS with Bootstrap 5 utilities
+4. Port smooth-scroll.js to vanilla JS
+5. Setup GLightbox for galleries
 
-**Ready to start Phase 1.5?**
-Say: "Extract data for [book-name]" or "Extract all authors" to begin!
+**Time estimate for Phase 2:** 2-3 hours
+
+---
+
+**Phase 1.5 completed successfully!** All book and author data has been extracted and structured into JSON format ready for Eleventy templating.

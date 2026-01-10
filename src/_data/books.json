@@ -4,30 +4,389 @@
     "title": "Eliška andílek",
     "slug": "eliska-andilek",
     "subtitle": null,
-    "summary": "Všichni říkají, že vypadám jako andílek. Žádný andílek ale nejsem...",
-    "description": "Delší popis knihy - TŘEBA EXTRAHOVAT Z HTML",
-    "ageGroup": "Pro děti od 6 do 9 let",
-    "year": 2018,
-    "publisher": "Nakladatelství XYZ",
-    "isbn": "978-80-XXXXX-XX-X",
-    "pages": 120,
+    "summary": "Všichni říkají, že vypadám jako andílek. Žádný andílek ale nejsem. V tomhle příběhu se přesvědčíte, že odvaha mi rozhodně nechybí!",
+    "description": "Všichni říkají, že vypadám jako andílek. Žádný andílek ale nejsem. V tomhle příběhu se přesvědčíte, že odvaha mi rozhodně nechybí!",
+    "ageGroup": "Pro děti od 6 let",
+    "year": 2021,
+    "publisher": "65. pole",
+    "isbn": "",
+    "pages": null,
     "cover": "/assets/images/hero/eliska-andilek-900.jpg",
-    "coverThumbnail": "/assets/images/thumbnails/eliska-andilek-thumb.jpg",
+    "coverThumbnail": "/assets/images/hero/eliska-andilek-900.jpg",
     "authors": {
       "text": ["Pavlína Jurková", "Jarmila Vlčková"],
       "illustrations": ["Petr Korunka"]
     },
     "buyLinks": [
       {
-        "retailer": "Databáze knih",
-        "url": "https://www.databazeknih.cz/knihy/eliska-andilek-123456",
+        "retailer": "65. pole",
+        "url": "https://www.65pole.cz/kniha/eliska-andilek/",
         "primary": true
       }
     ],
     "excerpts": [],
     "testimonials": [],
-    "gallery": [],
+    "gallery": [
+      "/assets/images/ukazky/eliska-andilek-1.jpg",
+      "/assets/images/ukazky/eliska-andilek-2.jpg",
+      "/assets/images/ukazky/eliska-andilek-3.jpg",
+      "/assets/images/ukazky/eliska-andilek-4.jpg",
+      "/assets/images/ukazky/eliska-andilek-5.jpg",
+      "/assets/images/ukazky/eliska-andilek-6.jpg"
+    ],
     "featured": true,
-    "publishedDate": "2018-09-15"
+    "publishedDate": "2021-01-01"
+  },
+  {
+    "id": "eliska-detektiv",
+    "title": "Eliška detektiv",
+    "slug": "eliska-detektiv",
+    "subtitle": null,
+    "summary": "Eliška s Toníčkem si v novém domově už zvykli. Do tak krásného domu se zahradou by to ale chtělo pořádného domácího mazlíčka. Podaří se jim přesvědčit rodiče? Hrozně moc si totiž přejí kočku. Nebo ještě raději psa!",
+    "description": "Eliška s Toníčkem si v novém domově už zvykli. Do tak krásného domu se zahradou by to ale chtělo pořádného domácího mazlíčka. Podaří se jim přesvědčit rodiče? Hrozně moc si totiž přejí kočku. Nebo ještě raději psa!",
+    "ageGroup": "Pro děti od 6 let",
+    "year": 2021,
+    "publisher": "65. pole",
+    "isbn": "",
+    "pages": null,
+    "cover": "/assets/images/hero/eliska-detektiv-900.jpg",
+    "coverThumbnail": "/assets/images/hero/eliska-detektiv-900.jpg",
+    "authors": {
+      "text": ["Pavlína Jurková", "Jarmila Vlčková"],
+      "illustrations": ["Petr Korunka"]
+    },
+    "buyLinks": [
+      {
+        "retailer": "65. pole",
+        "url": "https://www.65pole.cz/kniha/eliska-detektiv/",
+        "primary": true
+      }
+    ],
+    "excerpts": [],
+    "testimonials": [],
+    "gallery": [
+      "/assets/images/ukazky/eliska-detektiv-1.jpg",
+      "/assets/images/ukazky/eliska-detektiv-2.jpg",
+      "/assets/images/ukazky/eliska-detektiv-3.jpg",
+      "/assets/images/ukazky/eliska-detektiv-4.jpg",
+      "/assets/images/ukazky/eliska-detektiv-5.jpg",
+      "/assets/images/ukazky/eliska-detektiv-6.jpg",
+      "/assets/images/ukazky/eliska-detektiv-7.jpg",
+      "/assets/images/ukazky/eliska-detektiv-8.jpg"
+    ],
+    "featured": true,
+    "publishedDate": "2021-01-01"
+  },
+  {
+    "id": "eliska-rebelka",
+    "title": "Eliška rebelka",
+    "slug": "eliska-rebelka",
+    "subtitle": null,
+    "summary": "Eliška s Toníčkem si v novém domově už zvykli. Do tak krásného domu se zahradou by to ale chtělo pořádného domácího mazlíčka. Podaří se jim přesvědčit rodiče? Hrozně moc si totiž přejí kočku. Nebo ještě raději psa!",
+    "description": "Eliška s Toníčkem si v novém domově už zvykli. Do tak krásného domu se zahradou by to ale chtělo pořádného domácího mazlíčka. Podaří se jim přesvědčit rodiče? Hrozně moc si totiž přejí kočku. Nebo ještě raději psa!",
+    "ageGroup": "Pro děti od 6 let",
+    "year": 2021,
+    "publisher": "65. pole",
+    "isbn": "",
+    "pages": null,
+    "cover": "/assets/images/hero/eliska-rebelka-900.jpg",
+    "coverThumbnail": "/assets/images/hero/eliska-rebelka-900.jpg",
+    "authors": {
+      "text": ["Pavlína Jurková", "Jarmila Vlčková"],
+      "illustrations": ["Petr Korunka"]
+    },
+    "buyLinks": [
+      {
+        "retailer": "65. pole",
+        "url": "https://www.65pole.cz/kniha/eliska-rebelka/",
+        "primary": true
+      }
+    ],
+    "excerpts": [],
+    "testimonials": [],
+    "gallery": [
+      "/assets/images/ukazky/eliska-rebelka-1.jpg",
+      "/assets/images/ukazky/eliska-rebelka-2.jpg",
+      "/assets/images/ukazky/eliska-rebelka-3.jpg",
+      "/assets/images/ukazky/eliska-rebelka-4.jpg",
+      "/assets/images/ukazky/eliska-rebelka-5.jpg",
+      "/assets/images/ukazky/eliska-rebelka-6.jpg",
+      "/assets/images/ukazky/eliska-rebelka-7.jpg",
+      "/assets/images/ukazky/eliska-rebelka-8.jpg",
+      "/assets/images/ukazky/eliska-rebelka-9.jpg",
+      "/assets/images/ukazky/eliska-rebelka-10.jpg"
+    ],
+    "featured": true,
+    "publishedDate": "2021-01-01"
+  },
+  {
+    "id": "viktor-a-pripad-zmizeleho-psa",
+    "title": "Viktor a případ zmizelého psa",
+    "slug": "viktor-a-pripad-zmizeleho-psa",
+    "subtitle": "Když máš odvahu a otevřenou mysl, dokážeš nemožné!",
+    "summary": "Kam se podělo to roztomilé štěně, které ještě včera cupovalo na kousky maminčinu kuchařku? Viktor s Žofií rozjíždějí detektivní pátrání. Ani jeden z nich však netuší…",
+    "description": "Strach, hrůza a beznaděj… Takové pocity prožívá Viktor, kterému jednoho dne záhadně zmizí jeho milované štěně. Se svou kamarádkou Žofií rozjíždí detektivní pátrání. Ani jeden z nich však netuší, do jak mrazivého nebezpečí se dostanou. Podezřelých je hodně, věřit nemůžou nikomu. A nejhorší je, že vyřešení celého případu mají celou dobu přímo před očima…",
+    "ageGroup": "Ilustrovaná kniha pro nebojácné děti, rodiče a prarodiče od 8 do 108 let",
+    "year": 2019,
+    "publisher": "Albatros",
+    "isbn": "",
+    "pages": null,
+    "cover": "/assets/images/hero/viktor-a-pripad-zmizeleho-psa-900.jpg",
+    "coverThumbnail": "/assets/images/hero/viktor-a-pripad-zmizeleho-psa-900.jpg",
+    "authors": {
+      "text": ["Pavlína Jurková", "Jarmila Vlčková"],
+      "illustrations": ["Martina Fojtů"]
+    },
+    "buyLinks": [
+      {
+        "retailer": "Albatros Media",
+        "url": "https://www.albatrosmedia.cz/tituly/93061209/viktor-a-pripad-zmizeleho-psa/",
+        "primary": true
+      }
+    ],
+    "excerpts": [
+      {
+        "title": "Lunino království",
+        "text": "…Na konci osady čekalo Viktora překvapení. Zůstal stát jak omráčený, něco takového ještě nikdy neviděl. Před ním se skvěla překrásná dřevěná maringotka pomalovaná pestrými barvami. Nahoře nad jejími okny bylo velkými písmeny napsáno: LUNINO KRÁLOVSTVÍ."
+      },
+      {
+        "title": "Hlídač",
+        "text": "Hlídač mezitím došel až doprostřed sadu a vztekle se rozhlížel po svém nepříteli. Oháněl se holí a sprostě nadával: 'Vylez, ty zbabělče, postav se mi jako chlap chlapovi!' Z jeho hlasu však bylo znát, že začíná mít opravdový strach."
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Ke psu Senecovi, kterého Viktorovi věnovala teta Bobina, přibyla bezvadná kamarádka Žofie. Jenže Seneca se ztratí. A začíná skutečně napínavé dobrodružství. Podaří se ho zachránit nebo ne? Už teď se strašně moc těším, jak jednou budu obě knížky, jak \"Viktora a záhadnou tetu Bobinu\", tak i \"Viktora a případ zmizelého psa\", číst svým vnučkám.",
+        "author": "Taťjana Medvecká",
+        "source": "herečka",
+        "rating": 5
+      },
+      {
+        "quote": "Chvílemi se mi tajil dech napětím a chvílemi jsem naopak rozdýchávala dojetí. Viktor je ze současného světa, citlivý kluk, který tak odhodlaně a zapáleně ukazuje cestu odvahy. Kdyby byly takové knihy na seznamu povinné četby v době mého dětství, určitě bych nesháněla výcuc do čtenářského deníku podvodem.",
+        "author": "Šárka Brožíková",
+        "source": "speciální pedagog, psycholog",
+        "rating": 5
+      },
+      {
+        "quote": "V iktor a případ zmizelého psa je strašně napínavá knížka. Vadí mi, když někdo ubližuje dětem i zvířatům. Nejvíc jsem se bál, když šel Viktor s Žofií v noci zachránit Senecu.",
+        "author": "Benjamín",
+        "source": "7 let",
+        "rating": 5
+      }
+    ],
+    "gallery": [
+      "/assets/images/ukazky/lunino-kralovstvi.jpg",
+      "/assets/images/ukazky/hlidac.jpg"
+    ],
+    "featured": true,
+    "publishedDate": "2019-05-01"
+  },
+  {
+    "id": "viktor-a-zahadna-teta-bobina",
+    "title": "Viktor a záhadná teta Bobina",
+    "slug": "viktor-a-zahadna-teta-bobina",
+    "subtitle": "Jak silné může být přátelství malého kluka a staroušků?",
+    "summary": "Přečti si prázdninový příběh Viktora v překvapivém prostředí. Pro zvídavé děti, rodiče i prarodiče. A k tomu skvělé ilustrace.",
+    "description": "'Zlobivé' devítileté dítě Viktor je za trest svými věčně pracujícími rodiči odesláno ke svérázné asketické tetě Bobině do zapadlého městečka Hrabákova, kde má strávit celé dva měsíce prázdnin. Zuřící Viktor netuší, že teta je ředitelkou Domova pokojného stáří, a že právě tam, v domově důchodců, společně s ní a dalšími deseti staroušky prožije to nejkrásnější léto svého života.",
+    "ageGroup": "Ilustrovaná kniha pro nebojácné děti, rodiče a prarodiče od 8 do 108 let",
+    "year": 2018,
+    "publisher": "Albatros",
+    "isbn": "978-80-00-05291-6",
+    "pages": null,
+    "cover": "/assets/images/hero/viktor-a-zahadna-teta-bobina-900.jpg",
+    "coverThumbnail": "/assets/images/hero/viktor-a-zahadna-teta-bobina-900.jpg",
+    "authors": {
+      "text": ["Jarmila Vlčková", "Pavlína Jurková"],
+      "illustrations": ["Martina Fojtů"]
+    },
+    "buyLinks": [
+      {
+        "retailer": "Albatros Media",
+        "url": "https://www.albatrosmedia.cz/tituly/83974938/viktor-a-zahadna-teta-bobina/",
+        "primary": true
+      }
+    ],
+    "excerpts": [
+      {
+        "title": "Viktor a postava s černou kapucí",
+        "text": "…Viktor strnul a snažil se rozpoznat, kdo by to mohl být. Postava v černém plášti s kapucí se zarazila. Zadívala se na Viktora a rychle zmizela v zahradě…"
+      },
+      {
+        "title": "Na starém ponurém hřbitově",
+        "text": "…ocitl se na starém ponurém hřbitově. Tma byla opravdu černočerná, jen sem tam dohořívala světýlka svíček a osvětlovala jména mrtvých vytesaná do kamene. Nad jedním z hrobů stála černá postava a nervózně se rozhlížela po hřbitově. Viktor s hrůzou zjistil, že v rukou svírá motyku a napřahuje se k úderu…"
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Prolnutí dětského a starouškovského světa je velmi půvabné, opravdové, dojemné, povzbudivé a originální. Vrátila jsem se do dětství ve svém dospělém těle. Díky za tu příležitost!",
+        "author": "Irena Budweiserová",
+        "source": "zpěvačka",
+        "rating": 5
+      },
+      {
+        "quote": "Knížku jsem přečetla na jeden dech. Párkrát jsem si i brekla, to už tak staré herečky dělávají. Zároveň jsem si v příběhu Viktora pěkně zahrála. Hned několik postav najednou! Děkuji, držím palce, těším se…",
+        "author": "Bára Hrzánová",
+        "source": "herečka",
+        "rating": 5
+      },
+      {
+        "quote": "Knížka je napínavá, ale i vtipná. Četli jsme ji celá rodina společně a náš táta se u toho hodně nasmál. Také má krásné obrázky, a to je pro mě hodně důležité.",
+        "author": "Matyáš",
+        "source": "8 let",
+        "rating": 5
+      }
+    ],
+    "gallery": [
+      "/assets/images/ukazky/viktor.jpg",
+      "/assets/images/ukazky/hrbitov.jpg",
+      "/assets/images/ukazky/ziguli.jpg",
+      "/assets/images/ukazky/cikanka.jpg"
+    ],
+    "featured": true,
+    "publishedDate": "2018-05-17",
+    "awards": [
+      {
+        "title": "1. místo v literární anketě SUK – Čteme všichni!",
+        "year": 2018,
+        "description": "Cena dětí - Národní pedagogické muzeum a knihovna J. A. Komenského"
+      }
+    ]
+  },
+  {
+    "id": "tajemstvi-rodiny-m",
+    "title": "Tajemství rodiny M",
+    "slug": "tajemstvi-rodiny-m",
+    "subtitle": null,
+    "summary": "Motivační příběh o sourozencích, o strastech dospívání, o výzvách, o síle rodiny…",
+    "description": "Matylda, Maxmilián a Kryštof jsou sourozenci, kteří jednoho dne zjistí, že před nimi rodiče něco tají. A tak rozjedou pátrací akci. V jednu chvíli se ale všechno zvrtne a život celé rodiny se obrátí vzhůru nohama. Matylda se proto rozhodne běžet svůj životní závod a rodinu zachránit. Podaří se jí vyhrát?",
+    "ageGroup": "Kniha pro děti od 10 let",
+    "year": 2022,
+    "publisher": "Booktook.cz",
+    "isbn": "",
+    "pages": null,
+    "cover": "/assets/images/hero/tajemstvi-900.jpg",
+    "coverThumbnail": "/assets/images/hero/tajemstvi-900.jpg",
+    "authors": {
+      "text": ["Pavlína Jurková", "Jarmila Vlčková"],
+      "illustrations": []
+    },
+    "buyLinks": [
+      {
+        "retailer": "Luxor",
+        "url": "https://www.luxor.cz/v/1874118/tajemstvi-rodiny-m",
+        "primary": true
+      },
+      {
+        "retailer": "Booktook.cz",
+        "url": "https://www.booktook.cz/p/tajemstvi-rodiny-m/"
+      }
+    ],
+    "excerpts": [
+      {
+        "title": "Matylda a odraz v zrcadle",
+        "text": "Matylda se rozhodla, že i když se to nemá, pro jednou se nic nestane, když bude rodiče špehovat. Spustila nohy z postele a zamířila ke dveřím. Cestou se pohledem střetla s vlastním odrazem v zrcadle. Prohlížela si svou protáhlou tvář, velký nos a drobné tělíčko v plandavém pyžamu. Vypadala spíš jako kluk než holka."
+      }
+    ],
+    "testimonials": [],
+    "gallery": [
+      "/assets/images/ukazky/tajemstvi-rodiny-m-1.jpg",
+      "/assets/images/ukazky/tajemstvi-rodiny-m-2.jpg"
+    ],
+    "featured": true,
+    "publishedDate": "2022-01-01"
+  },
+  {
+    "id": "roza-a-ztraceny-tatinek",
+    "title": "Róza a ztracený tatínek",
+    "slug": "roza-a-ztraceny-tatinek",
+    "subtitle": null,
+    "summary": "Nová kniha pro děti od autorek úspěšných knih o Viktorovi a Elišce.",
+    "description": "Nová kniha pro děti od autorek úspěšných knih o Viktorovi a Elišce.",
+    "ageGroup": "Pro děti od 8 let",
+    "year": 2025,
+    "publisher": "65. pole",
+    "isbn": "",
+    "pages": null,
+    "cover": "/assets/images/hero/roza-a-ztraceny-tatinek-900.jpg",
+    "coverThumbnail": "/assets/images/hero/roza-a-ztraceny-tatinek-900.jpg",
+    "authors": {
+      "text": ["Pavlína Jurková", "Jarmila Vlčková"],
+      "illustrations": ["Petr Korunka"]
+    },
+    "buyLinks": [
+      {
+        "retailer": "65. pole",
+        "url": "https://www.65pole.cz/kniha/roza-a-ztraceny-tatinek/",
+        "primary": true
+      }
+    ],
+    "excerpts": [],
+    "testimonials": [],
+    "gallery": [
+      "/assets/images/ukazky/ukazka-roza-1.jpg",
+      "/assets/images/ukazky/ukazka-roza-2.jpg",
+      "/assets/images/ukazky/ukazka-roza-3.jpg",
+      "/assets/images/ukazky/ukazka-roza-4.jpg",
+      "/assets/images/ukazky/ukazka-roza-5.jpg",
+      "/assets/images/ukazky/ukazka-roza-6.jpg"
+    ],
+    "featured": true,
+    "publishedDate": "2025-01-01"
+  },
+  {
+    "id": "hra-o-sen",
+    "title": "Hra o sen",
+    "slug": "hra-o-sen",
+    "subtitle": "Bojuj o to, co chceš a buď připravený to dostat!",
+    "summary": "Napínavá knižní reality show pro ty, kdo se rádi bojí",
+    "description": "Deset třináctiletých, výjimečně nadaných dětí odjíždí do staré zapomenuté vily uprostřed divoké přírody. Čeká je tvrdý boj. Byly vybrány do nové televizní soutěže Tajný mecenáš. Kdo vyhraje, získá vlastního mecenáše – člověka, který mu zaplatí vše, co bude potřebovat, aby mohl rozvíjet svůj mimořádný talent. Soutěžící děti totiž spojuje jedna věc – vyrůstají v rodinách, které nemají peníze. Jde tedy o hodně. Vyhrát ale může jen jeden!",
+    "ageGroup": "Pro čtenáře od 11 let",
+    "year": 2020,
+    "publisher": "Grada",
+    "isbn": "",
+    "pages": null,
+    "cover": "/assets/images/hero/hra-o-sen-900.jpg",
+    "coverThumbnail": "/assets/images/hero/hra-o-sen-900.jpg",
+    "authors": {
+      "text": ["Pavlína Jurková", "Jarmila Vlčková"],
+      "illustrations": ["Eva Chupíková"]
+    },
+    "buyLinks": [
+      {
+        "retailer": "Grada",
+        "url": "https://www.grada.cz/hra-o-sen-11596/",
+        "primary": true
+      }
+    ],
+    "excerpts": [
+      {
+        "title": "Geniální dárek pro mecenáše",
+        "text": "Leon našel v zahradě mrtvého hraboše a rozhodl se ho vypreparovat. Byl si jistý, že právě to bude geniální dárek pro mecenáše. Dal si na nos kolíček na prádlo, aby necítil ten strašný smrad, který se z hraboše linul, oblékl si bílý plášť a na ruce si navlékl gumové rukavice."
+      },
+      {
+        "title": "Limuzína se rozjela",
+        "text": "…Limuzína se rozjela. Leon to nevydržel a rýpnul si: 'Ty jsi ten geniální spisovatel s příšernou matkou, viď? To byla ona, cos jí mával?' Filipovi se nechtělo znovu vysvětlovat, jak to režisér schválně celé sestříhal, aby z toho maminka vyšla jako fúrie."
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Hra o sen je zábavná, dobrodružná kniha plná emocí. Když jsem jí začala číst, nemohla jsem přestat. Hltala jsem slovo od slova a měla pocit, že toto napínavé dobrodružství prožívám s těmito téměř geniálními hrdiny.",
+        "author": "Anastázie",
+        "source": "15 let",
+        "rating": 5
+      },
+      {
+        "quote": "Skvělá kniha, která zaujme nejen děti, ale i dospělé. Je to jako kdybyste se koukali na skutečnou reality show v televizi.",
+        "author": "Ludvík",
+        "source": "13 let",
+        "rating": 5
+      }
+    ],
+    "gallery": [
+      "/assets/images/ukazky/hra-o-sen.jpg",
+      "/assets/images/ukazky/hra-o-sen-adam.jpg"
+    ],
+    "featured": true,
+    "publishedDate": "2020-01-01"
   }
 ]

@@ -315,16 +315,16 @@ Vytvoříme `src/_data/books.json` se VŠEMI knihami v jednom poli:
 
 Z analýzy současných HTML souborů máme tyto knihy:
 
-| HTML soubor                           | ID pro books.json             | Status    |
-| ------------------------------------- | ----------------------------- | --------- |
-| `eliska-andilek.html`                 | `eliska-andilek`              | ✅ Aktivní |
-| `eliska-detektiv.html`                | `eliska-detektiv`             | ✅ Aktivní |
-| `eliska-rebelka.html`                 | `eliska-rebelka`              | ✅ Aktivní |
-| `viktor-a-pripad-zmizeleho-psa.html`  | `viktor-a-pripad-zmizeleho-psa` | ✅ Aktivní |
-| `viktor-a-zahadna-teta-bobina.html`   | `viktor-a-zahadna-teta-bobina` | ✅ Aktivní |
-| `tajemstvi-rodiny-m.html`             | `tajemstvi-rodiny-m`          | ✅ Aktivní |
-| `roza-a-ztraceny-tatinek.html`        | `roza-a-ztraceny-tatinek`     | ✅ Aktivní |
-| `hra-o-sen.html`                      | `hra-o-sen`                   | ✅ Aktivní |
+| HTML soubor                          | ID pro books.json               | Status     |
+| ------------------------------------ | ------------------------------- | ---------- |
+| `eliska-andilek.html`                | `eliska-andilek`                | ✅ Aktivní |
+| `eliska-detektiv.html`               | `eliska-detektiv`               | ✅ Aktivní |
+| `eliska-rebelka.html`                | `eliska-rebelka`                | ✅ Aktivní |
+| `viktor-a-pripad-zmizeleho-psa.html` | `viktor-a-pripad-zmizeleho-psa` | ✅ Aktivní |
+| `viktor-a-zahadna-teta-bobina.html`  | `viktor-a-zahadna-teta-bobina`  | ✅ Aktivní |
+| `tajemstvi-rodiny-m.html`            | `tajemstvi-rodiny-m`            | ✅ Aktivní |
+| `roza-a-ztraceny-tatinek.html`       | `roza-a-ztraceny-tatinek`       | ✅ Aktivní |
+| `hra-o-sen.html`                     | `hra-o-sen`                     | ✅ Aktivní |
 
 **Celkem: 8 knih**
 
@@ -589,6 +589,7 @@ document.addEventListener("DOMContentLoaded", function () {
 ```
 
 **Soubory k odstranění:**
+
 - `assets/js/jquery.swipebox.min.js` → nahrazeno GLightbox CDN
 - `assets/js/odpocet.js` → nepoužíváno
 - `assets/js/smooth-scroll.js` → portováno do main.js
@@ -800,14 +801,14 @@ layout: layouts/base.njk
 
 ### 2b.3 Stránky k migraci
 
-| HTML soubor          | Nový soubor       | Poznámka                                     |
-| -------------------- | ----------------- | -------------------------------------------- |
-| `index.html`         | `src/index.njk`   | Homepage                                     |
-| `nase-knihy.html`    | `src/nase-knihy.njk` | Listing všech knih (iterace přes books.json) |
-| `autori-knihy.html`  | `src/autori-knihy.njk` | Autoři (iterace přes authors.json)           |
-| `galerie.html`       | `src/galerie.njk` | Galerie obrázků                              |
-| `media.html`         | `src/media.njk`   | Média a recenze                              |
-| 8× knihy HTML        | `src/books.njk`   | Generováno dynamicky z books.json            |
+| HTML soubor         | Nový soubor            | Poznámka                                     |
+| ------------------- | ---------------------- | -------------------------------------------- |
+| `index.html`        | `src/index.njk`        | Homepage                                     |
+| `nase-knihy.html`   | `src/nase-knihy.njk`   | Listing všech knih (iterace přes books.json) |
+| `autori-knihy.html` | `src/autori-knihy.njk` | Autoři (iterace přes authors.json)           |
+| `galerie.html`      | `src/galerie.njk`      | Galerie obrázků                              |
+| `media.html`        | `src/media.njk`        | Média a recenze                              |
+| 8× knihy HTML       | `src/books.njk`        | Generováno dynamicky z books.json            |
 
 ### 2b.4 Checklist
 
@@ -829,13 +830,14 @@ layout: layouts/base.njk
 **Rozhodnutí:** Implementujeme pouze základní styly potřebné pro funkční web. Pokročilé animace a efekty přidáme iterativně po spuštění.
 
 - Migrovat `assets/css/custom20250625.css` do `src/css/style.css`
-- Aktualizovat Bootstrap 4 CSS utility → Bootstrap 5 (ml-* → ms-*, sr-only → visually-hidden)
+- Aktualizovat Bootstrap 4 CSS utility → Bootstrap 5 (ml-_ → ms-_, sr-only → visually-hidden)
 - Odstranit `!important` nadužívání
 - Základní responsive design (existující styl zachovat)
 
 ### 2.5.2 Co přidat POZDĚJI (post-launch)
 
 Všechny pokročilé vylepšení z původního plánu budou přidány iterativně:
+
 - Fluid typography s `clamp()`
 - Hover efekty na book cards
 - Scroll-triggered fade-in animace
@@ -853,6 +855,7 @@ Všechny pokročilé vylepšení z původního plánu budou přidány iterativn�
 ### 3.1 Schema.org strukturovaná data ✅ DONE
 
 **Již implementováno v Phase 2b:** `src/_includes/components/schema-book.njk` obsahuje kompletní Book schema včetně:
+
 - Základní metadata (title, author, illustrator, publisher)
 - ISBN, počet stran, jazyk
 - Aggregate rating z testimonials (pokud existují)
@@ -928,23 +931,23 @@ Sitemap: https://www.knihaprodeti.cz/sitemap.xml
 
 ```json
 {
-    "name": "Kniha pro děti",
-    "short_name": "Kniha pro děti",
-    "icons": [
-        {
-            "src": "/android-chrome-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "/android-chrome-256x256.png",
-            "sizes": "256x256",
-            "type": "image/png"
-        }
-    ],
-    "theme_color": "#ca6d1b",
-    "background_color": "#ffffff",
-    "display": "standalone"
+  "name": "Kniha pro děti",
+  "short_name": "Kniha pro děti",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ca6d1b",
+  "background_color": "#ffffff",
+  "display": "standalone"
 }
 ```
 
@@ -1015,29 +1018,29 @@ Přidat `loading="lazy"` na obrázky pod záhybem (první viewport bez lazy load
 
 ## 📅 Časový odhad (AKTUALIZOVÁNO)
 
-| Fáze      | Popis                                     | Odhad            | Priorita     | Status        |
-| --------- | ----------------------------------------- | ---------------- | ------------ | ------------- |
-| **0**     | Příprava, archivace                       | 0.5h             | 🔴 Vysoká    | Not started   |
-| **1**     | Eleventy inicializace                     | 1-2h             | 🔴 Vysoká    | Not started   |
-| **1.5**   | **Extrakce dat do JSON** ⭐               | 3-4h             | 🔴 KRITICKÁ  | Not started   |
-| **2**     | Tech upgrade (BS5, GLightbox, vanilla JS) | 2-3h             | 🔴 Vysoká    | Not started   |
-| **2b**    | Migrace obsahu do šablon                  | 6-8h             | 🔴 Vysoká    | Not started   |
-| **2.5**   | ~~UI/UX vylepšení~~ → MVP CSS only        | 1-2h             | 🟡 Střední   | Deferred      |
-| **3**     | SEO (sitemap, robots.txt, webmanifest)    | 1h               | 🟡 Střední   | Not started   |
-| **4**     | Obrázky (lazy loading)                    | 1h               | 🟡 Střední   | Not started   |
-| **5**     | Pokročilé UI/UX vylepšení                 | 3-5h             | 🟢 Post-MVP  | Deferred      |
-|           | **Celkem MVP (Fáze 0-4)**                 | **~15-21 hodin** |              |               |
-|           | **S pokročilými vylepšeními (+ Fáze 5)**  | **~18-26 hodin** |              |               |
+| Fáze    | Popis                                     | Odhad            | Priorita    | Status       |
+| ------- | ----------------------------------------- | ---------------- | ----------- | ------------ |
+| **0**   | Příprava, archivace                       | 0.5h             | 🔴 Vysoká   | ✅ COMPLETED |
+| **1**   | Eleventy inicializace                     | 1-2h             | 🔴 Vysoká   | ✅ COMPLETED |
+| **1.5** | **Extrakce dat do JSON** ⭐               | 3-4h             | 🔴 KRITICKÁ | ✅ COMPLETED |
+| **2**   | Tech upgrade (BS5, GLightbox, vanilla JS) | 2-3h             | 🔴 Vysoká   | Not started  |
+| **2b**  | Migrace obsahu do šablon                  | 6-8h             | 🔴 Vysoká   | Not started  |
+| **2.5** | ~~UI/UX vylepšení~~ → MVP CSS only        | 1-2h             | 🟡 Střední  | Deferred     |
+| **3**   | SEO (sitemap, robots.txt, webmanifest)    | 1h               | 🟡 Střední  | Not started  |
+| **4**   | Obrázky (lazy loading)                    | 1h               | 🟡 Střední  | Not started  |
+| **5**   | Pokročilé UI/UX vylepšení                 | 3-5h             | 🟢 Post-MVP | Deferred     |
+|         | **Celkem MVP (Fáze 0-4)**                 | **~15-21 hodin** |             |              |
+|         | **S pokročilými vylepšeními (+ Fáze 5)**  | **~18-26 hodin** |             |              |
 
 ### Kritická cesta (MVP)
 
 1. ✅ **Fáze 0** (0.5h) - Příprava
 2. ✅ **Fáze 1** (2h) - Eleventy setup
-3. ⚠️ **Fáze 1.5** (4h) - **DATA EXTRACTION** ← Kritický blokér
-4. ✅ **Fáze 2** (3h) - Tech upgrade
-5. ✅ **Fáze 2b** (8h) - Template migration
-6. ✅ **Fáze 3** (1h) - SEO
-7. ✅ **Fáze 4** (1h) - Images
+3. ✅ **Fáze 1.5** (4h) - **DATA EXTRACTION** ← COMPLETED!
+4. ⏳ **Fáze 2** (3h) - Tech upgrade ← NEXT
+5. ⏳ **Fáze 2b** (8h) - Template migration
+6. ⏳ **Fáze 3** (1h) - SEO
+7. ⏳ **Fáze 4** (1h) - Images
 
 **Total: ~19h pro funkční web**
 
@@ -1058,7 +1061,7 @@ Přidat `loading="lazy"` na obrázky pod záhybem (první viewport bez lazy load
 3. **Data-driven:** Všechny knihy generované dynamicky z `books.json` ✅
 4. **No analytics:** Google Analytics odstraněno dle požadavku ✅
 5. **Minimal CSS:** Pokročilé animace odloženy na post-MVP ✅
-6. **CSS migrace:** Bootstrap 4 → 5 utility updates (ml-* → ms-*, sr-only → visually-hidden)
+6. **CSS migrace:** Bootstrap 4 → 5 utility updates (ml-_ → ms-_, sr-only → visually-hidden)
 7. **JS konsolidace:** Odstranění jQuery, Swipebox, odpocet.js; port smooth-scroll.js
 8. **Testování:** Důkladně otestovat navbar na mobilu (BS5 má jiný JS)
 9. **Reference projekt:** Architektura bude zrcadlit divadlo-laryfary
@@ -1069,19 +1072,19 @@ Přidat `loading="lazy"` na obrázky pod záhybem (první viewport bez lazy load
 
 ### Co se změnilo oproti originálu:
 
-| Aspekt | Původní plán | Aktualizovaný plán | Důvod |
-|--------|-------------|-------------------|-------|
-| **Folder structure** | `src/css/`, `src/images/` | `src/` → `_site/assets/` | Zachovat URL kompatibilitu |
-| **Data organizace** | Nedefinováno | `books.json` array + schemas | Data-driven architecture |
-| **Fáze pořadí** | Fáze 2b nejasná | Nová Fáze 1.5 + detailní 2b | Kritická cesta jasná |
-| **Book pages** | Individuální files | Dynamic pagination | DRY principle |
-| **Analytics** | Neuvedeno | Explicitně odstraněno | User requirement |
-| **UI/UX** | Kompletní hned | MVP first, iterativní | Faster time-to-market |
-| **CSS files** | Nejasné | `custom20250625.css` → `style.css` | Konsolidace |
-| **JS dependencies** | Nejasné | Port + removal plan | Technický dluh |
-| **Schema.org** | Základní | Enhanced s reviews | SEO optimalizace |
-| **Missing pages** | Neidentifikováno | 4 knihy doplněny | Kompletní inventura |
-| **Image folders** | Neuvedeno | `img/` removed (Swipebox) | Cleanup |
+| Aspekt               | Původní plán              | Aktualizovaný plán                 | Důvod                      |
+| -------------------- | ------------------------- | ---------------------------------- | -------------------------- |
+| **Folder structure** | `src/css/`, `src/images/` | `src/` → `_site/assets/`           | Zachovat URL kompatibilitu |
+| **Data organizace**  | Nedefinováno              | `books.json` array + schemas       | Data-driven architecture   |
+| **Fáze pořadí**      | Fáze 2b nejasná           | Nová Fáze 1.5 + detailní 2b        | Kritická cesta jasná       |
+| **Book pages**       | Individuální files        | Dynamic pagination                 | DRY principle              |
+| **Analytics**        | Neuvedeno                 | Explicitně odstraněno              | User requirement           |
+| **UI/UX**            | Kompletní hned            | MVP first, iterativní              | Faster time-to-market      |
+| **CSS files**        | Nejasné                   | `custom20250625.css` → `style.css` | Konsolidace                |
+| **JS dependencies**  | Nejasné                   | Port + removal plan                | Technický dluh             |
+| **Schema.org**       | Základní                  | Enhanced s reviews                 | SEO optimalizace           |
+| **Missing pages**    | Neidentifikováno          | 4 knihy doplněny                   | Kompletní inventura        |
+| **Image folders**    | Neuvedeno                 | `img/` removed (Swipebox)          | Cleanup                    |
 
 ### Klíčová rozhodnutí:
 
