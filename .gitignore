@@ -4,6 +4,11 @@ node_modules/
 # Build output
 _site/
 
+# Rework documentation (local only)
+IMPLEMENTATION-STATUS.md
+rework-design.md
+rework-plan.md
+
 # Previous exports
 lovable-export/
 
