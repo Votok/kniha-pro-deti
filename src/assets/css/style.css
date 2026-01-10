@@ -103,6 +103,103 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.bg-hero-uvod {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.35), rgba(255, 255, 255, 0)),
+    url(../images/hero/kniha-pro-deti-900.jpg);
+  background-position: right;
+}
+.bg-hero-uvod-bobina {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.35), rgba(255, 255, 255, 0)),
+    url(../images/hero/viktor-a-zahadna-teta-bobina-900.jpg);
+  background-position: right;
+}
+.bg-hero-uvod-pripad {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.35), rgba(255, 255, 255, 0)),
+    url(../images/hero/viktor-a-pripad-zmizeleho-psa-900.jpg);
+  background-position: right;
+}
+
+
+.hero .dot {
+  display: none;
+}
+
+/* Hero Variations (Legacy) */
+.bg-hero-uvod-roza {
+  background-image: url(../images/hero/roza-a-ztraceny-tatinek-470.jpg);
+  background-position: center;
+}
+
+.bg-hero-uvod.bg-hero-uvod-roza h1,
+.bg-hero-uvod.bg-hero-uvod-roza p {
+  color: rgb(0, 0, 0);
+  background: white;
+  padding: 1rem;
+  margin-top: 15rem;
+}
+
+.bg-hero-uvod-hra-o-sen {
+  background-image: url(../images/hero/hra-o-sen-470.jpg);
+  background-position: center;
+}
+
+.bg-hero-uvod.bg-hero-uvod-hra-o-sen h1,
+.bg-hero-uvod.bg-hero-uvod-hra-o-sen p {
+  color: rgb(0, 0, 0);
+}
+.bg-hero-uvod-eliska-andilek {
+  background-image: url(../images/hero/eliska-andilek.jpg);
+  background-position: center;
+}
+
+.bg-hero-uvod.bg-hero-uvod-eliska-andilek h1,
+.bg-hero-uvod.bg-hero-uvod-eliska-andilek p {
+  color: rgb(0, 0, 0);
+  background: white;
+  padding: 1rem;
+  margin-top: 15rem;
+}
+.bg-hero-uvod-eliska-rebelka {
+  background-image: url(../images/hero/eliska-rebelka.jpg);
+  background-position: right;
+}
+
+.bg-hero-uvod.bg-hero-uvod-eliska-rebelka h1,
+.bg-hero-uvod.bg-hero-uvod-eliska-rebelka p {
+  color: rgb(0, 0, 0);
+  background: white;
+  padding: 1rem;
+  margin-top: 15rem;
+}
+.bg-hero-uvod-eliska-detektiv {
+  background-image: url(../images/hero/eliska-detektiv-470.jpg);
+  background-position: center;
+}
+
+.bg-hero-uvod.bg-hero-uvod-eliska-detektiv h1,
+.bg-hero-uvod.bg-hero-uvod-eliska-detektiv p {
+  color: rgb(0, 0, 0);
+  background: white;
+  padding: 1rem;
+  margin-top: 15rem;
+}
+.bg-hero-uvod-tajemstvi {
+  background-image: url(../images/hero/tajemstvi-470.jpg);
+  background-position: center;
+}
+
+.bg-hero-uvod.bg-hero-uvod-tajemstvi h1,
+.bg-hero-uvod.bg-hero-uvod-tajemstvi p {
+  color: transparent;
+}
+.bg-hero-uvod.bg-hero-uvod-tajemstvi .scroll-down {
+  display: none;
+}
+
+.phone {
+  opacity: 0.5;
+}
+
 /* Book Cards
    ========================================================================== */
 .book-card {
@@ -266,6 +363,20 @@ a.scroll-down img {
   overflow: hidden;
 }
 
+.flex-equal > * {
+  -ms-flex: 1;
+  -webkit-box-flex: 1;
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    -ms-flex: 1;
+    -webkit-box-flex: 1;
+    flex: 1;
+  }
+}
+
 .circle-object {
   background: #3e3e3e;
   width: 50px;
@@ -284,6 +395,44 @@ a.scroll-down img {
   }
 }
 
+/* Medium-small Devices (470px and up) */
+@media (min-width: 470px) {
+  .bg-hero-uvod-hra-o-sen {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0)),
+      url(../images/hero/hra-o-sen.jpg);
+    background-position: right;
+  }
+  .bg-hero-uvod-eliska-andilek {
+    background-image: url(../images/hero/eliska-andilek.jpg);
+    background-position: right;
+  }
+  .bg-hero-uvod-eliska-rebelka {
+    background-image: url(../images/hero/eliska-rebelka.jpg);
+    background-position: right;
+  }
+  .bg-hero-uvod-eliska-detektiv {
+    background-image: url(../images/hero/eliska-detektiv.jpg);
+    background-position: right;
+  }
+  .bg-hero-uvod-tajemstvi {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0)),
+      url(../images/hero/tajemstvi.jpg);
+    background-position: right;
+  }
+  .bg-hero-uvod.bg-hero-uvod-tajemstvi h1,
+  .bg-hero-uvod.bg-hero-uvod-tajemstvi p {
+    color: rgb(0, 0, 0);
+  }
+  .bg-hero-uvod.bg-hero-uvod-tajemstvi .scroll-down {
+    display: block;
+  }
+  
+  .bg-hero-uvod-roza {
+    background-image: url(../images/hero/roza-a-ztraceny-tatinek.jpg);
+    background-position: right;
+  }
+}
+
 /* Small Devices (576px and up) */
 @media (min-width: 576px) {
   .navbar-brand {
@@ -295,6 +444,41 @@ a.scroll-down img {
   }
   .lead .book-title {
     font-size: 2.5rem;
+  }
+  
+  .bg-hero-uvod {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.35), rgba(255, 255, 255, 0)),
+      url(../images/hero/kniha-pro-deti.jpg);
+  }
+  .bg-hero-uvod-bobina {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.35), rgba(255, 255, 255, 0)),
+      url(../images/hero/viktor-a-zahadna-teta-bobina.jpg);
+  }
+  .bg-hero-uvod-pripad {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.35), rgba(255, 255, 255, 0)),
+      url(../images/hero/viktor-a-pripad-zmizeleho-psa.jpg);
+  }
+  .bg-hero-uvod-hra-o-sen {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0)),
+      url(../images/hero/hra-o-sen.jpg);
+    background-position: right;
+  }
+  .bg-hero-uvod-eliska-andilek {
+    background-image: url(../images/hero/eliska-andilek.jpg);
+    background-position: right;
+  }
+  .bg-hero-uvod-eliska-rebelka {
+    background-image: url(../images/hero/eliska-rebelka.jpg);
+    background-position: right;
+  }
+  .bg-hero-uvod-eliska-detektiv {
+    background-image: url(../images/hero/eliska-detektiv.jpg);
+    background-position: right;
+  }
+  .bg-hero-uvod-tajemstvi {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0)),
+      url(../images/hero/tajemstvi.jpg);
+    background-position: right;
   }
 }
 
@@ -314,6 +498,41 @@ a.scroll-down img {
   .reference-video {
     padding: 0 10%;
   }
+
+  .bg-hero-uvod {
+    background-position: right;
+  }
+
+  .bg-hero-uvod h1,
+  .bg-hero-uvod p {
+    color: white;
+    background-color: transparent;
+  }
+  
+  .bg-hero-uvod-hra-o-sen {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+      url(../images/hero/hra-o-sen.jpg);
+  }
+  .bg-hero-uvod-eliska-andilek {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+      url(../images/hero/eliska-andilek.jpg);
+  }
+  .bg-hero-uvod-eliska-rebelka {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+      url(../images/hero/eliska-rebelka.jpg);
+  }
+  .bg-hero-uvod-eliska-detektiv {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+      url(../images/hero/eliska-detektiv.jpg);
+  }
+  .bg-hero-uvod-tajemstvi {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+      url(../images/hero/tajemstvi.jpg);
+  }
+  .bg-hero-uvod-roza {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+      url(../images/hero/roza-a-ztraceny-tatinek.jpg);
+  }
 }
 
 /* Large Devices (desktops, 992px and up) */
@@ -323,6 +542,9 @@ a.scroll-down img {
   }
   .reference-strip img {
     max-width: 200px;
+  }
+  .dot {
+    display: block;
   }
 }
 
@@ -336,6 +558,16 @@ a.scroll-down img {
   }
   .reference-video {
     padding: 0 15%;
+  }
+  .bg-hero-svatba {
+    background-position: right;
+  }
+}
+
+@media (min-width: 1500px) {
+  .book-sample img {
+    float: left;
+    margin-right: 1rem;
   }
 }
 
