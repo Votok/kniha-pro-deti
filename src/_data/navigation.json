@@ -1,0 +1,8 @@
+{
+  "main": [
+    { "title": "Naše knihy", "url": "/nase-knihy.html" },
+    { "title": "Autoři", "url": "/autori-knihy.html" },
+    { "title": "Galerie", "url": "/galerie.html" },
+    { "title": "Média", "url": "/media.html" }
+  ]
+}

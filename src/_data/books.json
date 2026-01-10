@@ -1,0 +1,33 @@
+[
+  {
+    "id": "eliska-andilek",
+    "title": "Eliška andílek",
+    "slug": "eliska-andilek",
+    "subtitle": null,
+    "summary": "Všichni říkají, že vypadám jako andílek. Žádný andílek ale nejsem...",
+    "description": "Delší popis knihy - TŘEBA EXTRAHOVAT Z HTML",
+    "ageGroup": "Pro děti od 6 do 9 let",
+    "year": 2018,
+    "publisher": "Nakladatelství XYZ",
+    "isbn": "978-80-XXXXX-XX-X",
+    "pages": 120,
+    "cover": "/assets/images/hero/eliska-andilek-900.jpg",
+    "coverThumbnail": "/assets/images/thumbnails/eliska-andilek-thumb.jpg",
+    "authors": {
+      "text": ["Pavlína Jurková", "Jarmila Vlčková"],
+      "illustrations": ["Petr Korunka"]
+    },
+    "buyLinks": [
+      {
+        "retailer": "Databáze knih",
+        "url": "https://www.databazeknih.cz/knihy/eliska-andilek-123456",
+        "primary": true
+      }
+    ],
+    "excerpts": [],
+    "testimonials": [],
+    "gallery": [],
+    "featured": true,
+    "publishedDate": "2018-09-15"
+  }
+]

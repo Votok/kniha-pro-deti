@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} | {{ site.name }}</title>
+  <meta name="description" content="{{ description }}">
+</head>
+<body>
+  <h1>Eleventy Setup Test</h1>
+  <p>If you see this, Eleventy is working!</p>
+  <ul>
+    <li>Site name: {{ site.name }}</li>
+    <li>Current year: {{ "" | year }}</li>
+    <li>Cache bust: {{ "" | cacheBust }}</li>
+  </ul>
+</body>
+</html>

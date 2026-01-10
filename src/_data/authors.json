@@ -1,0 +1,23 @@
+[
+  {
+    "id": "pavlina-jurkova",
+    "name": "Pavlína Jurková",
+    "role": "Autorka",
+    "bio": "Text o autorce bude doplněn z HTML souborů...",
+    "photo": "/assets/images/authors/pavlina-jurkova.jpg"
+  },
+  {
+    "id": "jarmila-vlckova",
+    "name": "Jarmila Vlčková",
+    "role": "Autorka",
+    "bio": "Text o autorce bude doplněn z HTML souborů...",
+    "photo": "/assets/images/authors/jarmila-vlckova.jpg"
+  },
+  {
+    "id": "petr-korunka",
+    "name": "Petr Korunka",
+    "role": "Ilustrátor",
+    "bio": "Text o ilustrátorovi bude doplněn z HTML souborů...",
+    "photo": "/assets/images/authors/petr-korunka.jpg"
+  }
+]
