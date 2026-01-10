@@ -1,0 +1,29 @@
+{# Karta autora pro autori-knihy.html #}
+<div class="col-md-6 mb-4">
+  <div class="card h-100">
+    <div class="row g-0 h-100">
+      <div class="col-md-4">
+        <img src="{{ author.photo }}" class="img-fluid rounded-start h-100 object-fit-cover" alt="{{ author.name }}">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ author.name }}</h5>
+          <p class="card-text"><small class="text-muted">
+            {% if author.role == "author" %}Autor/ka{% elif author.role == "illustrator" %}Ilustrátor/ka{% else %}{{ author.role }}{% endif %}
+          </small></p>
+          <p class="card-text">{{ author.bio }}</p>
+          {% if author.website or author.email %}
+          <div class="mt-3">
+            {% if author.website %}
+            <a href="{{ author.website }}" class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener">Web</a>
+            {% endif %}
+            {% if author.email %}
+            <a href="mailto:{{ author.email }}" class="btn btn-sm btn-outline-secondary">Kontakt</a>
+            {% endif %}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

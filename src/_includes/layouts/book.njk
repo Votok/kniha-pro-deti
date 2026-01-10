@@ -1,0 +1,102 @@
+---
+layout: layouts/base.njk
+---
+
+{% set title = book.title %}
+{% set description = book.summary %}
+{% set ogImage = book.cover %}
+
+{% block schemaOrg %}
+  {% include "components/schema-book.njk" %}
+{% endblock %}
+
+<div class="book-detail">
+  <div class="hero" style="background-image: url('{{ book.cover }}');">
+    <div class="container">
+      <h1>{{ book.title }}</h1>
+      {% if book.subtitle %}<p class="lead">{{ book.subtitle }}</p>{% endif %}
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-8">
+        <h2>O knize</h2>
+        <p>{{ book.description }}</p>
+
+        <p class="text-muted">{{ book.ageGroup }}</p>
+
+        {% if book.awards %}
+        <div class="awards mb-4">
+          <h3>Ocenění</h3>
+          {% for award in book.awards %}
+          <div class="alert alert-success">
+            <strong>{{ award.name }}</strong>{% if award.year %} ({{ award.year }}){% endif %}
+            {% if award.description %}<br>{{ award.description }}{% endif %}
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if book.excerpts %}
+        <h3>Ukázky z knihy</h3>
+        {% for excerpt in book.excerpts %}
+        <div class="excerpt mb-4">
+          <h4>{{ excerpt.title }}</h4>
+          <p>{{ excerpt.text }}</p>
+        </div>
+        {% endfor %}
+        {% endif %}
+
+        {% if book.testimonials %}
+        <h3>Recenze</h3>
+        {% for testimonial in book.testimonials %}
+        <blockquote class="blockquote">
+          <p>{{ testimonial.quote }}</p>
+          <footer class="blockquote-footer">{{ testimonial.author }}
+            {% if testimonial.source %}, <cite>{{ testimonial.source }}</cite>{% endif %}
+          </footer>
+        </blockquote>
+        {% endfor %}
+        {% endif %}
+      </div>
+
+      <div class="col-md-4">
+        <div class="card sticky-top" style="top: 100px;">
+          <img src="{{ book.cover }}" class="card-img-top" alt="{{ book.title }}">
+          <div class="card-body">
+            <h5>Kde koupit</h5>
+            {% for link in book.buyLinks %}
+            <a href="{{ link.url }}" class="btn {% if link.primary %}btn-primary{% else %}btn-outline-primary{% endif %} w-100 mb-2" target="_blank" rel="noopener">
+              {{ link.retailer }}
+            </a>
+            {% endfor %}
+
+            <hr>
+            <p><strong>Vydavatel:</strong> {{ book.publisher }}</p>
+            <p><strong>Rok vydání:</strong> {{ book.year }}</p>
+            {% if book.isbn %}<p><strong>ISBN:</strong> {{ book.isbn }}</p>{% endif %}
+            {% if book.pages %}<p><strong>Počet stran:</strong> {{ book.pages }}</p>{% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% if book.gallery %}
+    <div class="row mt-5">
+      <div class="col-12">
+        <h3>Galerie</h3>
+        <div class="gallery-grid row g-3">
+          {% for image in book.gallery %}
+          <div class="col-6 col-md-4 col-lg-3">
+            <a href="{{ image }}" class="glightbox" data-gallery="book-{{ book.id }}">
+              <img src="{{ image }}" class="img-fluid rounded" alt="Ilustrace z knihy {{ book.title }}" loading="lazy">
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>

@@ -1,0 +1,365 @@
+/* ==========================================================================
+   Custom Styles for knihaprodeti.cz
+   Migrated from Bootstrap 4 to Bootstrap 5
+   ========================================================================== */
+
+/* Base Typography
+   ========================================================================== */
+body {
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+.lead .book-title {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+h2,
+h3,
+h4 {
+  font-weight: 600;
+}
+
+/* Layout
+   ========================================================================== */
+.container {
+  max-width: 960px;
+}
+
+/* Navigation
+   ========================================================================== */
+.navbar-brand {
+  line-height: 30px;
+  font-size: 0.9rem;
+}
+
+nav.bg-dark {
+  background-color: rgba(202, 109, 27, 0.85) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.menu-spacer {
+  display: none;
+}
+
+/* Add padding for fixed navbar */
+body {
+  padding-top: 56px;
+}
+
+/* Buttons
+   ========================================================================== */
+.btn {
+  font-weight: 600;
+}
+
+.btn-primary,
+.btn-primary.disabled,
+.btn-primary:disabled {
+  background-color: #7c8743;
+  border-color: #919e4f;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle,
+.btn-primary:focus,
+.btn:focus,
+.btn.focus,
+.btn-primary:hover {
+  background-color: #919e4f;
+  border-color: #919e4f;
+  box-shadow: 0 0 0 0.2rem rgba(187, 203, 101, 0.25);
+}
+
+/* Hero Section
+   ========================================================================== */
+.hero {
+  color: black;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hero h1,
+.hero p {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Book Cards
+   ========================================================================== */
+.book-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.book-card .card-img-top {
+  object-fit: cover;
+  height: 300px;
+}
+
+/* Content Sections
+   ========================================================================== */
+.reference-strip {
+  background-color: #fbedd0;
+}
+
+.reference-strip-white {
+  background-color: #fff;
+}
+
+.reference-strip img {
+  max-width: 180px;
+}
+
+.book-text-strip {
+  background-color: #f7f6f6;
+}
+
+.reference-video {
+  padding: 0;
+}
+
+/* Publisher Logos
+   ========================================================================== */
+.logo-albatros {
+  width: 70px;
+  position: relative;
+  left: -10px;
+}
+
+.logo-grada {
+  width: 169px;
+  position: relative;
+  left: -10px;
+  top: 10px;
+}
+
+/* Quotes & Testimonials
+   ========================================================================== */
+.blockquote {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(100, 10, 50, 0.85);
+  border-left: 3px solid rgba(100, 10, 50, 0.85);
+  margin-left: 1.2rem;
+  padding-left: 1.2rem;
+}
+
+/* Scroll Down Arrow
+   ========================================================================== */
+a.scroll-down {
+  display: block;
+  margin-top: 1rem;
+}
+
+a.scroll-down img {
+  width: 42px;
+  opacity: 0.6;
+}
+
+/* Animations
+   ========================================================================== */
+.heartbeat {
+  animation: heartbeat 2.5s infinite;
+}
+
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
+
+.scale-in-center {
+  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Gallery Grid
+   ========================================================================== */
+.gallery-grid a {
+  display: block;
+  overflow: hidden;
+  border-radius: 0.25rem;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid a:hover {
+  transform: scale(1.05);
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid a:hover img {
+  transform: scale(1.1);
+}
+
+/* Utilities
+   ========================================================================== */
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.circle-object {
+  background: #3e3e3e;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* Responsive Breakpoints
+   ========================================================================== */
+
+/* Extra Small Devices */
+@media (min-width: 322px) {
+  .navbar-brand {
+    font-size: 1rem;
+  }
+}
+
+/* Small Devices (576px and up) */
+@media (min-width: 576px) {
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+  h1 {
+    font-weight: 600;
+    font-size: 2rem;
+  }
+  .lead .book-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Medium Devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .hero {
+    min-height: 700px;
+    height: 700px;
+  }
+  h1 {
+    font-weight: 300;
+    font-size: 3rem;
+  }
+  .reference-strip img {
+    max-width: 160px;
+  }
+  .reference-video {
+    padding: 0 10%;
+  }
+}
+
+/* Large Devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  h1 {
+    font-size: 3.8rem;
+  }
+  .reference-strip img {
+    max-width: 200px;
+  }
+}
+
+/* Extra Large Devices (1200px and up) */
+@media (min-width: 1200px) {
+  .menu-spacer {
+    width: 20px;
+    height: 10px;
+    display: inline-block;
+    margin: 0 2.5rem;
+  }
+  .reference-video {
+    padding: 0 15%;
+  }
+}
+
+@media (min-width: 1500px) {
+  .book-sample img {
+    float: left;
+    margin-right: 1rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .hero {
+    min-height: 900px;
+    height: 900px;
+  }
+}
+
+/* Footer
+   ========================================================================== */
+footer {
+  margin-top: auto;
+}
+
+footer h5 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}

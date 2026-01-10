@@ -84,18 +84,64 @@ kniha-pro-deti/
 - **Total testimonials:** 11 testimonials
 - **Total excerpts:** 8 book excerpts
 
-## 🔄 NEXT: Phase 2 - Tech Upgrade (Bootstrap 5, GLightbox, Vanilla JS)
+## ✅ COMPLETED: Phase 2 - Tech Upgrade (Bootstrap 5, GLightbox, Vanilla JS)
+
+**All layouts created:**
+
+- ✅ `src/_includes/layouts/base.njk` - Base HTML with Bootstrap 5.3, GLightbox, modern meta tags
+- ✅ `src/_includes/layouts/page.njk` - Simple page wrapper
+- ✅ `src/_includes/layouts/book.njk` - Dynamic book detail layout with gallery support
+
+**All components created:**
+
+- ✅ `src/_includes/components/header.njk` - Bootstrap 5 navbar with `data-bs-*` attributes
+- ✅ `src/_includes/components/footer.njk` - Footer with dynamic copyright year
+- ✅ `src/_includes/components/book-card.njk` - Book listing card with hover effects
+- ✅ `src/_includes/components/author-card.njk` - Author/illustrator card with contact links
+- ✅ `src/_includes/components/schema-book.njk` - Schema.org Book structured data
+
+**CSS & JS Migration:**
+
+- ✅ `src/css/style.css` - Migrated from `custom20250625.css` with BS5 updates
+  - Removed `!important` overuse
+  - Added modern card hover effects
+  - Added gallery grid styles
+  - Cleaned up and organized with proper sections
+- ✅ `src/js/main.js` - Vanilla JavaScript (NO jQuery)
+  - Smooth scroll with navbar offset
+  - GLightbox initialization
+  - Navbar active state handler
+  - Lazy loading image enhancements
+
+**Dynamic Book Pages:**
+
+- ✅ `src/books.njk` - Pagination setup for generating all 8 book pages from `books.json`
+
+### Key Tech Upgrades Applied:
+
+| Component       | Old            | New              | Status        |
+| --------------- | -------------- | ---------------- | ------------- |
+| Bootstrap       | 4.0.0          | 5.3.3            | ✅ Migrated   |
+| Data attributes | `data-toggle`  | `data-bs-toggle` | ✅ Updated    |
+| Utilities       | `ml-*`, `mr-*` | `ms-*`, `me-*`   | ✅ Updated    |
+| jQuery          | 3.2.1          | ❌ Removed       | ✅ Not needed |
+| Lightbox        | Swipebox       | GLightbox 3.3.0  | ✅ Replaced   |
+| Smooth scroll   | jQuery plugin  | Vanilla JS       | ✅ Ported     |
+
+## 🔄 NEXT: Phase 2b - Content Migration to Templates
 
 ### Ready to proceed with:
 
-1. Create layouts (base.njk, page.njk, book.njk)
-2. Create components (header.njk, footer.njk, book-card.njk, author-card.njk, schema-book.njk)
-3. Update CSS with Bootstrap 5 utilities
-4. Port smooth-scroll.js to vanilla JS
-5. Setup GLightbox for galleries
+1. Migrate `index.html` → `src/index.njk`
+2. Migrate `nase-knihy.html` → `src/nase-knihy.njk`
+3. Migrate `autori-knihy.html` → `src/autori-knihy.njk`
+4. Migrate `galerie.html` → `src/galerie.njk`
+5. Migrate `media.html` → `src/media.njk`
+6. Test build: `npm run build`
+7. Visual comparison with current site
 
-**Time estimate for Phase 2:** 2-3 hours
+**Time estimate for Phase 2b:** 6-8 hours
 
 ---
 
-**Phase 1.5 completed successfully!** All book and author data has been extracted and structured into JSON format ready for Eleventy templating.
+**Phase 2 completed successfully!** All modern dependencies are in place and templates are ready for content migration.
