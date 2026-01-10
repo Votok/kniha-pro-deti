@@ -85,6 +85,16 @@ document.addEventListener("DOMContentLoaded", function () {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const img = entry.target;
+          
+          // Only animate if the image hasn't loaded (and decoded) yet
+          if (img.complete) {
+             img.style.opacity = "1";
+             img.style.transition = "opacity 0.3s ease-in";
+             observer.unobserve(img);
+             return;
+          }
+
+          // If not loaded, hide it and wait for load
           img.style.opacity = "0";
           img.style.transition = "opacity 0.3s ease-in";
           
@@ -98,6 +108,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.querySelectorAll("img[loading='lazy']").forEach((img) => {
+      // Check immediately if already visible and loaded? 
+      // standard observer loop handles checking intersection
       imageObserver.observe(img);
     });
   }
