@@ -1,0 +1,158 @@
+---
+layout: layouts/page.njk
+title: Kniha pro děti | čtěte a staňte se hrdinou našich příběhů
+description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajemství a nakonec rozuzlení. Naše knihy pro zvídavé děti, rodiče i prarodiče. 👪 Skvělé ilustrace!"
+---
+
+<div class="container-fluid px-0">
+  <div class="row position-relative overflow-hidden p-3 p-md-5 bg-light hero bg-hero-uvod text-black">
+    <div class="col-md-7 pt-5 p-lg-6 d-flex flex-column align-items-start justify-content-around">
+      <div class="p-2">
+        <h1>Čtěte a staňte se hrdinou našich příběhů</h1>
+      </div>
+      <div class="p-2">
+        <a href="#scroll-top" class="scroll-down">
+          <img src="/assets/svg/chevron-down-white.gif" alt="Posuň dolů" class="heartbeat" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  {# Book thumbnails grid - dynamic from books.json #}
+  <div class="row my-3 mt-5 px-3" id="scroll-top">
+    {% for book in books %}
+    <div class="col-12 col-sm-4 col-md-4 col-xl-3">
+      <div class="row">
+        <div class="col-12 text-center overflow-hidden mb-4">
+          <a href="/{{ book.slug }}.html">
+            <img
+              src="{{ book.coverThumbnail or book.cover }}"
+              width="160"
+              class="mb-1 mb-sm-2"
+              alt="{{ book.title }}"
+              loading="lazy"
+            />
+          </a>
+          <a href="/{{ book.slug }}.html"><h5>{{ book.title }}</h5></a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  {# Testimonial from Taťjana Medvecká #}
+  <div class="row my-md-3 px-md-3 px-xl-5 py-sm-3 pt-sm-0 reference-strip">
+    <div class="col-12 col-md-10 px-md-5">
+      <div class="float-sm-start me-sm-3 my-3 mx-md-5">
+        <img
+          src="/assets/images/recenze/tatjana-medvecka.jpg"
+          class="img-fluid"
+          alt="Taťjana Medvecká, herečka"
+        />
+        <p class="mt-2"><small>foto Jana Pertáková</small></p>
+      </div>
+      <div class="mt-3 mx-md-5">
+        <p class="fst-italic">
+          Ke psu Senecovi, kterého Viktorovi věnovala teta Bobina, přibyla bezvadná kamarádka
+          Žofie. Jenže Seneca se ztratí. A začíná skutečně napínavé dobrodružství. Podaří se ho
+          zachránit nebo ne?
+        </p>
+        <p class="fst-italic">
+          Už teď se strašně moc těším, jak jednou budu obě knížky, jak "Viktora a záhadnou tetu
+          Bobinu", tak i "Viktora a případ zmizelého psa", číst svým vnučkám.
+        </p>
+        <p>— Taťjana Medvecká, herečka</p>
+      </div>
+    </div>
+  </div>
+
+  {# Featured book: Róza a ztracený tatínek #}
+  {% set roza = books | selectattr("slug", "equalto", "roza-a-ztraceny-tatinek") | first %}
+  {% if roza %}
+  <div class="row my-3 my-md-5 pt-3 pt-md-0 px-md-3 px-xl-5">
+    <div class="col-md-1 d-none d-md-block"></div>
+    <div class="col-12 col-md-6">
+      <h2>{{ roza.title }}</h2>
+      <p>Vyšla 12. 5. 2025 v nakladatelství 65. pole v edici Políčko.</p>
+      <p>{{ roza.description }}</p>
+      {% if roza.buyLinks.length > 0 %}
+      <a class="btn btn-light" href="{{ roza.buyLinks[0].url }}" target="_blank" rel="noopener">
+        Koupit knihu
+      </a>
+      {% endif %}
+    </div>
+    <div class="col-12 col-md-5 mt-2">
+      <img
+        src="{{ roza.cover }}"
+        class="img-fluid"
+        alt="{{ roza.title }}"
+        loading="lazy"
+      />
+    </div>
+    <div class="col-md-1 d-none d-md-block"></div>
+  </div>
+  {% endif %}
+
+  {# Featured book: Eliška detektiv #}
+  {% set eliska = books | selectattr("slug", "equalto", "eliska-detektiv") | first %}
+  {% if eliska %}
+  <div class="row my-3 my-md-5 pt-3 pt-md-0 px-md-3 px-xl-5">
+    <div class="col-md-1 d-none d-md-block"></div>
+    <div class="col-12 col-md-6">
+      <h2>{{ eliska.title }}</h2>
+      <p>Vyšla 30. září 2023 v nakladatelství 65. pole v edici Políčko.</p>
+      <p>{{ eliska.description }}</p>
+      {% if eliska.buyLinks.length > 0 %}
+      <a class="btn btn-light" href="{{ eliska.buyLinks[0].url }}" target="_blank" rel="noopener">
+        Koupit knihu
+      </a>
+      {% endif %}
+    </div>
+    <div class="col-12 col-md-5 mt-2">
+      <img
+        src="/assets/images/galerie/eliska-tri-dily.jpg"
+        class="img-fluid"
+        alt="Knihy Eliška detektiv, Eliška rebelka a Eliška andílek"
+        loading="lazy"
+      />
+    </div>
+    <div class="col-md-1 d-none d-md-block"></div>
+  </div>
+  {% endif %}
+
+  {# YouTube video embed #}
+  <div class="row my-3 my-md-5 pt-3 pt-md-0 px-md-3 px-xl-5">
+    <div class="col-12 text-center">
+      <div class="mt-5 mt-md-0">
+        <div class="ratio ratio-16x9">
+          <iframe
+            loading="lazy"
+            src="https://www.youtube.com/embed/szBVjbtPuXc"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            title="Kniha pro děti - video"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {# Contact section #}
+  <div class="row my-5 my-md-3 px-md-3 px-xl-5 py-5 book-text-strip">
+    <div class="col-md-2 d-none d-md-block"></div>
+    <div class="col-12 col-md-8">
+      <p class="lead">
+        Jako píšící herečky a hrající spisovatelky
+        <span class="fw-bold">nabízíme autorská čtení z našich knih</span>.<br />
+        Čteme v knihovnách, školách i na veřejných prostranstvích. V případě zájmu se na nás
+        neváhejte obrátit.
+      </p>
+
+      <p class="lead">
+        <span class="fw-bold">Kontakt</span>: Jarmila Vlčková
+        <a href="tel:608823463">608 823 463</a>, vlckovajarmila@seznam.cz
+      </p>
+    </div>
+    <div class="col-md-2 d-none d-md-block"></div>
+  </div>
+</div>

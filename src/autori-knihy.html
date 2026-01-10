@@ -1,0 +1,21 @@
+---
+layout: layouts/base.njk
+title: Autoři
+description: Seznamte se s autorkami a ilustrátory našich knih
+permalink: /autori-knihy.html
+---
+
+<div class="container py-5 mt-5">
+  <div class="row mb-5 text-center">
+    <div class="col-lg-8 mx-auto">
+      <h1 class="display-4 fw-bold mb-3">{{ title }}</h1>
+      <p class="lead text-muted">{{ description }}</p>
+    </div>
+  </div>
+
+  <div class="row">
+    {% for author in authors %}
+      {% include "components/author-card.njk" %}
+    {% endfor %}
+  </div>
+</div>

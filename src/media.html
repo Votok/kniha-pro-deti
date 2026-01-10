@@ -1,0 +1,70 @@
+---
+layout: layouts/base.njk
+title: Média
+description: Vše co se děje v médiích okolo našich knih
+permalink: /media.html
+---
+
+<div class="container py-5 mt-5">
+  <div class="row mb-5 text-center">
+    <div class="col-lg-8 mx-auto">
+      <h1 class="display-4 fw-bold mb-3">{{ title }}</h1>
+      <p class="lead text-muted">{{ description }}</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-8">
+      {% for item in media %}
+      <div class="mb-5">
+        {% if item.url %}
+        <a href="{{ item.url }}" target="_blank" rel="noopener" class="text-decoration-none text-dark">
+          <h3 class="h4 fw-bold hover-primary">{{ item.title }}</h3>
+        </a>
+        {% else %}
+        <h3 class="h4 fw-bold">{{ item.title }}</h3>
+        {% endif %}
+        
+        <div class="mt-2 text-body-secondary">
+          {{ item.description | safe }}
+        </div>
+      </div>
+      {% if not loop.last %}
+      <hr class="my-5 opacity-25">
+      {% endif %}
+      {% endfor %}
+    </div>
+    
+    <div class="col-lg-4 text-center">
+        <div class="sticky-top" style="top: 100px;">
+            <h4 class="mb-4 text-start ms-2">Napsali o nás</h4>
+            {% for scan in media_scans %}
+            <div class="mb-4">
+                <a href="{{ scan.image }}" class="glightbox d-block position-relative" data-gallery="media-scans" data-title="{{ scan.title }}">
+                    <img src="{{ scan.image }}" alt="{{ scan.title }}" class="img-fluid rounded shadow-sm hover-scale transition-transform">
+                    <div class="position-absolute top-50 start-50 translate-middle text-white opacity-0 hover-opacity-100 bg-dark bg-opacity-50 p-3 rounded">
+                        <i class="bi bi-zoom-in"></i> Zvětšit
+                    </div>
+                </a>
+                <p class="small text-muted mt-2">{{ scan.title }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.hover-primary:hover {
+    color: var(--bs-primary);
+}
+.hover-scale:hover {
+    transform: scale(1.02);
+}
+.transition-transform {
+    transition: transform 0.3s ease;
+}
+.hover-opacity-100:hover {
+    opacity: 1 !important;
+}
+</style>

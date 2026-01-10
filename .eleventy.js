@@ -34,14 +34,11 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("year", () => new Date().getFullYear());
 
   // Watch targets
-  eleventyConfig.addWatchTarget("./src/css/");
-  eleventyConfig.addWatchTarget("./src/js/");
+  eleventyConfig.addWatchTarget("./src/assets/css/");
+  eleventyConfig.addWatchTarget("./src/assets/js/");
 
-  // Passthrough copies - mapping src/ → _site/assets/ for URL continuity
-  eleventyConfig.addPassthroughCopy({ "src/css": "assets/css" });
-  eleventyConfig.addPassthroughCopy({ "src/images": "assets/images" });
-  eleventyConfig.addPassthroughCopy({ "src/js": "assets/js" });
-  eleventyConfig.addPassthroughCopy({ "src/svg": "assets/svg" });
+  // Passthrough copies - mapping src/assets/ → _site/assets/ for URL continuity
+  eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
 
   // Favicons and static assets
   const staticFiles = [
@@ -61,6 +58,11 @@ export default function (eleventyConfig) {
     if (fs.existsSync(full)) {
       eleventyConfig.addPassthroughCopy({ [`src/${f}`]: f });
     }
+  });
+
+  // RFC 3339 date filter for sitemap
+  eleventyConfig.addFilter("dateToRfc3339", (date) => {
+    return new Date(date).toISOString();
   });
 
   return {

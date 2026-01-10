@@ -24,10 +24,11 @@ kniha-pro-deti/
 │   ├── _includes/
 │   │   ├── layouts/           ✅ Created (empty)
 │   │   └── components/        ✅ Created (empty)
-│   ├── css/                   ✅ Created (empty)
-│   ├── js/                    ✅ Created (empty)
-│   ├── images/                ✅ Created (empty)
-│   ├── svg/                   ✅ Created (empty)
+│   ├── assets/                ✅ Consolidates {css, js, images, svg, media}
+│   │   ├── css/               ✅ Created
+│   │   ├── js/                ✅ Created
+│   │   ├── images/            ✅ Created
+│   │   └── svg/               ✅ Created
 │   └── test.njk               ✅ Test page
 ├── .eleventy.js               ✅ Created - ESM config
 ├── package.json               ✅ Created - Eleventy 3.x
@@ -102,12 +103,12 @@ kniha-pro-deti/
 
 **CSS & JS Migration:**
 
-- ✅ `src/css/style.css` - Migrated from `custom20250625.css` with BS5 updates
+- ✅ `src/assets/css/style.css` - Migrated from `custom20250625.css` with BS5 updates
   - Removed `!important` overuse
   - Added modern card hover effects
   - Added gallery grid styles
   - Cleaned up and organized with proper sections
-- ✅ `src/js/main.js` - Vanilla JavaScript (NO jQuery)
+- ✅ `src/assets/js/main.js` - Vanilla JavaScript (NO jQuery)
   - Smooth scroll with navbar offset
   - GLightbox initialization
   - Navbar active state handler
@@ -132,11 +133,11 @@ kniha-pro-deti/
 
 ### Ready to proceed with:
 
-1. Migrate `index.html` → `src/index.njk`
-2. Migrate `nase-knihy.html` → `src/nase-knihy.njk`
-3. Migrate `autori-knihy.html` → `src/autori-knihy.njk`
-4. Migrate `galerie.html` → `src/galerie.njk`
-5. Migrate `media.html` → `src/media.njk`
+1. Migrate `index.html` → `src/index.html`
+2. Migrate `nase-knihy.html` → `src/nase-knihy.html`
+3. Migrate `autori-knihy.html` → `src/autori-knihy.html`
+4. Migrate `galerie.html` → `src/galerie.html`
+5. Migrate `media.html` → `src/media.html`
 6. Test build: `npm run build`
 7. Visual comparison with current site
 

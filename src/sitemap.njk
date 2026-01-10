@@ -1,0 +1,45 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>{{ site.url }}/</loc>
+    <lastmod>{{ numberOfPages | dateToRfc3339 if numberOfPages else page.date | dateToRfc3339 }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/nase-knihy.html</loc>
+    <lastmod>{{ page.date | dateToRfc3339 }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/autori-knihy.html</loc>
+    <lastmod>{{ page.date | dateToRfc3339 }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/galerie.html</loc>
+    <lastmod>{{ page.date | dateToRfc3339 }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/media.html</loc>
+    <lastmod>{{ page.date | dateToRfc3339 }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  {% for book in books %}
+  <url>
+    <loc>{{ site.url }}/{{ book.slug }}.html</loc>
+    <lastmod>{{ book.publishedDate | dateToRfc3339 if book.publishedDate else page.date | dateToRfc3339 }}</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  {% endfor %}
+</urlset>

@@ -1037,10 +1037,10 @@ Přidat `loading="lazy"` na obrázky pod záhybem (první viewport bez lazy load
 1. ✅ **Fáze 0** (0.5h) - Příprava
 2. ✅ **Fáze 1** (2h) - Eleventy setup
 3. ✅ **Fáze 1.5** (4h) - **DATA EXTRACTION** ← COMPLETED!
-4. ⏳ **Fáze 2** (3h) - Tech upgrade ← NEXT
-5. ⏳ **Fáze 2b** (8h) - Template migration
-6. ⏳ **Fáze 3** (1h) - SEO
-7. ⏳ **Fáze 4** (1h) - Images
+4. ✅ **Fáze 2** (3h) - Tech upgrade ← COMPLETED
+5. ✅ **Fáze 2b** (8h) - Template migration ← COMPLETED
+6. ✅ **Fáze 3** (1h) - SEO ← COMPLETED
+7. ⏳ **Fáze 4** (1h) - Images (Lazy loading integrated)
 
 **Total: ~19h pro funkční web**
 
