@@ -24,8 +24,8 @@
   <!-- GLightbox CSS -->
   <link href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css" rel="stylesheet">
 
-  <!-- Custom CSS (cache-busted automatically) -->
-  <link href="/assets/css/style.css?v={{ "" | cacheBust }}" rel="stylesheet">
+  <!-- CSS Bundle - pattern jako divadlo-laryfary -->
+  <link rel="stylesheet" href="{% getBundleFileUrl 'css' %}">
   {% block extraStyles %}{% endblock %}
 
   <!-- Favicons -->
@@ -48,6 +48,11 @@
 </head>
 
 <body>
+  {# CSS Bundle pattern - include source CSS #}
+  {% css %}
+  {{ 'src/assets/css/style.css' | readFile | safe }}
+  {% endcss %}
+
   {% include "components/header.njk" %}
 
   <main>
@@ -64,8 +69,8 @@
   <!-- GLightbox JS -->
   <script src="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/js/glightbox.min.js"></script>
 
-  <!-- Custom JS (cache-busted automatically, no Google Analytics) -->
-  <script src="/assets/js/main.js?v={{ "" | cacheBust }}"></script>
+  <!-- Custom JS (passthrough copy, no Google Analytics) -->
+  <script src="/assets/js/main.js"></script>
   {% block extraScripts %}{% endblock %}
 </body>
 </html>

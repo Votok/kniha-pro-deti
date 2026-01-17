@@ -2,7 +2,6 @@
   "name": "kniha-pro-deti",
   "version": "2.0.0",
   "description": "Web pro dětské knihy od Pavlíny Jurkové a Jarmily Vlčkové",
-  "type": "module",
   "scripts": {
     "dev": "eleventy --serve --watch",
     "build": "eleventy",
@@ -12,7 +11,6 @@
     "@11ty/eleventy": "^3.1.2"
   },
   "devDependencies": {
-    "csso": "^5.0.5",
-    "terser": "^5.37.0"
+    "csso": "^5.0.5"
   }
 }

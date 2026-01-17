@@ -1,46 +1,52 @@
-// .eleventy.js (ESM syntax for Eleventy 3.x)
-import fs from "node:fs";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
+// .eleventy.js - CommonJS syntax jako divadlo-laryfary
+const fs = require("node:fs");
+const path = require("node:path");
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-export default function (eleventyConfig) {
-  // CSS minification
+module.exports = function (eleventyConfig) {
+  // CSS minifikace pomocí csso
   eleventyConfig.addBundle("css", {
     transforms: [
-      async function (content) {
-        const csso = await import("csso");
-        return csso.minify(content).css;
+      function (content) {
+        try {
+          const csso = require("csso");
+          return csso.minify(content).css;
+        } catch (e) {
+          return content; // Fallback pokud csso není nainstalováno
+        }
       },
     ],
   });
 
-  // JS minification
-  eleventyConfig.addBundle("js", {
-    transforms: [
-      async function (content) {
-        const { minify } = await import("terser");
-        const result = await minify(content);
-        return result.code;
-      },
-    ],
-  });
-
-  // Cache-busting
+  // Cache-busting filter
   eleventyConfig.addFilter("cacheBust", () => Date.now());
 
   // Current year for copyright
   eleventyConfig.addFilter("year", () => new Date().getFullYear());
 
+  // Helper pro čtení souborů (pro CSS bundle pattern)
+  eleventyConfig.addFilter("readFile", function (filePath) {
+    const full = path.resolve(__dirname, filePath);
+    return fs.readFileSync(full, "utf8");
+  });
+
+  // RFC 3339 date filter for sitemap
+  eleventyConfig.addFilter("dateToRfc3339", (date) => {
+    return new Date(date).toISOString();
+  });
+
   // Watch targets
   eleventyConfig.addWatchTarget("./src/assets/css/");
   eleventyConfig.addWatchTarget("./src/assets/js/");
 
-  // Passthrough copies - mapping src/assets/ → _site/assets/ for URL continuity
-  eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
+  // Passthrough copies - images jdou do root /images/ (kvůli ../images/ v CSS)
+  eleventyConfig.addPassthroughCopy({ "src/assets/css": "assets/css" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/js": "assets/js" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/images": "images" }); // přímo do root!
+  eleventyConfig.addPassthroughCopy({ "src/assets/svg": "assets/svg" });
+  // Staré swipebox assets (budou smazány později)
+  eleventyConfig.addPassthroughCopy({ "src/assets/img": "assets/img" });
 
-  // Favicons and static assets
+  // Favicons a static assets
   const staticFiles = [
     "favicon.ico",
     "apple-touch-icon.png",
@@ -60,11 +66,6 @@ export default function (eleventyConfig) {
     }
   });
 
-  // RFC 3339 date filter for sitemap
-  eleventyConfig.addFilter("dateToRfc3339", (date) => {
-    return new Date(date).toISOString();
-  });
-
   return {
     pathPrefix: "",
     dir: {
@@ -73,6 +74,7 @@ export default function (eleventyConfig) {
       includes: "_includes",
       data: "_data",
     },
+    // DŮLEŽITÉ: Tohle umožňuje použít {% %} syntaxi v .html souborech
     htmlTemplateEngine: "njk",
   };
-}
+};
