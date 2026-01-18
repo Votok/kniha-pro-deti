@@ -14,7 +14,7 @@ layout: layouts/base.njk
   <div class="hero" style="background-image: url('{{ book.cover }}');">
     <div class="container">
       <h1>{{ book.title }}</h1>
-      {% if book.subtitle %}<p class="lead">{{ book.subtitle }}</p>{% endif %}
+      {% if book.subtitle %}<p class="lead">{{ book.subtitle | safe }}</p>{% endif %}
     </div>
   </div>
 
@@ -22,7 +22,7 @@ layout: layouts/base.njk
     <div class="row">
       <div class="col-md-8">
         <h2>O knize</h2>
-        <p>{{ book.description }}</p>
+        <p>{{ book.description | safe }}</p>
 
         <p class="text-muted">{{ book.ageGroup }}</p>
 
@@ -42,8 +42,22 @@ layout: layouts/base.njk
         <h3>Ukázky z knihy</h3>
         {% for excerpt in book.excerpts %}
         <div class="excerpt mb-4">
-          <h4>{{ excerpt.title }}</h4>
-          <p>{{ excerpt.text }}</p>
+          <div class="row">
+            {% if excerpt.image %}
+            <div class="col-md-6 mb-3 mb-md-0">
+              <img src="{{ excerpt.image }}" class="img-fluid rounded" alt="{{ excerpt.title }}">
+            </div>
+            <div class="col-md-6">
+              <h4>{{ excerpt.title }}</h4>
+              {{ excerpt.text | safe }}
+            </div>
+            {% else %}
+            <div class="col-12">
+              <h4>{{ excerpt.title }}</h4>
+              {{ excerpt.text | safe }}
+            </div>
+            {% endif %}
+          </div>
         </div>
         {% endfor %}
         {% endif %}
@@ -52,7 +66,7 @@ layout: layouts/base.njk
         <h3>Recenze</h3>
         {% for testimonial in book.testimonials %}
         <blockquote class="blockquote">
-          <p>{{ testimonial.quote }}</p>
+          <p>{{ testimonial.quote | safe }}</p>
           <footer class="blockquote-footer">{{ testimonial.author }}
             {% if testimonial.source %}, <cite>{{ testimonial.source }}</cite>{% endif %}
           </footer>

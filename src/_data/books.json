@@ -4,9 +4,9 @@
     "title": "Eliška andílek",
     "slug": "eliska-andilek",
     "subtitle": null,
-    "summary": "Všichni říkají, že vypadám jako andílek. Žádný andílek ale nejsem. V tomhle příběhu se přesvědčíte, že odvaha mi rozhodně nechybí!",
-    "description": "Všichni říkají, že vypadám jako andílek. Žádný andílek ale nejsem. V tomhle příběhu se přesvědčíte, že odvaha mi rozhodně nechybí!",
-    "ageGroup": "Pro děti od 6 let",
+    "summary": "Eliška objevuje okolní svět s neuvěřitelnou zvídavostí a odvahou. Podaří se jí vypátrat, jaké tajemství skrývá dům, kam se jejich rodina přestěhovala?",
+    "description": "Ahoj! Jmenuju se Eliška a je mi sedm. S rodiči a bráškou Toníčkem se stěhujeme do úplně cizího města. Jmenuje se Žitín. Mně se ale vůbec nelíbí. Zvyknu si v nové škole? Najdu si tam kamarády? A jaké tajemství skrývá náš nový dům? Vždyť rodiče jsou od první chvíle, kdy ho uviděli, jako očarovaní. Já na tu záhadu ale přijdu.",
+    "ageGroup": "Pro děti od 5 do 9 let",
     "year": 2021,
     "publisher": "65. pole",
     "isbn": "",
@@ -24,15 +24,25 @@
         "primary": true
       }
     ],
-    "excerpts": [],
-    "testimonials": [],
-    "gallery": [
-      "/assets/images/ukazky/eliska-andilek-1.jpg",
-      "/assets/images/ukazky/eliska-andilek-2.jpg",
-      "/assets/images/ukazky/eliska-andilek-3.jpg",
-      "/assets/images/ukazky/eliska-andilek-4.jpg",
-      "/assets/images/ukazky/eliska-andilek-5.jpg",
-      "/assets/images/ukazky/eliska-andilek-6.jpg"
+    "excerpts": [
+      {
+        "title": "Nový dům v Žitíně",
+        "text": "<p>Cestou tatínek zabloudil. Z ničeho nic se ocitli v městečku Žitín. Na kopci u lesa narazili na starý zchátralý dům. Byla na něm veliká cedule NA PRODEJ. Když ho míjeli, maminka na tatínka zakřičela: &bdquo;Zastav!&ldquo;</p><p>Auto prudce zabrzdilo. &bdquo;To je nádhera!&ldquo; žasla maminka. Nemohla z domu spustit oči. Okamžitě ho začala fotografovat. Všichni vystoupili z auta. Bylo jim jasné, že když maminka fotí, zdrží se dlouho.</p><p>&bdquo;Podívejte se na ten vikýř. Ten nemá chybu!&ldquo; ukazoval dětem tatínek. Eliška nechápala proč, ale rodiče se do té barabizny se zpustlou zarostlou zahradou úplně zamilovali.</p><p>Od té doby se nebavili o ničem jiném. &bdquo;Mohli bychom tam pěstovat vlastní jahody, rajčata a hrášek,&ldquo; rozplývala se maminka. &bdquo;A Toníčkovi bych udělal velikánské pískoviště, aby si celé dny mohl hrát na čerstvém vzduchu,&ldquo; přidal se tatínek, &bdquo;to by bylo, aby se toho kašle nezbavil.&ldquo;</p>",
+        "image": "/assets/images/ukazky/eliska-andilek-1.jpg"
+      },
+      {
+        "title": "Noc v novém pokojíčku",
+        "text": "<p>Eliška ležela v posteli a marně se pokoušela usnout. Na nočním stolku měla rozsvícenou lampičku. To proto, aby se nebála. V rukou svírala chundelatého vlněného králíčka.</p><p>Připomínal jí starý život v Praze. Byla zvyklá si s ním před spaním povídat a svěřovat mu vše, co ji trápilo. Zespodu měl šňůrku, za kterou když zatáhla, začala hrát písnička. Byla to hračka spíš pro mimina, ale Eliška se jí nedokázala vzdát.</p><p>Pořád dokola si prohlížela svůj nový pokojíček. Maminka si s ním dala opravdu velkou práci. Na strop namalovala spoustu obláčků, aby se Elišce hezky usínalo. Když přimhouřila oči, vypadaly jako beránci.</p><p>Vtom za dveřmi uslyšela slabé zavrzání. Někdo tam stál. Bleskurychle zhasla lampičku a předstírala, že tvrdě spí.</p>",
+        "image": "/assets/images/ukazky/eliska-andilek-2.jpg"
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Knížka tak krásně vystihuje dětskou duši. A ty ilustrace! Jsem nadšená.",
+        "author": "Lucie Štěpánková",
+        "source": "herečka",
+        "rating": 5
+      }
     ],
     "featured": true,
     "publishedDate": "2021-01-01"
@@ -62,17 +72,25 @@
         "primary": true
       }
     ],
-    "excerpts": [],
-    "testimonials": [],
-    "gallery": [
-      "/assets/images/ukazky/eliska-detektiv-1.jpg",
-      "/assets/images/ukazky/eliska-detektiv-2.jpg",
-      "/assets/images/ukazky/eliska-detektiv-3.jpg",
-      "/assets/images/ukazky/eliska-detektiv-4.jpg",
-      "/assets/images/ukazky/eliska-detektiv-5.jpg",
-      "/assets/images/ukazky/eliska-detektiv-6.jpg",
-      "/assets/images/ukazky/eliska-detektiv-7.jpg",
-      "/assets/images/ukazky/eliska-detektiv-8.jpg"
+    "excerpts": [
+      {
+        "title": "Balení na tábor",
+        "text": "<p>U Elišky doma panoval zmatek a vzrušení. Dnes byla ve škole naposledy. Domů se vrátila s vysvědčením a dobrou náladou. Konečně začínají vytoužené prázdniny.</p><p>Eliščin pokojíček byl plný hromádek oblečení. Po zemi se povalovaly holínky, sportovní boty, sandálky, krém na opalování, přípravek proti komárům, několik plyšáků a dalších důležitých věcí. Už zítra totiž Eliška odjíždí na svůj první letní tábor.</p><p>Společně s maminkou a Toníčkem balili kufr. Maminka četla ze seznamu věcí určených na tábor a Eliška pro ně běhala. Ukládala je do kufru a volala: &bdquo;Další!&ldquo;</p><p>Pod nohama se jí motala Ťapka. Od Vánoc pěkně vyrostla. Už to nebylo malé roztomilé štěně, ale potrhlá psí slečna. Občas žalostně zakňučela, jako by věděla, že Elišku celý týden neuvidí. &bdquo;Ticho, Ťapko!&ldquo; okřikl ji Toníček nevrle. Seděl na posteli a mračil se na celý svět. Mrzelo ho, že nemůže jet na tábor také.</p>",
+        "image": "/assets/images/ukazky/eliska-detektiv-1.jpg"
+      },
+      {
+        "title": "Cesta do Jizerských hor",
+        "text": "<p>Elišce cesta do Jizerských hor připadala nekonečná. S holčičkou na vedlejším sedadle nebyla žádná řeč. Pořád se jen mračila, fňukala nebo si do trička otírala upatlaná sklíčka brýlí. V autobuse ale bylo veselo. Všude se rozléhalo dětské štěbetání a smích.</p><p>Co asi dělá Arnošt? Eliška se otočila a nenápadně ho pozorovala. Hned zalitovala, že si nesedla vedle něj. Byl obklopen velkými kluky a vypadalo to, že si s nimi náramně rozumí. Jeden z nich vytáhl z pouzdra kytaru a začal vybrnkávat písničku.</p><p>Eliška se otočila zpátky a zavřela oči. Kdyby alespoň seděla u okénka a mohla sledovat ubíhající krajinu. &bdquo;Škyt,&ldquo; zaslechla vedle sebe. Holčička vedle ní ze samého pláče dostala škytavku. &bdquo;Škyt…škyt,&ldquo; ozývalo se pravidelně.</p><p>Eliška se snažila usnout, ale nešlo to. Škytání ji čím dál víc rozčilovalo. Pokusila se nemyslet na to, že se vzdaluje dál a dál od domova.</p>",
+        "image": "/assets/images/ukazky/eliska-detektiv-2.jpg"
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Jako bych se vrátila do dětství. Kouzelná knížka, která voní létem, prázdninami a touhou zažít dobrodružství. Na své si přijdou děti i dospělí.",
+        "author": "Štěpánka Horáková",
+        "source": "překladatelka",
+        "rating": 5
+      }
     ],
     "featured": true,
     "publishedDate": "2021-01-01"
@@ -102,19 +120,25 @@
         "primary": true
       }
     ],
-    "excerpts": [],
-    "testimonials": [],
-    "gallery": [
-      "/assets/images/ukazky/eliska-rebelka-1.jpg",
-      "/assets/images/ukazky/eliska-rebelka-2.jpg",
-      "/assets/images/ukazky/eliska-rebelka-3.jpg",
-      "/assets/images/ukazky/eliska-rebelka-4.jpg",
-      "/assets/images/ukazky/eliska-rebelka-5.jpg",
-      "/assets/images/ukazky/eliska-rebelka-6.jpg",
-      "/assets/images/ukazky/eliska-rebelka-7.jpg",
-      "/assets/images/ukazky/eliska-rebelka-8.jpg",
-      "/assets/images/ukazky/eliska-rebelka-9.jpg",
-      "/assets/images/ukazky/eliska-rebelka-10.jpg"
+    "excerpts": [
+      {
+        "title": "Tajemství na půdě",
+        "text": "<p>&bdquo;Samá voda, samá voda…,&ldquo; ozývalo se za Eliškou. Obešla všechny místnosti, ale pořád slyšela to samé. Nezbylo jí nic jiného než přejít ke schodům na půdu. Vtom se ozvalo: &bdquo;Přihořívá…&ldquo;</p><p>Vzala za kliku a otevřela. Prolezla všechny kouty půdy, vyhýbala se pavučinám, překračovala nejrůznější haraburdí. V rohu stála stará almara, které chyběla dvířka. Přistoupila k ní blíž. &bdquo;Přihořívá,&ldquo; zašeptala Hedvika. Na dně almary se něco pohnulo. Eliška leknutím uskočila. Ve tmě uviděla dvě maličká světýlka. Arnošt s Hedvikou vykřikli: &bdquo;Hoří!&ldquo;</p><p>Konečně pochopila, co to je. Na staré dece ležela veliká černá kočka a pozorovala ji žlutýma očima. Takže to byla ta světýlka! Tuhle kočku Eliška neznala. U Gruberových ji nikdy neviděla.</p><p>&bdquo;Mňau,&ldquo; pozdravila ji kočka. Anebo to mělo znamenat &bdquo;vypadni?&ldquo; Eliška nemohla uvěřit tomu, co vidí. Před kočkou se choulila tři maličkatá koťátka. Dvě černá po mamince a jedno černobílé.</p>",
+        "image": "/assets/images/ukazky/eliska-rebelka-1.jpg"
+      },
+      {
+        "title": "Vánoční dárek",
+        "text": "<p>Za dveřmi se ozval smích a šramot. Eliška ztuhla. Okamžitě poznala, kdo to je. Gruberovi! Počáteční radost rychle vystřídala zlost. Tohle jim jen tak nedaruje. Zvlášť ne Hedvice, která ji předtím tak odbyla. Eliška nafoukla tváře a připravila si ten nejzamračenější obličej, jaký uměla.</p><p>Po chvilce se ozvalo nesmělé zaklepání. Maminka s tatínkem společně zvolali: &bdquo;Dále!&ldquo; Dveře se otevřely. &bdquo;Veselé Vánoce!&ldquo; zahlaholili Gruberovi.</p><p>V tu ránu se Eliška zapomněla mračit a s otevřenou pusou zírala na to, co Hedvika drží v náručí. Rodiče zalapali po dechu. Tohle přece není Gréta! Psík, kterého Hedvika svírala v náručí, vypadal jako netopýr. Měl obrovské uši, zvídavá černá očka a podivnou srst. Šil sebou a vyžadoval, aby ho pustila na zem.</p><p>&bdquo;Co to má znamenat?&ldquo; hlesla maminka. &bdquo;To je Ťapina,&ldquo; řekla pyšně Hedvika, &bdquo;dárek pro Elišku.&ldquo; &bdquo;Ťapinó!&ldquo; vykřikla Eliška a rozběhla se ke štěňátku. Ťapina se k Elišce vrhla, olizovala jí tváře a pokoušela se ukousnout jí nos.</p>",
+        "image": "/assets/images/ukazky/eliska-rebelka-2.jpg"
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Napínavá cesta Elišky k vytouženému mazlíčkovi musí pohltit každého malého čtenáře stejně jako moje děti, které se zvířecích chlupáčů nakonec dočkaly nejen v závěru knihy.",
+        "author": "Šárka Brožíková",
+        "source": "učitelka ZŠ",
+        "rating": 5
+      }
     ],
     "featured": true,
     "publishedDate": "2021-01-01"
@@ -124,9 +148,9 @@
     "title": "Viktor a případ zmizelého psa",
     "slug": "viktor-a-pripad-zmizeleho-psa",
     "subtitle": "Když máš odvahu a otevřenou mysl, dokážeš nemožné!",
-    "summary": "Kam se podělo to roztomilé štěně, které ještě včera cupovalo na kousky maminčinu kuchařku? Viktor s Žofií rozjíždějí detektivní pátrání. Ani jeden z nich však netuší…",
-    "description": "Strach, hrůza a beznaděj… Takové pocity prožívá Viktor, kterému jednoho dne záhadně zmizí jeho milované štěně. Se svou kamarádkou Žofií rozjíždí detektivní pátrání. Ani jeden z nich však netuší, do jak mrazivého nebezpečí se dostanou. Podezřelých je hodně, věřit nemůžou nikomu. A nejhorší je, že vyřešení celého případu mají celou dobu přímo před očima…",
-    "ageGroup": "Ilustrovaná kniha pro nebojácné děti, rodiče a prarodiče od 8 do 108 let",
+    "summary": "Viktorovo štěně Seneca se ztratí. Začíná skutečně napínavé dobrodružství. Dokáže ho Viktor zachránit?",
+    "description": "Kam se podělo to roztomilé štěně, které ještě včera cupovalo maminčinu kuchařku? Viktor s novou kamarádkou Žofií rozjíždějí detektivní pátrání. Podezřelých je hodně. Věřit nemůžou nikomu.",
+    "ageGroup": "Pro děti od 6 do 10 let",
     "year": 2019,
     "publisher": "Albatros",
     "isbn": "",
@@ -147,36 +171,22 @@
     "excerpts": [
       {
         "title": "Lunino království",
-        "text": "…Na konci osady čekalo Viktora překvapení. Zůstal stát jak omráčený, něco takového ještě nikdy neviděl. Před ním se skvěla překrásná dřevěná maringotka pomalovaná pestrými barvami. Nahoře nad jejími okny bylo velkými písmeny napsáno: LUNINO KRÁLOVSTVÍ."
+        "text": "<p>…Na konci osady čekalo Viktora překvapení. Zůstal stát jak omráčený, něco takového ještě nikdy neviděl. Před ním se skvěla překrásná dřevěná maringotka pomalovaná pestrými barvami. Nahoře nad jejími okny bylo velkými písmeny napsáno: LUNINO KRÁLOVSTVÍ.</p><p>Prohlížel si zarostlou zahradu a najednou si všiml velké holky, která si hověla v houpací síti. Nevěděl, co si o ní má myslet. Měla dlouhé fialové vlasy zacuchané do dredů s kovovými korálky, v uších několik náušnic a na rukou velké množství náramků. Přestože už bylo chladněji, byla oblečená jak v teplý letní den. Viktor si všiml, že má po těle spoustu tetování.</p><p>Bosýma nohama zvedala do výšky mourovaté koťátko a smála se tomu, jak mžourá na svět. Potom si ho dala na hlavu a nechala ho hrát si s korálky ve vlasech. Líně k nim otočila hlavu a sametovým hlasem pronesla: &bdquo;Nazdar, Žofie, vedeš si pánskou návštěvu? Tak vítejte.&ldquo;</p><p>&bdquo;Prosím tě, Luno, nech toho!&ldquo; zčervenala Žofie. &bdquo;To je Viktor. Pojď, Viktore, ukážu ti, kde bydlíme.&ldquo; Viktor se k ní nahnul a tiše zašeptal. &bdquo;A kdo je to vlastně ta Luna?&ldquo; Žofie se široce usmála a pronesla, jako by to byla ta nejjasnější věc pod sluncem: &bdquo;Přece moje máma.&ldquo;</p>",
+        "image": "/assets/images/ukazky/lunino-kralovstvi.jpg"
       },
       {
         "title": "Hlídač",
-        "text": "Hlídač mezitím došel až doprostřed sadu a vztekle se rozhlížel po svém nepříteli. Oháněl se holí a sprostě nadával: 'Vylez, ty zbabělče, postav se mi jako chlap chlapovi!' Z jeho hlasu však bylo znát, že začíná mít opravdový strach."
+        "text": "<p>Hlídač mezitím došel až doprostřed sadu a vztekle se rozhlížel po svém nepříteli. Oháněl se holí a sprostě nadával: &bdquo;Vylez, ty zbabělče, postav se mi jako chlap chlapovi!&ldquo;</p><p>Z jeho hlasu však bylo znát, že začíná mít opravdový strach. Těžce dýchal a jeho kulhání bylo čím dál tím zřetelnější. Opřel se o strom, vytáhl látkový kapesník a otíral si zpocené čelo.</p><p>Vtom zůstal jak opařený. Ucítil, že strom, o který se opírá, se pohnul. Hlídač zavrávoral, a kdyby ho nezachránila jeho hůl, spadl by na zem jako hruška.</p><p>Zíral na strom, který před jeho zraky ožíval. Když se na něj zadíval pozorněji, ucukl. S hrůzou zjistil, že stará jabloň má dokonce oči a ty oči se dívají přímo na něj. Chtěl se rozběhnout a utíkat pryč, ale nohy ho neposlouchaly. Jako by ani nebyly jeho…</p>",
+        "image": "/assets/images/ukazky/hlidac.jpg"
       }
     ],
     "testimonials": [
       {
-        "quote": "Ke psu Senecovi, kterého Viktorovi věnovala teta Bobina, přibyla bezvadná kamarádka Žofie. Jenže Seneca se ztratí. A začíná skutečně napínavé dobrodružství. Podaří se ho zachránit nebo ne? Už teď se strašně moc těším, jak jednou budu obě knížky, jak \"Viktora a záhadnou tetu Bobinu\", tak i \"Viktora a případ zmizelého psa\", číst svým vnučkám.",
-        "author": "Taťjana Medvecká",
-        "source": "herečka",
-        "rating": 5
-      },
-      {
-        "quote": "Chvílemi se mi tajil dech napětím a chvílemi jsem naopak rozdýchávala dojetí. Viktor je ze současného světa, citlivý kluk, který tak odhodlaně a zapáleně ukazuje cestu odvahy. Kdyby byly takové knihy na seznamu povinné četby v době mého dětství, určitě bych nesháněla výcuc do čtenářského deníku podvodem.",
-        "author": "Šárka Brožíková",
-        "source": "speciální pedagog, psycholog",
-        "rating": 5
-      },
-      {
-        "quote": "V iktor a případ zmizelého psa je strašně napínavá knížka. Vadí mi, když někdo ubližuje dětem i zvířatům. Nejvíc jsem se bál, když šel Viktor s Žofií v noci zachránit Senecu.",
-        "author": "Benjamín",
-        "source": "7 let",
+        "quote": "Detektivka, jak má být! Tahle dokonce zadrnká nejen na dobrodružnou strunku, ale i na tu dojemnou a veselou. Kromě napínavého příběhu, je tu ještě něco, co vás neomylně polapí – štěně, za které budete dýchat.",
+        "author": "Helena Varšavská",
+        "source": "literární redaktorka Albatros media",
         "rating": 5
       }
-    ],
-    "gallery": [
-      "/assets/images/ukazky/lunino-kralovstvi.jpg",
-      "/assets/images/ukazky/hlidac.jpg"
     ],
     "featured": true,
     "publishedDate": "2019-05-01"
@@ -186,9 +196,9 @@
     "title": "Viktor a záhadná teta Bobina",
     "slug": "viktor-a-zahadna-teta-bobina",
     "subtitle": "Jak silné může být přátelství malého kluka a staroušků?",
-    "summary": "Přečti si prázdninový příběh Viktora v překvapivém prostředí. Pro zvídavé děti, rodiče i prarodiče. A k tomu skvělé ilustrace.",
-    "description": "'Zlobivé' devítileté dítě Viktor je za trest svými věčně pracujícími rodiči odesláno ke svérázné asketické tetě Bobině do zapadlého městečka Hrabákova, kde má strávit celé dva měsíce prázdnin. Zuřící Viktor netuší, že teta je ředitelkou Domova pokojného stáří, a že právě tam, v domově důchodců, společně s ní a dalšími deseti staroušky prožije to nejkrásnější léto svého života.",
-    "ageGroup": "Ilustrovaná kniha pro nebojácné děti, rodiče a prarodiče od 8 do 108 let",
+    "summary": "&bdquo;No nazdar! Prázdniny bez kamarádů v baráku plným starejch lidí, kterýmu šéfuje šílená teta Bobina?! Tohle nemůžu přežít!&ldquo;",
+    "description": "Devítiletý Viktor kvůli sérii průšvihů dostane trojku z chování. Rodiče zuří a kamarádi s ním nechtějí nic mít. A aby toho nebylo málo, jeho &bdquo;převýchovy&ldquo; se na celé léto ujme podivná stárnoucí teta žijící v malém zapadlém městečku Hrabákově. Viktorem cloumá zlost a beznaděj. Takové prázdniny si opravdu nepředstavoval!",
+    "ageGroup": "Pro děti od 6 do 10 let",
     "year": 2018,
     "publisher": "Albatros",
     "isbn": "978-80-00-05291-6",
@@ -209,11 +219,13 @@
     "excerpts": [
       {
         "title": "Viktor a postava s černou kapucí",
-        "text": "…Viktor strnul a snažil se rozpoznat, kdo by to mohl být. Postava v černém plášti s kapucí se zarazila. Zadívala se na Viktora a rychle zmizela v zahradě…"
+        "text": "<p>Viktor se rozhlížel po stromech, které se ve větru hýbaly sem a tam a přitom strašidelně vrzaly. Když za sebou uslyšel zahoukat sýčka, na nic nečekal a rozběhl se za tetou Bobinou.</p><p>Ocitl se na starém ponurém hřbitově. Zastavil se a rozhlédl se kolem sebe. Teta nikde. Tma byla opravdu černočerná, jen sem tam dohořívala světýlka svíček a osvětlovala jména mrtvých vytesaná do kamene.</p><p>Skrčený Viktor potichu našlapoval po cestičkách mezi hroby a snažil se být co nejméně nápadný. Konečně našel tetu Bobinu. Byla shrbená za velkým náhrobkem. Popadla ho za ruku, stáhla ho k sobě a přiložila si dlouhý prst na ústa, aby byl zticha.</p><p>Významně pohodila hlavou směrem k zadnímu koutu hřbitova. Nad jedním z hrobů stála černá postava a nervózně se rozhlížela po hřbitově. Viktor s hrůzou zjistil, že v rukou svírá motyku a napřahuje se k úderu.</p>",
+        "image": "/assets/images/ukazky/hrbitov.jpg"
       },
       {
-        "title": "Na starém ponurém hřbitově",
-        "text": "…ocitl se na starém ponurém hřbitově. Tma byla opravdu černočerná, jen sem tam dohořívala světýlka svíček a osvětlovala jména mrtvých vytesaná do kamene. Nad jedním z hrobů stála černá postava a nervózně se rozhlížela po hřbitově. Viktor s hrůzou zjistil, že v rukou svírá motyku a napřahuje se k úderu…"
+        "title": "Bobina a žigulík",
+        "text": "<p>Pan Jaroslav se dozvěděl, že Bobina vlastní řidičský průkaz, ale už léta letoucí neřídila. A tak přišel s tím nesmyslným nápadem, že jí dá lekce řízení, aby si po těch letech připomněla, jak se řídí automobil.</p><p>Ráno ji vyzvedl svým naleštěným žigulíkem. Všichni jsme se sešli před brankou. Bobina si sedla za volant a pokusila se nastartovat. Auto několikrát zakuckalo, potom poskočilo a zase ztichlo. Z otevřeného okénka jsme zaslechli smích pana Jaroslava. Bobina se však nesmála.</p><p>Začala si kousat spodní ret, pevně stiskla volant a znovu nastartovala. Nic. A pak znovu. Zase nic. To se opakovalo ještě několikrát.</p><p>Když se auto po mnoha marných pokusech konečně rozjelo, všichni jsme si oddechli. Mávali jsme jim a jásali jsme, dokud nezmizeli za zatáčkou. Jenže když se setmělo a ti dva se nevrátili, začali jsme o ně mít strach.</p>",
+        "image": "/assets/images/ukazky/ziguli.jpg"
       }
     ],
     "testimonials": [
@@ -222,25 +234,7 @@
         "author": "Irena Budweiserová",
         "source": "zpěvačka",
         "rating": 5
-      },
-      {
-        "quote": "Knížku jsem přečetla na jeden dech. Párkrát jsem si i brekla, to už tak staré herečky dělávají. Zároveň jsem si v příběhu Viktora pěkně zahrála. Hned několik postav najednou! Děkuji, držím palce, těším se…",
-        "author": "Bára Hrzánová",
-        "source": "herečka",
-        "rating": 5
-      },
-      {
-        "quote": "Knížka je napínavá, ale i vtipná. Četli jsme ji celá rodina společně a náš táta se u toho hodně nasmál. Také má krásné obrázky, a to je pro mě hodně důležité.",
-        "author": "Matyáš",
-        "source": "8 let",
-        "rating": 5
       }
-    ],
-    "gallery": [
-      "/assets/images/ukazky/viktor.jpg",
-      "/assets/images/ukazky/hrbitov.jpg",
-      "/assets/images/ukazky/ziguli.jpg",
-      "/assets/images/ukazky/cikanka.jpg"
     ],
     "featured": true,
     "publishedDate": "2018-05-17",
@@ -257,9 +251,9 @@
     "title": "Tajemství rodiny M",
     "slug": "tajemstvi-rodiny-m",
     "subtitle": null,
-    "summary": "Motivační příběh o sourozencích, o strastech dospívání, o výzvách, o síle rodiny…",
+    "summary": "Příběh obyčejné rodiny ukazuje sílu kamarádství, sounáležitosti a podpory mezi sourozenci, postupné budování sebedůvěry hlavní hrdinky i odvahu jít si za svým.",
     "description": "Matylda, Maxmilián a Kryštof jsou sourozenci, kteří jednoho dne zjistí, že před nimi rodiče něco tají. A tak rozjedou pátrací akci. V jednu chvíli se ale všechno zvrtne a život celé rodiny se obrátí vzhůru nohama. Matylda se proto rozhodne běžet svůj životní závod a rodinu zachránit. Podaří se jí vyhrát?",
-    "ageGroup": "Kniha pro děti od 10 let",
+    "ageGroup": "Pro děti od 9 do 12 let",
     "year": 2022,
     "publisher": "Booktook.cz",
     "isbn": "",
@@ -284,13 +278,22 @@
     "excerpts": [
       {
         "title": "Matylda a odraz v zrcadle",
-        "text": "Matylda se rozhodla, že i když se to nemá, pro jednou se nic nestane, když bude rodiče špehovat. Spustila nohy z postele a zamířila ke dveřím. Cestou se pohledem střetla s vlastním odrazem v zrcadle. Prohlížela si svou protáhlou tvář, velký nos a drobné tělíčko v plandavém pyžamu. Vypadala spíš jako kluk než holka."
+        "text": "<p>Matylda se rozhodla, že i když se to nemá, pro jednou se nic nestane, když bude rodiče špehovat. Spustila nohy z postele a zamířila ke dveřím.</p><p>Cestou se pohledem střetla s vlastním odrazem v zrcadle. Prohlížela si svou protáhlou tvář, velký nos a drobné tělíčko v plandavém pyžamu. Vypadala spíš jako kluk než holka.</p><p>Svit pouličních lamp ještě víc zvýrazňoval jizvu na pravém spánku, kterou tam měla odmalička. Máma jí vyprávěla, že sotva se naučila chodit, běhala tak rychle, že ji nemohli uhlídat. Jednou jim takhle utíkala, zakopla a upadla na uřezaný keř růží. Proto ta jizva.</p>",
+        "image": "/assets/images/ukazky/tajemstvi-rodiny-m-1.jpg"
+      },
+      {
+        "title": "Kryštof a žlutá krabice",
+        "text": "<p>Natálka zamávala Matyldě rukou před obličejem. &bdquo;Posloucháš mě vůbec?&ldquo; Už poněkolikáté se jí na něco ptala, ale odpovědi se nedočkala.</p><p>&bdquo;Promiň, co jsi říkala?&ldquo; zeptala se Matylda. &bdquo;Ptala jsem se, jak ti šlo běhání.&ldquo; Matylda pokrčila rameny a usmála se: &bdquo;Mohlo to být i horší.&ldquo; V tom Natálka ukázala na druhou stranu parku: &bdquo;Hele, není támhle tvůj brácha? Nechceš na něj zavolat?&ldquo;</p><p>V dálce poskakovala známá postavička. Byl to Kryštof. Pořád se ohlížel a naštvaně pohazoval hlavou. V ruce nesl žlutou krabici.</p><p>Občas se zastavil a lehce nadzvedl víko. Něco uvnitř zkoumal, potom víko zase přiklopil. Když uviděl na zemi povalující se plechovku od piva, vztekle do ní kopl a šel dál.</p>",
+        "image": "/assets/images/ukazky/tajemstvi-rodiny-m-2.jpg"
       }
     ],
-    "testimonials": [],
-    "gallery": [
-      "/assets/images/ukazky/tajemstvi-rodiny-m-1.jpg",
-      "/assets/images/ukazky/tajemstvi-rodiny-m-2.jpg"
+    "testimonials": [
+      {
+        "quote": "Je zajímavé, jak dobře zná Pavlína svět za dveřmi dětských pokojíčků.",
+        "author": "Jitka Smutná",
+        "source": "herečka",
+        "rating": 5
+      }
     ],
     "featured": true,
     "publishedDate": "2022-01-01"
@@ -320,15 +323,25 @@
         "primary": true
       }
     ],
-    "excerpts": [],
-    "testimonials": [],
-    "gallery": [
-      "/assets/images/ukazky/ukazka-roza-1.jpg",
-      "/assets/images/ukazky/ukazka-roza-2.jpg",
-      "/assets/images/ukazky/ukazka-roza-3.jpg",
-      "/assets/images/ukazky/ukazka-roza-4.jpg",
-      "/assets/images/ukazky/ukazka-roza-5.jpg",
-      "/assets/images/ukazky/ukazka-roza-6.jpg"
+    "excerpts": [
+      {
+        "title": "Poslední dny před prázdninami",
+        "text": "<p>Jediné, na co Róza poslední dobou dokázala myslet, byly pomalu se blížící prázdniny. Ještě pár dní a odjedou s maminkou do Jánova. Žádná škola, žádné ranní vstávání, ani cvičné diktáty. Róza se bude jen poflakovat. Těšila se na dny, které stráví na samotě. Všude jen hory, les a klid. Dům po babičce v Jeseníkách, kam jezdí každé léto, byl pro ni tím nejkouzelnějším místem na světě.</p><p>Zvonilo už před pár minutami, ale paní učitelka, kterou měli páťáci na přírodopis, nikde. Ve třídě panoval šílený zmatek. Kluci se honili a házeli po sobě bačkorou, holky si v hloučcích povídaly a něčemu se chichotaly. Madla, která s Rózou seděla v lavici, každou chvilku vykoukla ze dveří třídy, zkontrolovala chodbu a zavolala: &bdquo;Vzduch čistej! Ještě nejde.&ldquo;</p><p>V tom největším hluku, a když už to vypadalo, že nikdo nepřijde, se prudce rozrazily dveře a v nich se objevil postrach školy, učitel Legner.</p>",
+        "image": "/assets/images/ukazky/ukazka-roza-1.jpg"
+      },
+      {
+        "title": "Nemoc na prázdninách",
+        "text": "<p>Víte, jak je to s létem. Tak dlouho se na něj těšíte, nemůžete se ho dočkat, a nakonec je všechno jinak, než jste si vysnili. Na začátku prázdnin Róza zuřila, že s nimi do Jánova jede i Patrik s dvojčaty. Nebyli pro ni nic jiného než vetřelci. Když už se s jejich přítomností v babiččině domě smířila, a dokonce se s Lindou a Vojtou skamarádila, přišla zase nemoc.</p><p>Dny v posteli jí připadaly nekonečné a rozvláčné. Pokud zrovna nespala, pozorovala z okna oblohu. Bylo to lepší než kino. V jednom z mraků uviděla obrys babičky, v jiném slona s rozdvojeným chobotem, v dalším stádo beránků. Včera dokonce zahlédla tatínkův obličej. Ale jenom na chvilku. Mraky rychle odpluly a obraz se rozplynul.</p><p>Podívala se na své ruce a prohlížela si je. Vypadaly jako hůlčičky. Je možné, že by za těch pár dní tolik zhubla?</p>",
+        "image": "/assets/images/ukazky/ukazka-roza-2.jpg"
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Svěží vítr na poli takových těch knížek, které rodiče koupí svým dětem, ale ve skutečnosti se nemohou dočkat, až si je budou sami moct přečíst.",
+        "author": "Adam Elias",
+        "source": "sounddesigner",
+        "rating": 5
+      }
     ],
     "featured": true,
     "publishedDate": "2025-01-01"
@@ -338,9 +351,9 @@
     "title": "Hra o sen",
     "slug": "hra-o-sen",
     "subtitle": "Bojuj o to, co chceš a buď připravený to dostat!",
-    "summary": "Napínavá knižní reality show pro ty, kdo se rádi bojí",
-    "description": "Deset třináctiletých, výjimečně nadaných dětí odjíždí do staré zapomenuté vily uprostřed divoké přírody. Čeká je tvrdý boj. Byly vybrány do nové televizní soutěže Tajný mecenáš. Kdo vyhraje, získá vlastního mecenáše – člověka, který mu zaplatí vše, co bude potřebovat, aby mohl rozvíjet svůj mimořádný talent. Soutěžící děti totiž spojuje jedna věc – vyrůstají v rodinách, které nemají peníze. Jde tedy o hodně. Vyhrát ale může jen jeden!",
-    "ageGroup": "Pro čtenáře od 11 let",
+    "summary": "Napínavá kombinace teenagerského příběhu a akčního thrilleru.",
+    "description": "Deset třináctiletých, výjimečně nadaných dětí odjíždí do staré zapomenuté vily uprostřed divoké přírody. Čeká je tvrdý boj. Byly vybrány do nové televizní soutěže Tajný mecenáš. Kdo vyhraje, získá vlastního mecenáše – člověka, který mu zaplatí vše, co bude potřebovat, aby mohl rozvíjet svůj mimořádný talent. Soutěžící děti totiž spojuje jedna věc. Vyrůstají v rodinách, které nemají peníze. Jde tedy o hodně. Teď už ale není cesty zpět. Neúprosný boj právě začíná!",
+    "ageGroup": "Pro děti od 10 do 13 let",
     "year": 2020,
     "publisher": "Grada",
     "isbn": "",
@@ -361,30 +374,22 @@
     "excerpts": [
       {
         "title": "Geniální dárek pro mecenáše",
-        "text": "Leon našel v zahradě mrtvého hraboše a rozhodl se ho vypreparovat. Byl si jistý, že právě to bude geniální dárek pro mecenáše. Dal si na nos kolíček na prádlo, aby necítil ten strašný smrad, který se z hraboše linul, oblékl si bílý plášť a na ruce si navlékl gumové rukavice."
+        "text": "<p>Leon našel v zahradě mrtvého hraboše a rozhodl se ho vypreparovat. Byl si jistý, že právě to bude geniální dárek pro mecenáše.</p><p>Dal si na nos kolíček na prádlo, aby necítil ten strašný smrad, který se z hraboše linul, oblékl si bílý plášť a na ruce si navlékl gumové rukavice.</p>",
+        "image": "/assets/images/ukazky/hra-o-sen.jpg"
       },
       {
         "title": "Limuzína se rozjela",
-        "text": "…Limuzína se rozjela. Leon to nevydržel a rýpnul si: 'Ty jsi ten geniální spisovatel s příšernou matkou, viď? To byla ona, cos jí mával?' Filipovi se nechtělo znovu vysvětlovat, jak to režisér schválně celé sestříhal, aby z toho maminka vyšla jako fúrie."
+        "text": "<p>…Limuzína se rozjela. Leon to nevydržel a rýpnul si: &bdquo;Ty jsi ten geniální spisovatel s příšernou matkou, viď? To byla ona, cos jí mával?&ldquo;</p><p>Filipovi se nechtělo znovu vysvětlovat, jak to režisér schválně celé sestříhal, aby z toho maminka vyšla jako fúrie.</p>",
+        "image": "/assets/images/ukazky/hra-o-sen-adam.jpg"
       }
     ],
     "testimonials": [
       {
-        "quote": "Hra o sen je zábavná, dobrodružná kniha plná emocí. Když jsem jí začala číst, nemohla jsem přestat. Hltala jsem slovo od slova a měla pocit, že toto napínavé dobrodružství prožívám s těmito téměř geniálními hrdiny.",
-        "author": "Anastázie",
-        "source": "15 let",
-        "rating": 5
-      },
-      {
-        "quote": "Skvělá kniha, která zaujme nejen děti, ale i dospělé. Je to jako kdybyste se koukali na skutečnou reality show v televizi.",
-        "author": "Ludvík",
-        "source": "13 let",
+        "quote": "Stal jsem se účastníkem dobře nastartované detektivky. S nadšením ji budu doporučovat všem, kteří chtějí číst. Tahle kniha mě prostě bavila.",
+        "author": "Patrik Klán",
+        "source": "spisovatel",
         "rating": 5
       }
-    ],
-    "gallery": [
-      "/assets/images/ukazky/hra-o-sen.jpg",
-      "/assets/images/ukazky/hra-o-sen-adam.jpg"
     ],
     "featured": true,
     "publishedDate": "2020-01-01"
