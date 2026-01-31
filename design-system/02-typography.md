@@ -52,12 +52,12 @@ The typography creates a friendly, approachable, and readable experience:
 
 | Element | Mobile Size     | Tablet Size (md:) | Desktop Size (lg:) | Weight     | Font   | Line Height |
 | ------- | --------------- | ----------------- | ------------------ | ---------- | ------ | ----------- |
-| H1      | 2.25rem (36px)  | 3rem (48px)       | 3.75rem (60px)     | Extra Bold | Nunito | Tight       |
-| H2      | 1.875rem (30px) | 2.25rem (36px)    | 3rem (48px)        | Bold       | Nunito | Tight       |
-| H3      | 1.5rem (24px)   | 1.75rem (28px)    | 2rem (32px)        | Bold       | Nunito | Tight       |
-| H4      | 1.25rem (20px)  | 1.5rem (24px)     | 1.5rem (24px)      | Bold       | Nunito | Normal      |
-| H5      | 1.125rem (18px) | 1.25rem (20px)    | 1.25rem (20px)     | Bold       | Nunito | Normal      |
-| H6      | 1rem (16px)     | 1rem (16px)       | 1.125rem (18px)    | Bold       | Nunito | Normal      |
+| H1      | 2.25rem (36px)  | 3rem (48px)       | 3.75rem (60px)     | Extra Bold | Nunito | 1.1         |
+| H2      | 1.875rem (30px) | 2.25rem (36px)    | 3rem (48px)        | Bold       | Nunito | 1.1         |
+| H3      | 1.5rem (24px)   | 1.75rem (28px)    | 2rem (32px)        | Bold       | Nunito | 1.1         |
+| H4      | 1.25rem (20px)  | 1.5rem (24px)     | 1.5rem (24px)      | Bold       | Nunito | 1.4         |
+| H5      | 1.125rem (18px) | 1.25rem (20px)    | 1.25rem (20px)     | Bold       | Nunito | 1.4         |
+| H6      | 1rem (16px)     | 1rem (16px)       | 1.125rem (18px)    | Bold       | Nunito | 1.4         |
 
 > [!NOTE]
 > All headings use `tracking-tight` (letter-spacing: -0.025em) for a refined, modern appearance.
@@ -115,10 +115,10 @@ Color: foreground
 Font family: Nunito
 Size: 1.875rem → 2.25rem → 3rem (responsive)
 Weight: 700 (Bold)
-Line height: tight (1.1)
-Letter spacing: tight (-0.025em)
+Line height: 1.1
+Letter spacing: -0.025em
 Color: foreground
-Margin bottom: 1.5rem (24px)
+Margin bottom: 1.5rem (24px) on mobile, 2rem (32px) on desktop
 ```
 
 ### Card/Feature Titles (H3)
@@ -150,14 +150,19 @@ Use sparingly for single key phrases within headings.
 
 ### Section Label/Badge
 
+Used for section headers (e.g., "Naše knihy", "O autorce"):
+
 ```
 Display: inline-block
-Padding: 0.375rem 1rem (6px 16px)
-Background: primary at 10% opacity
-Color: primary
-Border radius: full (9999px)
+Padding: 0.375rem 1rem (6px vertical, 16px horizontal)
+Background: hsl(var(--primary) / 0.1)
+Color: hsl(var(--primary))
+Border radius: 9999px (full pill shape)
+Font family: Nunito (display font)
 Font size: 0.875rem (14px)
 Font weight: 600 (Semibold)
+Text transform: none (preserve original case)
+Margin bottom: 1rem (16px) when above heading
 ```
 
 ---

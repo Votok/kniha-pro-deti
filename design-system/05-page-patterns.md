@@ -70,17 +70,29 @@ A two-column layout with generous top padding that creates visual impact:
 
 **Right Column: Floating Books**
 
-- 5 book covers positioned absolutely in a scattered arrangement
-- Each book has slight rotation (-8° to +6°)
-- Books float with different animation delays (staggered)
-- Center book is largest and featured
-- Decorative blur circles behind
+- 5 book covers positioned with `position: absolute` in a decorative arrangement
+- Specific positioning for each book (from center):
+  - Book 1: top-left, `rotate(-8deg)`, scale 0.8
+  - Book 2: top-right, `rotate(6deg)`, scale 0.7
+  - Book 3: center, `rotate(0deg)`, scale 1.0 (largest/featured)
+  - Book 4: bottom-left, `rotate(-5deg)`, scale 0.75
+  - Book 5: bottom-right, `rotate(4deg)`, scale 0.85
+- Each book uses `float` animation with staggered delays (0s, 0.5s, 1s, 1.5s, 2s)
+- Container has `position: relative` for absolute positioning context
+- 2-3 decorative blur circles (`blur(80px)`, `opacity: 0.3`) positioned behind books
 
 **Scroll Indicator**:
 
-- Positioned at bottom center
-- Bounce animation
-- Text label + circular button with chevron
+- Position: `absolute`, `bottom: 2rem`, `left: 50%`, `transform: translateX(-50%)`
+- Layout: Vertical flex column, `align-items: center`, gap: 0.5rem
+- Text label: 0.875rem, `hsl(var(--muted-foreground))`, "Scroll to explore"
+- Button:
+  - Circular: width/height 40px, border-radius: 50%
+  - Background: `hsl(var(--card))`
+  - Shadow: `shadow-soft`
+  - Icon: Chevron down, 20×20px, color: `hsl(var(--primary))`
+- Animation: `bounce` (2s ease-in-out infinite) on button only
+- Hover: button background → `hsl(var(--primary))`, icon color → `hsl(var(--primary-foreground))`
 
 ---
 
@@ -95,15 +107,15 @@ A two-column layout with generous top padding that creates visual impact:
 
 **Feature Card**:
 
-| Element     | Style                                    |
-| ----------- | ---------------------------------------- |
-| Container   | Card bg, `1rem` radius, `shadow-soft`    |
-| Icon Box    | 56×56px, Primary @ 10%, `0.75rem` radius |
-| Icon        | 28×28px, Primary color                   |
-| Title       | Display font, 1.25rem, bold              |
-| Description | Muted foreground, relaxed line-height    |
-| Hover       | `shadow-card`, lift -4px                 |
-| Stagger     | 100ms animation delay per card           |
+| Element     | Style                                                                    |
+| ----------- | ------------------------------------------------------------------------ |
+| Container   | Background: `hsl(var(--card))`, border-radius: `1rem`, shadow: `shadow-soft`, padding: `1.5rem` |
+| Icon Box    | Width/height: 56px, background: `hsl(var(--primary) / 0.1)`, border-radius: `0.75rem` (12px) |
+| Icon        | Width/height: 28px, color: `hsl(var(--primary))`                        |
+| Title       | Font: Nunito (display), size: 1.25rem (20px), weight: 700, margin-bottom: 0.5rem |
+| Description | Color: `hsl(var(--muted-foreground))`, size: 0.875rem (14px), line-height: 1.6 |
+| Hover       | Shadow: `shadow-card`, transform: `translateY(-4px)`, transition: 300ms ease-out |
+| Entrance    | Animation: `fadeInUp` with staggered delays (0ms, 100ms, 200ms, 300ms)  |
 
 ---
 
@@ -137,27 +149,27 @@ A two-column layout with generous top padding that creates visual impact:
 
 **Benefits Card**:
 
-| Element     | Style                                       |
-| ----------- | ------------------------------------------- |
-| Container   | Card bg, `1rem` radius (2xl), `shadow-soft` |
-| Padding     | `1.5rem`                                    |
-| Icon Box    | 48×48px, Primary @ 10%, `0.75rem` radius    |
-| Icon        | 24×24px, Primary color                      |
-| Title       | Display font, 1.125rem, bold                |
-| Description | Muted foreground, 0.875rem, relaxed         |
-| Hover       | `shadow-card`, lift -4px                    |
-| Stagger     | 100ms animation delay per card              |
+| Element     | Style                                                                    |
+| ----------- | ------------------------------------------------------------------------ |
+| Container   | Background: `hsl(var(--card))`, border-radius: `1rem` (16px), shadow: `shadow-soft` |
+| Padding     | `1.5rem` (24px)                                                          |
+| Icon Box    | Width/height: 48px, background: `hsl(var(--primary) / 0.1)`, border-radius: `0.75rem` (12px) |
+| Icon        | Width/height: 24px, color: `hsl(var(--primary))`                        |
+| Title       | Font: Nunito (display), size: 1.125rem (18px), weight: 700, margin-bottom: 0.5rem |
+| Description | Color: `hsl(var(--muted-foreground))`, size: 0.875rem (14px), line-height: 1.6 |
+| Hover       | Shadow: `shadow-card`, transform: `translateY(-4px)`, transition: 300ms ease-out |
+| Entrance    | Animation: `fadeInUp` with staggered delays (0ms, 100ms, 200ms, 300ms)  |
 
 **Author Photo**:
 
-| Element       | Style                                 |
-| ------------- | ------------------------------------- |
-| Image Size    | 320–420px width                       |
-| Border Radius | `1rem` (2xl)                          |
-| Shadow        | `shadow-book`                         |
-| Hover         | Scale 105% (optional)                 |
-| Caption       | Floating card at bottom, pill shape   |
-| Decorative    | Blurred accent/primary circles behind |
+| Element       | Style                                                                |
+| ------------- | -------------------------------------------------------------------- |
+| Image Size    | Width: 320px (mobile) → 420px (lg), height: auto (maintains aspect) |
+| Border Radius | `1rem` (16px)                                                        |
+| Shadow        | `shadow-book`                                                        |
+| Hover         | Transform: `scale(1.05)`, transition: 300ms ease-out (optional feature) |
+| Caption       | Floating card positioned at bottom with `position: absolute`, `bottom: 1rem`, rounded-full pill shape, padding: `0.5rem 1rem` |
+| Decorative    | 2-3 blurred circles (`blur(80px)`) with `hsl(var(--accent) / 0.3)` and `hsl(var(--primary) / 0.3)`, positioned behind with `z-index: -1` |
 
 ---
 
@@ -180,13 +192,13 @@ A two-column layout with generous top padding that creates visual impact:
 
 **Card Layout**: Horizontal flex on desktop (photo + content), stacked on mobile
 
-| Element     | Style                               |
-| ----------- | ----------------------------------- |
-| Photo       | 128–160px circle, `shadow-book`     |
-| Quote Text  | 1.25–1.5rem, medium weight, relaxed |
-| Author Name | Display font, 1.25rem, bold         |
-| Author Role | Muted foreground                    |
-| Gap         | `2rem` / `3rem` (md)                |
+| Element     | Style                                                      |
+| ----------- | ---------------------------------------------------------- |
+| Photo       | 128px (mobile) → 160px (lg), `border-radius: 50%`, `shadow-book` |
+| Quote Text  | 1.25rem (mobile) → 1.5rem (lg), weight 500, line-height 1.6 |
+| Author Name | Display font (Nunito), 1.25rem, weight 700                 |
+| Author Role | Muted foreground, 0.875rem                                 |
+| Gap         | 2rem (mobile) → 3rem (md)                                  |
 
 ---
 
@@ -262,8 +274,17 @@ A product-focused page with multiple content sections:
 
 **Metadata Pills**:
 
-- Card bg, `shadow-soft`, pill shape
-- Icon + text pairs
+- Display: inline-flex, align-items: center, gap: 0.5rem
+- Background: `hsl(var(--card))`
+- Shadow: `shadow-soft`
+- Border-radius: 9999px (full pill)
+- Padding: `0.5rem 1rem` (8px vertical, 16px horizontal)
+- Font-size: 0.875rem (14px)
+- Font-weight: 500 (medium)
+- Icon size: 16×16px
+- Icon color: `hsl(var(--muted-foreground))`
+- Text color: `hsl(var(--foreground))`
+- Layout: Horizontal flex row with multiple pills, gap: 0.75rem
 
 ---
 
@@ -271,18 +292,24 @@ A product-focused page with multiple content sections:
 
 **Header**: Centered with storybook-colored tag
 
-**Layout**: Alternating image/text rows
+**Layout**: Alternating 2-column layouts (stacked on mobile, side-by-side on lg)
 
-| Row  | Layout                 |
-| ---- | ---------------------- |
-| Odd  | Image left, text right |
-| Even | Text left, image right |
+Each sample alternates image/text positions:
 
-**Sample Card**:
+| Sample # | Mobile Order       | Desktop Layout (lg)   |
+| -------- | ------------------ | --------------------- |
+| 1        | Image, then text   | Image left, text right |
+| 2        | Image, then text   | Text left, image right |
+| 3        | Image, then text   | Image left, text right |
+| n (odd)  | Image, then text   | Image left, text right |
+| n (even) | Image, then text   | Text left, image right |
 
-- Image with shadow and colored offset behind
-- Sample title (H3)
-- Multiple paragraphs
+**Sample Card Structure**:
+
+- Image container with `shadow-soft` and colored offset div behind (8px offset, uses theme colors)
+- Sample title (H3, 1.5rem, bold)
+- 2-4 body paragraphs with 1rem bottom margin
+- Grid gap: 2rem (mobile) → 3rem (lg)
 
 ---
 
@@ -359,8 +386,10 @@ A product-focused page with multiple content sections:
 
 **Mini Hero**:
 
-- Accent @ 10% background
-- Centered tag, H1, description
+- Background: `hsl(var(--accent) / 0.1)` — accent color at 10% opacity
+- Centered content: tag badge, H1 title, description paragraph
+- Max-width: 48rem (768px), centered with `margin: 0 auto`
+- Padding: 4rem (mobile) → 6rem (lg) vertical
 
 **Gallery Section**:
 
@@ -370,13 +399,16 @@ A product-focused page with multiple content sections:
 
 **Gallery Image**:
 
-| Property      | Value                         |
-| ------------- | ----------------------------- |
-| Aspect Ratio  | 1:1 (square)                  |
-| Border Radius | `0.75rem`                     |
-| Shadow        | `shadow-soft` → `shadow-card` |
-| Hover Image   | Scale 110% (500ms)            |
-| Hover Overlay | Foreground @ 20%              |
+| Property          | Default State          | Hover State                                             |
+| ----------------- | ---------------------- | ------------------------------------------------------- |
+| Container         | `aspect-ratio: 1/1`, `overflow: hidden`, `position: relative` | — |
+| Border Radius     | `0.75rem` (12px)       | —                                                       |
+| Shadow            | `shadow-soft`          | `shadow-card`                                           |
+| Image Transform   | `scale(1)`             | `scale(1.1)` — zooms in 10%                             |
+| Overlay           | `opacity: 0`           | `opacity: 1`, background: `hsl(var(--foreground) / 0.2)` |
+| Transition (img)  | —                      | `transform 500ms ease-out`                              |
+| Transition (overlay) | —                   | `opacity 300ms ease-out`                                |
+| Cursor            | —                      | `pointer`                                               |
 
 > [!TIP]
 > Gallery images are ready for lightbox integration. The hover effect provides visual feedback for clickable items.
@@ -398,13 +430,15 @@ Used across multiple sections:
 
 ### Section Backgrounds
 
-| Pattern       | When to use                   |
-| ------------- | ----------------------------- |
-| Background    | Default content sections      |
-| Warm Gradient | Emphasis, testimonials, about |
-| Muted @ 30%   | Subtle differentiation        |
-| Primary @ 10% | Call-to-action banners        |
-| Book Color    | Product heroes (dynamic)      |
+| Pattern              | CSS Value                                                                        | When to use                                      |
+| -------------------- | -------------------------------------------------------------------------------- | ------------------------------------------------ |
+| Background           | `background: hsl(var(--background))`                                             | Default content sections                         |
+| Warm Gradient        | `background: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(40 35% 96%) 100%)` | Emphasis sections, about, why choose       |
+| Storybook Gradient   | `background: linear-gradient(180deg, hsl(210 40% 96%) 0%, hsl(var(--background)) 100%)` | Testimonials section                   |
+| Muted @ 30%          | `background: hsl(var(--muted) / 0.3)`                                            | Subtle differentiation, events section           |
+| Primary @ 10%        | `background: hsl(var(--primary) / 0.1)`                                          | Call-to-action banners, CTA sections             |
+| Accent @ 10%         | `background: hsl(var(--accent) / 0.1)`                                           | Mini heroes, gallery page header                 |
+| Book Color (dynamic) | `background: hsl(var(--book-color))` — set via inline style or data attribute   | Product hero sections (color from book metadata) |
 
 ---
 

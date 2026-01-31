@@ -10,12 +10,12 @@
 
 All interactive buttons include these hover behaviors:
 
-| Property   | Value                        | Purpose                 |
-| ---------- | ---------------------------- | ----------------------- |
-| Background | Color darkens to 90% opacity | Visual feedback         |
-| Transform  | `translateY(-2px)` to `-4px` | Lift effect             |
-| Shadow     | Increases to `--shadow-card` | Depth enhancement       |
-| Transition | 200ms ease-out               | Smooth, responsive feel |
+| Property   | Value                                                                       | Purpose                 |
+| ---------- | --------------------------------------------------------------------------- | ----------------------- |
+| Background | Background opacity changes to 0.9 (multiply current background by 0.9)      | Visual feedback         |
+| Transform  | `translateY(-2px)` (standard buttons) or `translateY(-4px)` (hero buttons) | Lift effect             |
+| Shadow     | Escalates from current level to `shadow-card` (or `shadow-book` for hero)  | Depth enhancement       |
+| Transition | 200ms ease-out on: `transform, box-shadow, background-color, opacity`      | Smooth, responsive feel |
 
 **Hero Button** (primary CTA):
 
@@ -35,17 +35,32 @@ All interactive buttons include these hover behaviors:
 
 ---
 
-### Card Hover (Book Cards)
+### Card Hover Effects
+
+**Book Cards** (product cards with `.book-card` class):
 
 Cards featuring books use a distinctive "picked up" effect:
 
-| Property   | Value                            | Purpose                      |
-| ---------- | -------------------------------- | ---------------------------- |
-| Transform  | `translateY(-8px) rotate(-1deg)` | Lift + playful tilt          |
-| Shadow     | `--shadow-book`                  | Deepest shadow level         |
-| Transition | 300ms ease-out                   | Smooth, intentional movement |
+| Property   | Value                                    | Purpose                      |
+| ---------- | ---------------------------------------- | ---------------------------- |
+| Transform  | `translateY(-8px) rotate(-1deg)`         | Lift + playful tilt          |
+| Shadow     | Changes from `shadow-soft` to `shadow-book` | Deepest shadow level    |
+| Transition | 300ms ease-out on `transform, box-shadow` | Smooth, intentional movement |
 
 This effect suggests the book is being "picked up" from a table.
+
+**Feature Cards** (about section, why choose section):
+
+| Property   | Value                                    | Purpose             |
+| ---------- | ---------------------------------------- | ------------------- |
+| Transform  | `translateY(-4px)`                       | Subtle lift         |
+| Shadow     | Changes from `shadow-soft` to `shadow-card` | Moderate elevation |
+| Transition | 300ms ease-out on `transform, box-shadow` | Smooth movement    |
+
+**Standard Cards** (testimonials, author cards):
+
+- No hover transform or shadow change
+- May include internal element hovers (buttons, links)
 
 ---
 
@@ -53,21 +68,63 @@ This effect suggests the book is being "picked up" from a table.
 
 Optional decorative effect for card elements:
 
-- **Trigger**: Hover on `.page-curl` elements
-- **Effect**: Triangle appears in bottom-right corner
-- **Size**: 60px × 60px
-- **Appearance**: Linear gradient creating folded corner illusion
-- **Transition**: Opacity 300ms ease
+**Trigger**: Hover on elements with `.page-curl` class
 
-**Implementation**: Creates a pseudo-element `::after` with a gradient from transparent to muted background color.
+**Implementation**:
+
+```css
+.page-curl {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-curl::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 60px 60px;
+  border-color: transparent transparent hsl(var(--muted)) transparent;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.page-curl:hover::after {
+  opacity: 0.6;
+}
+```
+
+**Specifications**:
+
+- Triangle size: 60px × 60px (created with CSS border trick)
+- Position: Bottom-right corner
+- Color: Muted background color at 60% opacity
+- Transition: opacity 300ms ease
 
 ---
 
 ### Link Hover
 
-- **Standard links**: Underline appears on hover
-- **Navigation links**: Color shift to primary, optional underline
-- **Underline offset**: 4px below text baseline
+**Standard text links** (body content):
+
+- Default state: `text-decoration: none`, color: `primary`
+- Hover state: `text-decoration: underline`, `text-underline-offset: 4px`
+- Transition: 200ms ease-out on `color, text-decoration-color`
+
+**Navigation links** (header/footer):
+
+- Default state: `text-decoration: none`, color: `foreground` at 80% opacity
+- Hover state: color changes to `primary`, no underline
+- Transition: 200ms ease-out on `color`
+
+**Underline specifications**:
+
+- Offset from baseline: 4px (`text-underline-offset: 4px`)
+- Thickness: 1px (default)
+- Color: Inherits from text color
 
 ---
 
@@ -75,29 +132,31 @@ Optional decorative effect for card elements:
 
 ### Standard Transition
 
-Use for all interactive elements:
+Use for all interactive elements (avoid using `transition: all` for performance):
 
-| Property   | Value                                                    |
-| ---------- | -------------------------------------------------------- |
-| Duration   | **200ms** (buttons) / **300ms** (cards)                  |
-| Easing     | `ease-out`                                               |
-| Properties | `all` (transform, box-shadow, opacity, background-color) |
+| Property   | Value                                                                  |
+| ---------- | ---------------------------------------------------------------------- |
+| Duration   | **200ms** (buttons, links) / **300ms** (cards, complex elements)       |
+| Easing     | `ease-out`                                                             |
+| Properties | Explicitly list: `transform, box-shadow, opacity, background-color, color` |
 
 ### Recommended Defaults
 
-| Element Type | Duration | Properties                    |
-| ------------ | -------- | ----------------------------- |
-| Buttons      | 200ms    | background, transform, shadow |
-| Cards        | 300ms    | transform, shadow             |
-| Links        | 200ms    | color, text-decoration        |
-| Page curl    | 300ms    | opacity                       |
+| Element Type | Duration | Easing   | Properties (explicit list)                        |
+| ------------ | -------- | -------- | ------------------------------------------------- |
+| Buttons      | 200ms    | ease-out | `background-color, transform, box-shadow, opacity` |
+| Cards        | 300ms    | ease-out | `transform, box-shadow`                           |
+| Links        | 200ms    | ease-out | `color, text-decoration-color`                    |
+| Page curl    | 300ms    | ease     | `opacity`                                         |
+| Images       | 300ms    | ease-out | `transform, opacity`                              |
 
 ### Bootstrap Mapping Notes
 
 ```scss
-// Custom transition utilities
-$transition-base: all 0.2s ease-out;
-$transition-card: all 0.3s ease-out;
+// Custom transition utilities (avoid 'all' for better performance)
+$transition-base: background-color 0.2s ease-out, transform 0.2s ease-out, box-shadow 0.2s ease-out, opacity 0.2s ease-out;
+$transition-card: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+$transition-link: color 0.2s ease-out, text-decoration-color 0.2s ease-out;
 
 // Example usage in component
 .btn {
@@ -106,6 +165,10 @@ $transition-card: all 0.3s ease-out;
 
 .card {
   transition: $transition-card;
+}
+
+a {
+  transition: $transition-link;
 }
 ```
 
@@ -117,19 +180,21 @@ $transition-card: all 0.3s ease-out;
 
 Five variations create a natural, organic floating effect for book covers in the hero section. Each has slightly different timing and movement:
 
-| Animation | Duration | Vertical Movement | Rotation Change |
-| --------- | -------- | ----------------- | --------------- |
-| `float1`  | 4s       | 0 → -15px         | -8° → -5°       |
-| `float2`  | 5s       | 0 → -12px         | 2° → 0°         |
-| `float3`  | 4.5s     | 0 → -18px         | 6° → 8°         |
-| `float4`  | 5.5s     | 0 → -12px         | -5° → -3°       |
-| `float5`  | 4.8s     | 0 → -14px         | 4° → 6°         |
+| Animation | Duration | Keyframe 0%/100%                      | Keyframe 50%                               |
+| --------- | -------- | ------------------------------------- | ------------------------------------------ |
+| `float1`  | 4s       | `translateY(0) rotate(-8deg)`         | `translateY(-15px) rotate(-5deg)`          |
+| `float2`  | 5s       | `translateY(0) rotate(2deg)`          | `translateY(-12px) rotate(0deg)`           |
+| `float3`  | 4.5s     | `translateY(0) rotate(6deg)`          | `translateY(-18px) rotate(8deg)`           |
+| `float4`  | 5.5s     | `translateY(0) rotate(-5deg)`         | `translateY(-12px) rotate(-3deg)`          |
+| `float5`  | 4.8s     | `translateY(0) rotate(4deg)`          | `translateY(-14px) rotate(6deg)`           |
 
-**Characteristics**:
+**Shared Characteristics**:
 
 - Easing: `ease-in-out`
-- Loop: `infinite`
-- Pattern: Sinusoidal movement (smooth up and down)
+- Iteration: `infinite`
+- Direction: `normal`
+- Pattern: Sinusoidal movement (smooth up and down, peaks at 50%)
+- Apply with: `animation: float1 4s ease-in-out infinite;` (replace with appropriate float animation)
 
 **Purpose**: Creates a whimsical, storybook atmosphere where books appear to float gently in space.
 
@@ -187,11 +252,34 @@ Subtle zoom entrance for images and cards:
 
 Scroll indicator at bottom of hero section:
 
-| Property | Value                              |
-| -------- | ---------------------------------- |
-| Type     | CSS `bounce` (built-in/predefined) |
-| Purpose  | Draw attention to scroll action    |
-| Location | Bottom center of hero section      |
+**Implementation**:
+
+```css
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.scroll-indicator {
+  animation: bounce 2s ease-in-out infinite;
+}
+```
+
+**Specifications**:
+
+| Property       | Value                         |
+| -------------- | ----------------------------- |
+| Animation name | `bounce`                      |
+| Duration       | 2s                            |
+| Easing         | ease-in-out                   |
+| Iteration      | infinite                      |
+| Movement       | 0 → -12px → 0 (vertical only) |
+| Purpose        | Draw attention to scroll action |
+| Location       | Bottom center of hero section |
 
 ---
 
@@ -301,7 +389,7 @@ $transition-base: all 0.2s ease-out !default;
 ```css
 /* Book card hover */
 .book-card {
-  transition: all 0.3s ease-out;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
 .book-card:hover {
@@ -310,13 +398,19 @@ $transition-base: all 0.2s ease-out !default;
 }
 
 /* Button lift effect */
-.btn-primary:hover,
-.btn-hero:hover {
+.btn-primary,
+.btn-hero {
+  transition: background-color 0.2s ease-out, transform 0.2s ease-out, box-shadow 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+.btn-primary:hover {
+  background-color: hsl(var(--primary) / 0.9);
   transform: translateY(-2px);
   box-shadow: var(--shadow-card);
 }
 
 .btn-hero:hover {
+  background-color: hsl(var(--primary) / 0.9);
   transform: translateY(-4px);
   box-shadow: var(--shadow-book);
 }

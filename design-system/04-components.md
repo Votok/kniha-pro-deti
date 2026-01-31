@@ -21,14 +21,14 @@ Components follow a **warm, friendly, and premium** design language:
 
 All buttons share these foundational styles:
 
-| Property       | Value                  |
-| -------------- | ---------------------- |
-| Border Radius  | `0.5rem` (lg, rounded) |
-| Font Weight    | 600 (semibold)         |
-| Font Family    | Display font (Nunito)  |
-| Transition     | 200ms all, ease-out    |
-| Focus Ring     | 2px ring with offset   |
-| Disabled State | 50% opacity            |
+| Property       | Value                                                       |
+| -------------- | ----------------------------------------------------------- |
+| Border Radius  | `0.5rem` (lg, rounded)                                      |
+| Font Weight    | 600 (semibold)                                              |
+| Font Family    | Display font (Nunito)                                       |
+| Transition     | 200ms all, ease-out                                         |
+| Focus Ring     | 2px ring with offset, using `ring` color token             |
+| Disabled State | `opacity: 0.5`, `cursor: not-allowed`, `pointer-events: none` |
 
 ### Size Variants
 
@@ -42,18 +42,18 @@ All buttons share these foundational styles:
 
 ### Color Variants
 
-| Variant     | Background  | Text               | Hover Effect                           |
-| ----------- | ----------- | ------------------ | -------------------------------------- |
-| Default     | Primary     | Primary Foreground | bg opacity 90%, shadow-card, lift -2px |
-| Destructive | Destructive | Destructive FG     | bg opacity 90%                         |
-| Outline     | Transparent | Primary            | Fill with Primary bg                   |
-| Secondary   | Secondary   | Secondary FG       | bg opacity 80%                         |
-| Ghost       | Transparent | —                  | bg Accent, text Accent FG              |
-| Link        | Transparent | Primary            | Underline                              |
-| **Hero**    | Primary     | Primary FG         | shadow-book, lift -4px                 |
-| Storybook   | Storybook   | Storybook FG       | shadow-card, lift -2px                 |
-| Accent      | Accent      | Accent FG          | shadow-card, lift -2px                 |
-| Forest      | Forest      | Forest FG          | shadow-card, lift -2px                 |
+| Variant     | Background  | Text               | Hover Effect                                                               |
+| ----------- | ----------- | ------------------ | -------------------------------------------------------------------------- |
+| Default     | Primary     | Primary Foreground | bg: `hsl(var(--primary) / 0.9)`, shadow: `shadow-card`, transform: `translateY(-2px)` |
+| Destructive | Destructive | Destructive FG     | bg: `hsl(var(--destructive) / 0.9)`, shadow: `shadow-card`, transform: `translateY(-2px)` |
+| Outline     | Transparent | Primary            | bg: `hsl(var(--primary))`, text: `hsl(var(--primary-foreground))`, no lift |
+| Secondary   | Secondary   | Secondary FG       | bg: `hsl(var(--secondary) / 0.8)`, no lift, no shadow change              |
+| Ghost       | Transparent | Foreground         | bg: `hsl(var(--accent) / 0.1)`, text: `hsl(var(--accent-foreground))`, no lift |
+| Link        | Transparent | Primary            | `text-decoration: underline`, `text-underline-offset: 4px`                |
+| **Hero**    | Primary     | Primary FG         | bg: `hsl(var(--primary) / 0.9)`, shadow: `shadow-book`, transform: `translateY(-4px)` |
+| Storybook   | Storybook   | Storybook FG       | bg: `hsl(var(--storybook) / 0.9)`, shadow: `shadow-card`, transform: `translateY(-2px)` |
+| Accent      | Accent      | Accent FG          | bg: `hsl(var(--accent) / 0.9)`, shadow: `shadow-card`, transform: `translateY(-2px)` |
+| Forest      | Forest      | Forest FG          | bg: `hsl(var(--forest) / 0.9)`, shadow: `shadow-card`, transform: `translateY(-2px)` |
 
 > [!TIP]
 > The **Hero** variant is designed for primary CTAs (e.g., "Buy Book"). It has a stronger lift and shadow effect than the default button.
@@ -91,15 +91,16 @@ All buttons share these foundational styles:
 
 The book card has specialized styling for product display:
 
-| Property          | Value                                    |
-| ----------------- | ---------------------------------------- |
-| Border Radius     | `1rem` (2xl)                             |
-| Shadow            | `shadow-soft` → `shadow-card` on hover   |
-| Cover Container   | Colored background with aspect ratio 3:4 |
-| Cover Image       | `shadow-book` (prominent depth)          |
-| Hover Transform   | `translateY(-8px) rotate(-1deg)`         |
-| Title Hover       | Text color changes to Primary            |
-| Stagger Animation | 100ms delay per card                     |
+| Property            | Value                                                                      |
+| ------------------- | -------------------------------------------------------------------------- |
+| Border Radius       | `1rem` (16px, 2xl)                                                         |
+| Shadow              | Default: `shadow-soft`, Hover: `shadow-card`                               |
+| Cover Container     | Colored background with `aspect-ratio: 3/4`                                |
+| Cover Image         | `shadow-book` (prominent depth)                                            |
+| Hover Transform     | `translateY(-8px) rotate(-1deg)`                                           |
+| Hover Transition    | 300ms ease-out on `transform, box-shadow`                                  |
+| Title Hover         | Text color changes from `foreground` to `primary`                          |
+| Entrance Animation  | `fadeInUp` (0.6s) with staggered delay: card 1 = 0ms, card 2 = 100ms, card 3 = 200ms, etc. |
 
 > [!IMPORTANT]
 > Book cards use a **page curl effect** on hover — the slight rotation combined with lift creates the illusion of picking up a book.
@@ -129,16 +130,25 @@ The book card has specialized styling for product display:
 
 ### Section Tag Badge
 
-Used for section headers (e.g., "Naše knihy"):
+Used for section headers with thematic color variations:
 
-| Property      | Value                  |
-| ------------- | ---------------------- |
-| Background    | Accent at 30% opacity  |
-| Text Color    | Accent Foreground      |
-| Padding       | `0.375rem` v, `1rem` h |
-| Border Radius | Full pill              |
-| Font Size     | 0.875rem               |
-| Font Weight   | 600                    |
+| Property      | Value                                                    |
+| ------------- | -------------------------------------------------------- |
+| Display       | inline-block                                             |
+| Background    | Varies by section (see variants below)                   |
+| Text Color    | Matches background color at full opacity                 |
+| Padding       | 0.375rem vertical, 1rem horizontal (6px × 16px)          |
+| Border Radius | 9999px (full pill)                                       |
+| Font Family   | Nunito (display font)                                    |
+| Font Size     | 0.875rem (14px)                                          |
+| Font Weight   | 600 (semibold)                                           |
+
+**Color Variants** (background / text):
+
+- Default: `hsl(var(--primary) / 0.1)` / `hsl(var(--primary))`
+- About/Features: `hsl(var(--accent) / 0.3)` / `hsl(var(--accent-foreground))`
+- Storybook theme: `hsl(var(--storybook) / 0.1)` / `hsl(var(--storybook))`
+- Forest theme: `hsl(var(--forest) / 0.1)` / `hsl(var(--forest))`
 
 ---
 
@@ -146,7 +156,7 @@ Used for section headers (e.g., "Naše knihy"):
 
 ### Header
 
-The header is a **sticky/fixed** navigation bar that transforms on scroll:
+The header is a **fixed-position** navigation bar (`position: fixed; top: 0; left: 0; right: 0; z-index: 50`) that transforms on scroll:
 
 | State         | Background         | Padding (V) | Shadow      |
 | ------------- | ------------------ | ----------- | ----------- |
@@ -194,13 +204,19 @@ Additional scrolled state properties:
 
 ### Structure
 
-2-area flex layout on desktop, stacked on mobile:
+3-area layout with flexible arrangement:
 
-| Area       | Content                         |
-| ---------- | ------------------------------- |
-| Brand      | Logo, description, social icons |
-| Navigation | Horizontal inline nav links     |
-| Bottom Bar | Copyright only                  |
+**Main Footer Area** (flex layout on lg, stacked on mobile):
+
+| Area       | Content                         | Desktop Width |
+| ---------- | ------------------------------- | ------------- |
+| Brand      | Logo, description, social icons | 50%           |
+| Navigation | Horizontal inline nav links     | 50%           |
+
+**Bottom Bar** (full-width, separate area below main footer):
+
+- Copyright text
+- Separated by top border
 
 ### Styling
 
@@ -278,15 +294,18 @@ Horizontal list with chevron separators:
 
 ## Trust Indicators
 
-Small inline indicators for social proof:
+Small inline indicators for social proof (e.g., "1000+ satisfied readers"):
 
-| Property    | Value          |
-| ----------- | -------------- |
-| Icon Size   | 16×16px        |
-| Icon Color  | Primary        |
-| Text Size   | 0.875rem       |
-| Text Weight | 600 (semibold) |
-| Gap         | `0.375rem`     |
+| Property     | Value                                |
+| ------------ | ------------------------------------ |
+| Layout       | Inline-flex, align-items: center     |
+| Icon Size    | 16×16px                              |
+| Icon Color   | `hsl(var(--primary))`                |
+| Text Size    | 0.875rem (14px)                      |
+| Text Weight  | 600 (semibold)                       |
+| Text Color   | `hsl(var(--foreground))`             |
+| Gap          | 0.375rem (6px) between icon and text |
+| Container Gap | 1.5rem (24px) between multiple indicators when displayed in a row |
 
 ---
 

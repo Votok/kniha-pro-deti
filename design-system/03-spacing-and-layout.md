@@ -84,7 +84,7 @@ Centered content with max-width constraint:
 max-width: 48rem (768px)
 margin: 0 auto
 text-align: center
-margin-bottom: 3rem-4rem (48-64px)
+margin-bottom: 3rem (48px) on mobile, 4rem (64px) on lg breakpoint
 ```
 
 ### Common Grid Configurations
@@ -191,11 +191,15 @@ Padding inside: p-4
 
 ### Centered Content Block
 
-```
-max-w-xl mx-auto (for paragraphs)
-max-w-3xl mx-auto (for section headers)
-max-w-4xl mx-auto (for testimonials)
-```
+Use these max-width constraints for centered content:
+
+| Max Width         | Pixels | Use Case                                                        |
+| ----------------- | ------ | --------------------------------------------------------------- |
+| max-w-xl (36rem)  | 576px  | Single column body text, feature descriptions, intro paragraphs |
+| max-w-3xl (48rem) | 768px  | Section headers (tag + title + description)                     |
+| max-w-4xl (56rem) | 896px  | Testimonial cards, author bios, long-form content               |
+
+All centered blocks must have `margin: 0 auto` and `text-align: center` (unless content requires left alignment).
 
 ---
 

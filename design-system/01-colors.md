@@ -124,11 +124,11 @@ The color palette is inspired by warmth, nature, and childhood imagination:
 
 The design uses a 3-tier shadow depth system with warm undertones:
 
-| Shadow Name | CSS Value                                  | Use Case          |
-| ----------- | ------------------------------------------ | ----------------- |
-| Soft        | `0 4px 20px -4px hsl(30 30% 50% / 0.15)`   | Subtle elevation  |
-| Card        | `0 8px 30px -8px hsl(30 30% 50% / 0.2)`    | Card hover states |
-| Book        | `0 12px 40px -10px hsl(30 30% 40% / 0.25)` | Featured elements |
+| Shadow Name | CSS Value                                  | Use Case                                                         |
+| ----------- | ------------------------------------------ | ---------------------------------------------------------------- |
+| Soft        | `0 4px 20px -4px hsl(30 30% 50% / 0.15)`   | Default cards, feature boxes, badges at rest                     |
+| Card        | `0 8px 30px -8px hsl(30 30% 50% / 0.2)`    | Hovered cards, buttons on hover, popovers, elevated UI elements  |
+| Book        | `0 12px 40px -10px hsl(30 30% 40% / 0.25)` | Book cover images, hero buttons on hover, featured testimonials |
 
 ---
 
