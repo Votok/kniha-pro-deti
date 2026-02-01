@@ -4,6 +4,7 @@ title: Kniha pro děti | čtěte a staňte se hrdinou našich příběhů
 description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajemství a nakonec rozuzlení. Naše knihy pro zvídavé děti, rodiče i prarodiče. 👪 Skvělé ilustrace!"
 ---
 
+<!-- #keep section (Hero) -->
 <section class="section-padding bg-hero-uvod">
   <div class="container">
     <div class="row g-5">
@@ -19,6 +20,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
   </div>
 </section>
 
+<!-- #keep section (Books) -->
 <section id="knihy" class="section-padding">
   <div class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
@@ -42,6 +44,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
   </div>
 </section>
 
+<!-- #replace content section  (Testimonials)-->
 <section class="section-padding reference-strip">
   <div class="container">
     <div class="row g-5">
@@ -71,80 +74,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
   </div>
 </section>
 
-{% set roza = books | selectattr("slug", "equalto", "roza-a-ztraceny-tatinek") | first %}
-{% if roza %}
-<section class="section-padding">
-  <div class="container">
-    <div class="row g-5 align-items-center">
-      <div class="col-12 col-lg-6">
-        <h2>{{ roza.title }}</h2>
-        <p>Vyšla 12. 5. 2025 v nakladatelství 65. pole v edici Políčko.</p>
-        <p>{{ roza.description }}</p>
-        {% if roza.buyLinks.length > 0 %}
-        <a class="btn btn-light" href="{{ roza.buyLinks[0].url }}" target="_blank" rel="noopener">
-          Koupit knihu
-        </a>
-        {% endif %}
-      </div>
-      <div class="col-12 col-lg-6">
-        <img
-          src="{{ roza.cover }}"
-          class="img-fluid"
-          alt="{{ roza.title }}"
-          loading="lazy"
-        />
-      </div>
-    </div>
-  </div>
-</section>
-{% endif %}
-
-{% set eliska = books | selectattr("slug", "equalto", "eliska-detektiv") | first %}
-{% if eliska %}
-<section class="section-padding">
-  <div class="container">
-    <div class="row g-5 align-items-center">
-      <div class="col-12 col-lg-6">
-        <h2>{{ eliska.title }}</h2>
-        <p>Vyšla 30. září 2023 v nakladatelství 65. pole v edici Políčko.</p>
-        <p>{{ eliska.description }}</p>
-        {% if eliska.buyLinks.length > 0 %}
-        <a class="btn btn-light" href="{{ eliska.buyLinks[0].url }}" target="_blank" rel="noopener">
-          Koupit knihu
-        </a>
-        {% endif %}
-      </div>
-      <div class="col-12 col-lg-6">
-        <img
-          src="/assets/images/galerie/eliska-tri-dily.jpg"
-          class="img-fluid"
-          alt="Knihy Eliška detektiv, Eliška rebelka a Eliška andílek"
-          loading="lazy"
-        />
-      </div>
-    </div>
-  </div>
-</section>
-{% endif %}
-
-<section class="section-padding">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="ratio ratio-16x9">
-          <iframe
-            loading="lazy"
-            src="https://www.youtube.com/embed/szBVjbtPuXc"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            title="Kniha pro děti - video"
-          ></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!-- #replace content section (Events)-->
 <section class="section-padding-compact book-text-strip">
   <div class="container">
     <div class="row">
