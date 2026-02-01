@@ -1,6 +1,6 @@
 ---
 layout: layouts/page.njk
-title: Kniha pro děti | čtěte a staňte se hrdinou našich příběhů
+title: Kniha pro děti | Píšeme příběhy, které pomáhají dětem růst
 description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajemství a nakonec rozuzlení. Naše knihy pro zvídavé děti, rodiče i prarodiče. 👪 Skvělé ilustrace!"
 ---
 
@@ -9,11 +9,15 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
   <div class="container">
     <div class="row g-5">
       <div class="col-12 col-md-7">
-        <h1>Čtěte a staňte se hrdinou našich příběhů</h1>
-        <div class="mt-4">
-          <a href="#knihy" class="scroll-down">
-            <img src="/assets/svg/chevron-down-white.gif" alt="Posuň dolů" class="heartbeat" />
-          </a>
+        <h1>Píšeme příběhy, které pomáhají dětem růst</h1>
+        <p>
+          Píšeme příběhy pro děti od 5 do 12 let, které učí odvaze, sebedůvěře a zvládání životních
+          výzev. S krásnými ilustracemi, které si zamilujete.
+        </p>
+        <div><button>Koupit knihy</button><button>Pro koho jsou knihy?</button></div>
+        <div>
+          <div><span>📚</span><span>8 knih v edici</span></div>
+          <div><span>🌱</span><span>Pro děti 5-12 let</span></div>
         </div>
       </div>
     </div>
@@ -23,6 +27,14 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
 <!-- #keep section (Books) -->
 <section id="knihy" class="section-padding">
   <div class="container">
+    <div>
+      <span>Naše knihy</span>
+      <h2>Vyberte tu pravou knihu</h2>
+      <p>
+        Každá kniha je navržena pro konkrétní věkovou skupinu. Vyberte si podle věku vašeho dítěte
+        nebo si prohlédněte celou kolekci.
+      </p>
+    </div>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
       {% for book in books %}
       <div class="col">
@@ -40,6 +52,9 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
         </div>
       </div>
       {% endfor %}
+    </div>
+    <div>
+      <p>Nevíte, kterou knihu vybrat? <a href="#kontakt">Napište nám</a> a rádi vám poradíme.</p>
     </div>
   </div>
 </section>
