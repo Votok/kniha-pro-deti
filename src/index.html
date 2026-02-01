@@ -4,15 +4,13 @@ title: Kniha pro děti | čtěte a staňte se hrdinou našich příběhů
 description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajemství a nakonec rozuzlení. Naše knihy pro zvídavé děti, rodiče i prarodiče. 👪 Skvělé ilustrace!"
 ---
 
-<section class="section-padding bg-light bg-hero-uvod">
+<section class="section-padding bg-hero-uvod">
   <div class="container">
-    <div class="row position-relative overflow-hidden">
-      <div class="col-md-7 d-flex flex-column align-items-start justify-content-around">
-        <div class="p-2">
-          <h1>Čtěte a staňte se hrdinou našich příběhů</h1>
-        </div>
-        <div class="p-2">
-          <a href="#scroll-top" class="scroll-down">
+    <div class="row g-5">
+      <div class="col-12 col-md-7">
+        <h1>Čtěte a staňte se hrdinou našich příběhů</h1>
+        <div class="mt-4">
+          <a href="#knihy" class="scroll-down">
             <img src="/assets/svg/chevron-down-white.gif" alt="Posuň dolů" class="heartbeat" />
           </a>
         </div>
@@ -21,8 +19,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
   </div>
 </section>
 
-{# Book thumbnails grid - dynamic from books.json #}
-<section id="scroll-top" class="section-padding">
+<section id="knihy" class="section-padding">
   <div class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
       {% for book in books %}
@@ -45,11 +42,10 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
   </div>
 </section>
 
-{# Testimonial from Taťjana Medvecká #}
 <section class="section-padding reference-strip">
   <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-10">
+    <div class="row g-5">
+      <div class="col-12 col-md-10 mx-auto">
         <div class="float-sm-start me-sm-3 my-3 mx-md-5">
           <img
             src="/assets/images/recenze/tatjana-medvecka.jpg"
@@ -75,13 +71,12 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
   </div>
 </section>
 
-{# Featured book: Róza a ztracený tatínek #}
 {% set roza = books | selectattr("slug", "equalto", "roza-a-ztraceny-tatinek") | first %}
 {% if roza %}
 <section class="section-padding">
   <div class="container">
     <div class="row g-5 align-items-center">
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-lg-6">
         <h2>{{ roza.title }}</h2>
         <p>Vyšla 12. 5. 2025 v nakladatelství 65. pole v edici Políčko.</p>
         <p>{{ roza.description }}</p>
@@ -91,7 +86,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
         </a>
         {% endif %}
       </div>
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-lg-6">
         <img
           src="{{ roza.cover }}"
           class="img-fluid"
@@ -104,13 +99,12 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
 </section>
 {% endif %}
 
-{# Featured book: Eliška detektiv #}
 {% set eliska = books | selectattr("slug", "equalto", "eliska-detektiv") | first %}
 {% if eliska %}
 <section class="section-padding">
   <div class="container">
     <div class="row g-5 align-items-center">
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-lg-6">
         <h2>{{ eliska.title }}</h2>
         <p>Vyšla 30. září 2023 v nakladatelství 65. pole v edici Políčko.</p>
         <p>{{ eliska.description }}</p>
@@ -120,7 +114,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
         </a>
         {% endif %}
       </div>
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-lg-6">
         <img
           src="/assets/images/galerie/eliska-tri-dily.jpg"
           class="img-fluid"
@@ -133,11 +127,10 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
 </section>
 {% endif %}
 
-{# YouTube video embed #}
 <section class="section-padding">
   <div class="container">
     <div class="row">
-      <div class="col-12 text-center">
+      <div class="col-12">
         <div class="ratio ratio-16x9">
           <iframe
             loading="lazy"
@@ -152,8 +145,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
   </div>
 </section>
 
-{# Contact section #}
-<section class="section-padding book-text-strip">
+<section class="section-padding-compact book-text-strip">
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-8 mx-auto">
