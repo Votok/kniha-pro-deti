@@ -38,7 +38,7 @@ src/
 
 **Images:** Source in `src/assets/images/`, build copies to `/images/` (not `/assets/images/`) for CSS `../images/` refs.
 
-**CSS:** Bootstrap 5 base + custom (`#7c8743` buttons, `rgba(202,109,27,0.85)` navbar, Open Sans font). Minified via CSSO.
+**CSS:** Bootstrap 5 (CDN) + custom overrides in `style.css`. Design system defines all colors (HSL via CSS variables), typography (Nunito/Inter from Google Fonts), spacing, and components. See `design-system/07-bootstrap-cdn-mapping.md` for implementation rules. Minified via CSSO.
 
 **JS:** `main.js` only - smooth scroll, GLightbox galleries, active nav, lazy load fade-in. No jQuery.
 
@@ -66,10 +66,17 @@ src/
 
 **Legacy Files:** Repository transitioning from archived site. Legacy JS files exist (`jquery.swipebox.min.js`, `smooth-scroll.js`, `odpocet.js`) but are NOT used. Only `main.js` is active.
 
-**Design System:** `design-system/` folder contains markdown files to guide redesign from old site. Will be deleted after transition complete.
+**Design System:** `design-system/` folder is the **single source of truth** for all visual design decisions. Contains 7 permanent specification files:
+  - `01-colors.md` - Complete color palette (brand, theme, semantic colors, shadows, gradients)
+  - `02-typography.md` - Font families (Nunito/Inter), type scale, weights, responsive sizing
+  - `03-spacing-and-layout.md` - Spacing scale, grid patterns, container settings, border radius
+  - `04-components.md` - Buttons, cards, badges, navigation, footer, breadcrumbs specifications
+  - `05-page-patterns.md` - Homepage, book detail, listing page structures and sections
+  - `06-interactions-and-motion.md` - Hover states, transitions, animations, focus states
+  - `07-bootstrap-cdn-mapping.md` - **BINDING CONTRACT**: Defines exactly how to implement files 01-06 using Bootstrap 5 CDN + custom CSS. Specifies which Bootstrap classes to override, which custom utilities to create, and all implementation rules. This file MUST be followed for all styling work.
 
 **Images Path:** Source uses `src/assets/images/`, build outputs to `/images/` (not `/assets/images/`) to support CSS relative paths.
 
 **Language:** Czech language content - respect existing text when editing.
 
-**Templates:** Nunjucks syntax (`{% %}`, `{{ }}`). Bootstrap 5 classes preferred over custom CSS.
+**Templates:** Nunjucks syntax (`{% %}`, `{{ }}`). Use Bootstrap 5 classes as base, extended with custom CSS classes defined in `assets/css/style.css` per `design-system/07-bootstrap-cdn-mapping.md`.
