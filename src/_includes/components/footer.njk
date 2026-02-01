@@ -1,19 +1,83 @@
 {# src/_includes/components/footer.njk #}
-<footer class="footer">
+<footer class="footer bg-foreground text-background py-5 py-lg-6">
   <div class="container">
-    <div class="footer-main">
-      <div class="footer-brand">
-        <h5>{{ site.name }}</h5>
-        <p>{{ site.description }}</p>
+    <div class="row g-5 g-lg-6">
+      <!-- Brand Column -->
+      <div class="col-12 col-lg-6">
+        <div class="footer-brand" style="max-width: 28rem">
+          <h5 class="fw-bold mb-3">
+            <span class="text-background">Kniha</span><span class="text-gradient-warm">ProDěti</span>
+          </h5>
+          <p class="mb-4" style="color: hsl(var(--color-background) / 0.7)">
+            Originální české pohádky od známých hereček. Krásné příběhy, které rozvíjejí fantazii a
+            učí děti důležitým životním hodnotám.
+          </p>
+
+          <!-- Social Icons -->
+          <div class="d-flex gap-3">
+            <a
+              href="https://www.facebook.com/knihaprodeti.cz/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-social-link"
+              aria-label="Facebook"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a
+              href="https://www.instagram.com/knihaprodeti.cz/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-social-link"
+              aria-label="Instagram"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
-      <nav class="footer-nav">
-        {% for item in navigation.main %}
-        <a href="{{ item.url }}">{{ item.title }}</a>
-        {% endfor %}
-      </nav>
+
+      <!-- Navigation Column -->
+      <div class="col-12 col-lg-6 d-flex align-items-center justify-content-lg-end">
+        <nav class="footer-nav d-flex flex-wrap gap-4 gap-lg-5">
+          {% for item in navigation.main %}
+          <a href="{{ item.url }}" class="footer-nav-link">{{ item.title }}</a>
+          {% endfor %}
+        </nav>
+      </div>
     </div>
-    <div class="footer-bottom border-top mt-5 pt-4">
-      <p>&copy; {{ "" | year }} {{ site.name }}. Všechna práva vyhrazena.</p>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom mt-5 pt-4" style="border-top: 1px solid hsl(var(--color-background) / 0.1)">
+      <p class="small mb-0 text-center text-lg-start" style="color: hsl(var(--color-background) / 0.5)">
+        &copy; {{ "" | year }} {{ site.name }}. Všechna práva vyhrazena.
+      </p>
     </div>
   </div>
 </footer>

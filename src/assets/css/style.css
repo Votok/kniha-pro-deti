@@ -561,6 +561,28 @@ select:focus:not(:focus-visible) {
   background: linear-gradient(135deg, hsl(var(--color-primary) / 0.05) 0%, hsl(var(--color-accent) / 0.05) 100%);
 }
 
+/* Background & Text Color Utilities */
+.bg-foreground {
+  background-color: hsl(var(--color-foreground)) !important;
+}
+
+.text-background {
+  color: hsl(var(--color-background)) !important;
+}
+
+/* Spacing Utilities */
+.py-lg-6 {
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+
+@media (min-width: 992px) {
+  .py-lg-6 {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+  }
+}
+
 /* Shadow Utilities */
 .shadow-soft {
   box-shadow: var(--shadow-soft);
@@ -1157,4 +1179,46 @@ select:focus:not(:focus-visible) {
   .testimonial-card .text-center {
     text-align: center;
   }
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+/* Footer Base */
+.footer {
+  background-color: hsl(var(--color-foreground));
+  color: hsl(var(--color-background));
+}
+
+/* Footer Social Links */
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: hsl(var(--color-background) / 0.1);
+  color: hsl(var(--color-background));
+  border-radius: var(--radius-sm);
+  transition: all 200ms ease-out;
+  text-decoration: none;
+}
+
+.footer-social-link:hover {
+  background-color: hsl(var(--color-primary));
+  color: hsl(var(--color-primary-fg));
+  transform: translateY(-2px);
+}
+
+/* Footer Navigation Links */
+.footer-nav-link {
+  color: hsl(var(--color-background) / 0.7);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 200ms ease-out;
+}
+
+.footer-nav-link:hover {
+  color: hsl(var(--color-primary));
 }
