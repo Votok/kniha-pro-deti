@@ -1,14 +1,19 @@
 {# src/_includes/components/footer.njk #}
-<footer class="bg-dark text-white mt-5 py-4">
+<footer class="footer">
   <div class="container">
-    <div class="row">
-      <div class="col-md-6">
+    <div class="footer-main">
+      <div class="footer-brand">
         <h5>{{ site.name }}</h5>
         <p>{{ site.description }}</p>
       </div>
-      <div class="col-md-6 text-md-end">
-        <p>&copy; {{ "" | year }} {{ site.name }}. Všechna práva vyhrazena.</p>
-      </div>
+      <nav class="footer-nav">
+        {% for item in navigation.main %}
+        <a href="{{ item.url }}">{{ item.title }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {{ "" | year }} {{ site.name }}. Všechna práva vyhrazena.</p>
     </div>
   </div>
 </footer>
