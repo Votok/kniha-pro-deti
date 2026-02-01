@@ -33,18 +33,17 @@ All pages follow this consistent structure:
 
 ## Homepage Pattern
 
-The homepage consists of 6 distinct sections stacked vertically:
+The homepage consists of 5 distinct sections stacked vertically:
 
 ### Section Composition
 
 | Order | Section      | Background         | Padding (V)     |
 | ----- | ------------ | ------------------ | --------------- |
 | 1     | Hero         | Hero Gradient      | Responsive top  |
-| 2     | About        | Warm Gradient      | `5rem` / `7rem` |
-| 3     | Books        | Background         | `5rem` / `7rem` |
-| 4     | Why Choose   | Warm Gradient      | `5rem` / `7rem` |
-| 5     | Testimonials | Storybook Gradient | `5rem` / `7rem` |
-| 6     | Events       | Muted @ 30%        | `4rem` / `5rem` |
+| 2     | Books        | Background         | `5rem` / `7rem` |
+| 3     | Why Choose   | Warm Gradient      | `5rem` / `7rem` |
+| 4     | Testimonials | Storybook Gradient | `5rem` / `7rem` |
+| 5     | Events       | Muted @ 30%        | `4rem` / `5rem` |
 
 ---
 
@@ -93,29 +92,6 @@ A two-column layout with generous top padding that creates visual impact:
   - Icon: Chevron down, 20×20px, color: `hsl(var(--primary))`
 - Animation: `bounce` (2s ease-in-out infinite) on button only
 - Hover: button background → `hsl(var(--primary))`, icon color → `hsl(var(--primary-foreground))`
-
----
-
-### About Section (Features Grid)
-
-**Header**: Centered section header with tag badge, H2, and description
-
-**Grid Layout**:
-
-- 1 column (mobile) → 2 columns (sm) → 4 columns (lg)
-- Gap: `1.5rem` / `2rem`
-
-**Feature Card**:
-
-| Element     | Style                                                                    |
-| ----------- | ------------------------------------------------------------------------ |
-| Container   | Background: `hsl(var(--card))`, border-radius: `1rem`, shadow: `shadow-soft`, padding: `1.5rem` |
-| Icon Box    | Width/height: 56px, background: `hsl(var(--primary) / 0.1)`, border-radius: `0.75rem` (12px) |
-| Icon        | Width/height: 28px, color: `hsl(var(--primary))`                        |
-| Title       | Font: Nunito (display), size: 1.25rem (20px), weight: 700, margin-bottom: 0.5rem |
-| Description | Color: `hsl(var(--muted-foreground))`, size: 0.875rem (14px), line-height: 1.6 |
-| Hover       | Shadow: `shadow-card`, transform: `translateY(-4px)`, transition: 300ms ease-out |
-| Entrance    | Animation: `fadeInUp` with staggered delays (0ms, 100ms, 200ms, 300ms)  |
 
 ---
 
@@ -433,9 +409,9 @@ Used across multiple sections:
 | Pattern              | CSS Value                                                                        | When to use                                      |
 | -------------------- | -------------------------------------------------------------------------------- | ------------------------------------------------ |
 | Background           | `background: hsl(var(--background))`                                             | Default content sections                         |
-| Warm Gradient        | `background: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(40 35% 96%) 100%)` | Emphasis sections, about, why choose       |
+| Warm Gradient        | `background: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(40 35% 96%) 100%)` | Emphasis sections, why choose, events      |
 | Storybook Gradient   | `background: linear-gradient(180deg, hsl(210 40% 96%) 0%, hsl(var(--background)) 100%)` | Testimonials section                   |
-| Muted @ 30%          | `background: hsl(var(--muted) / 0.3)`                                            | Subtle differentiation, events section           |
+| Muted @ 30%          | `background: hsl(var(--muted) / 0.3)`                                            | Subtle differentiation, deprecated               |
 | Primary @ 10%        | `background: hsl(var(--primary) / 0.1)`                                          | Call-to-action banners, CTA sections             |
 | Accent @ 10%         | `background: hsl(var(--accent) / 0.1)`                                           | Mini heroes, gallery page header                 |
 | Book Color (dynamic) | `background: hsl(var(--book-color))` — set via inline style or data attribute   | Product hero sections (color from book metadata) |
