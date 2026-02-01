@@ -10,17 +10,17 @@ layout: layouts/base.njk
   {% include "components/schema-book.njk" %}
 {% endblock %}
 
-<div class="book-detail">
-  <div class="hero" style="background-image: url('{{ book.cover }}');">
-    <div class="container">
-      <h1>{{ book.title }}</h1>
-      {% if book.subtitle %}<p class="lead">{{ book.subtitle | safe }}</p>{% endif %}
-    </div>
+<section class="hero" style="background-image: url('{{ book.cover }}');">
+  <div class="container">
+    <h1>{{ book.title }}</h1>
+    {% if book.subtitle %}<p class="lead">{{ book.subtitle | safe }}</p>{% endif %}
   </div>
+</section>
 
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col-md-8">
+<section class="section-padding">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-12 col-md-8">
         <h2>O knize</h2>
         <p>{{ book.description | safe }}</p>
 
@@ -42,12 +42,12 @@ layout: layouts/base.njk
         <h3>Ukázky z knihy</h3>
         {% for excerpt in book.excerpts %}
         <div class="excerpt mb-4">
-          <div class="row">
+          <div class="row g-4">
             {% if excerpt.image %}
-            <div class="col-md-6 mb-3 mb-md-0">
+            <div class="col-12 col-md-6">
               <img src="{{ excerpt.image }}" class="img-fluid rounded" alt="{{ excerpt.title }}">
             </div>
-            <div class="col-md-6">
+            <div class="col-12 col-md-6">
               <h4>{{ excerpt.title }}</h4>
               {{ excerpt.text | safe }}
             </div>
@@ -75,7 +75,7 @@ layout: layouts/base.njk
         {% endif %}
       </div>
 
-      <div class="col-md-4">
+      <div class="col-12 col-md-4">
         <div class="card sticky-top" style="top: 100px;">
           <img src="{{ book.cover }}" class="card-img-top" alt="{{ book.title }}">
           <div class="card-body">
@@ -100,9 +100,9 @@ layout: layouts/base.njk
     <div class="row mt-5">
       <div class="col-12">
         <h3>Galerie</h3>
-        <div class="gallery-grid row g-3">
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
           {% for image in book.gallery %}
-          <div class="col-6 col-md-4 col-lg-3">
+          <div class="col">
             <a href="{{ image }}" class="glightbox" data-gallery="book-{{ book.id }}">
               <img src="{{ image }}" class="img-fluid rounded" alt="Ilustrace z knihy {{ book.title }}" loading="lazy">
             </a>
@@ -113,4 +113,4 @@ layout: layouts/base.njk
     </div>
     {% endif %}
   </div>
-</div>
+</section>

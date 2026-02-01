@@ -5,38 +5,40 @@ description: Fotografie z křtů knih, setkání se čtenáři a další momentk
 permalink: /galerie.html
 ---
 
-<div class="container py-5 mt-5">
-  <div class="row mb-5 text-center">
-    <div class="col-lg-8 mx-auto">
-      <h1 class="display-4 fw-bold mb-3">{{ title }}</h1>
-      <p class="lead text-muted">{{ description }}</p>
+<section class="section-padding">
+  <div class="container">
+    <div class="row mb-5 text-center">
+      <div class="col-lg-8 mx-auto">
+        <h1 class="display-4 fw-bold mb-3">{{ title }}</h1>
+        <p class="lead text-muted">{{ description }}</p>
+      </div>
     </div>
-  </div>
 
-  {% for section in galleries %}
-  <div class="row mb-4 mt-5">
-    <div class="col-12">
-      <h2 class="mb-4">{{ section.title }}</h2>
-      {% if section.note %}
-      <p class="text-muted">{{ section.note }}</p>
-      {% endif %}
+    {% for section in galleries %}
+    <div class="row mb-4 mt-5">
+      <div class="col-12">
+        <h2 class="mb-4">{{ section.title }}</h2>
+        {% if section.note %}
+        <p class="text-muted">{{ section.note }}</p>
+        {% endif %}
+      </div>
     </div>
-  </div>
 
-  <div class="row g-3">
-    {% for image in section.images %}
-    <div class="col-md-4 col-sm-6">
-      <a href="{{ image.src }}" class="glightbox position-relative d-block overflow-hidden rounded shadow-sm" data-gallery="{{ section.slug }}">
-        <img src="{{ image.src }}" alt="{{ image.alt }}" class="img-fluid w-100 object-fit-cover" style="height: 250px;" loading="lazy">
-        <div class="position-absolute bottom-0 start-0 p-3 w-100 text-white bg-dark bg-opacity-50 opacity-0 hover-opacity-100 transition-opacity">
-          <small>{{ image.alt }}</small>
-        </div>
-      </a>
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
+      {% for image in section.images %}
+      <div class="col">
+        <a href="{{ image.src }}" class="glightbox position-relative d-block overflow-hidden rounded shadow-sm" data-gallery="{{ section.slug }}">
+          <img src="{{ image.src }}" alt="{{ image.alt }}" class="img-fluid w-100 object-fit-cover" style="height: 250px;" loading="lazy">
+          <div class="position-absolute bottom-0 start-0 p-3 w-100 text-white bg-dark bg-opacity-50 opacity-0 hover-opacity-100 transition-opacity">
+            <small>{{ image.alt }}</small>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
     </div>
     {% endfor %}
   </div>
-  {% endfor %}
-</div>
+</section>
 
 <style>
 /* Simple hover effect for captions */

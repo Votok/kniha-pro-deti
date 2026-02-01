@@ -5,20 +5,20 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
 permalink: /nase-knihy.html
 ---
 
-<div class="container-fluid px-0">
-  <div class="row mb-0 ps-md-3 ps-xl-5 mt-5 mt-md-5 pt-3 pt-xl-5">
-    <div class="col-12 me-md-0 pt-3 px-3 pt-md-4 px-md-5">
-      <h1>Seznamte se</h1>
+<section class="section-padding">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-12">
+        <h1>Seznamte se</h1>
+      </div>
     </div>
-  </div>
 
-  {# Iterate through all books in groups of 3 #}
-  {% for row in books | batch(3) %}
-  <div class="row mb-4 my-md-3 px-md-3 px-xl-5 py-sm-3 pt-sm-0">
-    {% for book in row %}
-    <div class="col-12 col-sm-12 col-md-4 mb-5">
-      <div class="row">
-        <div class="col-12 text-center overflow-hidden">
+    {# Iterate through all books in groups of 3 #}
+    {% for row in books | batch(3) %}
+    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 g-4 mb-5">
+      {% for book in row %}
+      <div class="col">
+        <div class="text-center overflow-hidden mb-4">
           <a href="/{{ book.slug }}.html">
             <img
               src="{{ book.cover }}"
@@ -29,9 +29,7 @@ permalink: /nase-knihy.html
             />
           </a>
         </div>
-      </div>
-      <div class="row pb-3">
-        <div class="col-12 text-center overflow-hidden">
+        <div class="text-center overflow-hidden">
           <a href="/{{ book.slug }}.html"><h4>{{ book.title }}</h4></a>
           <p><small class="text-muted">Rok vydání: {{ book.year }}</small></p>
           <p>
@@ -45,8 +43,8 @@ permalink: /nase-knihy.html
           {% endif %}
         </div>
       </div>
+      {% endfor %}
     </div>
     {% endfor %}
   </div>
-  {% endfor %}
-</div>
+</section>
