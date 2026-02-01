@@ -1,17 +1,66 @@
 {# src/_includes/components/header.njk #}
-<header class="fixed-top navbar navbar-expand-lg">
-    <div class="container">
-      <a class="navbar-brand" href="/">{{ site.name }}</a>
-      <button class="navbar-toggler" type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarCollapse"
-              aria-controls="navbarCollapse"
-              aria-expanded="false"
-              aria-label="Otevřít navigaci">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav ms-auto">
+<header class="fixed-top navbar navbar-expand-lg bg-transparent" id="mainHeader">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <span class="brand-text">Kniha<span class="brand-highlight">ProDěti</span></span>
+    </a>
+
+    <button class="navbar-toggler border-0" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Otevřít navigaci">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mx-auto d-none d-lg-flex">
+        {% for item in navigation.main %}
+        <li class="nav-item">
+          <a class="nav-link {{ 'active' if page.url == item.url }}"
+             {% if page.url == item.url %}aria-current="page"{% endif %}
+             href="{{ item.url }}">{{ item.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+
+      <div class="d-none d-lg-flex align-items-center gap-3">
+        <div class="d-flex align-items-center gap-2">
+          {% for social in navigation.social %}
+          <a href="{{ social.url }}"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn-social"
+             aria-label="{{ social.name }}">
+            {% if social.icon == 'facebook' %}
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+            {% elif social.icon == 'instagram' %}
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+            </svg>
+            {% endif %}
+          </a>
+          {% endfor %}
+        </div>
+
+        <a href="/#knihy" class="btn btn-primary btn-cta">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+            <path d="M3 6h18"></path>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          Koupit knihy
+        </a>
+      </div>
+
+      {# Mobile menu #}
+      <div class="d-lg-none mobile-nav-content">
+        <ul class="navbar-nav">
           {% for item in navigation.main %}
           <li class="nav-item">
             <a class="nav-link {{ 'active' if page.url == item.url }}"
@@ -20,6 +69,38 @@
           </li>
           {% endfor %}
         </ul>
+
+        <div class="d-flex align-items-center gap-3 pt-4 border-top">
+          {% for social in navigation.social %}
+          <a href="{{ social.url }}"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn-social"
+             aria-label="{{ social.name }}">
+            {% if social.icon == 'facebook' %}
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+            {% elif social.icon == 'instagram' %}
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+            </svg>
+            {% endif %}
+          </a>
+          {% endfor %}
+        </div>
+
+        <a href="/#knihy" class="btn btn-primary btn-cta w-100 mt-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+            <path d="M3 6h18"></path>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          Koupit knihy
+        </a>
       </div>
     </div>
+  </div>
 </header>

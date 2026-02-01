@@ -1,8 +1,21 @@
 {
   "main": [
-    { "title": "Naše knihy", "url": "/nase-knihy.html" },
+    { "title": "Knihy", "url": "/#knihy" },
     { "title": "Autoři", "url": "/autori-knihy.html" },
+    { "title": "Besedy", "url": "#kontakt" },
     { "title": "Galerie", "url": "/galerie.html" },
-    { "title": "Média", "url": "/media.html" }
+    { "title": "Media", "url": "/media.html" }
+  ],
+  "social": [
+    {
+      "name": "Facebook",
+      "url": "https://www.facebook.com/knihaprodeti",
+      "icon": "facebook"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/knihaprodeti",
+      "icon": "instagram"
+    }
   ]
 }

@@ -61,13 +61,30 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // ===================================================================
+  // Header Scroll Behavior
+  // ===================================================================
+  // Add "scrolled" class to header when user scrolls down
+
+  const header = document.getElementById("mainHeader");
+
+  if (header) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+  }
+
+  // ===================================================================
   // Bootstrap Navbar Active State
   // ===================================================================
   // Highlight current page in navigation
-  
+
   const currentLocation = window.location.pathname;
   const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
-  
+
   navLinks.forEach((link) => {
     if (link.getAttribute("href") === currentLocation) {
       link.classList.add("active");
