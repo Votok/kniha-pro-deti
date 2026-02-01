@@ -705,7 +705,249 @@ select:focus:not(:focus-visible) {
 }
 
 /* ==========================================================================
-   12. COMPONENT CUSTOM CLASSES
+   12. HERO SECTION
+   ========================================================================== */
+
+/* Hero Section Layout */
+.hero-section {
+  padding-top: 7rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .hero-section {
+    padding-top: 10rem;
+    padding-bottom: 6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-section {
+    padding-top: 12rem;
+    padding-bottom: 6rem;
+  }
+}
+
+/* Text Gradient */
+.text-gradient-warm {
+  background: linear-gradient(135deg, hsl(var(--color-primary)) 0%, hsl(var(--color-accent)) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero Buttons */
+.btn-hero {
+  padding: 0.875rem 2.5rem;
+  border-radius: var(--radius-xl);
+  font-size: 1.125rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-outline-primary {
+  border: 2px solid hsl(var(--color-primary));
+  background-color: transparent;
+  color: hsl(var(--color-primary));
+}
+
+.btn-outline-primary:hover {
+  background-color: hsl(var(--color-primary));
+  color: hsl(var(--color-primary-fg));
+  border-color: hsl(var(--color-primary));
+}
+
+/* Trust Indicators */
+.trust-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.trust-indicator-emoji {
+  font-size: 1.5rem;
+}
+
+.trust-indicator-text {
+  font-size: 0.875rem;
+  color: hsl(var(--color-muted-fg));
+}
+
+/* Floating Books Container */
+.floating-books-container {
+  min-height: 350px;
+}
+
+@media (min-width: 768px) {
+  .floating-books-container {
+    min-height: 420px;
+  }
+}
+
+.floating-books-wrapper {
+  width: 100%;
+  max-width: 32rem;
+  height: 350px;
+}
+
+@media (min-width: 768px) {
+  .floating-books-wrapper {
+    height: 420px;
+  }
+}
+
+/* Floating Book Positions */
+.floating-book {
+  position: absolute;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.floating-book-1 {
+  top: 0;
+  left: 0;
+  width: 7rem;
+  transform: rotate(-8deg);
+  animation: float1 6s ease-in-out infinite;
+}
+
+@media (min-width: 768px) {
+  .floating-book-1 {
+    width: 9rem;
+  }
+}
+
+.floating-book-2 {
+  top: 50%;
+  left: 50%;
+  width: 10rem;
+  transform: translate(-50%, -50%) rotate(2deg);
+  animation: float2 6s ease-in-out infinite;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .floating-book-2 {
+    width: 13rem;
+  }
+}
+
+.floating-book-3 {
+  top: 1rem;
+  right: 0;
+  width: 7rem;
+  transform: rotate(6deg);
+  animation: float3 6s ease-in-out infinite;
+}
+
+@media (min-width: 768px) {
+  .floating-book-3 {
+    width: 9rem;
+  }
+}
+
+.floating-book-4 {
+  bottom: 2rem;
+  left: 1rem;
+  width: 6rem;
+  transform: rotate(-5deg);
+  animation: float4 6s ease-in-out infinite;
+}
+
+@media (min-width: 768px) {
+  .floating-book-4 {
+    width: 8rem;
+  }
+}
+
+.floating-book-5 {
+  bottom: 1rem;
+  right: 2rem;
+  width: 6rem;
+  transform: rotate(4deg);
+  animation: float5 6s ease-in-out infinite;
+}
+
+@media (min-width: 768px) {
+  .floating-book-5 {
+    width: 8rem;
+  }
+}
+
+/* Decorative Blurs for Floating Books */
+.floating-books-blur {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.floating-books-blur-accent {
+  top: -2rem;
+  left: -2rem;
+  width: 8rem;
+  height: 8rem;
+  background-color: hsl(var(--color-accent));
+}
+
+.floating-books-blur-primary {
+  bottom: -2rem;
+  right: -2rem;
+  width: 10rem;
+  height: 10rem;
+  background-color: hsl(var(--color-primary) / 0.4);
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .scroll-indicator {
+    margin-top: 4rem;
+  }
+}
+
+.scroll-indicator-text {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: hsl(var(--color-foreground) / 0.7);
+}
+
+.scroll-indicator-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: hsl(var(--color-primary) / 0.2);
+  border-radius: 50%;
+  color: hsl(var(--color-primary));
+  transition: background-color 0.3s ease, color 0.3s ease;
+  animation: bounce 2s ease-in-out infinite;
+  text-decoration: none;
+}
+
+.scroll-indicator-button:hover {
+  background-color: hsl(var(--color-primary));
+  color: hsl(var(--color-primary-fg));
+}
+
+.scroll-indicator-button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* ==========================================================================
+   13. COMPONENT CUSTOM CLASSES
    ========================================================================== */
 
 /* Badge - Section Tag */

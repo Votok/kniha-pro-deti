@@ -4,23 +4,99 @@ title: Kniha pro děti | Píšeme příběhy, které pomáhají dětem růst
 description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajemství a nakonec rozuzlení. Naše knihy pro zvídavé děti, rodiče i prarodiče. 👪 Skvělé ilustrace!"
 ---
 
-<!-- #keep section (Hero) -->
-<section class="section-padding bg-hero-uvod">
-  <div class="container">
-    <div class="row g-5">
-      <div class="col-12 col-md-7">
-        <h1>Píšeme příběhy, které pomáhají dětem růst</h1>
-        <p>
-          Píšeme příběhy pro děti od 5 do 12 let, které učí odvaze, sebedůvěře a zvládání životních
-          výzev. S krásnými ilustracemi, které si zamilujete.
-        </p>
-        <div><button>Koupit knihy</button><button>Pro koho jsou knihy?</button></div>
-        <div>
-          <div><span>📚</span><span>8 knih v edici</span></div>
-          <div><span>🌱</span><span>Pro děti 5-12 let</span></div>
+<!-- Hero Section -->
+<section class="hero-section position-relative overflow-hidden bg-gradient-hero">
+  <div class="container position-relative">
+    <div class="row g-5 g-lg-4 align-items-center">
+
+      {# Left Column - Content #}
+      <div class="col-12 col-lg-6">
+        <div class="d-flex flex-column gap-4 text-center text-lg-start">
+
+          <h1 class="display-3 fw-bold lh-sm">
+            Píšeme příběhy, které
+            <span class="text-gradient-warm">pomáhají dětem růst</span>
+          </h1>
+
+          <p class="lead text-muted mx-auto mx-lg-0" style="max-width: 36rem;">
+            Píšeme příběhy pro děti od 5 do 12 let, které učí odvaze, sebedůvěře a zvládání životních
+            výzev. S krásnými ilustracemi, které si zamilujete.
+          </p>
+
+          <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start pt-3">
+            <a href="/#knihy" class="btn btn-primary btn-lg btn-hero">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                <path d="M3 6h18"></path>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+              Koupit knihy
+            </a>
+            <a href="/#knihy" class="btn btn-outline-primary btn-lg btn-hero">
+              Pro koho jsou knihy?
+            </a>
+          </div>
+
+          <div class="d-flex align-items-center gap-4 gap-lg-5 justify-content-center justify-content-lg-start pt-3">
+            <div class="trust-indicator">
+              <span class="trust-indicator-emoji">📚</span>
+              <span class="trust-indicator-text">8 knih v edici</span>
+            </div>
+            <div class="trust-indicator">
+              <span class="trust-indicator-emoji">🌱</span>
+              <span class="trust-indicator-text">Pro děti 5–12 let</span>
+            </div>
+          </div>
+
         </div>
       </div>
+
+      {# Right Column - Floating Books #}
+      <div class="col-12 col-lg-6">
+        <div class="floating-books-container position-relative d-flex justify-content-center align-items-center">
+
+          {# Decorative blur circles #}
+          <div class="floating-books-blur floating-books-blur-accent"></div>
+          <div class="floating-books-blur floating-books-blur-primary"></div>
+
+          {# Book covers #}
+          <div class="floating-books-wrapper position-relative">
+            <div class="floating-book floating-book-1">
+              <img src="/images/hero/kniha-viktor-a-zahadna-teta-bobina.jpg" alt="Viktor a záhadná teta Bobina" class="img-fluid rounded-3 shadow-book">
+            </div>
+
+            <div class="floating-book floating-book-2">
+              <img src="/images/hero/kniha-obalka-roza-a-ztraceny-tatinek.jpg" alt="Róza a ztracený tatínek" class="img-fluid rounded-3 shadow-book">
+            </div>
+
+            <div class="floating-book floating-book-3">
+              <img src="/images/hero/kniha-obalka-eliska-detektiv-m.jpg" alt="Eliška Detektiv" class="img-fluid rounded-3 shadow-book">
+            </div>
+
+            <div class="floating-book floating-book-4">
+              <img src="/images/hero/kniha-obalka-eliska-rebelka-m.jpg" alt="Eliška Rebelka" class="img-fluid rounded-3 shadow-book">
+            </div>
+
+            <div class="floating-book floating-book-5">
+              <img src="/images/hero/kniha-obalka-tajemstvi-rodiny-m.jpg" alt="Tajemství rodiny M" class="img-fluid rounded-3 shadow-book">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
+
+    {# Scroll Indicator #}
+    <div class="scroll-indicator">
+      <span class="scroll-indicator-text">Objevte více</span>
+      <a href="#knihy" class="scroll-indicator-button" aria-label="Scroll to books">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m6 9 6 6 6-6"></path>
+        </svg>
+      </a>
+    </div>
+
   </div>
 </section>
 
