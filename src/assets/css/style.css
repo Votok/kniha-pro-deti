@@ -739,24 +739,81 @@ select:focus:not(:focus-visible) {
    12. HERO SECTION
    ========================================================================== */
 
-/* Hero Section Layout */
+/* Fixed Navbar Compensation */
+body {
+  padding-top: 72px; /* Account for fixed navbar height */
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-top: 76px;
+  }
+}
+
+/* Hero Section Layout - Homepage */
 .hero-section {
-  padding-top: 7rem;
+  padding-top: 5rem;
   padding-bottom: 4rem;
 }
 
 @media (min-width: 768px) {
   .hero-section {
-    padding-top: 10rem;
+    padding-top: 8rem;
     padding-bottom: 6rem;
   }
 }
 
 @media (min-width: 1024px) {
   .hero-section {
-    padding-top: 12rem;
+    padding-top: 10rem;
     padding-bottom: 6rem;
   }
+}
+
+/* Hero Section - Book Detail Pages */
+.hero {
+  position: relative;
+  min-height: 300px;
+  padding: 3rem 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    min-height: 400px;
+    padding: 4rem 0;
+  }
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, hsl(var(--color-foreground) / 0.7) 0%, hsl(var(--color-foreground) / 0.5) 100%);
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  color: hsl(var(--color-background));
+  text-shadow: 0 2px 8px hsl(var(--color-foreground) / 0.3);
+}
+
+.hero .lead {
+  color: hsl(var(--color-background) / 0.9);
+  text-shadow: 0 1px 4px hsl(var(--color-foreground) / 0.2);
 }
 
 /* Text Gradient */
