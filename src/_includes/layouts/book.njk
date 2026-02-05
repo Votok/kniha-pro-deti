@@ -10,107 +10,277 @@ layout: layouts/base.njk
   {% include "components/schema-book.njk" %}
 {% endblock %}
 
-<section class="hero" style="background-image: url('{{ book.cover }}');">
+{# Breadcrumb Section #}
+<section class="py-3 bg-light">
   <div class="container">
-    <h1>{{ book.title }}</h1>
-    {% if book.subtitle %}<p class="lead">{{ book.subtitle | safe }}</p>{% endif %}
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="/" class="text-decoration-none">Úvod</a></li>
+        <li class="breadcrumb-item"><a href="/#knihy" class="text-decoration-none">Knihy</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ book.title }}</li>
+      </ol>
+    </nav>
   </div>
 </section>
 
-<section class="section-padding">
+{# Product Hero Section #}
+<section class="section-padding" style="background: linear-gradient(180deg, hsl(40 40% 98%) 0%, hsl(35 35% 95%) 50%, hsl(30 30% 93%) 100%);">
   <div class="container">
-    <div class="row g-5">
-      <div class="col-12 col-md-8">
-        <h2>O knize</h2>
-        <p>{{ book.description | safe }}</p>
-
-        <p class="text-muted">{{ book.ageGroup }}</p>
-
-        {% if book.awards %}
-        <div class="awards mb-4">
-          <h3>Ocenění</h3>
-          {% for award in book.awards %}
-          <div class="alert alert-success">
-            <strong>{{ award.name }}</strong>{% if award.year %} ({{ award.year }}){% endif %}
-            {% if award.description %}<br>{{ award.description }}{% endif %}
-          </div>
-          {% endfor %}
+    <div class="row g-5 align-items-center">
+      {# Book Cover - Left Column #}
+      <div class="col-12 col-lg-5">
+        <div class="position-relative d-flex justify-content-center">
+          <img
+            src="{{ book.cover }}"
+            alt="{{ book.title }}"
+            class="img-fluid shadow-book hover-lift"
+            style="max-width: 24rem; width: 100%; border-radius: var(--radius-lg); transition: transform 0.3s ease-out;"
+          >
+          {# Decorative blur circles #}
+          <div class="blur-decoration blur-decoration-accent" style="top: 0; left: 0;"></div>
+          <div class="blur-decoration blur-decoration-primary" style="bottom: 0; right: 0;"></div>
         </div>
-        {% endif %}
-
-        {% if book.excerpts %}
-        <h3>Ukázky z knihy</h3>
-        {% for excerpt in book.excerpts %}
-        <div class="excerpt mb-4">
-          <div class="row g-4">
-            {% if excerpt.image %}
-            <div class="col-12 col-md-6">
-              <img src="{{ excerpt.image }}" class="img-fluid rounded" alt="{{ excerpt.title }}">
-            </div>
-            <div class="col-12 col-md-6">
-              <h4>{{ excerpt.title }}</h4>
-              {{ excerpt.text | safe }}
-            </div>
-            {% else %}
-            <div class="col-12">
-              <h4>{{ excerpt.title }}</h4>
-              {{ excerpt.text | safe }}
-            </div>
-            {% endif %}
-          </div>
-        </div>
-        {% endfor %}
-        {% endif %}
-
-        {% if book.testimonials %}
-        <h3>Recenze</h3>
-        {% for testimonial in book.testimonials %}
-        <blockquote class="blockquote">
-          <p>{{ testimonial.quote | safe }}</p>
-          <footer class="blockquote-footer">{{ testimonial.author }}
-            {% if testimonial.source %}, <cite>{{ testimonial.source }}</cite>{% endif %}
-          </footer>
-        </blockquote>
-        {% endfor %}
-        {% endif %}
       </div>
 
-      <div class="col-12 col-md-4">
-        <div class="card sticky-top" style="top: 100px;">
-          <img src="{{ book.cover }}" class="card-img-top" alt="{{ book.title }}">
-          <div class="card-body">
-            <h5>Kde koupit</h5>
-            {% for link in book.buyLinks %}
-            <a href="{{ link.url }}" class="btn {% if link.primary %}btn-primary{% else %}btn-outline-primary{% endif %} w-100 mb-2" target="_blank" rel="noopener">
-              {{ link.retailer }}
-            </a>
+      {# Product Info - Right Column #}
+      <div class="col-12 col-lg-7">
+        {# Series Badge #}
+        {% if book.series %}
+        <span class="badge bg-secondary text-secondary-fg mb-3" style="font-size: 0.875rem; padding: 0.5rem 1rem;">
+          Série {{ book.series }}
+        </span>
+        {% endif %}
+
+        {# Title #}
+        <h1 class="mb-3">{{ book.title }}</h1>
+
+        {# Author Line #}
+        <p class="text-muted mb-3" style="font-size: 1.125rem;">
+          <strong>Autorky:</strong>
+          {% for author in book.authors.text %}
+            {{ author }}{% if not loop.last %}, {% endif %}
+          {% endfor %}
+        </p>
+
+        {# Metadata Pills #}
+        <div class="d-flex flex-wrap gap-3 mb-4">
+          {# Age Group #}
+          <div class="d-inline-flex align-items-center gap-2 px-3 py-2 bg-card shadow-soft" style="border-radius: var(--radius-full); font-size: 0.875rem; font-weight: 500;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            <span>{{ book.ageGroup }}</span>
+          </div>
+
+          {# Pages #}
+          {% if book.pages %}
+          <div class="d-inline-flex align-items-center gap-2 px-3 py-2 bg-card shadow-soft" style="border-radius: var(--radius-full); font-size: 0.875rem; font-weight: 500;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted">
+              <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
+            </svg>
+            <span>{{ book.pages }} stran</span>
+          </div>
+          {% endif %}
+
+          {# Publisher #}
+          <div class="d-inline-flex align-items-center gap-2 px-3 py-2 bg-card shadow-soft" style="border-radius: var(--radius-full); font-size: 0.875rem; font-weight: 500;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+            </svg>
+            <span>{{ book.publisher }}</span>
+          </div>
+
+          {# Year #}
+          <div class="d-inline-flex align-items-center gap-2 px-3 py-2 bg-card shadow-soft" style="border-radius: var(--radius-full); font-size: 0.875rem; font-weight: 500;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <span>{{ book.year }}</span>
+          </div>
+
+          {# Star Rating #}
+          {% if book.testimonials and book.testimonials[0].rating %}
+          <div class="d-inline-flex align-items-center gap-2 px-3 py-2 bg-card shadow-soft" style="border-radius: var(--radius-full); font-size: 0.875rem; font-weight: 500;">
+            {% for i in range(0, book.testimonials[0].rating) %}
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="hsl(var(--color-accent))" stroke="hsl(var(--color-accent))" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
             {% endfor %}
-
-            <hr>
-            <p><strong>Vydavatel:</strong> {{ book.publisher }}</p>
-            <p><strong>Rok vydání:</strong> {{ book.year }}</p>
-            {% if book.isbn %}<p><strong>ISBN:</strong> {{ book.isbn }}</p>{% endif %}
-            {% if book.pages %}<p><strong>Počet stran:</strong> {{ book.pages }}</p>{% endif %}
           </div>
+          {% endif %}
         </div>
-      </div>
-    </div>
 
-    {% if book.gallery %}
-    <div class="row mt-5">
-      <div class="col-12">
-        <h3>Galerie</h3>
-        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
-          {% for image in book.gallery %}
-          <div class="col">
-            <a href="{{ image }}" class="glightbox" data-gallery="book-{{ book.id }}">
-              <img src="{{ image }}" class="img-fluid rounded" alt="Ilustrace z knihy {{ book.title }}" loading="lazy">
-            </a>
-          </div>
+        {# Description #}
+        <div class="mb-4" style="font-size: 1.125rem; line-height: 1.6; color: hsl(var(--color-foreground));">
+          <p>{{ book.description }}</p>
+        </div>
+
+        {# CTA Buttons #}
+        <div class="d-flex flex-wrap gap-3">
+          {% for link in book.buyLinks %}
+            {% if link.primary %}
+              <a href="{{ link.url }}" class="btn btn-primary btn-lg" target="_blank" rel="noopener" style="border-radius: var(--radius-md);">
+                Koupit knihu
+              </a>
+            {% endif %}
+          {% endfor %}
+          {% for link in book.buyLinks %}
+            {% if not link.primary %}
+              <a href="{{ link.url }}" class="btn btn-outline-primary btn-lg" target="_blank" rel="noopener" style="border-radius: var(--radius-md);">
+                Objednat u {{ link.retailer }}
+              </a>
+            {% endif %}
           {% endfor %}
         </div>
       </div>
     </div>
-    {% endif %}
+  </div>
+</section>
+
+{# Text Samples Section #}
+{% if book.excerpts and book.excerpts.length > 0 %}
+<section class="section-padding bg-light">
+  <div class="container">
+    {# Section Header #}
+    <div class="text-center mx-auto mb-5" style="max-width: 48rem;">
+      <span class="badge-section-tag mb-3">Ukázky z knihy</span>
+      <h2 class="mb-3">Nahlédněte do příběhu</h2>
+      <p class="text-muted" style="font-size: 1.125rem;">
+        Přečtěte si knihu ukázky a nechte se vtáhnout do unikátního světa knihy {{ book.title }}
+      </p>
+    </div>
+
+    {# Alternating Samples #}
+    <div class="row g-5">
+      {% for excerpt in book.excerpts %}
+      <div class="col-12">
+        <div class="row g-4 align-items-center {% if loop.index % 2 == 0 %}flex-lg-row-reverse{% endif %}">
+          {# Image #}
+          {% if excerpt.image %}
+          <div class="col-12 col-lg-6">
+            <div class="position-relative">
+              <img
+                src="{{ excerpt.image }}"
+                alt="{{ excerpt.title }}"
+                class="img-fluid shadow-soft"
+                style="border-radius: var(--radius-lg); width: 100%;"
+              >
+            </div>
+          </div>
+          {% endif %}
+
+          {# Text Content #}
+          <div class="col-12 col-lg-6">
+            <h3 class="mb-4" style="font-size: 1.5rem; font-weight: 700;">{{ excerpt.title }}</h3>
+            <div style="color: hsl(var(--color-foreground)); line-height: 1.7;">
+              {{ excerpt.text | safe }}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# Testimonial Section #}
+{% if book.testimonials and book.testimonials.length > 0 %}
+<section class="section-padding bg-gradient-storybook">
+  <div class="container">
+    <div class="mx-auto" style="max-width: 56rem;">
+      {# Testimonial Card #}
+      <div class="card position-relative shadow-card" style="border-radius: var(--radius-2xl); padding: 2rem; border: none;">
+        {# Quote Badge #}
+        <div class="testimonial-quote-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"></path>
+          </svg>
+        </div>
+
+        {# Testimonial Content #}
+        <div class="mt-4">
+          <blockquote class="mb-4" style="font-size: 1.25rem; font-weight: 500; line-height: 1.6; color: hsl(var(--color-foreground));">
+            "{{ book.testimonials[0].quote }}"
+          </blockquote>
+
+          <div class="d-flex align-items-center gap-3">
+            <div>
+              <div style="font-family: 'Nunito', sans-serif; font-size: 1.125rem; font-weight: 700; color: hsl(var(--color-foreground));">
+                {{ book.testimonials[0].author }}
+              </div>
+              {% if book.testimonials[0].source %}
+              <div class="text-muted" style="font-size: 0.875rem;">
+                {{ book.testimonials[0].source }}
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# Related Books Section #}
+{% if book.series %}
+<section class="section-padding" style="background-color: hsl(var(--color-muted) / 0.3);">
+  <div class="container">
+    {# Section Header #}
+    <div class="text-center mb-5">
+      <h2 class="mb-3">Další knihy ze série {{ book.series }}</h2>
+    </div>
+
+    {# Related Books Grid #}
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center" style="max-width: 72rem; margin: 0 auto;">
+      {% for relatedBook in books %}
+        {% if relatedBook.series == book.series and relatedBook.id != book.id %}
+        <div class="col">
+          <a href="/{{ relatedBook.slug }}.html" class="text-decoration-none">
+            <div class="card h-100 hover-lift" style="border: none;">
+              <img
+                src="{{ relatedBook.cover }}"
+                alt="{{ relatedBook.title }}"
+                class="card-img-top"
+                style="border-radius: var(--radius-lg) var(--radius-lg) 0 0;"
+              >
+              <div class="card-body">
+                <h5 class="card-title" style="font-size: 1.25rem; font-weight: 700;">{{ relatedBook.title }}</h5>
+                <p class="text-muted mb-0" style="font-size: 0.875rem;">{{ relatedBook.ageGroup }}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# CTA Banner #}
+<section class="section-padding-compact" style="background-color: hsl(var(--color-primary) / 0.1);">
+  <div class="container">
+    <div class="text-center mx-auto" style="max-width: 48rem;">
+      <h2 class="mb-4">Zaujala vás kniha {{ book.title }}?</h2>
+      <p class="mb-4" style="font-size: 1.125rem; color: hsl(var(--color-muted-fg));">
+        Objednejte si ji ještě dnes a nechte se vtáhnout do jedinečného dobrodružství.
+      </p>
+      {% for link in book.buyLinks %}
+        {% if link.primary %}
+          <a href="{{ link.url }}" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+            Koupit knihu
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
 </section>

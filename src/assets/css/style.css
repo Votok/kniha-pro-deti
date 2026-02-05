@@ -1279,3 +1279,93 @@ body {
 .footer-nav-link:hover {
   color: hsl(var(--color-primary));
 }
+
+/* ==========================================================================
+   BREADCRUMB
+   ========================================================================== */
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-bottom: 0;
+  list-style: none;
+  background-color: transparent;
+  font-size: 0.875rem;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: 0.5rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "/";
+  padding-right: 0.5rem;
+  color: hsl(var(--color-muted-fg));
+}
+
+.breadcrumb-item a {
+  color: hsl(var(--color-muted-fg));
+  text-decoration: none;
+  transition: color 0.2s ease-out;
+}
+
+.breadcrumb-item a:hover {
+  color: hsl(var(--color-foreground));
+  text-decoration: none;
+}
+
+.breadcrumb-item.active {
+  color: hsl(var(--color-foreground));
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   BOOK DETAIL PAGE UTILITIES
+   ========================================================================== */
+
+/* Background Card Utility */
+.bg-card {
+  background-color: hsl(var(--color-card)) !important;
+}
+
+/* Metadata Pills - Book Detail */
+.metadata-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: hsl(var(--color-card));
+  box-shadow: var(--shadow-soft);
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Book Cover Hover Effect */
+.book-cover-hero {
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.book-cover-hero:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-book);
+}
+
+/* Section Background Utilities */
+.bg-accent-light {
+  background-color: hsl(var(--color-accent) / 0.1) !important;
+}
+
+.bg-primary-light {
+  background-color: hsl(var(--color-primary) / 0.1) !important;
+}
+
+.bg-muted-light {
+  background-color: hsl(var(--color-muted) / 0.3) !important;
+}
