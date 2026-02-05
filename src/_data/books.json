@@ -11,8 +11,8 @@
     "publisher": "65. pole",
     "isbn": "",
     "pages": null,
-    "cover": "/assets/images/hero/roza-a-ztraceny-tatinek-900.jpg",
-    "coverThumbnail": "/assets/images/hero/roza-a-ztraceny-tatinek-900.jpg",
+    "cover": "/images/knihy/obalka-roza-a-ztraceny-tatinek.jpg",
+    "coverThumbnail": "/images/knihy/obalka-roza-a-ztraceny-tatinek.jpg",
     "authors": {
       "text": ["Pavlína Jurková", "Jarmila Vlčková"],
       "illustrations": ["Petr Korunka"]
@@ -59,8 +59,8 @@
     "publisher": "65. pole",
     "isbn": "",
     "pages": null,
-    "cover": "/assets/images/hero/eliska-detektiv-900.jpg",
-    "coverThumbnail": "/assets/images/hero/eliska-detektiv-900.jpg",
+    "cover": "/images/knihy/obalka-eliska-detektiv.jpg",
+    "coverThumbnail": "/images/knihy/obalka-eliska-detektiv.jpg",
     "authors": {
       "text": ["Pavlína Jurková", "Jarmila Vlčková"],
       "illustrations": ["Petr Korunka"]
@@ -107,8 +107,8 @@
     "publisher": "65. pole",
     "isbn": "",
     "pages": null,
-    "cover": "/assets/images/hero/eliska-rebelka-900.jpg",
-    "coverThumbnail": "/assets/images/hero/eliska-rebelka-900.jpg",
+    "cover": "/images/knihy/obalka-eliska-rebelka.jpg",
+    "coverThumbnail": "/images/knihy/obalka-eliska-rebelka.jpg",
     "authors": {
       "text": ["Pavlína Jurková", "Jarmila Vlčková"],
       "illustrations": ["Petr Korunka"]
@@ -155,8 +155,8 @@
     "publisher": "65. pole",
     "isbn": "",
     "pages": null,
-    "cover": "/assets/images/hero/eliska-andilek-900.jpg",
-    "coverThumbnail": "/assets/images/hero/eliska-andilek-900.jpg",
+    "cover": "/images/knihy/obalka-eliska-andilek.jpg",
+    "coverThumbnail": "/images/knihy/obalka-eliska-andilek.jpg",
     "authors": {
       "text": ["Pavlína Jurková", "Jarmila Vlčková"],
       "illustrations": ["Petr Korunka"]
@@ -203,8 +203,8 @@
     "publisher": "65. pole",
     "isbn": "",
     "pages": null,
-    "cover": "/assets/images/hero/superbox-eliska-900.jpg",
-    "coverThumbnail": "/assets/images/hero/superbox-eliska-900.jpg",
+    "cover": "/images/knihy/obalka-eliska-superbox.jpg",
+    "coverThumbnail": "/images/knihy/obalka-eliska-superbox.jpg",
     "authors": {
       "text": ["Pavlína Jurková", "Jarmila Vlčková"],
       "illustrations": ["Petr Korunka"]
@@ -336,8 +336,8 @@
     "publisher": "Booktook.cz",
     "isbn": "",
     "pages": null,
-    "cover": "/assets/images/hero/tajemstvi-900.jpg",
-    "coverThumbnail": "/assets/images/hero/tajemstvi-900.jpg",
+    "cover": "/images/knihy/obalka-tajemstvi-rodiny-m.jpg",
+    "coverThumbnail": "/images/knihy/obalka-tajemstvi-rodiny-m.jpg",
     "authors": {
       "text": ["Pavlína Jurková", "Jarmila Vlčková"],
       "illustrations": []
