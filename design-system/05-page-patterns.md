@@ -391,6 +391,137 @@ Each sample alternates image/text positions:
 
 ---
 
+### Media Page (Média)
+
+A content-rich page showcasing press coverage, interviews, and reviews with visual categorization.
+
+**Section Composition**:
+
+| Section            | Background      | Purpose                     |
+| ------------------ | --------------- | --------------------------- |
+| Breadcrumb         | Transparent     | Navigation trail            |
+| Hero               | Background      | Page introduction with badge |
+| Media Items        | Background      | Main content grid           |
+| Scanned Articles   | Storybook @ 10% | Visual press gallery        |
+| Media CTA          | Background      | Contact for media inquiries |
+
+---
+
+#### Hero Section
+
+**Container**: Max-width 3xl, centered, padding: 5rem (mobile) → 7rem (lg) vertical
+
+**Structure**:
+1. Category badge (Storybook @ 30% background)
+2. H1 title (Display font, 2.5rem → 3rem → 4rem responsive)
+3. Lead paragraph (1.25rem, muted color)
+
+**Badge**:
+- Display: inline-block
+- Padding: `0.375rem 1rem` (6px vertical, 16px horizontal)
+- Background: `hsl(var(--storybook) / 0.3)`
+- Border-radius: 9999px (full pill)
+- Font-size: 0.875rem (14px)
+- Font-weight: 600 (semibold)
+- Color: `hsl(var(--storybook-foreground))`
+
+---
+
+#### Media Items Grid
+
+**Layout**: 2-column grid on medium screens, single column on mobile
+- Gap: `1.5rem` (24px)
+- Container: Max-width constrained
+
+**Media Card**:
+
+| Element         | Style                                                                |
+| --------------- | -------------------------------------------------------------------- |
+| Container       | `<article>`, full height, padding: `1.5rem` (24px), border-radius: `1rem` (16px) |
+| Background      | Type-specific: `hsl(var(--forest) / 0.1)`, `hsl(var(--primary) / 0.1)`, `hsl(var(--storybook) / 0.1)` |
+| Border          | `border: 1px solid hsl(var(--border) / 0.5)`                        |
+| Shadow (hover)  | `shadow-card`                                                        |
+| Transform (hover) | `translateY(-4px)`                                                  |
+| Transition      | `all 300ms ease-out`                                                 |
+
+**Card Header**:
+- Layout: Horizontal flex, align-items: start, gap: 1rem
+- Icon badge: 48×48px box with icon inside
+- Icon badge background: `hsl(var(--card))`
+- Icon badge border-radius: `0.75rem` (12px)
+- Icon badge shadow: `shadow-soft`
+- Icon size: 24×24px, color: `hsl(var(--primary))`
+
+**Card Content**:
+- Source label: 0.75rem (12px), font-weight: 500, color: `hsl(var(--muted-foreground))`
+- Title: H3, 1.125rem (18px), font-weight: 700, margin-bottom: 0.5rem
+- Title hover: `color: hsl(var(--primary))`, underline
+- Description: 0.875rem (14px), line-height: 1.6, color: `hsl(var(--muted-foreground))`
+- Line clamp: 2 lines max with ellipsis
+
+**Optional Elements**:
+- Image: If present, display below description with `border-radius: 0.75rem`, `shadow-soft`, margin-top: 1rem
+- Audio player: HTML5 `<audio controls>`, full width, margin-top: 1rem
+
+**Icon Type Mapping**:
+
+| Media Type | Icon      | Color Theme |
+| ---------- | --------- | ----------- |
+| Article    | Newspaper | Forest      |
+| Review     | Message   | Primary     |
+| TV         | TV        | Storybook   |
+| Radio      | Radio     | Accent      |
+
+---
+
+#### Scanned Articles Gallery
+
+**Container**:
+- Background: `hsl(var(--storybook) / 0.1)`
+- Padding: 5rem (mobile) → 7rem (lg) vertical
+
+**Header**: Centered H2, max-width 3xl
+
+**Gallery Grid**:
+- Columns: 2 (mobile) → 4 (desktop)
+- Gap: `1rem` (mobile) → `1.5rem` (desktop)
+- Max-width: Contained
+
+**Gallery Item**:
+
+| Element       | Style                                                                |
+| ------------- | -------------------------------------------------------------------- |
+| Container     | `<button>`, `aspect-ratio: 3/4`, `position: relative`, full rounded corners |
+| Image         | `object-fit: cover`, full width/height                               |
+| Border-radius | `0.75rem` (12px)                                                     |
+| Shadow        | `shadow-soft` → `shadow-card` on hover                               |
+| Overlay       | Gradient: `linear-gradient(to top, hsl(0 0% 0% / 0.7), transparent)` |
+| Overlay opacity | `opacity: 0` → `opacity: 1` on group hover                         |
+| Icon position | Absolute centered with text label                                    |
+| Icon          | Zoom In icon, 24×24px, white color                                   |
+| Text          | "Zobrazit", 0.875rem, white, below icon                             |
+| Cursor        | `pointer`                                                            |
+
+**Lightbox**: Use Dialog/Modal component with close button, full-size image display
+
+---
+
+#### Media Collaboration CTA
+
+**Container**:
+- Padding: 4rem vertical
+- Max-width: 42rem (672px), centered
+- Text alignment: center
+
+**Content**:
+- H2: 1.875rem (30px), font-weight: 700, margin-bottom: 1rem
+- Description: 1.125rem, muted color, margin-bottom: 1.5rem
+- CTA button: Hero style with email link (`mailto:`)
+
+---
+
+---
+
 ## Content Section Patterns
 
 ### Standard Section Header
@@ -411,6 +542,7 @@ Used across multiple sections:
 | Background           | `background: hsl(var(--background))`                                             | Default content sections                         |
 | Warm Gradient        | `background: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(40 35% 96%) 100%)` | Emphasis sections, why choose, events      |
 | Storybook Gradient   | `background: linear-gradient(180deg, hsl(210 40% 96%) 0%, hsl(var(--background)) 100%)` | Testimonials section                   |
+| Storybook @ 10%      | `background: hsl(var(--storybook) / 0.1)`                                        | Scanned articles gallery, media page sections    |
 | Muted @ 30%          | `background: hsl(var(--muted) / 0.3)`                                            | Subtle differentiation, deprecated               |
 | Primary @ 10%        | `background: hsl(var(--primary) / 0.1)`                                          | Call-to-action banners, CTA sections             |
 | Accent @ 10%         | `background: hsl(var(--accent) / 0.1)`                                           | Mini heroes, gallery page header                 |
@@ -468,6 +600,78 @@ For alternating image/content pairs (author cards, text samples):
 ```html
 <div class="d-flex flex-column flex-md-row">...</div>
 <div class="d-flex flex-column flex-md-row-reverse">...</div>
+```
+
+### Media Page Implementation
+
+**Media Cards Grid**:
+```html
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+    <article class="h-100 p-4 rounded-3 border border-opacity-50 transition-all">
+      <div class="d-flex align-items-start gap-3">
+        <div class="icon-badge">
+          <!-- Icon (Bootstrap Icons or custom SVG) -->
+        </div>
+        <div class="flex-grow-1">
+          <p class="small fw-medium text-muted mb-1">Source</p>
+          <h3 class="h5 fw-bold mb-2">
+            <a href="#" class="text-decoration-none text-dark hover-primary">Title</a>
+          </h3>
+          <p class="small text-muted mb-0">Description...</p>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+```
+
+**Scanned Articles Gallery**:
+```html
+<section class="py-5 py-md-6" style="background: hsl(var(--storybook) / 0.1);">
+  <div class="container">
+    <h2 class="text-center mb-5">Napsali o nás</h2>
+    <div class="row row-cols-2 row-cols-md-4 g-3 g-md-4">
+      <div class="col">
+        <button class="gallery-item position-relative w-100 border-0 p-0" data-bs-toggle="modal" data-bs-target="#imageModal">
+          <img src="..." alt="..." class="img-fluid rounded-3 shadow-sm">
+          <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column align-items-center justify-content-center opacity-0">
+            <!-- Zoom icon -->
+            <span class="text-white small">Zobrazit</span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+**Custom CSS Required**:
+```css
+.icon-badge {
+  width: 48px;
+  height: 48px;
+  background: hsl(var(--card));
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-soft);
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-item img {
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+
+article:hover {
+  box-shadow: var(--shadow-card);
+  transform: translateY(-4px);
+}
 ```
 
 > [!IMPORTANT]
