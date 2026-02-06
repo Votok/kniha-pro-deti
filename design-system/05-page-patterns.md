@@ -522,6 +522,173 @@ A content-rich page showcasing press coverage, interviews, and reviews with visu
 
 ---
 
+### Besedy (Workshops) Page
+
+A specialized page for showcasing author workshops and school visits with detailed program information.
+
+**Section Composition**:
+
+| Section           | Background       | Purpose                          |
+| ----------------- | ---------------- | -------------------------------- |
+| Breadcrumb        | Transparent      | Navigation trail                 |
+| Hero              | Forest @ 10%     | Page introduction with benefits  |
+| Programs Grid     | Background       | Detailed workshop offerings      |
+| Testimonials      | Warm Gradient    | Social proof quote               |
+| Special Events CTA| Background       | Additional booking opportunities |
+
+---
+
+#### Hero Section (Besedy)
+
+**Layout**: 2-column grid on large screens (content left, image right), stacked on mobile
+
+**Container**:
+- Background: `hsl(var(--forest) / 0.1)`
+- Padding: 3rem (mobile) → 5rem (lg) vertical
+
+**Left Column Structure**:
+1. Category badge (Forest @ 20% background, Forest text)
+2. H1 title (Display font, 1.875rem → 2.25rem → 3rem responsive)
+3. Lead paragraph (1.125rem, muted color)
+4. Feature pills row (inline-flex badges with icons):
+   - Clock icon + duration
+   - Users icon + grade levels
+   - Background: Card color
+   - Shadow: `shadow-soft`
+   - Border-radius: 9999px (full pill)
+   - Padding: `0.5rem 1rem`
+   - Font-weight: 500 (medium)
+
+**Right Column**:
+- Image container: max-width 28rem (mobile) → 448px (lg), centered
+- Image border-radius: `1rem` (16px)
+- Image shadow: `shadow-card`
+- Decorative blur circle: positioned bottom-right, `-z-10`
+
+---
+
+#### Programs/Workshop Cards
+
+Horizontal cards showcasing individual workshop programs with integrated contact information.
+
+**Card Structure**: 4-column grid on large screens (`lg:grid-cols-4`), stacked on mobile
+
+**Container**:
+- Background: Tinted theme color with low opacity
+  - Options: `hsl(var(--accent) / 0.2)`, `hsl(var(--forest) / 0.1)`, `hsl(var(--storybook) / 0.1)`, `hsl(var(--primary) / 0.1)`
+- Border: `1px solid hsl(var(--border) / 0.5)` — 50% opacity for subtle definition
+- Border-radius: `1rem` (16px)
+- Overflow: hidden (for image clipping)
+- Grid gap: 0 (columns touch directly)
+
+**Column 1: Image** (`lg:col-span-1`)
+
+| Property      | Mobile                | Desktop (lg)           |
+| ------------- | --------------------- | ---------------------- |
+| Height        | 12rem (192px, h-48)   | Full height (h-auto)   |
+| Width         | Full width            | Full column width      |
+| Object Fit    | `cover`               | `cover`                |
+
+**Columns 2-3: Main Content** (`lg:col-span-2`)
+
+Padding: `1.5rem` (mobile) → `2rem` (md)
+
+**Header**:
+- Layout: Horizontal flex with icon box + text
+- Gap: 1rem
+- Icon box:
+  - Size: 48×48px (w-12 h-12)
+  - Background: `hsl(var(--card))`
+  - Border-radius: `0.75rem` (12px)
+  - Shadow: `shadow-soft`
+  - Icon size: 24×24px (w-6 h-6)
+  - Icon color: `hsl(var(--primary))`
+- Title: H3, Display font, 1.25rem (mobile) → 1.5rem (md), font-weight: 700
+- Subtitle: Muted color, 1rem
+
+**Description**:
+- Color: Muted foreground
+- Margin-bottom: 1rem
+
+**Activities List**:
+- Unordered list with custom bullet styling
+- Item spacing: `0.5rem` vertical gap
+- Bullet: Primary color, bold weight
+- Text: Muted foreground
+- Margin-bottom: 1.5rem
+
+**Metadata Badges**:
+- Layout: Horizontal flex wrap
+- Gap: `0.75rem`
+- Badge style:
+  - Padding: `0.375rem 0.75rem` (6px × 12px)
+  - Background: `hsl(var(--card))`
+  - Border-radius: 9999px (full pill)
+  - Font-size: 0.875rem (14px)
+  - Font-weight: 500 (medium)
+  - Shadow: `shadow-soft`
+  - Icon: 16×16px (w-4 h-4), inline with 0.25rem margin-right
+
+**Column 4: Contact Sidebar** (`lg:col-span-1`)
+
+| Property   | Value                                         |
+| ---------- | --------------------------------------------- |
+| Background | `hsl(var(--card))`                            |
+| Padding    | `1.5rem` (24px)                               |
+| Layout     | Vertical flex, justify-content: center        |
+
+**Content**:
+- Header: H4, Display font, font-weight: 700, margin-bottom: 1rem, text: "Objednat besedu"
+- Contact links stack with `0.75rem` vertical gap:
+  - Phone link:
+    - Icon: Phone, 16×16px (w-4 h-4)
+    - Text: Phone number
+    - Color: Muted foreground
+    - Hover: Primary color
+  - Email link:
+    - Icon: Mail, 16×16px (w-4 h-4), shrink-0
+    - Text: Email address
+    - Color: Muted foreground
+    - Hover: Primary color
+    - Word break: break-all (for long emails)
+
+**Spacing**: Cards stacked with `2rem` vertical gap
+
+---
+
+#### Testimonials Section (Besedy)
+
+**Background**: Warm Gradient (secondary → cream)
+
+**Container**: Max-width 3xl, centered, padding: 4rem vertical
+
+**Layout**: Centered blockquote with attribution
+
+| Element         | Style                                                                |
+| --------------- | -------------------------------------------------------------------- |
+| Blockquote text | Font-size: 1.25rem (mobile) → 1.5rem (md), italic, color: Foreground |
+| Margin-bottom   | 1.5rem                                                               |
+| Attribution     | Color: Muted foreground, preceded by em dash (—)                     |
+| Text alignment  | Center                                                               |
+
+---
+
+#### Special Events CTA
+
+**Container**:
+- Background: `hsl(var(--card))`
+- Border-radius: `1rem` (16px)
+- Padding: `2rem` (mobile) → `3rem` (md)
+- Shadow: `shadow-card`
+- Text alignment: center
+
+**Content**:
+- H2: Display font, 1.5rem (mobile) → 1.875rem (md), font-weight: 700, margin-bottom: 1rem
+- Description: 1.125rem, muted color, max-width: 42rem (centered), margin-bottom: 2rem
+- CTA button: Forest variant, size lg, with Mail icon
+
+---
+
 ## Content Section Patterns
 
 ### Standard Section Header

@@ -1051,6 +1051,252 @@ window.addEventListener('scroll', () => {
 }
 ```
 
+### Workshop/Program Cards (Besedy Page)
+
+**Base structure**: Custom using Bootstrap grid system
+
+**Required HTML structure**:
+```html
+<article class="workshop-card workshop-card-accent">
+  <div class="row g-0">
+    <!-- Image column -->
+    <div class="col-12 col-lg-3">
+      <div class="workshop-card-image">
+        <img src="..." alt="..." class="w-100 h-100 object-fit-cover">
+      </div>
+    </div>
+
+    <!-- Content columns (spans 2 out of 4) -->
+    <div class="col-12 col-lg-6">
+      <div class="workshop-card-content">
+        <div class="d-flex align-items-start gap-3 mb-3">
+          <div class="icon-badge">
+            <!-- Icon here -->
+          </div>
+          <div>
+            <h3 class="workshop-card-title">Title</h3>
+            <p class="text-muted mb-0">Subtitle</p>
+          </div>
+        </div>
+
+        <p class="text-muted mb-3">Description...</p>
+
+        <ul class="workshop-activities mb-4">
+          <li>Activity 1</li>
+          <li>Activity 2</li>
+        </ul>
+
+        <div class="d-flex flex-wrap gap-2">
+          <span class="pill-badge">
+            <i class="icon"></i>
+            Badge text
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact sidebar -->
+    <div class="col-12 col-lg-3">
+      <div class="workshop-card-contact">
+        <h4 class="h6 fw-bold mb-3">Objednat besedu</h4>
+        <div class="d-flex flex-column gap-2">
+          <a href="tel:..." class="contact-link">
+            <i class="icon-phone"></i>
+            Phone
+          </a>
+          <a href="mailto:..." class="contact-link">
+            <i class="icon-mail"></i>
+            Email
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+```
+
+**What to style in `assets/css/style.css`**:
+```css
+/* Workshop Card Container */
+.workshop-card {
+  border: 1px solid hsl(var(--color-border) / 0.5);
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+/* Color Variants - Tinted Backgrounds */
+.workshop-card-accent {
+  background-color: hsl(var(--color-accent) / 0.2);
+}
+
+.workshop-card-forest {
+  background-color: hsl(var(--color-forest) / 0.1);
+}
+
+.workshop-card-storybook {
+  background-color: hsl(var(--color-storybook) / 0.1);
+}
+
+.workshop-card-primary {
+  background-color: hsl(var(--color-primary) / 0.1);
+}
+
+/* Image Section */
+.workshop-card-image {
+  height: 12rem;  /* Mobile: fixed height */
+  overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .workshop-card-image {
+    height: 100%;  /* Desktop: full height */
+  }
+}
+
+.workshop-card-image img {
+  object-fit: cover;
+}
+
+/* Content Section */
+.workshop-card-content {
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .workshop-card-content {
+    padding: 2rem;
+  }
+}
+
+/* Icon Badge (inside content) */
+.workshop-card-content .icon-badge {
+  width: 48px;
+  height: 48px;
+  background-color: hsl(var(--color-card));
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.workshop-card-content .icon-badge i,
+.workshop-card-content .icon-badge svg {
+  width: 24px;
+  height: 24px;
+  color: hsl(var(--color-primary));
+}
+
+/* Title */
+.workshop-card-title {
+  font-family: "Nunito", system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .workshop-card-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Activities List */
+.workshop-activities {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.workshop-activities li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: hsl(var(--color-muted-fg));
+}
+
+.workshop-activities li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: hsl(var(--color-primary));
+  font-weight: 700;
+}
+
+/* Pill Badges (metadata) */
+.pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.375rem 0.75rem;
+  background-color: hsl(var(--color-card));
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  box-shadow: var(--shadow-soft);
+}
+
+.pill-badge i,
+.pill-badge svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Contact Sidebar */
+.workshop-card-contact {
+  padding: 1.5rem;
+  background-color: hsl(var(--color-card));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 992px) {
+  .workshop-card-contact {
+    height: 100%;
+  }
+}
+
+.workshop-card-contact h4 {
+  font-family: "Nunito", system-ui, sans-serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Contact Links */
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: hsl(var(--color-muted-fg));
+  text-decoration: none;
+  transition: color 0.2s ease-out;
+  word-break: break-all;
+}
+
+.contact-link i,
+.contact-link svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.contact-link:hover {
+  color: hsl(var(--color-primary));
+}
+```
+
+**IMPORTANT**: The workshop card uses Bootstrap's `.row.g-0` (no gutters) with explicit column spans:
+- Mobile: All 3 sections stack (`.col-12`)
+- Desktop (lg): `.col-lg-3` (image), `.col-lg-6` (content), `.col-lg-3` (contact)
+
+**FORBIDDEN**:
+- Using `.card` component for workshop cards — this is a custom layout
+- Modifying column widths per-card — use consistent 3-6-3 grid
+- Adding shadows or borders to inner elements — only container has border
+
 ---
 
 ## 6. Interactions and Motion
