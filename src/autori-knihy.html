@@ -7,14 +7,15 @@ permalink: /autori-knihy.html
 
 <section class="section-padding">
   <div class="container">
-    <div class="row mb-5 text-center">
-      <div class="col-lg-8 mx-auto">
-        <h1 class="display-4 fw-bold mb-3">{{ title }}</h1>
-        <p class="lead text-muted">{{ description }}</p>
-      </div>
+    {# Page Header #}
+    <div class="text-center mx-auto mb-5" style="max-width: 48rem;">
+      <span class="badge rounded-pill bg-primary-subtle text-primary mb-3">Náš tým</span>
+      <h1 class="display-4 fw-bold mb-3">{{ title }}</h1>
+      <p class="lead text-muted">{{ description }}</p>
     </div>
 
-    <div class="row">
+    {# Author Cards - Full width, alternating layout #}
+    <div class="authors-list">
       {% for author in authors %}
         {% include "components/author-card.njk" %}
       {% endfor %}

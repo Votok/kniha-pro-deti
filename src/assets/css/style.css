@@ -1098,6 +1098,55 @@ body {
   white-space: nowrap;
 }
 
+/* Author Cards (Authors Page) */
+.author-card {
+  background-color: hsl(var(--color-card));
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform 300ms ease-out, box-shadow 300ms ease-out;
+}
+
+.author-card:hover {
+  transform: translateY(-4px);
+}
+
+.author-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.author-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.author-name {
+  font-family: var(--bs-font-sans-serif);
+  color: hsl(var(--color-foreground));
+}
+
+.author-bio {
+  color: hsl(var(--color-muted-fg));
+  line-height: 1.6;
+}
+
+.author-bio p {
+  margin-bottom: 1rem;
+}
+
+.author-bio p:last-child {
+  margin-bottom: 0;
+}
+
+.author-links .btn {
+  display: inline-flex;
+  align-items: center;
+}
+
 /* Decorative Blur Circles */
 .blur-decoration {
   position: absolute;

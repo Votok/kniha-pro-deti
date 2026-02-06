@@ -3,8 +3,9 @@
     "id": "pavlina-jurkova",
     "name": "Pavlína Jurková",
     "role": "author",
-    "bio": "Jsme vypravěčky příběhů. Své umělecké aktivity dělíme mezi divadlo, psaní knížek pro děti a fotografování. I když nemůžeme být více rozdílné, spojuje nás láska k oboru, chuť podnikat a zkoušet nové věci. Před patnácti lety jsme založily úspěšné autorské divadlo Láryfáry, které se zaměřuje na interaktivní představení pro celé rodiny. Tady působíme jako herečky a scénáristky. V roce 2018 nám vyšla první společně napsaná kniha Viktor a záhadná teta Bobina, která se během pár měsíců stala bestsellerem a vítězem čtenářské ankety SUK-čteme všichni 2018. Věříme, že si svou tvorbou získáme co nejvíce srdcí malých i velkých čtenářů.",
-    "photo": "/images/pavlina-jurkova-a-jarmila-vlckova.jpg",
+    "gender": "female",
+    "bio": "<p>Jsem příšící herečka a hrajíci spisovatelka, maminka čtyř dětí. Své umělecké aktivity dělím mezi divadlo, dabing a psaní knih pro děti. Od dětství miluju knížky a tuto lásku se snažím předávat všem dětem.</p><p>S Jarmilou Vlčkovou jsme v roce 2008 založily Divadlo Láryfáry, které se zaměřuje na interaktivní představení pro celé rodiny. Zde působíme jako herečky a scénáristky.</p><p>V roce 2018 nám vyšla první společně napsaná kniha Viktor a záhadná teta Bobina, která se během pár měsíců stala bestsellerem a vítězem čtenářské ankety SUK-čteme všichni 2018. Po následovaly další úspěšné knížky: Viktor a případ zmizelého psa, Hra o sen, série o Elišce, Tajemství rodiny M. a Róza a ztracený tatínek.</p><p>Věřím, že i největší &bdquo;nečtenáři&ldquo; se nechají strhnout silným napínavým příběhem.</p>",
+    "photo": "/images/autori/autor-pavlina-jurkova.jpg",
     "email": "jurkova.pavlina@seznam.cz",
     "links": {
       "divadlo": "https://www.divadlolaryfary.cz"
@@ -14,8 +15,9 @@
     "id": "jarmila-vlckova",
     "name": "Jarmila Vlčková",
     "role": "author",
-    "bio": "Jsme vypravěčky příběhů. Své umělecké aktivity dělíme mezi divadlo, psaní knížek pro děti a fotografování. I když nemůžeme být více rozdílné, spojuje nás láska k oboru, chuť podnikat a zkoušet nové věci. Před patnácti lety jsme založily úspěšné autorské divadlo Láryfáry, které se zaměřuje na interaktivní představení pro celé rodiny. Tady působíme jako herečky a scénáristky. V roce 2018 nám vyšla první společně napsaná kniha Viktor a záhadná teta Bobina, která se během pár měsíců stala bestsellerem a vítězem čtenářské ankety SUK-čteme všichni 2018. Věříme, že si svou tvorbou získáme co nejvíce srdcí malých i velkých čtenářů.",
-    "photo": "/images/pavlina-jurkova-a-jarmila-vlckova.jpg",
+    "gender": "female",
+    "bio": "<p>Jsem herečka, dabérka a spoluautorka dětských knih. Společně s Pavlinou Jurkovou tvoříme autorskou dvojici, která již více než patnáct let baví děti i dospělé.</p><p>V Divadle Láryfáry, které jsme společně založily, vytváříme interaktivní představení pro celé rodiny. Tady působíme jako herečky a scénáristky.</p><p>Psaní knih pro mě znamená možnost vyprávět příběhy, které by děti samy chtěly číst – napínavé, vtipné a plné nečekaných. Každá naše kniha vzniká jako společné dobrodružství, kde se spojuje moje láska k herectví s radostí z vyprávění.</p><p>Věřím, že kvalitní dětská literatura dokáže formovat mladé čtenáře a probudit v nich lásku ke knížkám na celý život.</p>",
+    "photo": "/images/autori/autor-jarmila-vlckova.jpg",
     "email": "vlckovajarmila@seznam.cz",
     "links": {
       "divadlo": "https://www.divadlolaryfary.cz"
@@ -25,30 +27,33 @@
     "id": "petr-korunka",
     "name": "Petr Korunka",
     "role": "illustrator",
-    "bio": "Jsem ilustrátor, komiksátor, grafický designér a částečně učitel grafického designu. Moje komiksová série Radiator a Recyklator byla v roce 2022 završena trojsvazkem. Z ilustrátorských prací lze zmínit například knihy Za vlast a císařovnu, Koráb pohádek, Bertík a Čmuchadlo, nejnověji pak Ostrov Kormoránů a knihu Doktor Knittel. Ve volném čase rád lezu po horách, procházím se po lese a kreslím nejen komiksy. Za největší sportovní úspěch považuji umístění v Diamantové lize ve hře StarCraft 2 a přelezení cesty obtížnosti 7A ve skalách.",
-    "photo": "/images/petr-korunka.jpg",
+    "gender": "male",
+    "bio": "<p>Jsem ilustrátor, komiksátor, grafický designér a částečně učitel grafického designu. Moje komiksová série Radiator a Recyklator byla v roce 2022 završena trojsvazkem.</p><p>Z ilustrátorských prací lze zmínit například knihy Za vlast a císařovnu, Koráb pohádek, Bertík a Čmuchadlo, nejnověji pak Ostrov Kormoránů a knihu Doktor Knittel.</p><p>Ve volném čase rád lezu po horách, procházím se po lese a kreslím nejen komiksy. Za největší sportovní úspěch považuji umístění v Diamantové lize ve hře StarCraft 2 a přelezení cesty obtížnosti 7A ve skalách.</p>",
+    "photo": "/images/autori/autor-petr-korunka.jpg",
     "links": {
       "website": "http://www.cervenypes.cz/"
+    }
+  },
+  {
+    "id": "eva-chupikova",
+    "name": "Eva Chupíková",
+    "role": "illustrator",
+    "gender": "female",
+    "bio": "<p>Jsem ilustrátorkou dětských knih, autorkou a vydavatelkou edice dětských průvodců po českých a moravských pamětihodnostech (První průvodce památkami pro děti) a nadšenou amatérskou fotografkou.</p>",
+    "photo": "/images/autori/autor-eva-chupikova.jpg",
+    "links": {
+      "website": "http://www.evachupikova.cz/",
+      "pamatky": "https://www.pamatkyprodeti.cz/",
+      "instagram": "https://www.instagram.com/eva_chupikova/"
     }
   },
   {
     "id": "martina-fojtu",
     "name": "Martina Fojtů",
     "role": "illustrator",
-    "bio": "Maluji, kreslím, stříhám, lepím… A od roku 2001 pořádám výtvarné kurzy. V dětství bývá úcta ke stáří spíš otravnou povinností. Ale s knihou Viktor to jde i přirozeně a bez přednášek!",
-    "photo": "/images/martina-fojtu.jpg",
+    "gender": "female",
+    "bio": "<p>Maluji, kreslím, stříhám, lepím… A od roku 2001 pořádám výtvarné kurzy.</p><p>V dětství bývá úcta ke stáří spíš otravnou povinností. Ale s knihou Viktor to jde i přirozeně a bez přednášek!</p>",
+    "photo": "/images/autori/autor-martina-fojtu.jpg",
     "title": "akademická malířka"
-  },
-  {
-    "id": "eva-chupikova",
-    "name": "Eva Chupíková",
-    "role": "illustrator",
-    "bio": "Jsem ilustrátorkou dětských knih, autorkou a vydavatelkou edice dětských průvodců po českých a moravských pamětihodnostech (První průvodce památkami pro děti) a nadšenou amatérskou fotografkou.",
-    "photo": "/images/eva-chupikova.jpg",
-    "links": {
-      "website": "http://www.evachupikova.cz/",
-      "pamatky": "https://www.pamatkyprodeti.cz/",
-      "instagram": "https://www.instagram.com/eva_chupikova/"
-    }
   }
 ]
