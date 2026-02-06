@@ -108,7 +108,7 @@ layout: layouts/base.njk
 
         {# Description #}
         <div class="mb-4" style="font-size: 1.125rem; line-height: 1.6; color: hsl(var(--color-foreground));">
-          <p>{{ book.description }}</p>
+          {{ book.description | safe }}
         </div>
 
         {# CTA Buttons #}
