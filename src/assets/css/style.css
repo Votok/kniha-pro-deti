@@ -1208,9 +1208,9 @@ body {
   color: hsl(var(--color-secondary-fg)) !important;
 }
 
-/* Book Card Hover Effect */
+/* Book Card Hover Effect - "picked up" effect with playful tilt */
 .card.hover-lift:hover {
-  transform: translateY(-8px);
+  transform: translateY(-8px) rotate(-1deg);
   box-shadow: var(--shadow-book);
 }
 
