@@ -162,7 +162,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
           <a href="/{{ book.slug }}.html" class="text-decoration-none">
             <div
               class="position-relative"
-              style="aspect-ratio: 3/4; background: hsl(var(--color-primary) / 0.05); padding: 1rem"
+              style="aspect-ratio: 3/4; background: hsl({{ book.cardColor | default('var(--color-primary) / 0.05') }}); padding: 1rem"
             >
               <img
                 src="{{ book.cover }}"

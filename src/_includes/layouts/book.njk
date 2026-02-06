@@ -24,7 +24,7 @@ layout: layouts/base.njk
 </section>
 
 {# Product Hero Section #}
-<section class="section-padding" style="background: linear-gradient(180deg, hsl(40 40% 98%) 0%, hsl(35 35% 95%) 50%, hsl(30 30% 93%) 100%);">
+<section class="section-padding" style="background: hsl({{ book.cardColor | default('40 40% 98%') }});">
   <div class="container">
     <div class="row g-5 align-items-center">
       {# Book Cover - Left Column #}
@@ -235,12 +235,13 @@ layout: layouts/base.njk
         <div class="col">
           <a href="/{{ relatedBook.slug }}.html" class="text-decoration-none">
             <div class="card h-100 hover-lift" style="border: none;">
-              <img
-                src="{{ relatedBook.cover }}"
-                alt="{{ relatedBook.title }}"
-                class="card-img-top"
-                style="border-radius: var(--radius-lg) var(--radius-lg) 0 0;"
-              >
+              <div style="aspect-ratio: 3/4; background: hsl({{ relatedBook.cardColor | default('var(--color-primary) / 0.05') }}); padding: 1rem; border-radius: var(--radius-lg) var(--radius-lg) 0 0;">
+                <img
+                  src="{{ relatedBook.cover }}"
+                  alt="{{ relatedBook.title }}"
+                  class="w-100 h-100 object-fit-cover rounded-3 shadow-soft"
+                >
+              </div>
               <div class="card-body">
                 <h5 class="card-title" style="font-size: 1.25rem; font-weight: 700;">{{ relatedBook.title }}</h5>
                 <p class="text-muted mb-0" style="font-size: 0.875rem;">{{ relatedBook.ageGroup }}</p>
