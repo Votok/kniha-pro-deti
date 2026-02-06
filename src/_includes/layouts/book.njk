@@ -104,17 +104,6 @@ layout: layouts/base.njk
             </svg>
             <span>{{ book.year }}</span>
           </div>
-
-          {# Star Rating #}
-          {% if book.testimonials and book.testimonials[0].rating %}
-          <div class="d-inline-flex align-items-center gap-2 px-3 py-2 bg-card shadow-soft" style="border-radius: var(--radius-full); font-size: 0.875rem; font-weight: 500;">
-            {% for i in range(0, book.testimonials[0].rating) %}
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="hsl(var(--color-accent))" stroke="hsl(var(--color-accent))" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-            </svg>
-            {% endfor %}
-          </div>
-          {% endif %}
         </div>
 
         {# Description #}

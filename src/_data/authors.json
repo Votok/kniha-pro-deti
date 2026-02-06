@@ -4,7 +4,7 @@
     "name": "Pavlína Jurková",
     "role": "author",
     "bio": "Jsme vypravěčky příběhů. Své umělecké aktivity dělíme mezi divadlo, psaní knížek pro děti a fotografování. I když nemůžeme být více rozdílné, spojuje nás láska k oboru, chuť podnikat a zkoušet nové věci. Před patnácti lety jsme založily úspěšné autorské divadlo Láryfáry, které se zaměřuje na interaktivní představení pro celé rodiny. Tady působíme jako herečky a scénáristky. V roce 2018 nám vyšla první společně napsaná kniha Viktor a záhadná teta Bobina, která se během pár měsíců stala bestsellerem a vítězem čtenářské ankety SUK-čteme všichni 2018. Věříme, že si svou tvorbou získáme co nejvíce srdcí malých i velkých čtenářů.",
-    "photo": "/assets/images/pavlina-jurkova-a-jarmila-vlckova.jpg",
+    "photo": "/images/pavlina-jurkova-a-jarmila-vlckova.jpg",
     "email": "jurkova.pavlina@seznam.cz",
     "links": {
       "divadlo": "https://www.divadlolaryfary.cz"
@@ -15,7 +15,7 @@
     "name": "Jarmila Vlčková",
     "role": "author",
     "bio": "Jsme vypravěčky příběhů. Své umělecké aktivity dělíme mezi divadlo, psaní knížek pro děti a fotografování. I když nemůžeme být více rozdílné, spojuje nás láska k oboru, chuť podnikat a zkoušet nové věci. Před patnácti lety jsme založily úspěšné autorské divadlo Láryfáry, které se zaměřuje na interaktivní představení pro celé rodiny. Tady působíme jako herečky a scénáristky. V roce 2018 nám vyšla první společně napsaná kniha Viktor a záhadná teta Bobina, která se během pár měsíců stala bestsellerem a vítězem čtenářské ankety SUK-čteme všichni 2018. Věříme, že si svou tvorbou získáme co nejvíce srdcí malých i velkých čtenářů.",
-    "photo": "/assets/images/pavlina-jurkova-a-jarmila-vlckova.jpg",
+    "photo": "/images/pavlina-jurkova-a-jarmila-vlckova.jpg",
     "email": "vlckovajarmila@seznam.cz",
     "links": {
       "divadlo": "https://www.divadlolaryfary.cz"
@@ -26,7 +26,7 @@
     "name": "Petr Korunka",
     "role": "illustrator",
     "bio": "Jsem ilustrátor, komiksátor, grafický designér a částečně učitel grafického designu. Moje komiksová série Radiator a Recyklator byla v roce 2022 završena trojsvazkem. Z ilustrátorských prací lze zmínit například knihy Za vlast a císařovnu, Koráb pohádek, Bertík a Čmuchadlo, nejnověji pak Ostrov Kormoránů a knihu Doktor Knittel. Ve volném čase rád lezu po horách, procházím se po lese a kreslím nejen komiksy. Za největší sportovní úspěch považuji umístění v Diamantové lize ve hře StarCraft 2 a přelezení cesty obtížnosti 7A ve skalách.",
-    "photo": "/assets/images/petr-korunka.jpg",
+    "photo": "/images/petr-korunka.jpg",
     "links": {
       "website": "http://www.cervenypes.cz/"
     }
@@ -36,7 +36,7 @@
     "name": "Martina Fojtů",
     "role": "illustrator",
     "bio": "Maluji, kreslím, stříhám, lepím… A od roku 2001 pořádám výtvarné kurzy. V dětství bývá úcta ke stáří spíš otravnou povinností. Ale s knihou Viktor to jde i přirozeně a bez přednášek!",
-    "photo": "/assets/images/martina-fojtu.jpg",
+    "photo": "/images/martina-fojtu.jpg",
     "title": "akademická malířka"
   },
   {
@@ -44,7 +44,7 @@
     "name": "Eva Chupíková",
     "role": "illustrator",
     "bio": "Jsem ilustrátorkou dětských knih, autorkou a vydavatelkou edice dětských průvodců po českých a moravských pamětihodnostech (První průvodce památkami pro děti) a nadšenou amatérskou fotografkou.",
-    "photo": "/assets/images/eva-chupikova.jpg",
+    "photo": "/images/eva-chupikova.jpg",
     "links": {
       "website": "http://www.evachupikova.cz/",
       "pamatky": "https://www.pamatkyprodeti.cz/",

@@ -43,8 +43,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/js": "assets/js" });
   eleventyConfig.addPassthroughCopy({ "src/assets/images": "images" }); // přímo do root!
   eleventyConfig.addPassthroughCopy({ "src/assets/svg": "assets/svg" });
-  // Staré swipebox assets (budou smazány později)
-  eleventyConfig.addPassthroughCopy({ "src/assets/img": "assets/img" });
 
   // Favicons a static assets
   const staticFiles = [

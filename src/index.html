@@ -159,44 +159,46 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
       <div class="col">
         <article class="card h-100 hover-lift border-0">
           <!-- Book Cover with Age Badge -->
-          <div
-            class="position-relative"
-            style="aspect-ratio: 3/4; background: hsl(var(--color-primary) / 0.05); padding: 1rem"
-          >
-            <img
-              src="{{ book.cover }}"
-              alt="{{ book.title }}"
-              class="w-100 h-100 object-fit-cover rounded-3 shadow-soft"
-              loading="lazy"
-            />
-            <div class="position-absolute top-0 end-0 mt-3 me-3">
-              <span
-                class="d-inline-flex align-items-center gap-2 px-3 py-2 bg-white rounded-pill shadow-soft"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="text-primary"
+          <a href="/{{ book.slug }}.html" class="text-decoration-none">
+            <div
+              class="position-relative"
+              style="aspect-ratio: 3/4; background: hsl(var(--color-primary) / 0.05); padding: 1rem"
+            >
+              <img
+                src="{{ book.cover }}"
+                alt="{{ book.title }}"
+                class="w-100 h-100 object-fit-cover rounded-3 shadow-soft"
+                loading="lazy"
+              />
+              <div class="position-absolute top-0 end-0 mt-3 me-3">
+                <span
+                  class="d-inline-flex align-items-center gap-2 px-3 py-2 bg-white rounded-pill shadow-soft"
                 >
-                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
-                <span class="small fw-semibold"
-                  >{{ book.ageGroup | replace("Pro děti od ", "") | replace(" let", " let") |
-                  replace("let", "let") }}</span
-                >
-              </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="text-primary"
+                  >
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                  <span class="small fw-semibold"
+                    >{{ book.ageGroup | replace("Pro děti od ", "") | replace(" let", " let") |
+                    replace("let", "let") }}</span
+                  >
+                </span>
+              </div>
             </div>
-          </div>
+          </a>
 
           <!-- Card Body -->
           <div class="card-body d-flex flex-column">
@@ -516,7 +518,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
               <!-- Avatar Column -->
               <div class="col-12 col-md-auto text-center">
                 <img
-                  src="/assets/images/recenze/tatjana-medvecka.jpg"
+                  src="/images/recenze/tatjana-medvecka.jpg"
                   class="testimonial-avatar rounded-circle shadow-soft"
                   alt="Taťjana Medvecká, herečka"
                 />
@@ -547,7 +549,9 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
 <!-- Events Section (Besedy) -->
 <section id="besedy" class="section-padding">
   <div class="container">
-    <div class="card border-0 shadow-card bg-gradient-warm rounded-3 position-relative overflow-hidden">
+    <div
+      class="card border-0 shadow-card bg-gradient-warm rounded-3 position-relative overflow-hidden"
+    >
       <!-- Decorative blur circles -->
       <div class="position-absolute top-0 end-0 blur-decoration blur-decoration-accent"></div>
       <div class="position-absolute bottom-0 start-0 blur-decoration blur-decoration-primary"></div>
@@ -586,7 +590,9 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
           <div class="col-12 col-lg-6">
             <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
               <!-- Feature: Školy -->
-              <div class="d-inline-flex align-items-center gap-2 px-4 py-3 bg-white rounded-pill shadow-soft">
+              <div
+                class="d-inline-flex align-items-center gap-2 px-4 py-3 bg-white rounded-pill shadow-soft"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -609,7 +615,9 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
               </div>
 
               <!-- Feature: Knihovny -->
-              <div class="d-inline-flex align-items-center gap-2 px-4 py-3 bg-white rounded-pill shadow-soft">
+              <div
+                class="d-inline-flex align-items-center gap-2 px-4 py-3 bg-white rounded-pill shadow-soft"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -632,7 +640,9 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
               </div>
 
               <!-- Feature: 50+ ročně -->
-              <div class="d-inline-flex align-items-center gap-2 px-4 py-3 bg-white rounded-pill shadow-soft">
+              <div
+                class="d-inline-flex align-items-center gap-2 px-4 py-3 bg-white rounded-pill shadow-soft"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
