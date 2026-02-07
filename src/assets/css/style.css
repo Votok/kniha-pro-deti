@@ -1125,7 +1125,6 @@ body {
 }
 
 .author-name {
-  font-family: var(--bs-font-sans-serif);
   color: hsl(var(--color-foreground));
 }
 
