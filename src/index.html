@@ -161,13 +161,13 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
           <!-- Book Cover with Age Badge -->
           <a href="{{ book.slug }}.html" class="text-decoration-none">
             <div
-              class="position-relative"
+              class="position-relative book-cover-inner"
               style="aspect-ratio: 3/4; background: hsl({{ book.cardColor | default('var(--color-primary) / 0.05') }}); padding: 1rem"
             >
               <img
                 src="{{ book.cover }}"
                 alt="{{ book.title }}"
-                class="w-100 h-100 object-fit-cover rounded-3 shadow-soft"
+                class="w-100 h-100 object-fit-cover shadow-soft"
                 loading="lazy"
               />
               <div class="position-absolute top-0 end-0 mt-3 me-3">

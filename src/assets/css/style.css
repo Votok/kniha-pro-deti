@@ -1214,6 +1214,21 @@ body {
   box-shadow: var(--shadow-book);
 }
 
+/* Book Card - Homepage Books Section */
+#knihy .card {
+  border-radius: var(--radius-2xl);
+}
+
+/* Book Card Inner Container - Match pill roundness */
+#knihy .card .book-cover-inner {
+  border-radius: var(--radius-2xl);
+}
+
+/* Book Card Cover Image */
+#knihy .card .book-cover-inner img {
+  border-radius: var(--radius-lg);
+}
+
 /* ==========================================================================
    TESTIMONIAL CARDS
    ========================================================================== */
