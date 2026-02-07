@@ -1,7 +1,7 @@
 {
   "main": [
     { "title": "Knihy", "url": "/#knihy" },
-    { "title": "Autoři", "url": "/autori-knihy.html" },
+    { "title": "Autoři", "url": "/autori.html" },
     { "title": "Besedy", "url": "/besedy.html" },
     { "title": "Galerie", "url": "/galerie.html" },
     { "title": "Media", "url": "/media.html" }
