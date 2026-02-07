@@ -5,15 +5,22 @@ description: Seznamte se s autorkami a ilustrátory našich knih
 permalink: /autori-knihy.html
 ---
 
+<!-- Hero Section -->
+<section class="section-padding bg-gradient-hero">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <span class="badge-section-tag mb-3">Náš tým</span>
+        <h1 class="display-4 fw-bold mb-3">{{ title }}</h1>
+        <p class="lead text-muted">{{ description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Authors Section -->
 <section class="section-padding">
   <div class="container">
-    {# Page Header #}
-    <div class="text-center mx-auto mb-5 mb-lg-6" style="max-width: 48rem;">
-      <span class="badge-section-tag mb-3">Náš tým</span>
-      <h1 class="display-4 fw-bold mb-3">{{ title }}</h1>
-      <p class="lead text-muted">{{ description }}</p>
-    </div>
-
     {# Author Cards - Full width, alternating layout #}
     <div class="authors-list">
       {% for author in authors %}

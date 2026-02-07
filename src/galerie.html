@@ -5,16 +5,22 @@ description: Fotografie z křtů knih, setkání se čtenáři a další momentk
 permalink: /galerie.html
 ---
 
-<section class="section-padding">
+<!-- Hero Section -->
+<section class="section-padding bg-gradient-hero">
   <div class="container">
-    <div class="row mb-5 text-center">
-      <div class="col-lg-8 mx-auto">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
         <span class="badge-section-tag mb-3">Momentky</span>
         <h1 class="display-4 fw-bold mb-3">{{ title }}</h1>
         <p class="lead text-muted">{{ description }}</p>
       </div>
     </div>
+  </div>
+</section>
 
+<!-- Gallery Section -->
+<section class="section-padding">
+  <div class="container">
     {% for section in galleries %}
     <div class="row mb-4 mt-5">
       <div class="col-12">
