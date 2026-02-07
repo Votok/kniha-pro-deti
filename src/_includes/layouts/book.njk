@@ -184,31 +184,36 @@ layout: layouts/base.njk
 {% if book.testimonials and book.testimonials.length > 0 %}
 <section class="section-padding bg-gradient-storybook">
   <div class="container">
-    <div class="mx-auto" style="max-width: 56rem;">
-      {# Testimonial Card #}
-      <div class="card position-relative shadow-card" style="border-radius: var(--radius-2xl); padding: 2rem; border: none;">
-        {# Quote Badge #}
-        <div class="testimonial-quote-badge">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"></path>
-          </svg>
-        </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10 col-xl-8">
+        {# Testimonial Card #}
+        <div class="testimonial-card card border-0 shadow-card position-relative">
+          {# Quote Icon Badge #}
+          <div class="testimonial-quote-badge">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
+            </svg>
+          </div>
 
-        {# Testimonial Content #}
-        <div class="mt-4">
-          <blockquote class="mb-4" style="font-size: 1.25rem; font-weight: 500; line-height: 1.6; color: hsl(var(--color-foreground));">
-            "{{ book.testimonials[0].quote }}"
-          </blockquote>
+          <div class="card-body p-4 p-md-5">
+            {# Quote Text #}
+            <blockquote class="testimonial-quote mb-4">
+              <p class="fs-4 fw-normal mb-0">
+                "{{ book.testimonials[0].quote }}"
+              </p>
+            </blockquote>
 
-          <div class="d-flex align-items-center gap-3">
+            {# Author Info #}
             <div>
-              <div style="font-family: 'Nunito', sans-serif; font-size: 1.125rem; font-weight: 700; color: hsl(var(--color-foreground));">
-                {{ book.testimonials[0].author }}
-              </div>
+              <p class="fw-bold fs-5 mb-1">{{ book.testimonials[0].author }}</p>
               {% if book.testimonials[0].source %}
-              <div class="text-muted" style="font-size: 0.875rem;">
-                {{ book.testimonials[0].source }}
-              </div>
+              <p class="text-muted mb-0">{{ book.testimonials[0].source }}</p>
               {% endif %}
             </div>
           </div>
