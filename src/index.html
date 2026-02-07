@@ -24,7 +24,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
           <div
             class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start pt-3"
           >
-            <a href="/#knihy" class="btn btn-primary btn-lg btn-hero">
+            <a href="./#knihy" class="btn btn-primary btn-lg btn-hero">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -76,7 +76,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
           <div class="floating-books-wrapper position-relative">
             <div class="floating-book floating-book-1">
               <img
-                src="/images/hero/kniha-viktor-a-zahadna-teta-bobina.jpg"
+                src="images/hero/kniha-viktor-a-zahadna-teta-bobina.jpg"
                 alt="Viktor a záhadná teta Bobina"
                 class="img-fluid rounded-3 shadow-book"
               />
@@ -84,7 +84,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
 
             <div class="floating-book floating-book-2">
               <img
-                src="/images/hero/kniha-obalka-roza-a-ztraceny-tatinek.jpg"
+                src="images/hero/kniha-obalka-roza-a-ztraceny-tatinek.jpg"
                 alt="Róza a ztracený tatínek"
                 class="img-fluid rounded-3 shadow-book"
               />
@@ -92,7 +92,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
 
             <div class="floating-book floating-book-3">
               <img
-                src="/images/hero/kniha-obalka-eliska-detektiv-m.jpg"
+                src="images/hero/kniha-obalka-eliska-detektiv-m.jpg"
                 alt="Eliška Detektiv"
                 class="img-fluid rounded-3 shadow-book"
               />
@@ -100,7 +100,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
 
             <div class="floating-book floating-book-4">
               <img
-                src="/images/hero/kniha-obalka-eliska-rebelka-m.jpg"
+                src="images/hero/kniha-obalka-eliska-rebelka-m.jpg"
                 alt="Eliška Rebelka"
                 class="img-fluid rounded-3 shadow-book"
               />
@@ -108,7 +108,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
 
             <div class="floating-book floating-book-5">
               <img
-                src="/images/hero/kniha-obalka-tajemstvi-rodiny-m.jpg"
+                src="images/hero/kniha-obalka-tajemstvi-rodiny-m.jpg"
                 alt="Tajemství rodiny M"
                 class="img-fluid rounded-3 shadow-book"
               />
@@ -159,7 +159,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
       <div class="col">
         <article class="card h-100 hover-lift border-0">
           <!-- Book Cover with Age Badge -->
-          <a href="/{{ book.slug }}.html" class="text-decoration-none">
+          <a href="{{ book.slug }}.html" class="text-decoration-none">
             <div
               class="position-relative"
               style="aspect-ratio: 3/4; background: hsl({{ book.cardColor | default('var(--color-primary) / 0.05') }}); padding: 1rem"
@@ -223,7 +223,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
 
             <!-- Title -->
             <h3 class="h5 fw-bold mb-2">
-              <a href="/{{ book.slug }}.html" class="text-decoration-none text-foreground"
+              <a href="{{ book.slug }}.html" class="text-decoration-none text-foreground"
                 >{{ book.title }}</a
               >
             </h3>
@@ -301,7 +301,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
                 Koupit
               </a>
               {% endif %} {% endif %}
-              <a href="/{{ book.slug }}.html" class="btn btn-outline-primary flex-fill">
+              <a href="{{ book.slug }}.html" class="btn btn-outline-primary flex-fill">
                 Více
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -479,7 +479,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
             <div class="blur-decoration blur-decoration-accent"></div>
             <div class="blur-decoration blur-decoration-primary"></div>
             <img
-              src="/images/autorky-knih.jpg"
+              src="images/autorky-knih.jpg"
               alt="Jarmila Vlčková a Pavlína Jurková - autorky knih pro děti"
               class="img-fluid rounded-3 shadow-book author-photo"
             />
@@ -518,7 +518,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
               <!-- Avatar Column -->
               <div class="col-12 col-md-auto text-center">
                 <img
-                  src="/images/recenze/tatjana-medvecka.jpg"
+                  src="images/recenze/tatjana-medvecka.jpg"
                   class="testimonial-avatar rounded-circle shadow-soft"
                   alt="Taťjana Medvecká, herečka"
                 />
@@ -566,7 +566,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
               Nabízíme autorská čtení a besedy pro školy, školky, knihovny a soukromé akce. Děti se
               mohou setkat s autorkami osobně.
             </p>
-            <a href="/besedy.html" class="btn btn-primary btn-lg">
+            <a href="besedy.html" class="btn btn-primary btn-lg">
               Zjistit více
               <svg
                 xmlns="http://www.w3.org/2000/svg"

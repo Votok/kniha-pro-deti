@@ -29,6 +29,19 @@ module.exports = function (eleventyConfig) {
     return fs.readFileSync(full, "utf8");
   });
 
+  // Transform: make stylesheet hrefs relative in final HTML output
+  eleventyConfig.addTransform("relative-stylesheet-href", function (content, outputPath) {
+    if (outputPath && outputPath.endsWith(".html")) {
+      return content.replace(
+        /(<link[^>]*rel=["']stylesheet["'][^>]*href=["'])\/(.*?)(["'][^>]*>)/gi,
+        (m, p1, p2, p3) => {
+          return `${p1}${p2}${p3}`;
+        }
+      );
+    }
+    return content;
+  });
+
   // RFC 3339 date filter for sitemap
   eleventyConfig.addFilter("dateToRfc3339", (date) => {
     return new Date(date).toISOString();

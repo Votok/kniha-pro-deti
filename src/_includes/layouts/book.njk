@@ -17,8 +17,8 @@ layout: layouts/base.njk
   <div class="container">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb mb-0">
-        <li class="breadcrumb-item"><a href="/" class="text-decoration-none">Úvod</a></li>
-        <li class="breadcrumb-item"><a href="/#knihy" class="text-decoration-none">Knihy</a></li>
+        <li class="breadcrumb-item"><a href="./" class="text-decoration-none">Úvod</a></li>
+        <li class="breadcrumb-item"><a href="./#knihy" class="text-decoration-none">Knihy</a></li>
         <li class="breadcrumb-item active" aria-current="page">{{ book.title }}</li>
       </ol>
     </nav>
@@ -240,7 +240,7 @@ layout: layouts/base.njk
       {% for relatedBook in books %}
         {% if relatedBook.series == book.series and relatedBook.id != book.id %}
         <div class="col">
-          <a href="/{{ relatedBook.slug }}.html" class="text-decoration-none">
+          <a href="{{ relatedBook.slug }}.html" class="text-decoration-none">
             <div class="card h-100 hover-lift" style="border: none;">
               <div style="aspect-ratio: 3/4; background: hsl({{ relatedBook.cardColor | default('var(--color-primary) / 0.05') }}); padding: 1rem; border-radius: var(--radius-lg) var(--radius-lg) 0 0;">
                 <img
