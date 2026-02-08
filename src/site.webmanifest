@@ -1,16 +1,23 @@
 {
   "name": "Kniha pro děti",
   "short_name": "Kniha pro děti",
+  "description": "Čtou vaše děti? A čtete vy jim? Zábava i napétí, tajemství a nakonec rozuzlení. Naše knihy pro zvídavé děti, rodiče i prarodiče.",
+  "lang": "cs",
+  "start_url": "/",
+  "scope": "/",
+  "id": "/",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/android-chrome-256x256.png",
       "sizes": "256x256",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ],
   "theme_color": "#ca6d1b",
