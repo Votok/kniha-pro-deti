@@ -1486,7 +1486,6 @@ body {
 
 /* Image Section */
 .workshop-card-image {
-  height: 12rem;  /* Mobile: fixed height */
   overflow: hidden;
   position: relative;
 }
@@ -1498,8 +1497,24 @@ body {
 }
 
 .workshop-card-image img {
-  object-fit: cover;
   transition: transform 0.3s ease-out;
+}
+
+/* Mobile & Tablet: show full image at natural aspect ratio */
+@media (max-width: 991px) {
+  .workshop-card-image img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Desktop: fill height and crop as needed */
+@media (min-width: 992px) {
+  .workshop-card-image img {
+    object-fit: cover;
+    object-position: center;
+  }
 }
 
 .workshop-card:hover .workshop-card-image img {
