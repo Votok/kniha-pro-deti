@@ -52,7 +52,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/assets/js/");
 
   // Passthrough copies - images jdou do root /images/ (kvůli ../images/ v CSS)
-  eleventyConfig.addPassthroughCopy({ "src/assets/css": "assets/css" });
   eleventyConfig.addPassthroughCopy({ "src/assets/js": "assets/js" });
   eleventyConfig.addPassthroughCopy({ "src/assets/images": "images" }); // přímo do root!
   eleventyConfig.addPassthroughCopy({ "src/assets/svg": "assets/svg" });
