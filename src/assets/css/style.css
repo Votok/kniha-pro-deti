@@ -1657,3 +1657,66 @@ body {
   color: hsl(var(--color-primary));
   text-decoration: none;
 }
+
+/* Dark Mode - Workshop Cards */
+@media (prefers-color-scheme: dark) {
+  /* Workshop card backgrounds - darker, more saturated versions */
+  .workshop-card-accent {
+    background: linear-gradient(135deg, hsl(45 40% 25%) 0%, hsl(42 35% 22%) 100%);
+  }
+
+  .workshop-card-storybook {
+    background: linear-gradient(135deg, hsl(210 35% 25%) 0%, hsl(215 30% 22%) 100%);
+  }
+
+  .workshop-card-forest {
+    background: linear-gradient(135deg, hsl(140 30% 25%) 0%, hsl(145 25% 22%) 100%);
+  }
+
+  .workshop-card-primary {
+    background: linear-gradient(135deg, hsl(25 35% 25%) 0%, hsl(30 30% 22%) 100%);
+  }
+
+  .workshop-card-rose {
+    background: linear-gradient(135deg, hsl(340 35% 25%) 0%, hsl(345 30% 22%) 100%);
+  }
+
+  /* Workshop card content text */
+  .workshop-card-title {
+    color: hsl(var(--color-foreground));
+  }
+
+  .workshop-activities li {
+    color: hsl(var(--color-muted-fg));
+  }
+
+  /* Icon badge backgrounds */
+  .workshop-card-content .icon-badge {
+    background-color: hsl(var(--color-card));
+    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 0.3);
+  }
+
+  /* Pill badges - darker background, better contrast */
+  .pill-badge {
+    background-color: hsl(var(--color-card));
+    color: hsl(var(--color-foreground));
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.3);
+  }
+
+  .pill-badge svg {
+    color: hsl(var(--color-muted-fg));
+  }
+
+  /* Contact sidebar */
+  .workshop-card-contact {
+    background-color: hsl(var(--color-card));
+  }
+
+  .workshop-card-contact h4 {
+    color: hsl(var(--color-foreground));
+  }
+
+  .contact-link {
+    color: hsl(var(--color-muted-fg));
+  }
+}
