@@ -570,6 +570,21 @@ select:focus:not(:focus-visible) {
   background: linear-gradient(135deg, hsl(var(--color-primary) / 0.05) 0%, hsl(var(--color-accent) / 0.05) 100%);
 }
 
+/* Dark Mode - Gradient Backgrounds */
+@media (prefers-color-scheme: dark) {
+  .bg-gradient-warm {
+    background: linear-gradient(135deg, hsl(var(--color-secondary)) 0%, hsl(25 20% 18%) 100%);
+  }
+
+  .bg-gradient-storybook {
+    background: linear-gradient(180deg, hsl(210 30% 18%) 0%, hsl(var(--color-background)) 100%);
+  }
+
+  .bg-gradient-hero {
+    background: linear-gradient(135deg, hsl(var(--color-primary) / 0.15) 0%, hsl(var(--color-accent) / 0.1) 100%);
+  }
+}
+
 /* Background & Text Color Utilities */
 .bg-foreground {
   background-color: hsl(var(--color-foreground)) !important;
@@ -1718,5 +1733,27 @@ body {
 
   .contact-link {
     color: hsl(var(--color-muted-fg));
+  }
+
+  /* White pill badges in dark mode - make them darker */
+  .bg-white.rounded-pill,
+  .bg-white.shadow-soft {
+    background-color: hsl(var(--color-card)) !important;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.3);
+  }
+
+  /* Ensure text in gradient cards has good contrast */
+  .bg-gradient-warm .text-muted,
+  .bg-gradient-storybook .text-muted {
+    color: hsl(var(--color-muted-fg)) !important;
+  }
+
+  /* Book detail hero - force dark text since background is always light */
+  .book-hero-title {
+    color: hsl(25 30% 20%) !important;
+  }
+
+  .book-hero-description {
+    color: hsl(25 30% 20%) !important;
   }
 }

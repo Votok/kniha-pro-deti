@@ -54,7 +54,7 @@ layout: layouts/base.njk
         {% endif %}
 
         {# Title #}
-        <h1 class="display-4 fw-bold mb-3">{{ book.title }}</h1>
+        <h1 class="display-4 fw-bold mb-3 book-hero-title">{{ book.title }}</h1>
 
         {# Author Line #}
         <p class="text-muted mb-3" style="font-size: 1.125rem;">
@@ -109,7 +109,7 @@ layout: layouts/base.njk
         </div>
 
         {# Description #}
-        <div class="mb-4" style="font-size: 1.125rem; line-height: 1.6; color: hsl(var(--color-foreground));">
+        <div class="mb-4 book-hero-description" style="font-size: 1.125rem; line-height: 1.6;">
           {{ book.description | safe }}
         </div>
 
