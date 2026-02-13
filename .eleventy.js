@@ -56,6 +56,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/images": "images" }); // přímo do root!
   eleventyConfig.addPassthroughCopy({ "src/assets/svg": "assets/svg" });
   eleventyConfig.addPassthroughCopy({ "src/assets/*.mp3": "assets" }); // audio soubory
+  eleventyConfig.addPassthroughCopy({ "src/.htaccess": ".htaccess" }); // Apache redirects
 
   // Favicons a static assets
   const staticFiles = [
