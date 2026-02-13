@@ -17,12 +17,8 @@
     "badge": "novinka",
     "excerptIntro": "Přečtěte si ukázku knihy a nechte se vtáhnout do světa knihy Róza a ztracený tatínek.",
     "authors": {
-      "text": [
-        "Pavlína Jurková"
-      ],
-      "illustrations": [
-        "Eva Chupíková"
-      ]
+      "text": ["Pavlína Jurková"],
+      "illustrations": ["Eva Chupíková"]
     },
     "buyLinks": [
       {
@@ -71,12 +67,8 @@
     "cover": "images/knihy/obalka-eliska-andilek.jpg",
     "coverThumbnail": "images/knihy/obalka-eliska-andilek.jpg",
     "authors": {
-      "text": [
-        "Pavlína Jurková"
-      ],
-      "illustrations": [
-        "Eva Chupíková"
-      ]
+      "text": ["Pavlína Jurková"],
+      "illustrations": ["Eva Chupíková"]
     },
     "buyLinks": [
       {
@@ -126,12 +118,8 @@
     "coverThumbnail": "images/knihy/obalka-eliska-rebelka.jpg",
     "excerptIntro": "Přečtěte si ukázku knihy a nechte se vtáhnout do dobrodružného světa Elišky a Toníčka.",
     "authors": {
-      "text": [
-        "Pavlína Jurková"
-      ],
-      "illustrations": [
-        "Eva Chupíková"
-      ]
+      "text": ["Pavlína Jurková"],
+      "illustrations": ["Eva Chupíková"]
     },
     "buyLinks": [
       {
@@ -181,12 +169,8 @@
     "coverThumbnail": "images/knihy/obalka-eliska-detektiv.jpg",
     "excerptIntro": "Přečtěte si ukázku knihy a nechte se vtáhnout do detektivního světa malé Elišky.",
     "authors": {
-      "text": [
-        "Pavlína Jurková"
-      ],
-      "illustrations": [
-        "Eva Chupíková"
-      ]
+      "text": ["Pavlína Jurková"],
+      "illustrations": ["Eva Chupíková"]
     },
     "buyLinks": [
       {
@@ -236,12 +220,8 @@
     "coverThumbnail": "images/knihy/obalka-eliska-superbox.jpg",
     "badge": "bestseller",
     "authors": {
-      "text": [
-        "Pavlína Jurková"
-      ],
-      "illustrations": [
-        "Eva Chupíková"
-      ]
+      "text": ["Pavlína Jurková"],
+      "illustrations": ["Eva Chupíková"]
     },
     "buyLinks": [
       {
@@ -273,13 +253,8 @@
     "coverThumbnail": "images/knihy/obalka-viktor-a-zahadna-teta-bobina-2.jpg",
     "badge": "bestseller",
     "authors": {
-      "text": [
-        "Jarmila Vlčková",
-        "Pavlína Jurková"
-      ],
-      "illustrations": [
-        "Martina Fojtů"
-      ]
+      "text": ["Jarmila Vlčková", "Pavlína Jurková"],
+      "illustrations": ["Martina Fojtů"]
     },
     "buyLinks": [
       {
@@ -332,17 +307,12 @@
     "publisher": "Albatros",
     "isbn": "",
     "pages": null,
-    "cover": "images/knihy/obalka-viktor-a-pripad-zmizeleho-psa.jpg",
-    "coverThumbnail": "images/knihy/obalka-viktor-a-pripad-zmizeleho-psa.jpg",
+    "cover": "images/knihy/obalka-viktor-a-pripad-zmizeleho-psa-2.jpg",
+    "coverThumbnail": "images/knihy/obalka-viktor-a-pripad-zmizeleho-psa-2.jpg",
     "excerptIntro": "Přečtěte si ukázku knihy a vydejte se společně s Viktorem a Žofíí na detektivní pátrání.",
     "authors": {
-      "text": [
-        "Pavlína Jurková",
-        "Jarmila Vlčková"
-      ],
-      "illustrations": [
-        "Martina Fojtů"
-      ]
+      "text": ["Pavlína Jurková", "Jarmila Vlčková"],
+      "illustrations": ["Martina Fojtů"]
     },
     "buyLinks": [
       {
@@ -354,7 +324,7 @@
     "excerpts": [
       {
         "title": "Lunino království",
-        "text": "<p>…Na konci osady čekalo Viktora překvapení. Zůstal stát jak omráčený, něco takového ještě nikdy neviděl. Před ním se skvěla překrásná dřevěná maringotka pomalovaná pestrými barvami. Nahoře nad jejími okny bylo velkými písmeny napsáno: LUNINO KRÁLOVSTVÍ.</p><p>Prohlížel si zarostlou zahradu a najednou si všiml velké holky, která si hověla v houpací síti. Nevěděl, co si o ní má myslet. Měla dlouhé fialové vlasy zacuchané do dredů s kovovými korálky, v uších několik náušnic a na rukou velké množství náramků. Přestože už bylo chladněji, byla oblečená jak v teplý letní den. Viktor si všiml, že má po těle spoustu tetování.</p><p>Bosýma nohama zvedala do výšky mourovaté koťátko a smála se tomu, jak mžourá na svět. Potom si ho dala na hlavu a nechala ho hrát si s korálky ve vlasech. Líně k nim otočila hlavu a sametovým hlasem pronesla: &bdquo;Nazdar, Žofie, vedeš si pánskou návštěvu? Tak vítejte.&ldquo;</p><p>&bdquo;Prosím tě, Luno, nech toho!&ldquo; zčervenala Žofie. &bdquo;To je Viktor. Pojď, Viktore, ukážu ti, kde bydlíme.&ldquo; Viktor se k ní nahnul a tiše zašeptal. &bdquo;A kdo je to vlastně ta Luna?&ldquo; Žofie se široce usmála a pronesla, jako by to byla ta nejjasnější věc pod sluncem: &bdquo;Přece moje máma.&ldquo;</p>",
+        "text": "<p>…Na konci osady čekalo Viktora překvapení. Zůstal stát jak omráčený, něco takového ještě nikdy neviděl. Před ním se skvěla překrásná dřevěná maringotka pomalovaná pestrými barvami. Nahoře nad jejími okny bylo velkými písmeny napsáno: LUNINO KRÁLOVSTVÍ. Prohlížel si zarostlou zahradu a najednou si všiml velké holky, která si hověla v houpací síti. Nevěděl, co si o ní má myslet. Měla dlouhé fialové vlasy zacuchané do dredů s kovovými korálky, v uších několik náušnic a na rukou velké množství náramků. Přestože už bylo chladněji, byla oblečená jak v teplý letní den. Viktor si všiml, že má po těle spoustu tetování.</p><p>Bosýma nohama zvedala do výšky mourovaté koťátko a smála se tomu, jak mžourá na svět. Potom si ho dala na hlavu a nechala ho hrát si s korálky ve vlasech. Líně k nim otočila hlavu a sametovým hlasem pronesla: &bdquo;Nazdar, Žofie, vedeš si pánskou návštěvu? Tak vítejte.&ldquo;</p><p>&bdquo;Prosím tě, Luno, nech toho!&ldquo; zčervenala Žofie. &bdquo;To je Viktor. Pojď, Viktore, ukážu ti, kde bydlíme.&ldquo; Viktor se k ní nahnul a tiše zašeptal. &bdquo;A kdo je to vlastně ta Luna?&ldquo; Žofie se široce usmála a pronesla, jako by to byla ta nejjasnější věc pod sluncem: &bdquo;Přece moje máma.&ldquo;</p>",
         "image": "images/ukazky/lunino-kralovstvi.jpg"
       },
       {
@@ -391,9 +361,7 @@
     "coverThumbnail": "images/knihy/obalka-tajemstvi-rodiny-m.jpg",
     "excerptIntro": "Přečtěte si ukázku knihy a nechte se vtáhnout do světa jedné obyčejné rodiny.",
     "authors": {
-      "text": [
-        "Pavlína Jurková"
-      ],
+      "text": ["Pavlína Jurková"],
       "illustrations": []
     },
     "buyLinks": [
@@ -442,13 +410,8 @@
     "cover": "images/knihy/obalka-hra-o-sen.jpg",
     "coverThumbnail": "images/knihy/obalka-hra-o-sen.jpg",
     "authors": {
-      "text": [
-        "Pavlína Jurková",
-        "Jarmila Vlčková"
-      ],
-      "illustrations": [
-        "Eva Chupíková"
-      ]
+      "text": ["Pavlína Jurková", "Jarmila Vlčková"],
+      "illustrations": ["Eva Chupíková"]
     },
     "buyLinks": [
       {
