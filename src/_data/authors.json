@@ -18,7 +18,7 @@
     "role": "author",
     "gender": "female",
     "roleLabel": "autorka",
-    "bio": "<p>Jsem herečka, fotografka a spoluautorka dětských knih. Společně s Pavlínou Jurkovou tvoříme dvojici, která už více než sedmnáct let baví děti i dospělé. V Divadle Láryfáry, které jsme společně založily, bereme každé představení jako dialog s divákem.</p><p>Vedle psaní knih pro děti a divadla vyprávím příběhy i prostřednictvím fotografování. Zabývám se především divadelní fotografií, přírodními a městskými scenériemi či makro fotografií. Za sebou mám několik samostatných výstav.</p><p>Pro děti jsem připravila obrazové vyprávění o Palečcích, <a href=\"https://www.fler.cz\" target=\"_blank\" rel=\"noopener\">www.fler.cz</a>.</p><p>V současné době kromě Divadla Láryfáry spolupracuji s Městským divadlem v Mladé Boleslavi (zde působím jako herečka a fotografka), s Divadlem Pod kůži a s Divadlem A. Dvořáka v Příbrami, kde hraji ve slavné divadelní hře Hrdý Budžes, se kterou cestujeme po celé České republice.</p><p>S Pavlínou Jurkovou jsem napsala devět divadelních pohádek a tři dětské knížky.</p><p>Věřím, že kvalitní dětská literatura dokáže formovat mladé čtenáře a probudit v nich lásku ke knihám na celý život.</p>",
+    "bio": "<p>Jsem herečka, fotografka a spoluautorka dětských knih. Společně s Pavlínou Jurkovou tvoříme dvojici, která už více než sedmnáct let baví děti i dospělé. V Divadle Láryfáry, které jsme společně založily, bereme každé představení jako dialog s divákem.</p><p>Vedle psaní knih pro děti a divadla vyprávím příběhy i prostřednictvím fotografování. Zabývám se především divadelní fotografií, přírodními a městskými scenériemi či makro fotografií. Za sebou mám několik samostatných výstav.</p><p>Pro děti jsem připravila obrazové vyprávění o Palečcích, <a href=\"https://www.fler.cz/shop/jarmen\" target=\"_blank\" rel=\"noopener\">www.fler.cz/jarmen</a>.</p><p>V současné době kromě Divadla Láryfáry spolupracuji s Městským divadlem v Mladé Boleslavi (zde působím jako herečka a fotografka), s Divadlem Pod kůži a s Divadlem A. Dvořáka v Příbrami, kde hraji ve slavné divadelní hře Hrdý Budžes, se kterou cestujeme po celé České republice.</p><p>S Pavlínou Jurkovou jsem napsala devět divadelních pohádek a tři dětské knížky.</p><p>Věřím, že kvalitní dětská literatura dokáže formovat mladé čtenáře a probudit v nich lásku ke knihám na celý život.</p>",
     "photo": "images/autori/autor-jarmila-vlckova.jpg",
     "email": "vlckovajarmila@seznam.cz",
     "links": {
@@ -59,6 +59,9 @@
     "roleLabel": "ilustrátorka",
     "title": "akademická malířka",
     "bio": "<p>Jsem akademická malířka. Maluji, kreslím, stříhám, lepím… A od roku 2001 také pořádám výtvarné kurzy pro děti i dospělé.</p><p>Ilustrovala jsem dětské knihy Hra o sen, Viktor a záhadná teta Bobina, Viktor a případ zmizelého psa a Korálky z rybízu. Z pedagogických knih jmenujme například Sociální dovednosti v mateřské škole a Pravidla chování dětí v mateřské škole.</p><p>Věřím, že témata jako úcta ke stáří nebo mezigenerační vztahy se dají dětem přiblížit citlivě a bez moralizování. Kniha Viktor je krásným příkladem toho, že i vážnější témata mohou děti přijmout přirozeně a s radostí.</p>",
-    "photo": "images/autori/autor-martina-fojtu.jpg"
+    "photo": "images/autori/autor-martina-fojtu.jpg",
+    "links": {
+      "website": "https://www.martinafojtu.cz/"
+    }
   }
 ]
