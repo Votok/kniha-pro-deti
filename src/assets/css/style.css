@@ -1722,6 +1722,61 @@ body {
   text-decoration: none;
 }
 
+/* Email Copy Button */
+.email-copy-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.email-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  padding: 0.2rem;
+  cursor: pointer;
+  color: hsl(var(--color-muted-fg));
+  border-radius: 0.25rem;
+  transition: color 0.2s ease-out, background-color 0.2s ease-out;
+  flex-shrink: 0;
+}
+
+.email-copy-btn:hover {
+  color: hsl(var(--color-primary));
+  background-color: hsl(var(--color-muted));
+}
+
+.email-copy-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+.email-copy-btn .copy-check {
+  display: none;
+}
+
+.email-copy-btn .copy-label {
+  display: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: hsl(150 50% 35%);
+}
+
+.email-copy-btn.copied .copy-icon {
+  display: none;
+}
+
+.email-copy-btn.copied .copy-check {
+  display: inline;
+  color: hsl(150 50% 35%);
+}
+
+.email-copy-btn.copied .copy-label {
+  display: inline;
+}
+
 /* Dark Mode - Workshop Cards */
 @media (prefers-color-scheme: dark) {
   /* Workshop card backgrounds - darker, more saturated versions */

@@ -17,7 +17,8 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
           </h1>
 
           <p class="lead text-muted mx-auto mx-lg-0" style="max-width: 36rem">
-            Příběhy, které učí odváze, sebedůvěře a zvládání životních výzev. S krásnými ilustracemi, které si zamilujete.
+            Příběhy, které učí odváze, sebedůvěře a zvládání životních výzev. S krásnými
+            ilustracemi, které si zamilujete.
           </p>
 
           <div
@@ -56,14 +57,16 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
             </div>
             <div class="trust-indicator">
               <span class="trust-indicator-emoji">🌱</span>
-              <span class="trust-indicator-text">Pro děti 5–12 let</span>
+              <span class="trust-indicator-text">Pro děti 5–13 let</span>
             </div>
           </div>
         </div>
       </div>
 
       {# Right Column - Authors Photo with Floating Books #}
-      <div class="col-12 col-lg-6 position-relative d-flex justify-content-center align-items-center hero-photo-column">
+      <div
+        class="col-12 col-lg-6 position-relative d-flex justify-content-center align-items-center hero-photo-column"
+      >
         {# Decorative background blurs #}
         <div class="hero-blur hero-blur-accent"></div>
         <div class="hero-blur hero-blur-primary"></div>
@@ -85,19 +88,39 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
 
         {# Floating books along the bottom edge #}
         <div class="hero-floating-book hero-floating-book-1 animate-float-1">
-          <img src="images/hero/kniha-obalka-eliska-rebelka-m.jpg" alt="Eliška Rebelka" class="w-100">
+          <img
+            src="images/hero/kniha-obalka-eliska-rebelka-m.jpg"
+            alt="Eliška Rebelka"
+            class="w-100"
+          />
         </div>
         <div class="hero-floating-book hero-floating-book-2 animate-float-3">
-          <img src="images/hero/kniha-viktor-a-zahadna-teta-bobina.jpg" alt="Viktor a záhadná teta Bobina" class="w-100">
+          <img
+            src="images/hero/kniha-viktor-a-zahadna-teta-bobina.jpg"
+            alt="Viktor a záhadná teta Bobina"
+            class="w-100"
+          />
         </div>
         <div class="hero-floating-book hero-floating-book-3 animate-float-5">
-          <img src="images/hero/kniha-obalka-eliska-detektiv-m.jpg" alt="Eliška Detektiv" class="w-100">
+          <img
+            src="images/hero/kniha-obalka-eliska-detektiv-m.jpg"
+            alt="Eliška Detektiv"
+            class="w-100"
+          />
         </div>
         <div class="hero-floating-book hero-floating-book-4 animate-float-4">
-          <img src="images/hero/kniha-obalka-roza-a-ztraceny-tatinek.jpg" alt="Róza a ztracený tatínek" class="w-100">
+          <img
+            src="images/hero/kniha-obalka-roza-a-ztraceny-tatinek.jpg"
+            alt="Róza a ztracený tatínek"
+            class="w-100"
+          />
         </div>
         <div class="hero-floating-book hero-floating-book-5 animate-float-2">
-          <img src="images/hero/kniha-obalka-tajemstvi-rodiny-m.jpg" alt="Tajemství rodiny M" class="w-100">
+          <img
+            src="images/hero/kniha-obalka-tajemstvi-rodiny-m.jpg"
+            alt="Tajemství rodiny M"
+            class="w-100"
+          />
         </div>
       </div>
     </div>
@@ -131,9 +154,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
     <div class="text-center mx-auto mb-5 mb-lg-6" style="max-width: 48rem">
       <span class="badge-section-tag mb-3">Naše knihy</span>
       <h2 class="mb-4">Vyberte tu pravou knihu</h2>
-      <p class="text-muted">
-        Objevte příběh pro konkrétní věkovou skupinu.
-      </p>
+      <p class="text-muted">Objevte příběh pro konkrétní věkovou skupinu.</p>
     </div>
 
     <!-- Books Grid -->
@@ -190,9 +211,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
               >Nakladatelství 65. pole</span
             >
             {% elif book.publisher == "Albatros" %}
-            <span class="badge bg-secondary text-secondary-fg mb-3 align-self-start"
-              >Albatros</span
-            >
+            <span class="badge bg-secondary text-secondary-fg mb-3 align-self-start">Albatros</span>
             {% elif book.publisher == "Grada" %}
             <span class="badge bg-secondary text-secondary-fg mb-3 align-self-start"
               >Nakladatelství Grada</span
@@ -205,9 +224,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
             <span class="badge bg-secondary text-secondary-fg mb-3 align-self-start"
               >{{ book.publisher }}</span
             >
-            {% endif %}
-
-            {% if book.badge == "bestseller" %}
+            {% endif %} {% if book.badge == "bestseller" %}
             <span class="badge bg-warning text-dark mb-2 align-self-start">Bestseller</span>
             {% elif book.badge == "novinka" %}
             <span class="badge bg-success text-white mb-2 align-self-start">Novinka</span>
@@ -223,8 +240,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
             <!-- Authors -->
             <p class="small text-muted mb-3">
               {% if book.authors.text.length > 1 %} Autorky: {{ book.authors.text | join(", ") }} {%
-              elif book.authors.text.length == 1 %} Autorka: {{ book.authors.text[0] }} {%
-              endif %}
+              elif book.authors.text.length == 1 %} Autorka: {{ book.authors.text[0] }} {% endif %}
             </p>
 
             <!-- Summary -->
@@ -322,8 +338,48 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
     <!-- Help Text -->
     <div class="text-center">
       <p class="lead text-muted">
-        Nevíte, kterou knihu vybrat? <a href="mailto:info@knihaprodeti.cz" class="fw-semibold">Napište nám</a> a rádi
-        vám poradíme.
+        Nevíte, kterou knihu vybrat? Napište nám na
+        <span class="email-copy-wrap">
+          <span class="fw-semibold">info@knihaprodeti.cz</span>
+          <button
+            type="button"
+            class="email-copy-btn"
+            data-copy-email="info@knihaprodeti.cz"
+            title="Kopírovat e-mail"
+          >
+            <svg
+              class="copy-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+              <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+            </svg>
+            <svg
+              class="copy-check"
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span class="copy-label">Zkopírováno!</span>
+          </button>
+        </span>
+        a rádi vám poradíme.
       </p>
     </div>
   </div>
@@ -361,7 +417,8 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
             </div>
             <h3 class="h5 fw-bold mb-2">Hodnoty pro život</h3>
             <p class="text-muted small mb-0">
-              Naše příběhy učí děti přátelství, laskavosti, odváze, úctě ke stáří a odhodlání jít si za svými sny.
+              Naše příběhy učí děti přátelství, laskavosti, odváze, úctě ke stáří a odhodlání jít si
+              za svými sny.
             </p>
           </div>
         </div>
@@ -394,7 +451,8 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
             </div>
             <h3 class="h5 fw-bold mb-2">Překrásné ilustrace</h3>
             <p class="text-muted small mb-0">
-              Pro naše knihy si vybíráme ty nejlepší české ilustrátory. Jejich osobitost podporuje čtivost příběhu.
+              Pro naše knihy si vybíráme ty nejlepší české ilustrátory. Jejich osobitost podporuje
+              čtivost příběhu.
             </p>
           </div>
         </div>
@@ -424,7 +482,8 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
             </div>
             <h3 class="h5 fw-bold mb-2">Zkušené autorky</h3>
             <p class="text-muted small mb-0">
-              Jsme herečky, scénáristky a zakladatelky Divadla Láryfáry. Díky mnohaletým zkušenostem víme, jak zaujmout a pobavit dnešní děti.
+              Jsme herečky, scénáristky a zakladatelky Divadla Láryfáry. Díky mnohaletým zkušenostem
+              víme, jak zaujmout a pobavit dnešní děti.
             </p>
           </div>
         </div>
@@ -454,7 +513,8 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
             </div>
             <h3 class="h5 fw-bold mb-2">Kvalitní nakladatelství</h3>
             <p class="text-muted small mb-0">
-              Spolupracujeme s předními českými nakladatelstvími, která garantují kvalitní tisk a sazbu.
+              Spolupracujeme s předními českými nakladatelstvími, která garantují kvalitní tisk a
+              sazbu.
             </p>
           </div>
         </div>
@@ -533,8 +593,8 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
             <span class="badge-section-tag mb-3">Naše besedy</span>
             <h2 class="mb-4">Pozvěte autorky k vám</h2>
             <p class="text-muted mb-4" style="max-width: 36rem">
-              Nabízíme autorská čtení a besedy pro školy, knihovny a kulturní akce. Děti se
-              mohou setkat s autorkami osobně.
+              Nabízíme autorská čtení a besedy pro školy, knihovny a kulturní akce. Děti se mohou
+              setkat s autorkami osobně.
             </p>
             <a href="besedy.html" class="btn btn-primary btn-lg">
               Zjistit více

@@ -132,6 +132,23 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // ===================================================================
+  // Copy Email to Clipboard
+  // ===================================================================
+
+  document.querySelectorAll("[data-copy-email]").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      var email = this.getAttribute("data-copy-email");
+      navigator.clipboard.writeText(email).then(function () {
+        btn.classList.add("copied");
+        setTimeout(function () {
+          btn.classList.remove("copied");
+        }, 2000);
+      });
+    });
+  });
+
+  // ===================================================================
   // Console Info (Development)
   // ===================================================================
   if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
