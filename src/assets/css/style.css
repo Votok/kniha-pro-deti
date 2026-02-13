@@ -9,33 +9,33 @@
 
 :root {
   /* Brand Colors - Light Mode */
-  --color-primary: 25 55% 40%;        /* #9B6239 - warm brown */
-  --color-primary-fg: 0 0% 100%;      /* #FFFFFF */
-  --color-secondary: 140 25% 90%;     /* #D9EDE2 - soft sage green */
-  --color-secondary-fg: 140 30% 30%;  /* #3D664D */
-  --color-accent: 45 90% 65%;         /* #F5D54A - golden yellow */
-  --color-accent-fg: 35 50% 25%;      /* #5F4A28 */
+  --color-primary: 25 55% 40%; /* #9B6239 - warm brown */
+  --color-primary-fg: 0 0% 100%; /* #FFFFFF */
+  --color-secondary: 140 25% 90%; /* #D9EDE2 - soft sage green */
+  --color-secondary-fg: 140 30% 30%; /* #3D664D */
+  --color-accent: 45 90% 65%; /* #F5D54A - golden yellow */
+  --color-accent-fg: 35 50% 25%; /* #5F4A28 */
 
   /* Theme Colors */
-  --color-storybook: 210 50% 45%;     /* #3C73AC - trust blue */
-  --color-storybook-fg: 0 0% 100%;    /* #FFFFFF */
-  --color-forest: 150 35% 35%;        /* #3D7358 - nature green */
-  --color-forest-fg: 0 0% 100%;       /* #FFFFFF */
+  --color-storybook: 210 50% 45%; /* #3C73AC - trust blue */
+  --color-storybook-fg: 0 0% 100%; /* #FFFFFF */
+  --color-forest: 150 35% 35%; /* #3D7358 - nature green */
+  --color-forest-fg: 0 0% 100%; /* #FFFFFF */
 
   /* Background & Surface Colors */
-  --color-background: 40 33% 97%;     /* #F9F6F2 - warm cream */
-  --color-foreground: 25 30% 20%;     /* #423025 - primary text */
-  --color-card: 40 40% 99%;           /* #FDFCFA */
-  --color-card-fg: 25 30% 20%;        /* #423025 */
-  --color-popover: 40 40% 99%;        /* #FDFCFA */
-  --color-popover-fg: 25 30% 20%;     /* #423025 */
+  --color-background: 40 33% 97%; /* #F9F6F2 - warm cream */
+  --color-foreground: 25 30% 20%; /* #423025 - primary text */
+  --color-card: 40 40% 99%; /* #FDFCFA */
+  --color-card-fg: 25 30% 20%; /* #423025 */
+  --color-popover: 40 40% 99%; /* #FDFCFA */
+  --color-popover-fg: 25 30% 20%; /* #423025 */
 
   /* Muted & Utility Colors */
-  --color-muted: 30 20% 94%;          /* #F2EFEB - subtle backgrounds */
-  --color-muted-fg: 25 15% 45%;       /* #7A6F62 - secondary/muted text */
-  --color-border: 30 25% 88%;         /* #E8E0D5 - subtle borders */
-  --color-input: 30 25% 88%;          /* #E8E0D5 - form input borders */
-  --color-ring: 15 85% 60%;           /* #E8784B - focus rings */
+  --color-muted: 30 20% 94%; /* #F2EFEB - subtle backgrounds */
+  --color-muted-fg: 25 15% 45%; /* #7A6F62 - secondary/muted text */
+  --color-border: 30 25% 88%; /* #E8E0D5 - subtle borders */
+  --color-input: 30 25% 88%; /* #E8E0D5 - form input borders */
+  --color-ring: 15 85% 60%; /* #E8784B - focus rings */
 
   /* Feedback Colors */
   --color-destructive: 0 84.2% 60.2%; /* #ED5555 - error states */
@@ -47,12 +47,12 @@
   --shadow-book: 0 12px 40px -10px hsl(30 30% 40% / 0.25);
 
   /* Border Radius */
-  --radius-sm: 0.5rem;      /* 8px */
-  --radius-md: 0.75rem;     /* 12px */
-  --radius-lg: 1rem;        /* 16px */
-  --radius-xl: 1.25rem;     /* 20px */
-  --radius-2xl: 1.5rem;     /* 24px */
-  --radius-full: 9999px;    /* Full pill */
+  --radius-sm: 0.5rem; /* 8px */
+  --radius-md: 0.75rem; /* 12px */
+  --radius-lg: 1rem; /* 16px */
+  --radius-xl: 1.25rem; /* 20px */
+  --radius-2xl: 1.5rem; /* 24px */
+  --radius-full: 9999px; /* Full pill */
 
   /* Bootstrap Focus Ring */
   --bs-focus-ring-width: 2px;
@@ -67,33 +67,33 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* Brand Colors - Dark Mode */
-    --color-primary: 25 50% 50%;        /* #BF7540 - warmer, lighter brown */
-    --color-primary-fg: 0 0% 100%;      /* #FFFFFF */
-    --color-secondary: 140 20% 20%;     /* #293D30 - deeper sage green */
-    --color-secondary-fg: 140 25% 85%;  /* #C3DED0 */
-    --color-accent: 45 80% 50%;         /* #E6BA19 - more saturated gold */
-    --color-accent-fg: 0 0% 100%;       /* #FFFFFF */
+    --color-primary: 25 50% 50%; /* #BF7540 - warmer, lighter brown */
+    --color-primary-fg: 0 0% 100%; /* #FFFFFF */
+    --color-secondary: 140 20% 20%; /* #293D30 - deeper sage green */
+    --color-secondary-fg: 140 25% 85%; /* #C3DED0 */
+    --color-accent: 45 80% 50%; /* #E6BA19 - more saturated gold */
+    --color-accent-fg: 0 0% 100%; /* #FFFFFF */
 
     /* Theme Colors - Dark Mode */
-    --color-storybook: 210 45% 55%;     /* #5A8EC2 - lighter blue */
-    --color-storybook-fg: 0 0% 100%;    /* #FFFFFF */
-    --color-forest: 150 30% 45%;        /* #508668 - lighter forest green */
-    --color-forest-fg: 0 0% 100%;       /* #FFFFFF */
+    --color-storybook: 210 45% 55%; /* #5A8EC2 - lighter blue */
+    --color-storybook-fg: 0 0% 100%; /* #FFFFFF */
+    --color-forest: 150 30% 45%; /* #508668 - lighter forest green */
+    --color-forest-fg: 0 0% 100%; /* #FFFFFF */
 
     /* Background & Surface - Dark Mode */
-    --color-background: 25 25% 10%;     /* #201813 - dark page background */
-    --color-foreground: 40 30% 95%;     /* #F7F4EE - primary text */
-    --color-card: 25 20% 14%;           /* #2A221E */
-    --color-card-fg: 40 30% 95%;        /* #F7F4EE */
-    --color-popover: 25 20% 14%;        /* #2A221E */
-    --color-popover-fg: 40 30% 95%;     /* #F7F4EE */
+    --color-background: 25 25% 10%; /* #201813 - dark page background */
+    --color-foreground: 40 30% 95%; /* #F7F4EE - primary text */
+    --color-card: 25 20% 14%; /* #2A221E */
+    --color-card-fg: 40 30% 95%; /* #F7F4EE */
+    --color-popover: 25 20% 14%; /* #2A221E */
+    --color-popover-fg: 40 30% 95%; /* #F7F4EE */
 
     /* Muted & Utility - Dark Mode */
-    --color-muted: 25 15% 20%;          /* #3D312C */
-    --color-muted-fg: 30 15% 60%;       /* #A89C8F */
-    --color-border: 25 15% 25%;         /* #4A3E36 */
-    --color-input: 25 15% 25%;          /* #4A3E36 */
-    --color-ring: 15 80% 55%;           /* #DF6633 */
+    --color-muted: 25 15% 20%; /* #3D312C */
+    --color-muted-fg: 30 15% 60%; /* #A89C8F */
+    --color-border: 25 15% 25%; /* #4A3E36 */
+    --color-input: 25 15% 25%; /* #4A3E36 */
+    --color-ring: 15 80% 55%; /* #DF6633 */
 
     /* Feedback - Dark Mode */
     --color-destructive: 0 62.8% 30.6%; /* #7F2323 */
@@ -117,9 +117,24 @@ body {
 }
 
 /* Headings - Base Styles */
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6,
-.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6 {
   font-family: "Nunito", system-ui, -apple-system, sans-serif;
   font-weight: 700;
   line-height: 1.1;
@@ -128,52 +143,94 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* Headings - Mobile Sizes (Base) */
-h1, .h1 {
-  font-size: 2.25rem;  /* 36px */
+h1,
+.h1 {
+  font-size: 2.25rem; /* 36px */
   font-weight: 800;
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: 1.875rem; /* 30px */
 }
 
-h3, .h3 {
-  font-size: 1.5rem;   /* 24px */
+h3,
+.h3 {
+  font-size: 1.5rem; /* 24px */
 }
 
-h4, .h4 {
-  font-size: 1.25rem;  /* 20px */
+h4,
+.h4 {
+  font-size: 1.25rem; /* 20px */
   line-height: 1.4;
 }
 
-h5, .h5 {
+h5,
+.h5 {
   font-size: 1.125rem; /* 18px */
   line-height: 1.4;
 }
 
-h6, .h6 {
-  font-size: 1rem;     /* 16px */
+h6,
+.h6 {
+  font-size: 1rem; /* 16px */
   line-height: 1.4;
 }
 
 /* Headings - Tablet Sizes */
 @media (min-width: 768px) {
-  h1, .h1 { font-size: 3rem; }      /* 48px */
-  h2, .h2 { font-size: 2.25rem; }   /* 36px */
-  h3, .h3 { font-size: 1.75rem; }   /* 28px */
-  h4, .h4 { font-size: 1.5rem; }    /* 24px */
-  h5, .h5 { font-size: 1.25rem; }   /* 20px */
-  h6, .h6 { font-size: 1rem; }      /* 16px */
+  h1,
+  .h1 {
+    font-size: 3rem;
+  } /* 48px */
+  h2,
+  .h2 {
+    font-size: 2.25rem;
+  } /* 36px */
+  h3,
+  .h3 {
+    font-size: 1.75rem;
+  } /* 28px */
+  h4,
+  .h4 {
+    font-size: 1.5rem;
+  } /* 24px */
+  h5,
+  .h5 {
+    font-size: 1.25rem;
+  } /* 20px */
+  h6,
+  .h6 {
+    font-size: 1rem;
+  } /* 16px */
 }
 
 /* Headings - Desktop Sizes */
 @media (min-width: 1024px) {
-  h1, .h1 { font-size: 3.75rem; }   /* 60px */
-  h2, .h2 { font-size: 3rem; }      /* 48px */
-  h3, .h3 { font-size: 2rem; }      /* 32px */
-  h4, .h4 { font-size: 1.5rem; }    /* 24px */
-  h5, .h5 { font-size: 1.25rem; }   /* 20px */
-  h6, .h6 { font-size: 1.125rem; }  /* 18px */
+  h1,
+  .h1 {
+    font-size: 3.75rem;
+  } /* 60px */
+  h2,
+  .h2 {
+    font-size: 3rem;
+  } /* 48px */
+  h3,
+  .h3 {
+    font-size: 2rem;
+  } /* 32px */
+  h4,
+  .h4 {
+    font-size: 1.5rem;
+  } /* 24px */
+  h5,
+  .h5 {
+    font-size: 1.25rem;
+  } /* 20px */
+  h6,
+  .h6 {
+    font-size: 1.125rem;
+  } /* 18px */
 }
 
 /* Links */
@@ -242,12 +299,8 @@ a:hover {
   font-family: "Nunito", system-ui, -apple-system, sans-serif;
   font-weight: 600;
   border-radius: var(--radius-md);
-  transition: background-color 0.2s ease-out,
-              transform 0.2s ease-out,
-              box-shadow 0.2s ease-out,
-              opacity 0.2s ease-out,
-              color 0.2s ease-out,
-              border-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out, transform 0.2s ease-out, box-shadow 0.2s ease-out,
+    opacity 0.2s ease-out, color 0.2s ease-out, border-color 0.2s ease-out;
 }
 
 .btn:hover {
@@ -405,7 +458,8 @@ a.btn:focus {
 
 /* Floating Book Animations */
 @keyframes float1 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) rotate(-8deg);
   }
   50% {
@@ -414,7 +468,8 @@ a.btn:focus {
 }
 
 @keyframes float2 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) rotate(15deg);
   }
   50% {
@@ -423,7 +478,8 @@ a.btn:focus {
 }
 
 @keyframes float3 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) rotate(6deg);
   }
   50% {
@@ -432,7 +488,8 @@ a.btn:focus {
 }
 
 @keyframes float4 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) rotate(-5deg);
   }
   50% {
@@ -441,7 +498,8 @@ a.btn:focus {
 }
 
 @keyframes float5 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) rotate(4deg);
   }
   50% {
@@ -474,7 +532,8 @@ a.btn:focus {
 
 /* Scroll Indicator Animation */
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -558,7 +617,11 @@ select:focus:not(:focus-visible) {
 }
 
 .bg-gradient-hero {
-  background: linear-gradient(135deg, hsl(var(--color-primary) / 0.05) 0%, hsl(var(--color-accent) / 0.05) 100%);
+  background: linear-gradient(
+    135deg,
+    hsl(var(--color-primary) / 0.05) 0%,
+    hsl(var(--color-accent) / 0.05) 100%
+  );
 }
 
 /* Dark Mode - Gradient Backgrounds */
@@ -572,7 +635,11 @@ select:focus:not(:focus-visible) {
   }
 
   .bg-gradient-hero {
-    background: linear-gradient(135deg, hsl(var(--color-primary) / 0.15) 0%, hsl(var(--color-accent) / 0.1) 100%);
+    background: linear-gradient(
+      135deg,
+      hsl(var(--color-primary) / 0.15) 0%,
+      hsl(var(--color-accent) / 0.1) 100%
+    );
   }
 }
 
@@ -728,6 +795,18 @@ select:focus:not(:focus-visible) {
   box-shadow: none;
 }
 
+/* Light mode: dark hamburger icon */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(51, 51, 51, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Dark mode: white hamburger icon */
+@media (prefers-color-scheme: dark) {
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+}
+
 .navbar-collapse.show,
 .navbar-collapse.collapsing {
   background-color: hsl(var(--color-card));
@@ -806,13 +885,17 @@ body {
 }
 
 .hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, hsl(var(--color-foreground) / 0.7) 0%, hsl(var(--color-foreground) / 0.5) 100%);
+  background: linear-gradient(
+    135deg,
+    hsl(var(--color-foreground) / 0.7) 0%,
+    hsl(var(--color-foreground) / 0.5) 100%
+  );
   z-index: 1;
 }
 
@@ -938,7 +1021,12 @@ body {
 .hero-ring-outer {
   inset: -0.75rem;
   border-radius: 2.5rem;
-  background: linear-gradient(to bottom right, hsl(var(--color-primary) / 0.2), hsl(var(--color-accent) / 0.3), hsl(var(--color-primary) / 0.1));
+  background: linear-gradient(
+    to bottom right,
+    hsl(var(--color-primary) / 0.2),
+    hsl(var(--color-accent) / 0.3),
+    hsl(var(--color-primary) / 0.1)
+  );
   transform: rotate(3deg);
 }
 
@@ -1556,7 +1644,7 @@ body {
 
 @media (min-width: 992px) {
   .workshop-card-image {
-    height: 100%;  /* Desktop: full height */
+    height: 100%; /* Desktop: full height */
   }
 }
 
