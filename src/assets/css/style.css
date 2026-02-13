@@ -1299,6 +1299,10 @@ body {
   border-radius: var(--radius-2xl);
 }
 
+.testimonial-card > .card-body {
+  padding-top: 4rem !important;
+}
+
 /* Quote Badge */
 .testimonial-quote-badge {
   position: absolute;
