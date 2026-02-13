@@ -1,39 +1,27 @@
 RewriteEngine On
 
 # ===========================================
+# WWW and HTTPS Redirects (must be first!)
+# ===========================================
 
+# Combined: non-www OR non-https → https://www.knihaprodeti.cz in one redirect
+RewriteCond %{HTTP_HOST} !^www\. [OR]
+RewriteCond %{HTTPS} !on
+RewriteRule ^ https://www.knihaprodeti.cz%{REQUEST_URI} [L,R=301]
+
+# ===========================================
 # URL REDIRECTS (301 Permanent)
-
 # Old URLs from previous site version
-
 # ===========================================
 
 # autori-knihy.html -> autori.html
-
 RewriteRule ^autori-knihy\.html$ /autori.html [R=301,L]
 
 # nase-knihy.html -> index.html (books section is now on homepage)
-
 RewriteRule ^nase-knihy\.html$ / [R=301,L]
 
 # ===========================================
-
-# WWW and HTTPS Redirects
-
-# ===========================================
-
-RewriteCond %{HTTP_HOST} ^[^.]+\.[^.]+$
-RewriteCond %{HTTPS}s ^on(s)|
-RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-RewriteCond %{HTTPS} !on
-RewriteCond %{HTTP:X-Forwarded-Proto} !=https
-RewriteRule ^.\*$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,QSA,NE]
-
-# ===========================================
-
 # Cache Headers
-
 # ===========================================
 
 AddDefaultCharset UTF-8
@@ -76,21 +64,17 @@ AddDefaultCharset UTF-8
 </IfModule>
 
 # ===========================================
-
 # Security Headers
-
 # ===========================================
 
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"
   Header set X-Frame-Options "SAMEORIGIN"
-  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
 
 # ===========================================
-
 # Compression
-
 # ===========================================
 
 <IfModule mod_deflate.c>
