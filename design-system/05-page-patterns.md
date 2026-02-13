@@ -49,7 +49,7 @@ The homepage consists of 5 distinct sections stacked vertically:
 
 ### Hero Section
 
-A two-column layout with generous top padding that creates visual impact:
+A two-column layout with generous top padding featuring the authors photo as the central visual element, with floating book covers arranged along its bottom edge.
 
 **Layout**: 2-column grid on large screens, stacked on mobile
 
@@ -58,40 +58,118 @@ A two-column layout with generous top padding that creates visual impact:
 | Column | Content                          | Alignment          |
 | ------ | -------------------------------- | ------------------ |
 | Left   | Headline, CTAs, trust indicators | Center → Left (lg) |
-| Right  | Floating book covers display     | Center             |
+| Right  | Authors photo with floating books | Center            |
 
 **Left Column Structure**:
 
-1. Headline with gradient text span
+1. Headline with gradient text span (`text-gradient-warm`)
 2. Subheadline paragraph
 3. Two CTA buttons (hero + outline)
-4. Trust indicators row (with `pt-4` spacing)
+4. Trust indicators row (with `pt-4` spacing): "8 knih v edici" + "Pro deti 5-12 let"
 
-**Right Column: Floating Books**
+#### Right Column: Authors Photo with Floating Books
 
-- 5 book covers positioned with `position: absolute` in a decorative arrangement
-- Specific positioning for each book (from center):
-  - Book 1: top-left, `rotate(-8deg)`, scale 0.8
-  - Book 2: top-right, `rotate(6deg)`, scale 0.7
-  - Book 3: center, `rotate(0deg)`, scale 1.0 (largest/featured)
-  - Book 4: bottom-left, `rotate(-5deg)`, scale 0.75
-  - Book 5: bottom-right, `rotate(4deg)`, scale 0.85
-- Each book uses `float` animation with staggered delays (0s, 0.5s, 1s, 1.5s, 2s)
-- Container has `position: relative` for absolute positioning context
-- 2-3 decorative blur circles (`blur(80px)`, `opacity: 0.3`) positioned behind books
+The right column contains a portrait photo of the authors with a decorative layered border, and 5 small book covers floating along the photo's bottom edge.
 
-**Scroll Indicator**:
+**Container**: `position: relative`, `flex`, `justify-center`, `items-center`, `min-h-[400px] md:min-h-[500px]`
 
-- Position: `absolute`, `bottom: 2rem`, `left: 50%`, `transform: translateX(-50%)`
-- Layout: Vertical flex column, `align-items: center`, gap: 0.5rem
-- Text label: 0.875rem, `hsl(var(--muted-foreground))`, "Scroll to explore"
-- Button:
-  - Circular: width/height 40px, border-radius: 50%
-  - Background: `hsl(var(--card))`
-  - Shadow: `shadow-soft`
-  - Icon: Chevron down, 20×20px, color: `hsl(var(--primary))`
-- Animation: `bounce` (2s ease-in-out infinite) on button only
-- Hover: button background → `hsl(var(--primary))`, icon color → `hsl(var(--primary-foreground))`
+##### Decorative Background Blurs
+
+Two large blurred circles positioned behind the photo for ambient glow:
+
+| Blur       | Position                | Size     | Color           | Blur Radius |
+| ---------- | ----------------------- | -------- | --------------- | ----------- |
+| Top-left   | `-top-8 -left-8`        | 128×128px (w-32 h-32) | `accent/30` | `blur-3xl`  |
+| Bottom-right | `-bottom-8 -right-8`  | 160×160px (w-40 h-40) | `primary/20` | `blur-3xl` |
+
+##### Authors Photo (Central Visual)
+
+The photo uses a layered decorative frame with two offset rings behind it:
+
+**Photo container**: `position: relative`, `z-index: 10`
+
+**Responsive widths**:
+
+| Breakpoint | Width     |
+| ---------- | --------- |
+| Mobile     | `w-80` (320px) |
+| md         | `w-[352px]` |
+| lg         | `w-[422px]` |
+
+**Decorative ring layers** (back to front):
+
+| Layer | Inset     | Border Radius | Background                                                      | Rotation |
+| ----- | --------- | ------------- | --------------------------------------------------------------- | -------- |
+| Outer ring | `-inset-3` | `rounded-[2.5rem]` (40px) | `bg-gradient-to-br from-primary/20 via-accent/30 to-primary/10` | `rotate-3` (3deg) |
+| Inner ring | `-inset-1.5` | `rounded-[2rem]` (32px) | `bg-card/80`                                                   | `rotate-2` (2deg) |
+
+**Photo image**:
+
+| Property      | Value                   |
+| ------------- | ----------------------- |
+| Source         | `/autorky-knih.jpg`     |
+| Border radius | `rounded-[1.5rem]` (24px) |
+| Shadow        | `shadow-book`           |
+| Object fit    | `object-cover`          |
+| Position      | `relative` (sits above rings) |
+
+##### Floating Books Row
+
+5 book covers are positioned absolutely along the bottom edge of the photo, forming a horizontal row. They overlap the photo's bottom border, creating a "books sitting on the edge" effect. All books have `z-index: 20` (above the photo's `z-index: 10`).
+
+**Shared book properties**:
+
+| Property      | Value                |
+| ------------- | -------------------- |
+| Position      | `absolute`           |
+| z-index       | `20`                 |
+| Border radius | `rounded-md` (6px)   |
+| Overflow      | `hidden`             |
+| Shadow        | `shadow-book`        |
+| Image fit     | `w-full h-auto`      |
+
+**Individual book positions** (left to right):
+
+| # | Book Title                    | Image File                              | Left   | Bottom | Width (mobile) | Width (md) | Rotation    | Animation       |
+| - | ----------------------------- | --------------------------------------- | ------ | ------ | -------------- | ---------- | ----------- | --------------- |
+| 1 | Eliska Rebelka                | `/kniha-obalka-eliska-rebelka-m.jpg`    | `20%`  | `1px` (bottom-1) | `w-16` (64px) | `w-[78px]` | `rotate(-7deg)` | `animate-float-1` |
+| 2 | Viktor a zahadna teta Bobina  | `/kniha-viktor-a-zahadna-teta-bobina.jpg` | `33%` | `0.75rem` (bottom-3) | `w-16` (64px) | `w-[75px]` | `rotate(4deg)`  | `animate-float-3` |
+| 3 | Eliska Detektiv               | `/kniha-obalka-eliska-detektiv-m.jpg`   | `46%`  | `0` (bottom-0) | `w-14` (56px) | `w-[70px]` | `rotate(-3deg)` | `animate-float-5` |
+| 4 | Roza a ztraceny tatinek       | `/kniha-obalka-roza-a-ztraceny-tatinek.jpg` | `58%` | `0.5rem` (bottom-2) | `w-16` (64px) | `w-[75px]` | `rotate(8deg)` | `animate-float-4` |
+| 5 | Tajemstvi rodiny M            | `/kniha-obalka-tajemstvi-rodiny-m.jpg`  | `69%`  | `0.75rem` (bottom-3) | `w-14` (56px) | `w-[70px]` | `rotate(15deg)` | `animate-float-2` |
+
+**Layout observations**:
+
+- Books span from `left: 20%` to `left: 69%`, covering roughly the central 50% of the container width
+- Horizontal spacing between books: ~12-13 percentage points apart
+- Bottom offsets alternate between `0`, `1px`, `0.5rem`, and `0.75rem` to create a natural uneven baseline
+- Rotations alternate between negative and positive angles, increasing toward the edges (from -7deg to +15deg)
+- Book sizes alternate between `w-16`/`w-14` (64px/56px mobile), creating visual rhythm
+- At `md` breakpoint, books scale to 70-78px, maintaining the same proportions
+- Each book uses a different float animation (1-5), creating desynchronized floating movement
+
+**Animation assignment** (see [06-interactions-and-motion.md](06-interactions-and-motion.md) for keyframe details):
+
+| Book # | Animation Class    | Duration | Base Rotation (rest) | Float Rotation (peak) | Vertical Travel |
+| ------ | ------------------ | -------- | -------------------- | --------------------- | --------------- |
+| 1      | `animate-float-1`  | 4.0s     | -8deg → -7deg (inline) | -5deg               | -15px           |
+| 2      | `animate-float-3`  | 4.5s     | 6deg → 4deg (inline)   | 8deg                | -18px           |
+| 3      | `animate-float-5`  | 4.8s     | 4deg → -3deg (inline)  | 6deg                | -14px           |
+| 4      | `animate-float-4`  | 5.5s     | -5deg → 8deg (inline)  | -3deg               | -12px           |
+| 5      | `animate-float-2`  | 5.0s     | 15deg (inline)          | 12deg               | -12px           |
+
+> **Note on rotation interaction**: Each book has an inline `style={{ transform: "rotate(Xdeg)" }}` that sets its resting angle. The CSS animation keyframes define their own rotation values. The inline transform is overridden when the animation runs, so the **animation's keyframe rotation** is what the user actually sees. The inline style acts as a fallback/initial state before the animation starts.
+
+##### Scroll Indicator
+
+- Position: Below the grid, centered with `mt-12 md:mt-16`
+- Layout: Vertical flex column, `align-items: center`, gap: `0.5rem`
+- Text label: 0.875rem, `font-semibold`, `text-foreground/70`, text: "Objevte vice"
+- Icon container:
+  - Circular: `w-10 h-10` (40px), `rounded-full`
+  - Background: `primary/20`
+  - Icon: ChevronDown, `w-6 h-6`, color: `primary`
+- Animation: `animate-bounce` on the entire indicator group
 
 ---
 
@@ -116,36 +194,28 @@ A two-column layout with generous top padding that creates visual impact:
 
 **Header**: Centered section header with storybook-colored tag badge
 
-**Layout**: 2-column grid on large screens (benefits cards + author photo), stacked on mobile
+- Tag badge text: "Co v nich najdete" (storybook/10 background, storybook text color)
+- H2 title: "Proc prave nase knihy?"
 
-| Column | Content                |
-| ------ | ---------------------- |
-| Left   | 2×2 benefits card grid |
-| Right  | Author photo           |
+**Layout**: Single centered grid of benefit cards (no author photo — photo has moved to Hero section)
 
-**Benefits Card**:
+**Grid**: `sm:grid-cols-2 lg:grid-cols-4`, gap: `1.5rem` (24px), `max-w-5xl mx-auto`
+
+**Benefits Card** (4 cards: Heart/Hodnoty pro zivot, Palette/Prekrasne ilustrace, Users/Zkusene autorky, Award/Kvalitni nakladatelstvi):
 
 | Element     | Style                                                                    |
 | ----------- | ------------------------------------------------------------------------ |
-| Container   | Background: `hsl(var(--card))`, border-radius: `1rem` (16px), shadow: `shadow-soft` |
+| Container   | Background: `hsl(var(--card))`, border-radius: `1rem` (16px, rounded-2xl), shadow: `shadow-soft` |
 | Padding     | `1.5rem` (24px)                                                          |
-| Icon Box    | Width/height: 48px, background: `hsl(var(--primary) / 0.1)`, border-radius: `0.75rem` (12px) |
-| Icon        | Width/height: 24px, color: `hsl(var(--primary))`                        |
-| Title       | Font: Nunito (display), size: 1.125rem (18px), weight: 700, margin-bottom: 0.5rem |
-| Description | Color: `hsl(var(--muted-foreground))`, size: 0.875rem (14px), line-height: 1.6 |
-| Hover       | Shadow: `shadow-card`, transform: `translateY(-4px)`, transition: 300ms ease-out |
-| Entrance    | Animation: `fadeInUp` with staggered delays (0ms, 100ms, 200ms, 300ms)  |
+| Icon Box    | Width/height: 48px (w-12 h-12), background: `hsl(var(--primary) / 0.1)`, border-radius: `0.75rem` (12px, rounded-xl) |
+| Icon        | Width/height: 24px (w-6 h-6), color: `hsl(var(--primary))`              |
+| Icon Hover  | Icon box background changes to `primary/20` on group hover               |
+| Title       | Font: Nunito (display), size: 1.125rem (18px, text-lg), weight: 700, margin-bottom: 0.5rem |
+| Description | Color: `hsl(var(--muted-foreground))`, size: 0.875rem (14px, text-sm), line-height: relaxed (1.625) |
+| Hover       | Shadow: `shadow-card`, transform: `translateY(-4px)` (`hover:-translate-y-1`), transition: 300ms ease-out |
+| Entrance    | Animation delays staggered: 0ms, 100ms, 200ms, 300ms (one per card)     |
 
-**Author Photo**:
-
-| Element       | Style                                                                |
-| ------------- | -------------------------------------------------------------------- |
-| Image Size    | Width: 320px (mobile) → 420px (lg), height: auto (maintains aspect) |
-| Border Radius | `1rem` (16px)                                                        |
-| Shadow        | `shadow-book`                                                        |
-| Hover         | Transform: `scale(1.05)`, transition: 300ms ease-out (optional feature) |
-| Caption       | Floating card positioned at bottom with `position: absolute`, `bottom: 1rem`, rounded-full pill shape, padding: `0.5rem 1rem` |
-| Decorative    | 2-3 blurred circles (`blur(80px)`) with `hsl(var(--accent) / 0.3)` and `hsl(var(--primary) / 0.3)`, positioned behind with `z-index: -1` |
+> **Note**: The author photo that previously appeared in this section has been moved to the Hero section as the central visual element. This section is now purely a benefits card grid.
 
 ---
 
@@ -749,6 +819,59 @@ Use Bootstrap's container and grid system:
     </div>
   </div>
 </section>
+```
+
+### Hero Section (Authors Photo + Floating Books)
+
+```html
+<section class="position-relative overflow-hidden pt-5 pt-md-6 pb-4 pb-md-5 bg-hero-gradient">
+  <div class="container position-relative" style="z-index: 10;">
+    <div class="row g-4 g-lg-3 align-items-center">
+      <!-- Left: Content -->
+      <div class="col-12 col-lg-6 text-center text-lg-start">
+        <h1 class="display-4 fw-bold">
+          Headline <span class="text-gradient-warm">gradient span</span>
+        </h1>
+        <p class="lead text-muted">Subheadline...</p>
+        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+          <a class="btn btn-hero btn-lg">CTA</a>
+          <a class="btn btn-outline-primary btn-lg">Secondary</a>
+        </div>
+      </div>
+
+      <!-- Right: Authors photo with floating books -->
+      <div class="col-12 col-lg-6 position-relative d-flex justify-content-center align-items-center" style="min-height: 500px;">
+        <!-- Decorative blurs -->
+        <div class="position-absolute" style="top:-2rem;left:-2rem;width:8rem;height:8rem;background:hsl(var(--accent)/0.3);border-radius:50%;filter:blur(48px);"></div>
+        <div class="position-absolute" style="bottom:-2rem;right:-2rem;width:10rem;height:10rem;background:hsl(var(--primary)/0.2);border-radius:50%;filter:blur(48px);"></div>
+
+        <!-- Photo with decorative rings -->
+        <div class="position-relative" style="z-index:10;">
+          <div class="position-relative" style="width:422px;max-width:100%;">
+            <!-- Outer ring -->
+            <div class="position-absolute" style="inset:-0.75rem;border-radius:2.5rem;background:linear-gradient(to bottom right,hsl(var(--primary)/0.2),hsl(var(--accent)/0.3),hsl(var(--primary)/0.1));transform:rotate(3deg);"></div>
+            <!-- Inner ring -->
+            <div class="position-absolute" style="inset:-0.375rem;border-radius:2rem;background:hsl(var(--card)/0.8);transform:rotate(2deg);"></div>
+            <img src="/autorky-knih.jpg" alt="Authors" class="position-relative w-100 shadow-book" style="border-radius:1.5rem;object-fit:cover;">
+          </div>
+        </div>
+
+        <!-- Floating books (positioned absolutely along bottom) -->
+        <div class="position-absolute animate-float-1" style="bottom:0.25rem;left:20%;width:78px;transform:rotate(-7deg);z-index:20;border-radius:0.375rem;overflow:hidden;">
+          <img src="/kniha-obalka-eliska-rebelka-m.jpg" alt="Book 1" class="w-100 shadow-book">
+        </div>
+        <!-- Repeat for books 2-5 with respective left%, bottom, width, rotation values -->
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+**Custom CSS for floating books**:
+```css
+/* Each book needs position:absolute, z-index:20, border-radius, overflow:hidden, shadow-book */
+/* Apply animate-float-1 through animate-float-5 classes (see 06-interactions-and-motion.md) */
+/* Inline transform sets the resting rotation angle */
 ```
 
 ### Responsive Grids

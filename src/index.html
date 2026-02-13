@@ -62,57 +62,42 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
         </div>
       </div>
 
-      {# Right Column - Floating Books #}
-      <div class="col-12 col-lg-6">
-        <div
-          class="floating-books-container position-relative d-flex justify-content-center align-items-center"
-        >
-          {# Decorative blur circles #}
-          <div class="floating-books-blur floating-books-blur-accent"></div>
-          <div class="floating-books-blur floating-books-blur-primary"></div>
+      {# Right Column - Authors Photo with Floating Books #}
+      <div class="col-12 col-lg-6 position-relative d-flex justify-content-center align-items-center hero-photo-column">
+        {# Decorative background blurs #}
+        <div class="hero-blur hero-blur-accent"></div>
+        <div class="hero-blur hero-blur-primary"></div>
 
-          {# Book covers #}
-          <div class="floating-books-wrapper position-relative">
-            <div class="floating-book floating-book-1">
-              <img
-                src="images/hero/kniha-viktor-a-zahadna-teta-bobina.jpg"
-                alt="Viktor a záhadná teta Bobina"
-                class="img-fluid rounded-3 shadow-book"
-              />
-            </div>
-
-            <div class="floating-book floating-book-2">
-              <img
-                src="images/hero/kniha-obalka-roza-a-ztraceny-tatinek.jpg"
-                alt="Róza a ztracený tatínek"
-                class="img-fluid rounded-3 shadow-book"
-              />
-            </div>
-
-            <div class="floating-book floating-book-3">
-              <img
-                src="images/hero/kniha-obalka-eliska-detektiv-m.jpg"
-                alt="Eliška Detektiv"
-                class="img-fluid rounded-3 shadow-book"
-              />
-            </div>
-
-            <div class="floating-book floating-book-4">
-              <img
-                src="images/hero/kniha-obalka-eliska-rebelka-m.jpg"
-                alt="Eliška Rebelka"
-                class="img-fluid rounded-3 shadow-book"
-              />
-            </div>
-
-            <div class="floating-book floating-book-5">
-              <img
-                src="images/hero/kniha-obalka-tajemstvi-rodiny-m.jpg"
-                alt="Tajemství rodiny M"
-                class="img-fluid rounded-3 shadow-book"
-              />
-            </div>
+        {# Photo with decorative rings #}
+        <div class="hero-photo-container position-relative">
+          <div class="hero-photo-frame position-relative">
+            {# Outer gradient ring #}
+            <div class="hero-ring-outer position-absolute"></div>
+            {# Inner card ring #}
+            <div class="hero-ring-inner position-absolute"></div>
+            <img
+              src="images/autorky-knih.jpg"
+              alt="Jarmila Vlčková a Pavlína Jurková - autorky knih pro děti"
+              class="hero-photo-img position-relative w-100 shadow-book"
+            />
           </div>
+        </div>
+
+        {# Floating books along the bottom edge #}
+        <div class="hero-floating-book hero-floating-book-1 animate-float-1">
+          <img src="images/hero/kniha-obalka-eliska-rebelka-m.jpg" alt="Eliška Rebelka" class="w-100">
+        </div>
+        <div class="hero-floating-book hero-floating-book-2 animate-float-3">
+          <img src="images/hero/kniha-viktor-a-zahadna-teta-bobina.jpg" alt="Viktor a záhadná teta Bobina" class="w-100">
+        </div>
+        <div class="hero-floating-book hero-floating-book-3 animate-float-5">
+          <img src="images/hero/kniha-obalka-eliska-detektiv-m.jpg" alt="Eliška Detektiv" class="w-100">
+        </div>
+        <div class="hero-floating-book hero-floating-book-4 animate-float-4">
+          <img src="images/hero/kniha-obalka-roza-a-ztraceny-tatinek.jpg" alt="Róza a ztracený tatínek" class="w-100">
+        </div>
+        <div class="hero-floating-book hero-floating-book-5 animate-float-2">
+          <img src="images/hero/kniha-obalka-tajemstvi-rodiny-m.jpg" alt="Tajemství rodiny M" class="w-100">
         </div>
       </div>
     </div>
@@ -352,146 +337,125 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
       <h2 class="mb-4">Proč právě naše knihy?</h2>
     </div>
 
-    <div class="row g-5 g-lg-6 align-items-center">
-      <div class="col-12 col-lg-6">
-        <div class="row row-cols-1 row-cols-sm-2 g-4">
-          <div class="col">
-            <div class="card border-0 shadow-soft h-100 hover-lift">
-              <div class="card-body p-4">
-                <div class="icon-box-benefit mb-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="text-primary"
-                  >
-                    <path
-                      d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
-                    ></path>
-                  </svg>
-                </div>
-                <h3 class="h5 fw-bold mb-2">Hodnoty pro život</h3>
-                <p class="text-muted small mb-0">
-                  Naše příběhy učí děti přátelství, laskavosti, odváze, úctě ke stáří a odhodlání jít si za svými sny.
-                </p>
-              </div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 mx-auto" style="max-width: 64rem">
+      <div class="col">
+        <div class="card border-0 shadow-soft h-100 hover-lift">
+          <div class="card-body p-4">
+            <div class="icon-box-benefit mb-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-primary"
+              >
+                <path
+                  d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
+                ></path>
+              </svg>
             </div>
-          </div>
-
-          <div class="col">
-            <div class="card border-0 shadow-soft h-100 hover-lift">
-              <div class="card-body p-4">
-                <div class="icon-box-benefit mb-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="text-primary"
-                  >
-                    <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle>
-                    <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle>
-                    <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle>
-                    <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle>
-                    <path
-                      d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"
-                    ></path>
-                  </svg>
-                </div>
-                <h3 class="h5 fw-bold mb-2">Překrásné ilustrace</h3>
-                <p class="text-muted small mb-0">
-                  Pro naše knihy si vybíráme ty nejlepší české ilustrátory. Jejich osobitost podporuje čtivost příběhu.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card border-0 shadow-soft h-100 hover-lift">
-              <div class="card-body p-4">
-                <div class="icon-box-benefit mb-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="text-primary"
-                  >
-                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                  </svg>
-                </div>
-                <h3 class="h5 fw-bold mb-2">Zkušené autorky</h3>
-                <p class="text-muted small mb-0">
-                  Jsme herečky, scénáristky a zakladatelky Divadla Láryfáry. Díky mnohaletým zkušenostem víme, jak zaujmout a pobavit dnešní děti.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card border-0 shadow-soft h-100 hover-lift">
-              <div class="card-body p-4">
-                <div class="icon-box-benefit mb-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="text-primary"
-                  >
-                    <path
-                      d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"
-                    ></path>
-                    <circle cx="12" cy="8" r="6"></circle>
-                  </svg>
-                </div>
-                <h3 class="h5 fw-bold mb-2">Kvalitní nakladatelství</h3>
-                <p class="text-muted small mb-0">
-                  Spolupracujeme s předními českými nakladatelstvími, která garantují kvalitní tisk a sazbu.
-                </p>
-              </div>
-            </div>
+            <h3 class="h5 fw-bold mb-2">Hodnoty pro život</h3>
+            <p class="text-muted small mb-0">
+              Naše příběhy učí děti přátelství, laskavosti, odváze, úctě ke stáří a odhodlání jít si za svými sny.
+            </p>
           </div>
         </div>
       </div>
 
-      <div class="col-12 col-lg-6">
-        <div class="d-flex justify-content-center justify-content-lg-end">
-          <div class="position-relative">
-            <div class="blur-decoration blur-decoration-accent"></div>
-            <div class="blur-decoration blur-decoration-primary"></div>
-            <img
-              src="images/autorky-knih.jpg"
-              alt="Jarmila Vlčková a Pavlína Jurková - autorky knih pro děti"
-              class="img-fluid rounded-3 shadow-book author-photo"
-            />
-            <div class="author-caption">
-              <p class="small fw-semibold mb-0">Jarmila Vlčková & Pavlína Jurková</p>
+      <div class="col">
+        <div class="card border-0 shadow-soft h-100 hover-lift">
+          <div class="card-body p-4">
+            <div class="icon-box-benefit mb-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-primary"
+              >
+                <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle>
+                <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle>
+                <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle>
+                <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle>
+                <path
+                  d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"
+                ></path>
+              </svg>
             </div>
+            <h3 class="h5 fw-bold mb-2">Překrásné ilustrace</h3>
+            <p class="text-muted small mb-0">
+              Pro naše knihy si vybíráme ty nejlepší české ilustrátory. Jejich osobitost podporuje čtivost příběhu.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card border-0 shadow-soft h-100 hover-lift">
+          <div class="card-body p-4">
+            <div class="icon-box-benefit mb-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-primary"
+              >
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="h5 fw-bold mb-2">Zkušené autorky</h3>
+            <p class="text-muted small mb-0">
+              Jsme herečky, scénáristky a zakladatelky Divadla Láryfáry. Díky mnohaletým zkušenostem víme, jak zaujmout a pobavit dnešní děti.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card border-0 shadow-soft h-100 hover-lift">
+          <div class="card-body p-4">
+            <div class="icon-box-benefit mb-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-primary"
+              >
+                <path
+                  d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"
+                ></path>
+                <circle cx="12" cy="8" r="6"></circle>
+              </svg>
+            </div>
+            <h3 class="h5 fw-bold mb-2">Kvalitní nakladatelství</h3>
+            <p class="text-muted small mb-0">
+              Spolupracujeme s předními českými nakladatelstvími, která garantují kvalitní tisk a sazbu.
+            </p>
           </div>
         </div>
       </div>

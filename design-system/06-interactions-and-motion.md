@@ -178,15 +178,15 @@ a {
 
 ### Floating Book Animations
 
-Five variations create a natural, organic floating effect for book covers in the hero section. Each has slightly different timing and movement:
+Five variations create a natural, organic floating effect for the book covers arranged along the bottom of the hero photo. Each has slightly different timing, rotation range, and vertical travel to prevent synchronized movement:
 
-| Animation | Duration | Keyframe 0%/100%                      | Keyframe 50%                               |
-| --------- | -------- | ------------------------------------- | ------------------------------------------ |
-| `float1`  | 4s       | `translateY(0) rotate(-8deg)`         | `translateY(-15px) rotate(-5deg)`          |
-| `float2`  | 5s       | `translateY(0) rotate(2deg)`          | `translateY(-12px) rotate(0deg)`           |
-| `float3`  | 4.5s     | `translateY(0) rotate(6deg)`          | `translateY(-18px) rotate(8deg)`           |
-| `float4`  | 5.5s     | `translateY(0) rotate(-5deg)`         | `translateY(-12px) rotate(-3deg)`          |
-| `float5`  | 4.8s     | `translateY(0) rotate(4deg)`          | `translateY(-14px) rotate(6deg)`           |
+| Animation | Duration | Keyframe 0%/100%                      | Keyframe 50%                               | Vertical Travel | Rotation Range |
+| --------- | -------- | ------------------------------------- | ------------------------------------------ | --------------- | -------------- |
+| `float1`  | 4.0s     | `translateY(0) rotate(-8deg)`         | `translateY(-15px) rotate(-5deg)`          | 15px            | 3deg           |
+| `float2`  | 5.0s     | `translateY(0) rotate(15deg)`         | `translateY(-12px) rotate(12deg)`          | 12px            | 3deg           |
+| `float3`  | 4.5s     | `translateY(0) rotate(6deg)`          | `translateY(-18px) rotate(8deg)`           | 18px            | 2deg           |
+| `float4`  | 5.5s     | `translateY(0) rotate(-5deg)`         | `translateY(-12px) rotate(-3deg)`          | 12px            | 2deg           |
+| `float5`  | 4.8s     | `translateY(0) rotate(4deg)`          | `translateY(-14px) rotate(6deg)`           | 14px            | 2deg           |
 
 **Shared Characteristics**:
 
@@ -195,8 +195,12 @@ Five variations create a natural, organic floating effect for book covers in the
 - Direction: `normal`
 - Pattern: Sinusoidal movement (smooth up and down, peaks at 50%)
 - Apply with: `animation: float1 4s ease-in-out infinite;` (replace with appropriate float animation)
+- Vertical travel range: 12px to 18px (gentle bobbing)
+- Rotation change per cycle: 2-3 degrees (subtle tilting)
 
-**Purpose**: Creates a whimsical, storybook atmosphere where books appear to float gently in space.
+**Context**: These animations are applied to the 5 floating book covers that sit along the bottom edge of the hero photo. The different durations (4.0s to 5.5s) ensure the books never synchronize, creating an organic, living feel. See [05-page-patterns.md](05-page-patterns.md) → Hero Section → Floating Books Row for exact positioning details.
+
+**Purpose**: Creates a whimsical, storybook atmosphere where books appear to gently bob and tilt along the edge of the photo, suggesting they are lightly resting on or hovering near the surface.
 
 ---
 
