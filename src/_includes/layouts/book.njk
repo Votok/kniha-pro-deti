@@ -58,7 +58,7 @@ layout: layouts/base.njk
 
         {# Author Line #}
         <p class="text-muted mb-3" style="font-size: 1.125rem;">
-          <strong>Autorky:</strong>
+          <strong>{% if book.authors.text.length > 1 %}Autorky{% else %}Autorka{% endif %}:</strong>
           {% for author in book.authors.text %}
             {{ author }}{% if not loop.last %}, {% endif %}
           {% endfor %}
@@ -144,7 +144,7 @@ layout: layouts/base.njk
       <span class="badge-section-tag mb-3">Ukázky z knihy</span>
       <h2 class="mb-3">Nahlédněte do příběhu</h2>
       <p class="text-muted" style="font-size: 1.125rem;">
-        Přečtěte si knihu ukázky a nechte se vtáhnout do unikátního světa knihy {{ book.title }}
+        {% if book.excerptIntro %}{{ book.excerptIntro }}{% else %}Přečtěte si ukázku knihy a nechte se vtáhnout do unikátního světa knihy {{ book.title }}.{% endif %}
       </p>
     </div>
 

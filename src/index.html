@@ -17,8 +17,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
           </h1>
 
           <p class="lead text-muted mx-auto mx-lg-0" style="max-width: 36rem">
-            Píšeme příběhy pro děti od 5 do 12 let, které učí odvaze, sebedůvěře a zvládání
-            životních výzev. S krásnými ilustracemi, které si zamilujete.
+            Příběhy, které učí odváze, sebedůvěře a zvládání životních výzev. S krásnými ilustracemi, které si zamilujete.
           </p>
 
           <div
@@ -53,7 +52,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
           >
             <div class="trust-indicator">
               <span class="trust-indicator-emoji">📚</span>
-              <span class="trust-indicator-text">8 knih v edici</span>
+              <span class="trust-indicator-text">8 knih v nabídce</span>
             </div>
             <div class="trust-indicator">
               <span class="trust-indicator-emoji">🌱</span>
@@ -148,8 +147,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
       <span class="badge-section-tag mb-3">Naše knihy</span>
       <h2 class="mb-4">Vyberte tu pravou knihu</h2>
       <p class="text-muted">
-        Každá kniha je navržena pro konkrétní věkovou skupinu. Vyberte si podle věku vašeho dítěte
-        nebo si prohlédněte celou kolekci.
+        Objevte příběh pro konkrétní věkovou skupinu.
       </p>
     </div>
 
@@ -192,8 +190,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
                     <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                   </svg>
                   <span class="small fw-semibold"
-                    >{{ book.ageGroup | replace("Pro děti od ", "") | replace(" let", " let") |
-                    replace("let", "let") }}</span
+                    >{{ book.ageGroup | replace("Pro děti ", "") }}</span
                   >
                 </span>
               </div>
@@ -209,16 +206,26 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
             >
             {% elif book.publisher == "Albatros" %}
             <span class="badge bg-secondary text-secondary-fg mb-3 align-self-start"
-              >Albatros Media</span
+              >Albatros</span
             >
             {% elif book.publisher == "Grada" %}
             <span class="badge bg-secondary text-secondary-fg mb-3 align-self-start"
               >Nakladatelství Grada</span
             >
+            {% elif book.publisher == "Pikola" %}
+            <span class="badge bg-secondary text-secondary-fg mb-3 align-self-start"
+              >Nakladatelství Pikola</span
+            >
             {% else %}
             <span class="badge bg-secondary text-secondary-fg mb-3 align-self-start"
-              >Samostatná kniha</span
+              >{{ book.publisher }}</span
             >
+            {% endif %}
+
+            {% if book.badge == "bestseller" %}
+            <span class="badge bg-warning text-dark mb-2 align-self-start">Bestseller</span>
+            {% elif book.badge == "novinka" %}
+            <span class="badge bg-success text-white mb-2 align-self-start">Novinka</span>
             {% endif %}
 
             <!-- Title -->
@@ -230,7 +237,8 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
 
             <!-- Authors -->
             <p class="small text-muted mb-3">
-              {% if book.authors.text.length > 0 %} Autorky: {{ book.authors.text | join(", ") }} {%
+              {% if book.authors.text.length > 1 %} Autorky: {{ book.authors.text | join(", ") }} {%
+              elif book.authors.text.length == 1 %} Autorka: {{ book.authors.text[0] }} {%
               endif %}
             </p>
 
@@ -370,8 +378,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
                 </div>
                 <h3 class="h5 fw-bold mb-2">Hodnoty pro život</h3>
                 <p class="text-muted small mb-0">
-                  Příběhy učí děti odvaze, přátelství, laskavosti a dalším důležitým životním
-                  hodnotám.
+                  Naše příběhy učí děti přátelství, laskavosti, odváze, úctě ke stáří a odhodlání jít si za svými sny.
                 </p>
               </div>
             </div>
@@ -404,7 +411,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
                 </div>
                 <h3 class="h5 fw-bold mb-2">Překrásné ilustrace</h3>
                 <p class="text-muted small mb-0">
-                  Každá stránka je ozdobena ručně malovanými ilustracemi, které oživují příběhy.
+                  Pro naše knihy si vybíráme ty nejlepší české ilustrátory. Jejich osobitost podporuje čtivost příběhu.
                 </p>
               </div>
             </div>
@@ -434,7 +441,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
                 </div>
                 <h3 class="h5 fw-bold mb-2">Zkušené autorky</h3>
                 <p class="text-muted small mb-0">
-                  Autorkami jsou talentované české herečky, které ví, jak zaujmout a pobavit děti.
+                  Jsme herečky, scénáristky a zakladatelky Divadla Láryfáry. Díky mnohaletým zkušenostem víme, jak zaujmout a pobavit dnešní děti.
                 </p>
               </div>
             </div>
@@ -464,8 +471,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
                 </div>
                 <h3 class="h5 fw-bold mb-2">Kvalitní nakladatelství</h3>
                 <p class="text-muted small mb-0">
-                  Spolupracujeme s předním českým nakladatelstvím, které garantuje kvalitní tisk a
-                  vazbu.
+                  Spolupracujeme s předními českými nakladatelstvími, která garantují kvalitní tisk a sazbu.
                 </p>
               </div>
             </div>
@@ -563,7 +569,7 @@ description: "📖 Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajem
             <span class="badge-section-tag mb-3">Naše besedy</span>
             <h2 class="mb-4">Pozvěte autorky k vám</h2>
             <p class="text-muted mb-4" style="max-width: 36rem">
-              Nabízíme autorská čtení a besedy pro školy, školky, knihovny a soukromé akce. Děti se
+              Nabízíme autorská čtení a besedy pro školy, knihovny a kulturní akce. Děti se
               mohou setkat s autorkami osobně.
             </p>
             <a href="besedy.html" class="btn btn-primary btn-lg">

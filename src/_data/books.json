@@ -4,8 +4,8 @@
     "title": "Róza a ztracený tatínek",
     "slug": "roza-a-ztraceny-tatinek",
     "subtitle": null,
-    "summary": "Róza se vydává na cestu plnou dobrodružství. Získává na ní nové přátelství, rodinu, a především víru v sebe sama.",
-    "description": "Nová kniha pro děti od autorek úspěšných knih o Viktorovi a Elišce.",
+    "summary": "Nová kniha od autorky úspěšné série o Elišce. I tentokrát s kouzelnými ilustracemi Evy Chupíkové.",
+    "description": "Proč maminka o tatínkovi nikdy nemluví? Co provedl tak hrozného? A proč babička řekla: Někdy je lepší nevědět? Róza to musí zjistit, i kdyby to bolelo.",
     "cardColor": "140 25% 90%",
     "ageGroup": "Pro děti od 8 do 12 let",
     "year": 2025,
@@ -14,9 +14,11 @@
     "pages": null,
     "cover": "images/knihy/obalka-roza-a-ztraceny-tatinek.jpg",
     "coverThumbnail": "images/knihy/obalka-roza-a-ztraceny-tatinek.jpg",
+    "badge": "novinka",
+    "excerptIntro": "Přečtěte si ukázku knihy a nechte se vtáhnout do světa knihy Róza a ztracený tatínek.",
     "authors": {
-      "text": ["Pavlína Jurková", "Jarmila Vlčková"],
-      "illustrations": ["Petr Korunka"]
+      "text": ["Pavlína Jurková"],
+      "illustrations": ["Eva Chupíková"]
     },
     "buyLinks": [
       {
@@ -27,12 +29,12 @@
     ],
     "excerpts": [
       {
-        "title": "Poslední dny před prázdninami",
+        "title": "Nejlepší učitel všech dob",
         "text": "<p>Jediné, na co Róza poslední dobou dokázala myslet, byly pomalu se blížící prázdniny. Ještě pár dní a odjedou s maminkou do Jánova. Žádná škola, žádné ranní vstávání, ani cvičné diktáty. Róza se bude jen poflakovat. Těšila se na dny, které stráví na samotě. Všude jen hory, les a klid. Dům po babičce v Jeseníkách, kam jezdí každé léto, byl pro ni tím nejkouzelnějším místem na světě.</p><p>Zvonilo už před pár minutami, ale paní učitelka, kterou měli páťáci na přírodopis, nikde. Ve třídě panoval šílený zmatek. Kluci se honili a házeli po sobě bačkorou, holky si v hloučcích povídaly a něčemu se chichotaly. Madla, která s Rózou seděla v lavici, každou chvilku vykoukla ze dveří třídy, zkontrolovala chodbu a zavolala: &bdquo;Vzduch čistej! Ještě nejde.&ldquo;</p><p>V tom největším hluku, a když už to vypadalo, že nikdo nepřijde, se prudce rozrazily dveře a v nich se objevil postrach školy, učitel Legner.</p>",
         "image": "images/ukazky/roza-a-ztraceny-tatinek-1.jpg"
       },
       {
-        "title": "Nemoc na prázdninách",
+        "title": "Divné letní dny",
         "text": "<p>Víte, jak je to s létem. Tak dlouho se na něj těšíte, nemůžete se ho dočkat, a nakonec je všechno jinak, než jste si vysnili. Na začátku prázdnin Róza zuřila, že s nimi do Jánova jede i Patrik s dvojčaty. Nebyli pro ni nic jiného než vetřelci. Když už se s jejich přítomností v babiččině domě smířila, a dokonce se s Lindou a Vojtou skamarádila, přišla zase nemoc.</p><p>Dny v posteli jí připadaly nekonečné a rozvláčné. Pokud zrovna nespala, pozorovala z okna oblohu. Bylo to lepší než kino. V jednom z mraků uviděla obrys babičky, v jiném slona s rozdvojeným chobotem, v dalším stádo beránků. Včera dokonce zahlédla tatínkův obličej. Ale jenom na chvilku. Mraky rychle odpluly a obraz se rozplynul.</p><p>Podívala se na své ruce a prohlížela si je. Vypadaly jako hůlčičky. Je možné, že by za těch pár dní tolik zhubla?</p>",
         "image": "images/ukazky/ukazka-roza-2.jpg"
       }
@@ -64,9 +66,10 @@
     "pages": null,
     "cover": "images/knihy/obalka-eliska-detektiv.jpg",
     "coverThumbnail": "images/knihy/obalka-eliska-detektiv.jpg",
+    "excerptIntro": "Přečtěte si ukázku knihy a nechte se vtáhnout do detektivního světa malé Elišky.",
     "authors": {
-      "text": ["Pavlína Jurková", "Jarmila Vlčková"],
-      "illustrations": ["Petr Korunka"]
+      "text": ["Pavlína Jurková"],
+      "illustrations": ["Eva Chupíková"]
     },
     "buyLinks": [
       {
@@ -114,9 +117,10 @@
     "pages": null,
     "cover": "images/knihy/obalka-eliska-rebelka.jpg",
     "coverThumbnail": "images/knihy/obalka-eliska-rebelka.jpg",
+    "excerptIntro": "Přečtěte si ukázku knihy a nechte se vtáhnout do dobrodružného světa Elišky a Toníčka.",
     "authors": {
-      "text": ["Pavlína Jurková", "Jarmila Vlčková"],
-      "illustrations": ["Petr Korunka"]
+      "text": ["Pavlína Jurková"],
+      "illustrations": ["Eva Chupíková"]
     },
     "buyLinks": [
       {
@@ -165,8 +169,8 @@
     "cover": "images/knihy/obalka-eliska-andilek.jpg",
     "coverThumbnail": "images/knihy/obalka-eliska-andilek.jpg",
     "authors": {
-      "text": ["Pavlína Jurková", "Jarmila Vlčková"],
-      "illustrations": ["Petr Korunka"]
+      "text": ["Pavlína Jurková"],
+      "illustrations": ["Eva Chupíková"]
     },
     "buyLinks": [
       {
@@ -214,14 +218,15 @@
     "pages": null,
     "cover": "images/knihy/obalka-eliska-superbox.jpg",
     "coverThumbnail": "images/knihy/obalka-eliska-superbox.jpg",
+    "badge": "bestseller",
     "authors": {
-      "text": ["Pavlína Jurková", "Jarmila Vlčková"],
-      "illustrations": ["Petr Korunka"]
+      "text": ["Pavlína Jurková"],
+      "illustrations": ["Eva Chupíková"]
     },
     "buyLinks": [
       {
         "retailer": "65. pole",
-        "url": "https://www.65pole.cz/superbox/eliska/",
+        "url": "https://www.65pole.cz/kniha/tri-knihy-o-elisce-superbox/",
         "primary": true
       }
     ],
@@ -246,6 +251,7 @@
     "pages": null,
     "cover": "images/knihy/obalka-viktor-a-pripad-zmizeleho-psa.jpg",
     "coverThumbnail": "images/knihy/obalka-viktor-a-pripad-zmizeleho-psa.jpg",
+    "excerptIntro": "Přečtěte si ukázku knihy a vydejte se společně s Viktorem a Žofíí na detektivní pátrání.",
     "authors": {
       "text": ["Pavlína Jurková", "Jarmila Vlčková"],
       "illustrations": ["Martina Fojtů"]
@@ -264,7 +270,7 @@
         "image": "images/ukazky/lunino-kralovstvi.jpg"
       },
       {
-        "title": "Hlídač",
+        "title": "Oživlé stromy",
         "text": "<p>Hlídač mezitím došel až doprostřed sadu a vztekle se rozhlížel po svém nepříteli. Oháněl se holí a sprostě nadával: &bdquo;Vylez, ty zbabělče, postav se mi jako chlap chlapovi!&ldquo;</p><p>Z jeho hlasu však bylo znát, že začíná mít opravdový strach. Těžce dýchal a jeho kulhání bylo čím dál tím zřetelnější. Opřel se o strom, vytáhl látkový kapesník a otíral si zpocené čelo.</p><p>Vtom zůstal jak opařený. Ucítil, že strom, o který se opírá, se pohnul. Hlídač zavrávoral, a kdyby ho nezachránila jeho hůl, spadl by na zem jako hruška.</p><p>Zíral na strom, který před jeho zraky ožíval. Když se na něj zadíval pozorněji, ucukl. S hrůzou zjistil, že stará jabloň má dokonce oči a ty oči se dívají přímo na něj. Chtěl se rozběhnout a utíkat pryč, ale nohy ho neposlouchaly. Jako by ani nebyly jeho…</p>",
         "image": "images/ukazky/hlidac.jpg"
       }
@@ -296,6 +302,7 @@
     "pages": null,
     "cover": "images/knihy/obalka-viktor-a-zahadna-teta-bobina.jpg",
     "coverThumbnail": "images/knihy/obalka-viktor-a-zahadna-teta-bobina.jpg",
+    "badge": "bestseller",
     "authors": {
       "text": ["Jarmila Vlčková", "Pavlína Jurková"],
       "illustrations": ["Martina Fojtů"]
@@ -314,7 +321,7 @@
         "image": "images/ukazky/hrbitov.jpg"
       },
       {
-        "title": "Bobina a žigulík",
+        "title": "Výlet žigulíkem",
         "text": "<p>Pan Jaroslav se dozvěděl, že Bobina vlastní řidičský průkaz, ale už léta letoucí neřídila. A tak přišel s tím nesmyslným nápadem, že jí dá lekce řízení, aby si po těch letech připomněla, jak se řídí automobil.</p><p>Ráno ji vyzvedl svým naleštěným žigulíkem. Všichni jsme se sešli před brankou. Bobina si sedla za volant a pokusila se nastartovat. Auto několikrát zakuckalo, potom poskočilo a zase ztichlo. Z otevřeného okénka jsme zaslechli smích pana Jaroslava. Bobina se však nesmála.</p><p>Začala si kousat spodní ret, pevně stiskla volant a znovu nastartovala. Nic. A pak znovu. Zase nic. To se opakovalo ještě několikrát.</p><p>Když se auto po mnoha marných pokusech konečně rozjelo, všichni jsme si oddechli. Mávali jsme jim a jásali jsme, dokud nezmizeli za zatáčkou. Jenže když se setmělo a ti dva se nevrátili, začali jsme o ně mít strach.</p>",
         "image": "images/ukazky/ziguli.jpg"
       }
@@ -347,13 +354,14 @@
     "cardColor": "35 25% 88%",
     "ageGroup": "Pro děti od 9 do 12 let",
     "year": 2022,
-    "publisher": "Booktook.cz",
+    "publisher": "Pikola",
     "isbn": "",
     "pages": null,
     "cover": "images/knihy/obalka-tajemstvi-rodiny-m.jpg",
     "coverThumbnail": "images/knihy/obalka-tajemstvi-rodiny-m.jpg",
+    "excerptIntro": "Přečtěte si ukázku knihy a nechte se vtáhnout do světa jedné obyčejné rodiny.",
     "authors": {
-      "text": ["Pavlína Jurková", "Jarmila Vlčková"],
+      "text": ["Pavlína Jurková"],
       "illustrations": []
     },
     "buyLinks": [
@@ -361,10 +369,6 @@
         "retailer": "Luxor",
         "url": "https://www.luxor.cz/v/1874118/tajemstvi-rodiny-m",
         "primary": true
-      },
-      {
-        "retailer": "Booktook.cz",
-        "url": "https://www.booktook.cz/p/tajemstvi-rodiny-m/"
       }
     ],
     "excerpts": [
@@ -419,12 +423,12 @@
     "excerpts": [
       {
         "title": "Geniální dárek pro mecenáše",
-        "text": "<p>Leon našel v zahradě mrtvého hraboše a rozhodl se ho vypreparovat. Byl si jistý, že právě to bude geniální dárek pro mecenáše.</p><p>Dal si na nos kolíček na prádlo, aby necítil ten strašný smrad, který se z hraboše linul, oblékl si bílý plášť a na ruce si navlékl gumové rukavice.</p>",
+        "text": "<p>Leon našel v zahradě mrtvého hraboše a rozhodl se ho vypreparovat. Byl si jistý, že právě to bude geniální dárek pro mecenáše.</p><p>Dal si na nos kolíček na prádlo, aby necítil ten strašný smrad, který se z hraboše linul, oblékl si bílý plášť a na ruce si navlékl gumové rukavice.</p><p>Ema si lehla mezi krabice se zkumavkami a unavenýma očima ho pozorovala, jak zkušeně rozřezává hrabošovi břicho. Když začal pomalu vyndavat vnitřnosti, poprosila ho také o kolíček. Dál se už raději nedívala. Otočila se ke stěně, hlavu si přikryla svetrem a po chvíli vyčerpáním usnula.</p><p>Leon zatím hrabošovi stáhl kůži, odstranil mu oční bulvy a vyndal mozek z mozkovny.</p>",
         "image": "images/ukazky/hra-o-sen.jpg"
       },
       {
         "title": "Limuzína se rozjela",
-        "text": "<p>…Limuzína se rozjela. Leon to nevydržel a rýpnul si: &bdquo;Ty jsi ten geniální spisovatel s příšernou matkou, viď? To byla ona, cos jí mával?&ldquo;</p><p>Filipovi se nechtělo znovu vysvětlovat, jak to režisér schválně celé sestříhal, aby z toho maminka vyšla jako fúrie.</p>",
+        "text": "<p>…Limuzína se rozjela. Leon to nevydržel a rýpnul si: &bdquo;Ty jsi ten geniální spisovatel s příšernou matkou, viď? To byla ona, cos jí mával?&ldquo;</p><p>Filipovi se nechtělo znovu vysvětlovat, jak to režisér schválně celé sestříhal, aby z toho maminka vyšla jako fúrie.</p><p>Naštěstí nemusel říkat vůbec nic.</p><p>Zastal se ho vysoký hubený kluk: &bdquo;Buď v klidu. Ze mě taky udělali blbečka. Místo toho, aby ukázali, jak jsem dobrej v matice, pořád točili mýho tátu na vozíku a mámu, jak ho krmí kaší. Ale co,&ldquo; povzdechl si poohodil patkou, která mu neustále padala do očí, &bdquo;alespoň mi lidi poslali hlasy.&ldquo; Kývl hlavou k Filipovi a usmál se: &bdquo;Já jsem Adam.&ldquo;</p>",
         "image": "images/ukazky/hra-o-sen-adam.jpg"
       }
     ],
