@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: Tvoříme společně
+title: Pavlína Jurková a Jarmila Vlčková — české autorky knih pro děti
 description: Seznamte se s autorkami a ilustrátory našich knih
 permalink: /autori.html
 ---
@@ -23,9 +23,7 @@ permalink: /autori.html
   <div class="container">
     {# Author Cards - Full width, alternating layout #}
     <div class="authors-list">
-      {% for author in authors %}
-        {% include "components/author-card.njk" %}
-      {% endfor %}
+      {% for author in authors %} {% include "components/author-card.njk" %} {% endfor %}
     </div>
   </div>
 </section>

@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   {# Use book.title for book pages, otherwise use title from front matter #}
-  {% set pageTitle = book.title if book else title %}
-  {% set pageDescription = book.summary if book else description %}
+  {% set pageTitle = (book.title + ' – ' + (book.ageGroup | lower)) if book else title %}
+  {% set pageDescription = book.description if book else description %}
   <title>{{ pageTitle }} | {{ site.name }}</title>
   <meta name="description" content="{{ pageDescription | default(site.description) }}">
 

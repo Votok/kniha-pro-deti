@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: Galerie
+title: Galerie z autorských čtení a křtů knih
 description: Fotografie ze křtů knih, setkání se čtenáři a další momentky
 permalink: /galerie.html
 ---
@@ -34,9 +34,21 @@ permalink: /galerie.html
     <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
       {% for image in section.images %}
       <div class="col">
-        <a href="{{ image.src }}" class="glightbox position-relative d-block overflow-hidden rounded shadow-sm" data-gallery="{{ section.slug }}">
-          <img src="{{ image.src }}" alt="{{ image.alt }}" class="img-fluid w-100 object-fit-cover" style="height: 250px;" loading="lazy">
-          <div class="position-absolute bottom-0 start-0 p-3 w-100 text-white bg-dark bg-opacity-50 opacity-0 hover-opacity-100 transition-opacity">
+        <a
+          href="{{ image.src }}"
+          class="glightbox position-relative d-block overflow-hidden rounded shadow-sm"
+          data-gallery="{{ section.slug }}"
+        >
+          <img
+            src="{{ image.src }}"
+            alt="{{ image.alt }}"
+            class="img-fluid w-100 object-fit-cover"
+            style="height: 250px"
+            loading="lazy"
+          />
+          <div
+            class="position-absolute bottom-0 start-0 p-3 w-100 text-white bg-dark bg-opacity-50 opacity-0 hover-opacity-100 transition-opacity"
+          >
             <small>{{ image.alt }}</small>
           </div>
         </a>
@@ -48,11 +60,11 @@ permalink: /galerie.html
 </section>
 
 <style>
-/* Simple hover effect for captions */
-.hover-opacity-100:hover {
-  opacity: 1 !important;
-}
-.transition-opacity {
-  transition: opacity 0.3s ease;
-}
+  /* Simple hover effect for captions */
+  .hover-opacity-100:hover {
+    opacity: 1 !important;
+  }
+  .transition-opacity {
+    transition: opacity 0.3s ease;
+  }
 </style>
