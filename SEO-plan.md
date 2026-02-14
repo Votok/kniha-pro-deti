@@ -27,28 +27,28 @@
 
 ## Fáze 2: Optimalizace titulků a popisků stránek
 
-### 4. Titulek homepage
+### 4. ~~Titulek homepage~~ ✅
 
 - **Soubor:** `src/index.html` (front matter)
 - **Změna:** `Píšeme příběhy, které pomáhají dětem růst` → `České knihy pro děti 5–13 let od Pavlíny Jurkové a Jarmily Vlčkové`
 
-### 5. Meta description homepage
+### 5. ~~Meta description homepage~~ ✅
 
 - **Soubor:** `src/index.html` (front matter)
 - **Změna:** Odstranit emoji, přidat klíčová slova: _„České knihy pro děti od 5 do 13 let. Příběhy od Pavlíny Jurkové a Jarmily Vlčkové, které učí odvaze, přátelství a sebedůvěře. 8 knih s krásnými ilustracemi od českých ilustrátorů."_
 
-### 6. Titulky knihových stránek — přidat věkovou skupinu
+### 6. ~~Titulky knihových stránek — přidat věkovou skupinu~~ ✅
 
 - **Soubor:** `src/_includes/layouts/base.njk`
 - **Změna:** `{book.title} | Kniha pro děti` → `{book.title} – {ageGroup} | Kniha pro děti`
 - Např.: _„Eliška andílek – pro děti od 5 do 9 let | Kniha pro děti"_
 
-### 7. Meta description knihových stránek — použít description místo summary
+### 7. ~~Meta description knihových stránek — použít description místo summary~~ ✅
 
 - **Soubor:** `src/_includes/layouts/base.njk`
 - **Změna:** `book.summary` (krátký) → `book.description` (delší, bohatší na klíčová slova)
 
-### 8. Opravit generické titulky ostatních stránek
+### 8. ~~Opravit generické titulky ostatních stránek~~ ✅
 
 - `src/autori.html`: `Tvoříme společně` → `Pavlína Jurková a Jarmila Vlčková — české autorky knih pro děti`
 - `src/galerie.html`: `Galerie` → `Galerie z autorských čtení a křtů knih`
@@ -58,7 +58,7 @@
 
 ## Fáze 3: Klíčová slova v on-page textech
 
-### 9. Alt texty obálek knih na homepage
+### 9. ~~Alt texty obálek knih na homepage~~ ✅
 
 - **Soubor:** `src/index.html` (books grid)
 - **Změna:** `alt="{{ book.title }}"` → `alt="Obálka knihy {{ book.title }} – {{ book.ageGroup | lower }}"`
@@ -67,22 +67,22 @@
 
 ## Fáze 4: Vylepšení strukturovaných dat (Schema.org)
 
-### 11. Přidat description, url a typicalAgeRange do Book schema
+### 11. ~~Přidat description, url a typicalAgeRange do Book schema~~ ✅
 
 - **Soubor:** `src/_includes/components/schema-book.njk`
 - Přidat: `"description"`, `"url"`, `"typicalAgeRange"` (např. `"5-9"` extrahovaný z `ageGroup`)
 
-### 12. Přidat Offer do Book schema
+### 12. ~~Přidat Offer do Book schema~~ ✅
 
 - **Soubor:** `src/_includes/components/schema-book.njk`
 - Vyjádřit nákupní odkazy jako `"offers": { "@type": "Offer", "url": "...", "availability": "InStock" }`
 
-### 13. Přidat BreadcrumbList schema na knihové stránky
+### 13. ~~Přidat BreadcrumbList schema na knihové stránky~~ ✅
 
 - **Soubor:** `src/_includes/layouts/book.njk` nebo `schema-book.njk`
 - Drobečková navigace je vizuálně přítomná, ale chybí v JSON-LD: Úvod → Knihy → {Název knihy}
 
-### 14. Přidat WebSite + Organization schema na homepage
+### 14. ~~Přidat WebSite + Organization schema na homepage~~ ✅
 
 - **Soubor:** `src/_includes/layouts/base.njk`
 - Přidat JSON-LD pro identitu webu a organizace (pouze na homepage)
@@ -91,7 +91,7 @@
 
 ## Fáze 5: Interní prolinkování
 
-### 15. Přidat odkazy na knihy do patičky
+### 15. ~~Přidat odkazy na knihy do patičky~~ ✅
 
 - **Soubor:** `src/_includes/components/footer.njk`
 - Přidat sloupec „Naše knihy" s odkazy na všechny knihové stránky — distribuuje link equity z každé stránky
