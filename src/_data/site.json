@@ -1,12 +1,12 @@
 {
   "name": "Kniha pro děti",
-  "title": "Kniha pro děti | čtěte a staňte se hrdinou našich příběhů",
-  "description": "Čtou vaše děti? A čtete vy jim? Zábava i napětí, tajemství a nakonec rozuzlení. Naše knihy pro zvídavé děti, rodiče i prarodiče.",
+  "title": "České knihy pro děti 5–13 let | Kniha pro děti",
+  "description": "České knihy pro děti od 5 do 13 let. Příběhy od Pavlíny Jurkové a Jarmily Vlčkové, které učí odvaze, přátelství a sebedůvěře. 8 knih s krásnými ilustracemi od českých ilustrátorů.",
   "url": "https://www.knihaprodeti.cz",
   "lang": "cs",
   "locale": "cs_CZ",
   "og": {
-    "image": "images/hero/kniha-pro-deti-900.jpg"
+    "image": "images/hero/kniha-pro-deti.jpg"
   },
   "themeColor": "#ca6d1b"
 }

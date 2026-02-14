@@ -36,8 +36,8 @@
   <meta property="og:title" content="{{ pageTitle }} | {{ site.name }}">
   <meta property="og:description" content="{{ pageDescription | default(site.description) }}">
   <meta property="og:image" content="{{ site.url }}/{{ (book.cover if book else ogImage) | default(site.og.image) }}">
-  <meta property="og:image:width" content="{{ ogImageWidth | default('900') }}">
-  <meta property="og:image:height" content="{{ ogImageHeight | default('900') }}">
+  <meta property="og:image:width" content="{{ ogImageWidth | default('1600') }}">
+  <meta property="og:image:height" content="{{ ogImageHeight | default('878') }}">
   <meta property="og:image:alt" content="{{ ('Obálka knihy ' + book.title) if book else (ogImageAlt | default(pageTitle)) }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:type" content="{{ 'book' if book else (ogType | default('website')) }}">
