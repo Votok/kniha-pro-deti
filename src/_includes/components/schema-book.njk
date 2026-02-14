@@ -22,14 +22,8 @@
   "bookFormat": "Hardcover",
   "inLanguage": "cs",
   {% if book.pages %}"numberOfPages": {{ book.pages }},{% endif %}
-  "image": "{{ site.url }}{{ book.cover }}"{% if book.isbn %},
+  "image": "{{ site.url }}/{{ book.cover }}"{% if book.isbn %},
   "isbn": "{{ book.isbn }}"{% endif %}
-  {% if book.testimonials and book.testimonials.length > 0 %},
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "{% if book.testimonials[0].rating %}{{ book.testimonials[0].rating }}{% else %}5{% endif %}",
-    "reviewCount": {{ book.testimonials.length }}
-  }
-  {% endif %}
+
 }
 </script>
