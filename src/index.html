@@ -170,7 +170,7 @@ description: "České knihy pro děti od 5 do 13 let. Příběhy od Pavlíny Jur
             >
               <img
                 src="{{ book.cover }}"
-                alt="{{ book.title }}"
+                alt="Obálka knihy {{ book.title }} – {{ book.ageGroup | lower }}"
                 class="w-100 h-100 object-fit-cover shadow-soft"
                 loading="lazy"
               />

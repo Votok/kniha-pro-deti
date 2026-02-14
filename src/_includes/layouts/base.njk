@@ -51,6 +51,33 @@
   <meta name="twitter:image:alt" content="{{ ('Obálka knihy ' + book.title) if book else (ogImageAlt | default(pageTitle)) }}">
 
   {% block schemaOrg %}{% endblock %}
+
+  {# WebSite + Organization schema - only on homepage #}
+  {% if page.url == '/' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ site.name }}",
+    "url": "{{ site.url }}",
+    "description": "{{ site.description }}",
+    "inLanguage": "cs",
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ site.name }}",
+      "url": "{{ site.url }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ site.url }}/{{ site.og.image }}"
+      },
+      "sameAs": [
+        "https://www.facebook.com/knihaprodeti/",
+        "https://www.instagram.com/knizkomilky/"
+      ]
+    }
+  }
+  </script>
+  {% endif %}
 </head>
 
 <body>

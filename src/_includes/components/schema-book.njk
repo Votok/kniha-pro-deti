@@ -4,6 +4,8 @@
   "@context": "https://schema.org",
   "@type": "Book",
   "name": "{{ book.title }}",
+  "description": "{{ book.description | replace('"', '\\"') }}",
+  "url": "{{ site.url }}/{{ book.slug }}.html",
   "author": [
     {% for author in book.authors.text %}
     { "@type": "Person", "name": "{{ author }}" }{% if not loop.last %},{% endif %}
@@ -21,9 +23,50 @@
   },
   "bookFormat": "Hardcover",
   "inLanguage": "cs",
+  "typicalAgeRange": "{{ book.ageGroup | replace('Pro děti od ', '') | replace(' do ', '-') | replace(' let', '') }}",
   {% if book.pages %}"numberOfPages": {{ book.pages }},{% endif %}
   "image": "{{ site.url }}/{{ book.cover }}"{% if book.isbn %},
-  "isbn": "{{ book.isbn }}"{% endif %}
+  "isbn": "{{ book.isbn }}"{% endif %}{% if book.buyLinks and book.buyLinks.length > 0 %},
+  "offers": [
+    {% for link in book.buyLinks %}
+    {
+      "@type": "Offer",
+      "url": "{{ link.url }}",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "Organization",
+        "name": "{{ link.retailer }}"
+      }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]{% endif %}
+}
+</script>
 
+{# BreadcrumbList JSON-LD #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Úvod",
+      "item": "{{ site.url }}/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Knihy",
+      "item": "{{ site.url }}/#knihy"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ book.title }}",
+      "item": "{{ site.url }}/{{ book.slug }}.html"
+    }
+  ]
 }
 </script>

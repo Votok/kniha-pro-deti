@@ -62,13 +62,26 @@
         </div>
       </div>
 
-      <!-- Navigation Column -->
-      <div class="col-12 col-lg-6 d-flex align-items-center justify-content-lg-end">
-        <nav class="footer-nav d-flex flex-wrap gap-4 gap-lg-5">
-          {% for item in navigation.main %}
-          <a href="{{ item.url }}" class="footer-nav-link">{{ item.title }}</a>
+      <!-- Books Column -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <h6 class="fw-bold mb-3" style="color: hsl(var(--color-background) / 0.9)">Naše knihy</h6>
+        <nav class="d-flex flex-column gap-2">
+          {% for book in books %}
+          <a href="{{ book.slug }}.html" class="footer-nav-link">{{ book.title }}</a>
           {% endfor %}
         </nav>
+      </div>
+
+      <!-- Navigation Column -->
+      <div class="col-12 col-sm-6 col-lg-3 d-flex align-items-start justify-content-lg-end">
+        <div>
+          <h6 class="fw-bold mb-3" style="color: hsl(var(--color-background) / 0.9)">Navigace</h6>
+          <nav class="footer-nav d-flex flex-column gap-2">
+            {% for item in navigation.main %}
+            <a href="{{ item.url }}" class="footer-nav-link">{{ item.title }}</a>
+            {% endfor %}
+          </nav>
+        </div>
       </div>
     </div>
 
