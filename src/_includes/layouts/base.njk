@@ -4,8 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{{ title }} | {{ site.name }}</title>
-  <meta name="description" content="{{ description | default(site.description) }}">
+  {# Use book.title for book pages, otherwise use title from front matter #}
+  {% set pageTitle = book.title if book else title %}
+  {% set pageDescription = book.summary if book else description %}
+  <title>{{ pageTitle }} | {{ site.name }}</title>
+  <meta name="description" content="{{ pageDescription | default(site.description) }}">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,22 +33,22 @@
   <!-- Canonical & OG -->
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
   <meta property="og:site_name" content="{{ site.name }}">
-  <meta property="og:title" content="{{ title }} | {{ site.name }}">
-  <meta property="og:description" content="{{ description | default(site.description) }}">
-  <meta property="og:image" content="{{ site.url }}{{ ogImage | default(site.og.image) }}">
+  <meta property="og:title" content="{{ pageTitle }} | {{ site.name }}">
+  <meta property="og:description" content="{{ pageDescription | default(site.description) }}">
+  <meta property="og:image" content="{{ site.url }}{{ (book.cover if book else ogImage) | default(site.og.image) }}">
   <meta property="og:image:width" content="{{ ogImageWidth | default('900') }}">
   <meta property="og:image:height" content="{{ ogImageHeight | default('900') }}">
-  <meta property="og:image:alt" content="{{ ogImageAlt | default(title) }}">
+  <meta property="og:image:alt" content="{{ ('Obálka knihy ' + book.title) if book else (ogImageAlt | default(pageTitle)) }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-  <meta property="og:type" content="{{ ogType | default('website') }}">
+  <meta property="og:type" content="{{ 'book' if book else (ogType | default('website')) }}">
   <meta property="og:locale" content="{{ site.locale }}">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ title }} | {{ site.name }}">
-  <meta name="twitter:description" content="{{ description | default(site.description) }}">
-  <meta name="twitter:image" content="{{ site.url }}{{ ogImage | default(site.og.image) }}">
-  <meta name="twitter:image:alt" content="{{ ogImageAlt | default(title) }}">
+  <meta name="twitter:title" content="{{ pageTitle }} | {{ site.name }}">
+  <meta name="twitter:description" content="{{ pageDescription | default(site.description) }}">
+  <meta name="twitter:image" content="{{ site.url }}{{ (book.cover if book else ogImage) | default(site.og.image) }}">
+  <meta name="twitter:image:alt" content="{{ ('Obálka knihy ' + book.title) if book else (ogImageAlt | default(pageTitle)) }}">
 
   {% block schemaOrg %}{% endblock %}
 </head>

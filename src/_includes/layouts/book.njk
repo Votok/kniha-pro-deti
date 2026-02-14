@@ -2,12 +2,6 @@
 layout: layouts/base.njk
 ---
 
-{% set title = book.title %}
-{% set description = book.summary %}
-{% set ogImage = book.cover %}
-{% set ogType = "book" %}
-{% set ogImageAlt = "Obálka knihy " + book.title %}
-
 {% block schemaOrg %}
   {% include "components/schema-book.njk" %}
 {% endblock %}
