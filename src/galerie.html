@@ -5,6 +5,48 @@ description: Fotografie ze křtů knih, setkání se čtenáři a další moment
 permalink: /galerie.html
 ---
 
+{# BreadcrumbList JSON-LD #}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Úvod",
+        "item": "{{ site.url }}/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Galerie",
+        "item": "{{ site.url }}/galerie.html"
+      }
+    ]
+  }
+</script>
+
+{# ImageGallery JSON-LD — galerie fotografií #} {% for section in galleries %}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": "{{ section.title }}",
+    "url": "{{ site.url }}/galerie.html",
+    "image": [
+      {% for image in section.images %}
+      {
+        "@type": "ImageObject",
+        "url": "{{ site.url }}/{{ image.src }}",
+        "name": "{{ image.alt }}"
+      }{% if not loop.last %},{% endif %}
+      {% endfor %}
+    ]
+  }
+</script>
+{% endfor %}
+
 <!-- Hero Section -->
 <section class="section-padding bg-gradient-hero">
   <div class="container">

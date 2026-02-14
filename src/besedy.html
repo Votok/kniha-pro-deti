@@ -5,6 +5,106 @@ description: Nabízíme autorská čtení a besedy pro školy, knihovny a speci�
 permalink: /besedy.html
 ---
 
+{# BreadcrumbList JSON-LD #}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Úvod",
+        "item": "{{ site.url }}/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Besedy",
+        "item": "{{ site.url }}/besedy.html"
+      }
+    ]
+  }
+</script>
+
+{# Service JSON-LD — autorské besedy jako služba #}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Autorské besedy pro školy a knihovny",
+    "description": "Nabízíme autorská čtení a besedy pro školy, knihovny a speciální akce. Děti se mohou setkat s autorkami osobně, poslechnout si příběhy a nahlédnout do tajů spisovatelského řemesla.",
+    "url": "{{ site.url }}/besedy.html",
+    "provider": [
+      {
+        "@type": "Person",
+        "@id": "{{ site.url }}/autori.html#pavlina-jurkova",
+        "name": "Pavlína Jurková"
+      },
+      {
+        "@type": "Person",
+        "@id": "{{ site.url }}/autori.html#jarmila-vlckova",
+        "name": "Jarmila Vlčková"
+      }
+    ],
+    "areaServed": {
+      "@type": "Country",
+      "name": "Česká republika"
+    },
+    "audience": {
+      "@type": "EducationalAudience",
+      "educationalRole": "student",
+      "audienceType": "Děti 1.–9. třídy ZŠ"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Programy besed",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Čert nebo andílek?",
+            "description": "Beseda podle knihy Eliška andílek. Děti se seznámí s příběhem Elišky a otevřou témata přátelství a vztahů ve třídě. Pro 1. až 3. třídu, 90 minut."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Nakresli si svého starouška",
+            "description": "Beseda podle knihy Viktor a záhadná teta Bobina. Otevírá téma mezigeneračních vztahů a rodinných vzpomínek. Pro 2. až 4. třídu, 90 minut."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Jdi za svým snem",
+            "description": "Beseda podle knihy Hra o sen. Děti nahlédnou do zákulisí psaní knih a ponoří se do světa fake news. Pro 5. až 9. třídu, 90 minut."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Každá rodina má své tajemství",
+            "description": "Beseda podle knihy Tajemství rodiny M. Povídáme si o přátelství, rodině a jak vzniká knížka. Pro 4. až 5. třídu, 90 minut."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Róza a strom života",
+            "description": "Beseda ke knize Róza a ztracený tatínek. Vyprávíme si o odvaze lišit se a jak se píše knížka. Pro 4. až 5. třídu, 60 minut."
+          }
+        }
+      ]
+    }
+  }
+</script>
+
 <!-- Hero Section -->
 <section class="hero-section position-relative overflow-hidden bg-gradient-hero">
   <div class="container position-relative">

@@ -5,6 +5,28 @@ description: Seznamte se s autorkami a ilustrátory našich knih
 permalink: /autori.html
 ---
 
+{# Person + BreadcrumbList JSON-LD #} {% include "components/schema-person.njk" %}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Úvod",
+        "item": "{{ site.url }}/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Autoři",
+        "item": "{{ site.url }}/autori.html"
+      }
+    ]
+  }
+</script>
+
 <!-- Hero Section -->
 <section class="section-padding bg-gradient-hero">
   <div class="container">

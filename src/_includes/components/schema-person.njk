@@ -1,0 +1,20 @@
+{# Schema.org Person JSON-LD pro stránku Autoři #}
+{% for author in authors %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "{{ site.url }}/autori.html#{{ author.id }}",
+  "name": "{{ author.name }}",
+  "url": "{{ site.url }}/autori.html#{{ author.id }}",
+  "image": "{{ site.url }}/{{ author.photo }}",
+  "jobTitle": "{% if author.title %}{{ author.title }}{% elif author.role == 'author' %}{% if author.gender == 'female' %}spisovatelka{% else %}spisovatel{% endif %}{% else %}{% if author.gender == 'female' %}ilustrátorka{% else %}ilustrátor{% endif %}{% endif %}"{% if author.links %},
+  "sameAs": [
+    {% set linkList = [] %}
+    {% for key, url in author.links %}
+    "{{ url }}"{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]{% endif %}
+}
+</script>
+{% endfor %}

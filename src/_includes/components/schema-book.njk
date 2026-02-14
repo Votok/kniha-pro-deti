@@ -11,11 +11,13 @@
     { "@type": "Person", "name": "{{ author }}" }{% if not loop.last %},{% endif %}
     {% endfor %}
   ],
+  {% if book.authors.illustrations and book.authors.illustrations.length > 0 %}
   "illustrator": [
     {% for illustrator in book.authors.illustrations %}
     { "@type": "Person", "name": "{{ illustrator }}" }{% if not loop.last %},{% endif %}
     {% endfor %}
   ],
+  {% endif %}
   "datePublished": "{{ book.publishedDate }}",
   "publisher": {
     "@type": "Organization",
@@ -70,3 +72,25 @@
   ]
 }
 </script>
+
+{# BookSeries JSON-LD — propojení knih v sérii #}
+{% if book.series %}
+{% set seriesBooks = books | selectattr("series", "equalto", book.series) %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BookSeries",
+  "name": "Série {{ book.series }}",
+  "url": "{{ site.url }}/#knihy",
+  "hasPart": [
+    {% for b in seriesBooks %}
+    {
+      "@type": "Book",
+      "name": "{{ b.title }}",
+      "url": "{{ site.url }}/{{ b.slug }}.html"
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}

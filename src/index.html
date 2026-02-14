@@ -4,6 +4,28 @@ title: České knihy pro děti 5–13 let od Pavlíny Jurkové a Jarmily Vlčkov
 description: "České knihy pro děti od 5 do 13 let. Příběhy od Pavlíny Jurkové a Jarmily Vlčkové, které učí odvaze, přátelství a sebedůvěře. 8 knih s krásnými ilustracemi od českých ilustrátorů."
 ---
 
+{# ItemList JSON-LD — karusel knih ve vyhledávání #}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "České knihy pro děti od Pavlíny Jurkové a Jarmily Vlčkové",
+    "itemListOrder": "https://schema.org/ItemListUnordered",
+    "numberOfItems": {{ books.length }},
+    "itemListElement": [
+      {% for book in books %}
+      {
+        "@type": "ListItem",
+        "position": {{ loop.index }},
+        "url": "{{ site.url }}/{{ book.slug }}.html",
+        "name": "{{ book.title }}",
+        "image": "{{ site.url }}/{{ book.cover }}"
+      }{% if not loop.last %},{% endif %}
+      {% endfor %}
+    ]
+  }
+</script>
+
 <!-- Hero Section -->
 <section class="hero-section position-relative overflow-hidden bg-gradient-hero">
   <div class="container position-relative">
@@ -17,8 +39,8 @@ description: "České knihy pro děti od 5 do 13 let. Příběhy od Pavlíny Jur
           </h1>
 
           <p class="lead text-muted mx-auto mx-lg-0" style="max-width: 36rem">
-            Příběhy, které učí odvaze, sebedůvěře a zvládání životních výzev. S krásnými
-            ilustracemi, které si zamilujete.
+            Příběhy od Pavlíny Jurkové a Jarmily Vlčkové, které učí odvaze, přátelství a sebedůvěře.
+            S krásnými ilustracemi, které si zamilujete.
           </p>
 
           <div
@@ -153,8 +175,8 @@ description: "České knihy pro děti od 5 do 13 let. Příběhy od Pavlíny Jur
     <!-- Section Header -->
     <div class="text-center mx-auto mb-5 mb-lg-6" style="max-width: 48rem">
       <span class="badge-section-tag mb-3">Naše knihy</span>
-      <h2 class="mb-4">Vyberte tu pravou knihu</h2>
-      <p class="text-muted">Objevte příběh pro konkrétní věkovou skupinu.</p>
+      <h2 class="mb-4">České knihy pro děti od 5 do 13 let</h2>
+      <p class="text-muted">Vyberte tu pravou knihu</p>
     </div>
 
     <!-- Books Grid -->

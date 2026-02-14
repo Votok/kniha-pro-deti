@@ -5,6 +5,28 @@ description: Přehled rozhovorů, recenzí a mediálních vystoupení o nás a n
 permalink: /media.html
 ---
 
+{# BreadcrumbList JSON-LD #}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Úvod",
+        "item": "{{ site.url }}/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Média",
+        "item": "{{ site.url }}/media.html"
+      }
+    ]
+  }
+</script>
+
 <!-- Hero Section -->
 <section class="section-padding bg-gradient-hero">
   <div class="container">
