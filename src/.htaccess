@@ -17,8 +17,14 @@ RewriteRule ^ https://www.knihaprodeti.cz%{REQUEST_URI} [L,R=301]
 # autori-knihy.html -> autori.html
 RewriteRule ^autori-knihy\.html$ /autori.html [R=301,L]
 
+# autorky-knihy.html -> autori.html
+RewriteRule ^autorky-knihy\.html$ /autori.html [R=301,L]
+
 # nase-knihy.html -> index.html (books section is now on homepage)
 RewriteRule ^nase-knihy\.html$ / [R=301,L]
+
+# koupit-knihu.html -> index.html (buy links are now on individual book pages)
+RewriteRule ^koupit-knihu\.html$ / [R=301,L]
 
 # ===========================================
 # Cache Headers
