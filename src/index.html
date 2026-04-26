@@ -251,6 +251,9 @@ description: "České knihy pro děti od 5 do 13 let. Příběhy od Pavlíny Jur
             {% elif book.badge == "novinka" %}
             <span class="badge bg-success text-white mb-2 align-self-start">Novinka</span>
             {% endif %}
+            {% if book.seriesNumber %}
+            <span class="badge mb-2 align-self-start" style="background: hsl(45 75% 82%); color: hsl(30 40% 30%);">{{ book.seriesNumber }}. díl série</span>
+            {% endif %}
 
             <!-- Title -->
             <h3 class="h5 fw-bold mb-2">
@@ -266,15 +269,7 @@ description: "České knihy pro děti od 5 do 13 let. Příběhy od Pavlíny Jur
             </p>
 
             <!-- Summary -->
-            <p
-              class="text-muted mb-4 flex-grow-1"
-              style="
-                display: -webkit-box;
-                -webkit-line-clamp: 3;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
-              "
-            >
+            <p class="text-muted mb-4 flex-grow-1">
               {{ book.summary }}
             </p>
 
@@ -331,7 +326,10 @@ description: "České knihy pro děti od 5 do 13 let. Příběhy od Pavlíny Jur
                 </svg>
                 Koupit
               </a>
-              {% endif %} {% endif %}
+              {% endif %}
+              {% else %}
+              <span class="btn btn-outline-secondary flex-fill disabled">Brzy k dostání</span>
+              {% endif %}
               <a href="{{ book.slug }}.html" class="btn btn-outline-primary flex-fill">
                 Více
                 <svg
