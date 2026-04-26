@@ -18,9 +18,7 @@
     "buyNote": "Zaujala vás kniha Kryštof a Torpédo? Kniha vychází 12. května 2026 v Nakladatelství 65. pole.",
     "excerptIntro": "Přečtěte si ukázku a nechte se vtáhnout do světa jedinečného přátelství Kryštofa a jeho psa Torpéda.",
     "authors": {
-      "text": [
-        "Pavlína Jurková"
-      ],
+      "text": ["Pavlína Jurková"],
       "illustrations": []
     },
     "buyLinks": [],
@@ -65,12 +63,8 @@
     "badge": "novinka",
     "excerptIntro": "Přečtěte si ukázku knihy a nechte se vtáhnout do světa knihy Róza a ztracený tatínek.",
     "authors": {
-      "text": [
-        "Pavlína Jurková"
-      ],
-      "illustrations": [
-        "Eva Chupíková"
-      ]
+      "text": ["Pavlína Jurková"],
+      "illustrations": ["Eva Chupíková"]
     },
     "buyLinks": [
       {
@@ -120,12 +114,8 @@
     "cover": "images/knihy/obalka-eliska-andilek.jpg",
     "coverThumbnail": "images/knihy/obalka-eliska-andilek.jpg",
     "authors": {
-      "text": [
-        "Pavlína Jurková"
-      ],
-      "illustrations": [
-        "Eva Chupíková"
-      ]
+      "text": ["Pavlína Jurková"],
+      "illustrations": ["Eva Chupíková"]
     },
     "buyLinks": [
       {
@@ -176,12 +166,8 @@
     "coverThumbnail": "images/knihy/obalka-eliska-rebelka.jpg",
     "excerptIntro": "Přečtěte si ukázku knihy a nechte se vtáhnout do dobrodružného světa Elišky a Toníčka.",
     "authors": {
-      "text": [
-        "Pavlína Jurková"
-      ],
-      "illustrations": [
-        "Eva Chupíková"
-      ]
+      "text": ["Pavlína Jurková"],
+      "illustrations": ["Eva Chupíková"]
     },
     "buyLinks": [
       {
@@ -232,12 +218,8 @@
     "coverThumbnail": "images/knihy/obalka-eliska-detektiv.jpg",
     "excerptIntro": "Přečtěte si ukázku knihy a nechte se vtáhnout do detektivního světa malé Elišky.",
     "authors": {
-      "text": [
-        "Pavlína Jurková"
-      ],
-      "illustrations": [
-        "Eva Chupíková"
-      ]
+      "text": ["Pavlína Jurková"],
+      "illustrations": ["Eva Chupíková"]
     },
     "buyLinks": [
       {
@@ -287,12 +269,8 @@
     "coverThumbnail": "images/knihy/obalka-eliska-superbox.jpg",
     "badge": "bestseller",
     "authors": {
-      "text": [
-        "Pavlína Jurková"
-      ],
-      "illustrations": [
-        "Eva Chupíková"
-      ]
+      "text": ["Pavlína Jurková"],
+      "illustrations": ["Eva Chupíková"]
     },
     "buyLinks": [
       {
@@ -324,13 +302,8 @@
     "coverThumbnail": "images/knihy/obalka-viktor-a-zahadna-teta-bobina-2.jpg",
     "badge": "bestseller",
     "authors": {
-      "text": [
-        "Jarmila Vlčková",
-        "Pavlína Jurková"
-      ],
-      "illustrations": [
-        "Martina Fojtů"
-      ]
+      "text": ["Jarmila Vlčková", "Pavlína Jurková"],
+      "illustrations": ["Martina Fojtů"]
     },
     "buyLinks": [
       {
@@ -387,13 +360,8 @@
     "coverThumbnail": "images/knihy/obalka-viktor-a-pripad-zmizeleho-psa-2.jpg",
     "excerptIntro": "Přečtěte si ukázku knihy a vydejte se společně s Viktorem a Žofíí na detektivní pátrání.",
     "authors": {
-      "text": [
-        "Pavlína Jurková",
-        "Jarmila Vlčková"
-      ],
-      "illustrations": [
-        "Martina Fojtů"
-      ]
+      "text": ["Pavlína Jurková", "Jarmila Vlčková"],
+      "illustrations": ["Martina Fojtů"]
     },
     "buyLinks": [
       {
@@ -442,9 +410,7 @@
     "coverThumbnail": "images/knihy/obalka-tajemstvi-rodiny-m.jpg",
     "excerptIntro": "Přečtěte si ukázku knihy a nechte se vtáhnout do světa jedné obyčejné rodiny.",
     "authors": {
-      "text": [
-        "Pavlína Jurková"
-      ],
+      "text": ["Pavlína Jurková"],
       "illustrations": []
     },
     "buyLinks": [
@@ -493,13 +459,8 @@
     "cover": "images/knihy/obalka-hra-o-sen.jpg",
     "coverThumbnail": "images/knihy/obalka-hra-o-sen.jpg",
     "authors": {
-      "text": [
-        "Pavlína Jurková",
-        "Jarmila Vlčková"
-      ],
-      "illustrations": [
-        "Eva Chupíková"
-      ]
+      "text": ["Pavlína Jurková", "Jarmila Vlčková"],
+      "illustrations": ["Eva Chupíková"]
     },
     "buyLinks": [
       {
