@@ -15,13 +15,19 @@
     "cover": "images/knihy/obalka-krystof-a-torpedo.jpg",
     "coverThumbnail": "images/knihy/obalka-krystof-a-torpedo.jpg",
     "badge": "novinka",
-    "buyNote": "Zaujala vás kniha Kryštof a Torpédo? Kniha vychází 12. května 2026 v Nakladatelství 65. pole.",
+    "buyNote": "Zaujala vás kniha Kryštof a Torpédo? Objednejte si ji v Nakladatelství 65. pole.",
     "excerptIntro": "Přečtěte si ukázku a nechte se vtáhnout do světa jedinečného přátelství Kryštofa a jeho psa Torpéda.",
     "authors": {
       "text": ["Pavlína Jurková"],
       "illustrations": []
     },
-    "buyLinks": [],
+    "buyLinks": [
+      {
+        "retailer": "65. pole",
+        "url": "https://www.65pole.cz/kniha/krystof-a-torpedo/",
+        "primary": true
+      }
+    ],
     "excerpts": [
       {
         "title": "Štěně v nesnázích",
@@ -491,5 +497,58 @@
     ],
     "featured": true,
     "publishedDate": "2020-01-01"
+  },
+  {
+    "id": "chameleon-hubert",
+    "title": "Chameleon Hubert",
+    "slug": "chameleon-hubert",
+    "subtitle": null,
+    "summary": "Pro malé čtenáře, kteří mají rádi napětí, dobrodružství a zvířecí hrdiny. Příběh o ztraceném chameleonovi dětem ukazuje, že první dojem může klamat a že předsudky nám někdy brání poznat, jací lidé doopravdy jsou.",
+    "description": "<p>Pro děti, které se učí poznávat svět a zjišťují, že to, jak člověk vypadá na první pohled, nemusí vůbec odpovídat tomu, jaký doopravdy je.</p><p>Andělka a Tomík se právě přistěhovali do nového domu. Jenže sotva si začnou zvykat, jejich milovaný chameleon Hubert zmizí. Kam se poděl? Schovává se někde v domě? Nebo ho snad někdo odnesl?</p><p>Naštěstí potkají Péťu, který je připravený pomoct s pátráním. Jenže v domě bydlí samí zvláštní sousedé. Někteří vypadají trochu strašidelně, jiní záhadně a u některých si děti nejsou jisté vůbec ničím. Kdo z nich by mohl o Hubertovi něco vědět?</p><p>Při pátrání děti postupně zjišťují, že to, jak člověk vypadá na první pohled, nemusí vůbec odpovídat tomu, jaký doopravdy je. Dokážou překonat své předsudky a najít Huberta?</p>",
+    "cardColor": "140 35% 90%",
+    "cardAgeGroup": "Pro děti od 4 do 9 let",
+    "ageGroup": "Pro děti od 5 do 9 let",
+    "year": 2026,
+    "publisher": "Albatros",
+    "isbn": "",
+    "pages": null,
+    "cover": "images/knihy/obalka-chameleon-hubert.jpg",
+    "coverThumbnail": "images/knihy/obalka-chameleon-hubert.jpg",
+    "badge": "novinka",
+    "buyNote": "Zaujala vás kniha Chameleon Hubert? Objednejte si ji ještě dnes a pomozte Andělce s Tomíkem najít ztraceného chameleona.",
+    "excerptIntro": "Přečtěte si ukázku knihy a pomozte dětem najít ztraceného chameleona.",
+    "authors": {
+      "text": ["Pavlína Jurková"],
+      "illustrations": ["Vendula Hegerová"]
+    },
+    "buyLinks": [
+      {
+        "retailer": "Albatros",
+        "url": "https://www.albatros.cz/tituly/100506200/chameleon-hubert/",
+        "primary": true
+      }
+    ],
+    "excerpts": [
+      {
+        "title": "Noví sousedé",
+        "text": "<p>&bdquo;Babi, budeme mít nové sousedy!&ldquo; vtrhl do bytu Péťa.</p><p>&bdquo;Pst! Teď ne!&ldquo; přiložila si prst ke rtům babička. &bdquo;Pak mi to povíš, Petříku.&ldquo;</p><p>Babička ho přijela hlídat, aby o prázdninách nebyl sám, když jsou rodiče od rána do večera v práci. Jenže když v televizi sledovala svůj oblíbený seriál s poručíkem Colombem, nebyla s ní žádná řeč.</p><p>Péťa jen mávl rukou, otočil se a běžel zpátky dolů před dům.</p><p>Byt v přízemí byl už asi rok prázdný. Vždy, když šel okolo, poslouchal, jestli někoho neuslyší. Někdy dokonce z legrace zaklepal na dveře. Představoval si, kdo by se do tak velkého bytu mohl přestěhovat. Přál si, aby to byl někdo, kdo bude mít hodně dětí. Klidně pět nebo i deset. On se s nimi skamarádí a budou si společně hrát, stavět bunkry a chodit na výpravy. A dnes se to doopravdy stalo.</p><p>Ráno před domem zastavil obrovský náklaďák s vysouvací plošinou. Z něj vystoupili dva stěhováci a začali do bytu nosit skříně, gauč, postel…</p><p>&bdquo;Aspoň že je to přízemí,&ldquo; funěli, když se ve vchodu snažili vytočit s klavírem.</p><p>Péťa se nejdřív lekl, že se do bytu nastěhuje hudební skladatel. Nebo pianista! S tím by velká zábava nebyla. Určitě by každý den několik hodin cvičil. Anebo by vůbec nebyl doma, protože by koncertoval po celém světě.</p><p>Jenže před chvílí přijelo ještě jedno auto. Velká dodávka plná krabic a kufrů. A z ní vyskočil malý kluk.</p><p>&bdquo;Opatrně, Tomíku, ať tě něco nepřejede!&ldquo; napomínal ho jeho tatínek, který vystoupil jako druhý. Po něm z auta ladně vyhopsala maminka. A nakonec se zezadu vysoukala holka ve žlutých šatech, velká asi jako Péťa. Určitě už chodila do školy. Možná do druhé nebo třetí třídy. Měla tmavé vlasy zastřižené na kratičké mikádo a nos posetý pihami.</p>",
+        "image": "images/ukazky/chameleon-hubert-sousede-v-dome.jpg"
+      },
+      {
+        "title": "Nejsilnější muž světa",
+        "text": "<p>Tomík odsunul kryt kukátka a podíval se ven. V kukátku spatřil obrovské rýhované oko, které se dívalo přímo na něj! &bdquo;Aááá!&ldquo; vykřikl. Maminka mu rychle zacpala pusu, ale pozdě. Mávla rukou, aby všichni poodstoupili, a otevřela dveře.</p><p>První, co Tomík uviděl, bylo břicho v napnuté růžové košili. Teprve když pořádně zaklonil hlavu, zjistil, komu břicho patří. Před ním stál obr. Byl nejméně o dvě hlavy větší než tatínek! A tatínek rozhodně nebyl žádný drobek. Tomíkovi připadalo, že ten muž má všechno větší. Nos, oči, bradu… Dokonce i jeho úsměv byl obrovský. V ruce držel kufřík na kolečkách, který vedle něj vypadal legračně maličký, skoro jako by byl pro panenky.</p><p>A v tu chvíli to Tomíkovi došlo. Takového obra už přece viděl! V cirkuse. Byl to nejsilnější muž světa. Zvedal nad hlavu těžké činky, trhal řetězy tlusté jako hadi, a když foukl k dětem v první řadě, všem jim vyletěl popcorn z kelímků. Po celou dobu mu na rameni seděla malinkatá opička a tvářila se děsně legračně.</p>",
+        "image": "images/ukazky/chameleon-hubert-nejsilnejsi-muz-sveta.jpg"
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Hubert nás opravdu bavil. Děti si rychle oblíbily Andělku s Tomíkem a díky příběhu i zábavným úkolům v knížce se nenásilně učily, že každý člověk může být jiný a zaslouží si naše pochopení.",
+        "author": "Lenka Měřická",
+        "source": "učitelka MŠ",
+        "rating": 5
+      }
+    ],
+    "featured": true,
+    "publishedDate": "2026-01-01"
   }
 ]

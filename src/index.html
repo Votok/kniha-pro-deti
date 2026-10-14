@@ -1,7 +1,7 @@
 ---
 layout: layouts/page.njk
-title: České knihy pro děti 5–13 let od Pavlíny Jurkové a Jarmily Vlčkové
-description: "České knihy pro děti od 5 do 13 let. Příběhy od Pavlíny Jurkové a Jarmily Vlčkové, které učí odvaze, přátelství a sebedůvěře. 8 knih s krásnými ilustracemi od českých ilustrátorů."
+title: České knihy pro děti 4–13 let od Pavlíny Jurkové a Jarmily Vlčkové
+description: "České knihy pro děti od 4 do 13 let. Příběhy od Pavlíny Jurkové a Jarmily Vlčkové, které učí odvaze, přátelství a sebedůvěře. 11 knih s krásnými ilustracemi od českých ilustrátorů."
 ---
 
 {# ItemList JSON-LD — karusel knih ve vyhledávání #}
@@ -75,11 +75,11 @@ description: "České knihy pro děti od 5 do 13 let. Příběhy od Pavlíny Jur
           >
             <div class="trust-indicator">
               <span class="trust-indicator-emoji">📚</span>
-              <span class="trust-indicator-text">8 knih v nabídce</span>
+              <span class="trust-indicator-text">11 knih v nabídce</span>
             </div>
             <div class="trust-indicator">
               <span class="trust-indicator-emoji">🌱</span>
-              <span class="trust-indicator-text">Pro děti 5–13 let</span>
+              <span class="trust-indicator-text">Pro děti 4–13 let</span>
             </div>
           </div>
         </div>
@@ -175,7 +175,7 @@ description: "České knihy pro děti od 5 do 13 let. Příběhy od Pavlíny Jur
     <!-- Section Header -->
     <div class="text-center mx-auto mb-5 mb-lg-6" style="max-width: 48rem">
       <span class="badge-section-tag mb-3">Naše knihy</span>
-      <h2 class="mb-4">České knihy pro děti od 5 do 13 let</h2>
+      <h2 class="mb-4">České knihy pro děti od 4 do 13 let</h2>
       <p class="text-muted">Vyberte tu pravou knihu</p>
     </div>
 
@@ -192,8 +192,8 @@ description: "České knihy pro děti od 5 do 13 let. Příběhy od Pavlíny Jur
             >
               <img
                 src="{{ book.cover }}"
-                alt="Obálka knihy {{ book.title }} – {{ book.ageGroup | lower }}"
-                class="w-100 h-100 object-fit-cover shadow-soft"
+                alt="Obálka knihy {{ book.title }} – {{ book.cardAgeGroup | default(book.ageGroup) | lower }}"
+                class="w-100 h-100 {% if book.id == 'chameleon-hubert' %}object-fit-contain{% else %}object-fit-cover{% endif %} shadow-soft"
                 loading="lazy"
               />
               <div class="position-absolute top-0 end-0 mt-3 me-3">
@@ -218,7 +218,7 @@ description: "České knihy pro děti od 5 do 13 let. Příběhy od Pavlíny Jur
                     <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                   </svg>
                   <span class="small fw-semibold"
-                    >{{ book.ageGroup | replace("Pro děti ", "") }}</span
+                    >{{ book.cardAgeGroup | default(book.ageGroup) | replace("Pro děti ", "") }}</span
                   >
                 </span>
               </div>
