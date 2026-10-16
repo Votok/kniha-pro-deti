@@ -101,6 +101,130 @@
   }
 }
 
+/* Reusable content widths */
+.content-width-md {
+  max-width: 36rem;
+}
+
+.content-width-lg {
+  max-width: 48rem;
+}
+
+.content-width-xl {
+  max-width: 72rem;
+}
+
+.content-width-benefits {
+  max-width: 64rem;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+/* Book detail */
+.book-hero-cover {
+  width: 100%;
+  max-width: 24rem;
+  border-radius: var(--radius-lg);
+  transition: transform 0.3s ease-out;
+}
+
+.book-blur-top-start {
+  top: 0;
+  left: 0;
+}
+
+.book-blur-bottom-end {
+  right: 0;
+  bottom: 0;
+}
+
+.badge.book-series-badge {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.badge.book-series-number-badge {
+  color: hsl(30 40% 30%);
+  background: hsl(45 75% 82%);
+}
+
+.book-hero-author,
+.book-section-intro,
+.book-cta-text {
+  font-size: 1.125rem;
+}
+
+.book-metadata-pill {
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.book-hero-summary {
+  padding-left: 1rem;
+  border-left: 3px solid hsl(var(--color-primary));
+  color: hsl(25 30% 20%);
+  font-size: 0.9375rem;
+  font-style: italic;
+}
+
+.book-hero-description {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.book-buy-button {
+  border-radius: var(--radius-md);
+}
+
+.book-buy-note {
+  font-size: 0.9375rem;
+}
+
+.book-excerpt-image {
+  width: 100%;
+  border-radius: var(--radius-lg);
+}
+
+.book-excerpt-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.book-excerpt-text {
+  color: hsl(var(--color-foreground));
+  line-height: 1.7;
+}
+
+.book-related-section {
+  background-color: hsl(var(--color-muted) / 0.3);
+}
+
+.book-related-cover {
+  aspect-ratio: 3 / 4;
+  padding: 1rem;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.book-related-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.book-related-age {
+  font-size: 0.875rem;
+}
+
+.book-cta-section {
+  background-color: hsl(var(--color-primary) / 0.1);
+}
+
+.book-cta-text {
+  color: hsl(var(--color-muted-fg));
+}
+
 /* ==========================================================================
    4. GLOBAL ELEMENT RULES
    ========================================================================== */
@@ -1266,6 +1390,10 @@ body {
   object-fit: cover;
 }
 
+.author-card-photo {
+  aspect-ratio: 4 / 5;
+}
+
 .author-card-content {
   display: flex;
   flex-direction: column;
@@ -1369,6 +1497,8 @@ body {
 
 /* Book Card Inner Container - Match pill roundness */
 #knihy .card .book-cover-inner {
+  aspect-ratio: 3 / 4;
+  padding: 1rem;
   border-radius: var(--radius-2xl);
 }
 
@@ -1472,6 +1602,26 @@ body {
   color: hsl(var(--color-background));
 }
 
+.footer-brand {
+  max-width: 28rem;
+}
+
+.footer-description {
+  color: hsl(var(--color-background) / 0.7);
+}
+
+.footer-heading {
+  color: hsl(var(--color-background) / 0.9);
+}
+
+.footer-bottom {
+  border-top: 1px solid hsl(var(--color-background) / 0.1);
+}
+
+.footer-copyright {
+  color: hsl(var(--color-background) / 0.5);
+}
+
 /* Footer Social Links */
 .footer-social-link {
   display: inline-flex;
@@ -1502,6 +1652,18 @@ body {
 
 .footer-nav-link:hover {
   color: hsl(var(--color-primary));
+}
+
+.gallery-thumbnail {
+  height: 250px;
+}
+
+.hover-opacity-100:hover {
+  opacity: 1 !important;
+}
+
+.transition-opacity {
+  transition: opacity 0.3s ease;
 }
 
 /* ==========================================================================

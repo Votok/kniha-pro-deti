@@ -84,8 +84,7 @@ permalink: /galerie.html
           <img
             src="{{ image.src }}"
             alt="{{ image.alt }}"
-            class="img-fluid w-100 object-fit-cover"
-            style="height: 250px"
+            class="img-fluid w-100 object-fit-cover gallery-thumbnail"
             loading="lazy"
           />
           <div
@@ -100,13 +99,3 @@ permalink: /galerie.html
     {% endfor %}
   </div>
 </section>
-
-<style>
-  /* Simple hover effect for captions */
-  .hover-opacity-100:hover {
-    opacity: 1 !important;
-  }
-  .transition-opacity {
-    transition: opacity 0.3s ease;
-  }
-</style>

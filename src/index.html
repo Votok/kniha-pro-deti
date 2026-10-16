@@ -38,7 +38,7 @@ description: "České knihy pro děti od 4 do 13 let. Příběhy od Pavlíny Jur
             <span class="text-gradient-warm">pomáhají dětem růst</span>
           </h1>
 
-          <p class="lead text-muted mx-auto mx-lg-0" style="max-width: 36rem">
+          <p class="lead text-muted mx-auto mx-lg-0 content-width-md">
             Příběhy od Pavlíny Jurkové a Jarmily Vlčkové, které učí odvaze, přátelství a sebedůvěře.
             S krásnými ilustracemi, které si zamilujete.
           </p>
@@ -173,7 +173,7 @@ description: "České knihy pro děti od 4 do 13 let. Příběhy od Pavlíny Jur
 <section id="knihy" class="section-padding">
   <div class="container">
     <!-- Section Header -->
-    <div class="text-center mx-auto mb-5 mb-lg-6" style="max-width: 48rem">
+    <div class="text-center mx-auto mb-5 mb-lg-6 content-width-lg">
       <span class="badge-section-tag mb-3">Naše knihy</span>
       <h2 class="mb-4">České knihy pro děti od 4 do 13 let</h2>
       <p class="text-muted">Vyberte tu pravou knihu</p>
@@ -188,7 +188,7 @@ description: "České knihy pro děti od 4 do 13 let. Příběhy od Pavlíny Jur
           <a href="{{ book.slug }}.html" class="text-decoration-none">
             <div
               class="position-relative book-cover-inner"
-              style="aspect-ratio: 3/4; background: hsl({{ book.cardColor | default('var(--color-primary) / 0.05') }}); padding: 1rem"
+              style="background: hsl({{ book.cardColor | default('var(--color-primary) / 0.05') }})"
             >
               <img
                 src="{{ book.cover }}"
@@ -252,8 +252,7 @@ description: "České knihy pro děti od 4 do 13 let. Příběhy od Pavlíny Jur
             <span class="badge bg-success text-white mb-2 align-self-start">Novinka</span>
             {% endif %} {% if book.seriesNumber %}
             <span
-              class="badge mb-2 align-self-start"
-              style="background: hsl(45 75% 82%); color: hsl(30 40% 30%)"
+              class="badge mb-2 align-self-start book-series-number-badge"
               >{{ book.seriesNumber }}. díl série</span
             >
             {% endif %}
@@ -408,12 +407,12 @@ description: "České knihy pro děti od 4 do 13 let. Příběhy od Pavlíny Jur
 <!-- Why Choose Section -->
 <section id="proc-nase-knihy" class="section-padding bg-gradient-warm">
   <div class="container">
-    <div class="text-center mx-auto mb-5 mb-lg-6" style="max-width: 48rem">
+    <div class="text-center mx-auto mb-5 mb-lg-6 content-width-lg">
       <span class="badge-section-tag mb-3">Co v nich najdete</span>
       <h2 class="mb-4">Proč právě naše knihy?</h2>
     </div>
 
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 mx-auto" style="max-width: 64rem">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 mx-auto content-width-benefits">
       <div class="col">
         <div class="card border-0 shadow-soft h-100 hover-lift">
           <div class="card-body p-4">
@@ -612,7 +611,7 @@ description: "České knihy pro děti od 4 do 13 let. Příběhy od Pavlíny Jur
           <div class="col-12 col-lg-6 text-center text-lg-start">
             <span class="badge-section-tag mb-3">Naše besedy</span>
             <h2 class="mb-4">Pozvěte autorky k vám</h2>
-            <p class="text-muted mb-4" style="max-width: 36rem">
+            <p class="text-muted mb-4 content-width-md">
               Nabízíme autorská čtení a besedy pro školy, knihovny a kulturní akce. Děti se mohou
               setkat s autorkami osobně.
             </p>
@@ -653,8 +652,7 @@ description: "České knihy pro děti od 4 do 13 let. Příběhy od Pavlíny Jur
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="text-primary"
-                  style="flex-shrink: 0"
+                  class="text-primary flex-shrink-0"
                 >
                   <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
                   <circle cx="9" cy="7" r="4"></circle>
@@ -678,8 +676,7 @@ description: "České knihy pro děti od 4 do 13 let. Příběhy od Pavlíny Jur
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="text-primary"
-                  style="flex-shrink: 0"
+                  class="text-primary flex-shrink-0"
                 >
                   <path
                     d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
@@ -703,8 +700,7 @@ description: "České knihy pro děti od 4 do 13 let. Příběhy od Pavlíny Jur
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="text-primary"
-                  style="flex-shrink: 0"
+                  class="text-primary flex-shrink-0"
                 >
                   <path d="M8 2v4"></path>
                   <path d="M16 2v4"></path>

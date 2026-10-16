@@ -29,12 +29,11 @@ layout: layouts/base.njk
           <img
             src="{{ book.cover }}"
             alt="{{ book.title }}"
-            class="img-fluid shadow-book hover-lift"
-            style="max-width: 24rem; width: 100%; border-radius: var(--radius-lg); transition: transform 0.3s ease-out;"
+            class="img-fluid shadow-book hover-lift book-hero-cover"
           >
           {# Decorative blur circles #}
-          <div class="blur-decoration blur-decoration-accent" style="top: 0; left: 0;"></div>
-          <div class="blur-decoration blur-decoration-primary" style="bottom: 0; right: 0;"></div>
+          <div class="blur-decoration blur-decoration-accent book-blur-top-start"></div>
+          <div class="blur-decoration blur-decoration-primary book-blur-bottom-end"></div>
         </div>
       </div>
 
@@ -42,12 +41,12 @@ layout: layouts/base.njk
       <div class="col-12 col-lg-7">
         {# Series Badge #}
         {% if book.series %}
-        <span class="badge bg-secondary text-secondary-fg mb-3" style="font-size: 0.875rem; padding: 0.5rem 1rem;">
+        <span class="badge bg-secondary text-secondary-fg mb-3 book-series-badge">
           Série {{ book.series }}
         </span>
         {% endif %}
         {% if book.seriesNumber %}
-        <span class="badge mb-3 ms-1" style="font-size: 0.875rem; padding: 0.5rem 1rem; background: hsl(45 75% 82%); color: hsl(30 40% 30%);">
+        <span class="badge mb-3 ms-1 book-series-badge book-series-number-badge">
           {{ book.seriesNumber }}. díl série
         </span>
         {% endif %}
@@ -56,7 +55,7 @@ layout: layouts/base.njk
         <h1 class="display-4 fw-bold mb-3 book-hero-title">{{ book.title }}</h1>
 
         {# Author Line #}
-        <p class="text-muted mb-3" style="font-size: 1.125rem;">
+        <p class="text-muted mb-3 book-hero-author">
           <strong>{% if book.authors.text.length > 1 %}Autorky{% else %}Autorka{% endif %}:</strong>
           {% for author in book.authors.text %}
             {{ author }}{% if not loop.last %}, {% endif %}
@@ -66,7 +65,7 @@ layout: layouts/base.njk
         {# Metadata Pills #}
         <div class="d-flex flex-wrap gap-3 mb-4">
           {# Age Group #}
-          <div class="d-inline-flex align-items-center gap-2 px-3 py-2 bg-card shadow-soft" style="border-radius: var(--radius-full); font-size: 0.875rem; font-weight: 500;">
+          <div class="d-inline-flex align-items-center gap-2 px-3 py-2 bg-card shadow-soft book-metadata-pill">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted">
               <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
               <circle cx="9" cy="7" r="4"></circle>
@@ -78,7 +77,7 @@ layout: layouts/base.njk
 
           {# Pages #}
           {% if book.pages %}
-          <div class="d-inline-flex align-items-center gap-2 px-3 py-2 bg-card shadow-soft" style="border-radius: var(--radius-full); font-size: 0.875rem; font-weight: 500;">
+          <div class="d-inline-flex align-items-center gap-2 px-3 py-2 bg-card shadow-soft book-metadata-pill">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted">
               <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
             </svg>
@@ -87,7 +86,7 @@ layout: layouts/base.njk
           {% endif %}
 
           {# Publisher #}
-          <div class="d-inline-flex align-items-center gap-2 px-3 py-2 bg-card shadow-soft" style="border-radius: var(--radius-full); font-size: 0.875rem; font-weight: 500;">
+          <div class="d-inline-flex align-items-center gap-2 px-3 py-2 bg-card shadow-soft book-metadata-pill">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted">
               <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
               <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
@@ -96,7 +95,7 @@ layout: layouts/base.njk
           </div>
 
           {# Year #}
-          <div class="d-inline-flex align-items-center gap-2 px-3 py-2 bg-card shadow-soft" style="border-radius: var(--radius-full); font-size: 0.875rem; font-weight: 500;">
+          <div class="d-inline-flex align-items-center gap-2 px-3 py-2 bg-card shadow-soft book-metadata-pill">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted">
               <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
               <line x1="16" y1="2" x2="16" y2="6"></line>
@@ -109,13 +108,13 @@ layout: layouts/base.njk
 
         {# Reader Tagline #}
         {% if book.summary %}
-        <div class="mb-3" style="border-left: 3px solid hsl(var(--color-primary)); padding-left: 1rem; font-size: 0.9375rem; font-style: italic; color: hsl(var(--color-muted-foreground));">
+        <div class="mb-3 book-hero-summary">
           {{ book.summary }}
         </div>
         {% endif %}
 
         {# Description #}
-        <div class="mb-4 book-hero-description" style="font-size: 1.125rem; line-height: 1.6;">
+        <div class="mb-4 book-hero-description">
           {{ book.description | safe }}
         </div>
 
@@ -124,24 +123,24 @@ layout: layouts/base.njk
           {% if book.buyLinks and book.buyLinks.length > 0 %}
             {% for link in book.buyLinks %}
               {% if link.primary %}
-                <a href="{{ link.url }}" class="btn btn-primary btn-lg" target="_blank" rel="noopener" style="border-radius: var(--radius-md);">
+                <a href="{{ link.url }}" class="btn btn-primary btn-lg book-buy-button" target="_blank" rel="noopener">
                   Koupit knihu
                 </a>
               {% endif %}
             {% endfor %}
             {% for link in book.buyLinks %}
               {% if not link.primary %}
-                <a href="{{ link.url }}" class="btn btn-outline-primary btn-lg" target="_blank" rel="noopener" style="border-radius: var(--radius-md);">
+                <a href="{{ link.url }}" class="btn btn-outline-primary btn-lg book-buy-button" target="_blank" rel="noopener">
                   Objednat u {{ link.retailer }}
                 </a>
               {% endif %}
             {% endfor %}
           {% else %}
-            <span class="btn btn-outline-secondary btn-lg disabled" style="border-radius: var(--radius-md);">Brzy k dostání</span>
+            <span class="btn btn-outline-secondary btn-lg disabled book-buy-button">Brzy k dostání</span>
           {% endif %}
         </div>
         {% if book.buyNote %}
-        <p class="text-muted mt-3 mb-0" style="font-size: 0.9375rem;">{{ book.buyNote }}</p>
+        <p class="text-muted mt-3 mb-0 book-buy-note">{{ book.buyNote }}</p>
         {% endif %}
       </div>
     </div>
@@ -153,10 +152,10 @@ layout: layouts/base.njk
 <section class="section-padding bg-light">
   <div class="container">
     {# Section Header #}
-    <div class="text-center mx-auto mb-5" style="max-width: 48rem;">
+    <div class="text-center mx-auto mb-5 content-width-lg">
       <span class="badge-section-tag mb-3">Ukázky z knihy</span>
       <h2 class="mb-3">Nahlédněte do příběhu</h2>
-      <p class="text-muted" style="font-size: 1.125rem;">
+      <p class="text-muted book-section-intro">
         {% if book.excerptIntro %}{{ book.excerptIntro }}{% else %}Přečtěte si ukázku knihy a nechte se vtáhnout do unikátního světa knihy {{ book.title }}.{% endif %}
       </p>
     </div>
@@ -173,8 +172,7 @@ layout: layouts/base.njk
               <img
                 src="{{ excerpt.image }}"
                 alt="{{ excerpt.title }}"
-                class="img-fluid shadow-soft"
-                style="border-radius: var(--radius-lg); width: 100%;"
+                class="img-fluid shadow-soft book-excerpt-image"
               >
             </div>
           </div>
@@ -182,8 +180,8 @@ layout: layouts/base.njk
 
           {# Text Content #}
           <div class="col-12 col-lg-6">
-            <h3 class="mb-4" style="font-size: 1.5rem; font-weight: 700;">{{ excerpt.title }}</h3>
-            <div style="color: hsl(var(--color-foreground)); line-height: 1.7;">
+            <h3 class="mb-4 book-excerpt-title">{{ excerpt.title }}</h3>
+            <div class="book-excerpt-text">
               {{ excerpt.text | safe }}
             </div>
           </div>
@@ -241,7 +239,7 @@ layout: layouts/base.njk
 
 {# Related Books Section #}
 {% if book.series %}
-<section class="section-padding" style="background-color: hsl(var(--color-muted) / 0.3);">
+<section class="section-padding book-related-section">
   <div class="container">
     {# Section Header #}
     <div class="text-center mb-5">
@@ -249,13 +247,13 @@ layout: layouts/base.njk
     </div>
 
     {# Related Books Grid #}
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center" style="max-width: 72rem; margin: 0 auto;">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center mx-auto content-width-xl">
       {% for relatedBook in books %}
         {% if relatedBook.series == book.series and relatedBook.id != book.id %}
         <div class="col">
           <a href="{{ relatedBook.slug }}.html" class="text-decoration-none">
-            <div class="card h-100 hover-lift" style="border: none;">
-              <div style="aspect-ratio: 3/4; background: hsl({{ relatedBook.cardColor | default('var(--color-primary) / 0.05') }}); padding: 1rem; border-radius: var(--radius-lg) var(--radius-lg) 0 0;">
+            <div class="card h-100 hover-lift border-0">
+              <div class="book-related-cover" style="background: hsl({{ relatedBook.cardColor | default('var(--color-primary) / 0.05') }});">
                 <img
                   src="{{ relatedBook.cover }}"
                   alt="{{ relatedBook.title }}"
@@ -263,8 +261,8 @@ layout: layouts/base.njk
                 >
               </div>
               <div class="card-body">
-                <h5 class="card-title" style="font-size: 1.25rem; font-weight: 700;">{{ relatedBook.title }}</h5>
-                <p class="text-muted mb-0" style="font-size: 0.875rem;">{{ relatedBook.ageGroup }}</p>
+                <h5 class="card-title book-related-title">{{ relatedBook.title }}</h5>
+                <p class="text-muted mb-0 book-related-age">{{ relatedBook.ageGroup }}</p>
               </div>
             </div>
           </a>
@@ -277,11 +275,11 @@ layout: layouts/base.njk
 {% endif %}
 
 {# CTA Banner #}
-<section class="section-padding-compact" style="background-color: hsl(var(--color-primary) / 0.1);">
+<section class="section-padding-compact book-cta-section">
   <div class="container">
-    <div class="text-center mx-auto" style="max-width: 48rem;">
+    <div class="text-center mx-auto content-width-lg">
       <h2 class="mb-4">Zaujala vás kniha {{ book.title }}?</h2>
-      <p class="mb-4" style="font-size: 1.125rem; color: hsl(var(--color-muted-fg));">
+      <p class="mb-4 book-cta-text">
         Objednejte si ji ještě dnes a nechte se vtáhnout do jedinečného dobrodružství.
       </p>
       {% for link in book.buyLinks %}
